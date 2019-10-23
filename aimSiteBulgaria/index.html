@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- *
+    Кодировка страницы: -->
+    <meta charset="UTF-8">
+    <!-- *
+    Адаптивная веб-страницa:
+    Метатег viewport со значением width определяет, соответственно, ширину области просмотра.
+    С помощью ключевого слова device-width будет наследоваться ширина устройства по умолчанию.
+    Для масштабирования сайта на мобильном устройстве, применяются свойства minimum-scale, maximum-scale, initial-scale и user-scalable.
+    Значением initial-scale всегда должно быть положительное целое число от 0 до 10. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Вариант viewport для подключения bootstrap: (ПОКА ОТКЛЮЧЕН) -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+    <!-- *
+    Bootstrap CSS:
+    или через BootstrapCDN или скачиваем и добавляем библиотеки Bootstrap через 
+    файл bootstrap.min.css. Выбираем только один вариант. -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Вариант c файлом bootstrap.min.css для подключения bootstrap: (ПОКА ОТКЛЮЧЕН) -->
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <!-- * 
+    Заголового страницы: -->
+    <title>home_aimSiteBulgaria_(Bootstrap)</title>
+    <!-- *
+    Кскадная таблица стилей CSS. -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- * 
+    Шрифт Roboto Slab с сайта fonts.google.com -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700&display=swap" rel="stylesheet">
+    <!-- *
+    Сторонние (кастомные) шрифты (подключаем вручную), лежащие в отдельном файле fonts.css. -->
+    <link rel="stylesheet" href="css/fonts.css">
+    <!-- *
+    Шрифты (иконки) Font Awesome (https://fontawesome.com): -->
+    <!-- 1 вариант подключения (ПОКА ОТКЛЮЧЕН): онлайн, просто прописываем адрес скрипта, находящегося на сайте https://fontawesome.com -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" integrity="sha384-rtJEYb85SiYWgfpCr0jn174XgJTn4rptSOQsMroFBPQSGLdOC5IbubP6lJ35qoM9" crossorigin="anonymous"> -->
+    <!-- 2 вариант подключения: скачиваем библиотеку со шрифтами с сайта https://fontawesome.com, и указываем путь к библиотеке. -->
+    <link rel="stylesheet" href="libs/fontawesome/all.min.css">
+    <!-- *
+    Медиа-запросы: media-for-width.css и media-for-height.css - файлы с медиа-запросами для адаптивной верстки. -->
+    <link rel="stylesheet" href="css/media-for-width.css">
+    <link rel="stylesheet" href="css/media-for-height.css">
+</head>
+<body>
+<!-- Классы для сетки Bootstrap: col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 -->
+
+<!-- ======= homeH: header ======= -->
+<header id="homeH">
+    <!-- Фильтр для главного меню (расположить до container). -->
+    <div class="row p-0 m-0">
+        <div class="col-xl-12 p-0 m-0">
+            <div class="filterMineMenu">
+                <!-- Пустой div для фильтра. -->
+            </div>
+        </div>
+    </div>
+    <div class="container p-0">
+        <div class="homeH">
+            <div class="row p-0 m-0">
+                <div class="col-xl-2 col-lg-8 col-md-6 col-sm-5 col-3 p-0 m-0">
+                    <div class="homeH-logo">
+                        <img class="homeH-logo__img" src="img/home/header/header_logo.png" alt="logo">
+                    </div>
+                </div>
+                <div class="col-xl-7 d-xl-block d-none p-0 m-0">
+                    <nav class="homeH-nav">
+                        <ul class="homeH-menu clearfix">
+                            <li class="homeH-menu__item float-left">
+                                <a class="homeH-menu__item-link homeH-menu__item-link_active" href="index.html">
+                                    Главная
+                                </a>
+                            </li>
+                            <li class="homeH-menu__item float-left">
+                                <a class="homeH-menu__item-link homeH-menu__item-link_active" href="about.html">
+                                    О компании
+                                </a>
+                            </li>
+                            <li class="homeH-menu__item float-left">
+                                <a class="homeH-menu__item-link homeH-menu__item-link_active" href="#">
+                                    ВНЖ и ПМЖ в Болгарии
+                                </a>
+                            </li>
+                            <li class="homeH-menu__item float-left">
+                                <a class="homeH-menu__item-link homeH-menu__item-link_active" href="move.html">
+                                    Недвижимость и переезд
+                                </a>
+                            </li>
+                            <li class="homeH-menu__item float-left">
+                                <a class="homeH-menu__item-link homeH-menu__item-link_active" href="contacts.html">
+                                    Контакты
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-7 col-9 p-0 m-0">
+                    <div class="homeH-phone-i-sandwichMenu clearfix">
+                        <div class="homeH-phone float-left">
+                            <p class="homeH-phone__text">
+                                +7 (495) 12-321-345 <br>
+                                +7 (495) 12-321-345
+                            </p>
+                        </div>
+                        <div class="homeH-sandwichMenu float-right">
+                            <a class="homeH-sandwichMenu__link" href="#">
+                                <img class="homeH-sandwichMenu__img" src="./img/home/header/header_sandwichMenu.svg"
+                                     alt="Img">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row p-0 m-0">
+                <div class="col-xl-12 p-0 m-0">
+                    <div class="homeH-boxTitle">
+                        <h1 class="homeH-boxTitle__title">
+                            Болгария
+                        </h1>
+                        <h2 class="homeH-boxTitle__subtitle">
+                            Ждет вас
+                        </h2>
+                    </div>
+                    <button class="homeH-arrowButton" type="button">
+                        <!-- Кнопка без надписи. -->
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+    <!-- ======= home1: section#1 (advantages) ======= -->
+    <section id="home1">
+        <div class="container p-0">
+            <div class="home1">
+                <div class="row p-0 m-0">
+                    <div class="col-xl-12 p-0 m-0">
+                        <div class="home1-boxTitle">
+                            <h3 class="home1-boxTitle__title home1-boxTitle__titlesH3">
+                                Наши преимущества
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="home1-box">
+                        <div class="row p-0 m-0">
+                            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 p-0 m-0">
+                                <div class="home1-box__items home1-box__item1">
+                                    <img class="home1-box__items-img"
+                                         src="img/home/section1/advantages_helping-hand.png" alt="img">
+                                    <h3 class="home1-box__items-slogan">
+                                        Надежность
+                                    </h3>
+                                    <div class="home1-box__items-underline">
+                                        <!-- Пустой блок для линии подчеркивания. -->
+                                    </div>
+                                    <p class="home1-box__items-text">
+                                        Мы всегда придем к вам на помощь <br>
+                                        в решении самых неоднозначных <br>
+                                        вопросов
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 p-0 m-0">
+                                <div class="home1-box__items home1-box__item2">
+                                    <img class="home1-box__items-img" src="img/home/section1/advantages_veracity.png"
+                                         alt="img">
+                                    <h3 class="home1-box__items-slogan">
+                                        Достоверность
+                                    </h3>
+                                    <div class="home1-box__items-underline">
+                                        <!-- Пустой блок для линии подчеркивания. -->
+                                    </div>
+                                    <p class="home1-box__items-text">
+                                        Достоверность - главный принцип <br>
+                                        нашей работы. Мы знаем все тонкости <br>
+                                        переезда в Болгарию и оформления <br>
+                                        соответствующих документов
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 p-0 m-0">
+                                <div class="home1-box__items home1-box__item3">
+                                    <img class="home1-box__items-img home1-box__items-img_mod"
+                                         src="img/home/section1/advantages_competence.png" alt="img">
+                                    <h3 class="home1-box__items-slogan">
+                                        Компетентность
+                                    </h3>
+                                    <div class="home1-box__items-underline">
+                                        <!-- Пустой блок для линии подчеркивания. -->
+                                    </div>
+                                    <p class="home1-box__items-text">
+                                        Наши специалисты с большим опытом <br>
+                                        работы помогут разобраться во всех <br>
+                                        юридических тонкостях переезда <br>
+                                        на ПМЖ в Болгарию
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ======= home2: section#2 (relocation) ======= -->
+    <section id="home2">
+        <div class="container p-0">
+            <div class="home2">
+                <div class="row p-0 m-0">
+                    <div class="col-xl-12 p-0 m-0">
+                        <div class="home2-boxTitle">
+                            <h3 class="home2-boxTitle__title home1-boxTitle__titlesH3">
+                                Переезд в Болгарию
+                            </h3>
+                            <p class="home2-boxTitle__quote">
+                                «Если Вам не нравится то место, где вы находитесь - <br>
+                                смените его, Вы же не дерево»
+                            </p>
+                            <p class="home2-boxTitle__author">
+                                Джим Рон
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xl-12 p-0 m-0">
+                        <div class="home2-question">
+                            <div class="home2-question__arrow1 home2-question__arrows">
+                                <!-- Для фигуры: arrow-dashed-circle. -->
+                            </div>
+                            <div class="home2-question__arrow2 home2-question__arrows">
+                                <!-- Для фигуры: arrow-dashed-circle. -->
+                            </div>
+                            <p class="home2-question__text1">
+                                Пришло время и перед Вами стоит вопрос
+                            </p>
+                            <p class="home2-question__text2">
+                                Как переехать в Болгарию на ВНЖ или ПМЖ?
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xl-12 p-0 m-0">
+                        <div class="home2-answer">
+                            <h4 class="home2-answer__title">
+                                Мы знаем ответ
+                            </h4>
+                            <p class="home2-answer__text">
+                                Подберем для Вас оптимальный вариант и предложим лучшие условия!
+                            </p>
+                        </div>
+                        <button class="home2-buttonKnowMore home2-buttonsKnowMore">
+                            Узнать больше
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ======= home3: section#3 (estate) ======= -->
+    <section id="home3">
+        <div class="container p-0">
+            <div class="home3">
+                <div class="row p-0 m-0">
+                    <div class="col-xl-12 p-0 m-0">
+                        <div class="home3-boxTitle">
+                            <h3 class="home3-boxTitle__title home1-boxTitle__titlesH3">
+                                Недвижимость и транспортные услуги
+                            </h3>
+                            <div class="home3-images">
+                                <img class="home3-images__house1 home3-images__houses"
+                                     src="img/home/section3/estate_house1.png" alt="img">
+                                <img class="home3-images__house2 home3-images__houses"
+                                     src="img/home/section3/estate_house2.png" alt="img">
+                                <img class="home3-images__house3 home3-images__houses"
+                                     src="img/home/section3/estate_house3.png" alt="img">
+                            </div>
+                        </div>
+                        <div class="home3-box">
+                            <div class="home3-box__set1 home3-box__sets">
+                                <h4 class="home3-box__set1-title">
+                                    Мечтаете о доме на Солнечном берегу?
+                                </h4>
+                                <p class="home3-box__set1-text">
+                                    Или хотите выгодно инвестировать в заграничную недвижимость? В любом случае - <br>
+                                    подходящий вариант уже ждет Вас! Большой выбор объектов жилой и коммерческой <br>
+                                    недвижимости и профессиональный сервис позволит провести сделку с <br>
+                                    удовольствием и получить нужный результат
+                                </p>
+                            </div>
+                            <img class="home3-box__imgCircle" src="img/home/section3/estate_circle.svg" alt="img">
+                            <div class="home3-box__set2 home3-box__sets">
+                                <p class="home3-box__set2-text">
+                                    Если Ваши чемоданы уже собраны и Вы готовы к переезду, рады предложить Вам <br>
+                                    транспортные услуги по перевозке личный вещей в Болгарию. Для успешного размещения
+                                    <br>
+                                    на новом месте жительства мы поможем перевести Ваши вещи в сохранности
+                                </p>
+                            </div>
+                        </div>
+                        <button class="home3-buttonKnowMore home2-buttonsKnowMore">
+                            Узнать больше
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ======= home4: section#4 (reviews) ======= -->
+    <section id="home4">
+        <div class="container p-0">
+            <div class="home4">
+                <div class="row p-0 m-0">
+                    <div class="col-xl-12 p-0 m-0">
+                        <div class="home4-boxTitle">
+                            <h3 class="home4-boxTitle__title home1-boxTitle__titlesH3">
+                                Отзывы наших клиентов
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="home4-box">
+                    <div class="row p-0 m-0">
+                        <div class="col-xl-2 col-lg-2 col-md-2 d-md-block d-sm-none d-none p-0 m-0">
+                            <div class="home4-box__arrowLeft home4-box__arrowsLeftRight">
+                                <!-- Для фигуры: arrowLeft. -->
+                            </div>
+                        </div>
+                        <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 p-0 m-0">
+                            <div class="home4-review">
+                                <img class="home4-review__userPhoto" src="img/home/section4/reviews_user.png"
+                                     alt="img">
+                                <div class="home4-review__userProfile clearfix">
+                                    <p class="home4-review__userProfile-name float-sm-left float-none">
+                                        Диана апасова
+                                    </p>
+                                    <a class="home4-review__userProfile-vk float-sm-left float-none" href="#">
+                                        vk.com/apasova
+                                    </a>
+                                    <a class="home4-review__userProfile-city float-sm-right float-none" href="#">
+                                        Москва → София
+                                    </a>
+                                </div>
+                                <p class="home4-review__userArticle">
+                                    Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum ac diam sit amet
+                                    quam vehicula elementum sed sit amet dui. Mauris blandit aliquet elit, eget
+                                    tincidunt nibh pulvinar a. Nulla quis lorem ut libero malesuada feugiat. Nulla
+                                    quis lorem ut libero malesuada feugiat.
+                                </p>
+                            </div>
+                            <div class="home4-navDots clearfix">
+                                <div class="home4-navDots__dot1 home4-navDots__dots float-left">
+                                    <!-- Для фигуры: навигационная точка. -->
+                                </div>
+                                <div class="home4-navDots__dot2 home4-navDots__dots float-left">
+                                    <!-- Для фигуры: навигационная точка. -->
+                                </div>
+                                <div class="home4-navDots__dot3 home4-navDots__dots float-left">
+                                    <!-- Для фигуры: навигационная точка. -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-2 col-md-2 d-md-block d-sm-none d-none p-0 m-0">
+                            <div class="home4-box__arrowRight home4-box__arrowsLeftRight">
+                                <!-- Для фигуры: arrow-right. -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ======= home5: section#5 (questions) ======= -->
+    <section id="home5">
+        <div class="container p-0">
+            <div class="home5">
+                <div class="row p-0 m-0">
+                    <div class="col-xl-12 p-0 m-0">
+                        <div class="home5-boxTitle">
+                            <h3 class="home5-boxTitle__title home1-boxTitle__titlesH3">
+                                Есть вопросы <br>
+                                по переезду в болгарию?
+                            </h3>
+                            <p class="home5-boxTitle__subtitle">
+                                Мы проконсультируем <br>
+                                Вас бесплатно!
+                            </p>
+                            <div class="home5-boxTitle__arrow home2-question__arrows">
+                                <!-- Для фигуры: arrow-dashed-circle. -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-12 p-0 m-0">
+                        <form class="home5-form" action="#">
+                            <input class="home5-form__nameField home5-form__userFields" type="text" placeholder="Имя"
+                                   required>
+                            <input class="home5-form__emailField home5-form__userFields" type="email"
+                                   placeholder="E-mail" required>
+                            <input class="home5-form__telField home5-form__userFields" type="tel"
+                                   placeholder="Телефон" required>
+                            <button class="home5-form__orderField home5-form__userFields home5-form__userOrder"
+                                    type="submit">
+                                Заказать консультацию
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<!-- ======= homeF: footer ======= -->
+<footer id="homeF">
+    <div class="container p-0">
+        <div class="homeF">
+            <div class="row p-0 m-0">
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 p-0 m-0">
+                    <div class="homeF-logo">
+                        <img class="homeF-logo__img" src="img/home/footer/footer_logo.png" alt="logo">
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 p-0 m-0">
+                    <div class="homeF-copyright">
+                        <p class="homeF-copyright__text">
+                            2019 / Все права защищены
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-4 d-md-block d-none p-0 m-0">
+                    <div class="homeF-confidentiality">
+                        <a class="homeF-confidentiality__text" href="#">
+                            Политика конфиденциальности
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 d-lg-block d-none p-0 m-0">
+                    <div class="homeF-phone float-right">
+                        <p class="homeF-phone__text homeH-phone__text">
+                            +7 (495) 12-321-345 <br>
+                            +7 (495) 12-321-345
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

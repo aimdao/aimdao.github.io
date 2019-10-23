@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" version="1.1" viewBox="21.4 2.4689998 60.188 60.188" width="60.188pt" height="60.188pt" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <g stroke="none" stroke-opacity="1" stroke-dasharray="none" fill="none" fill-opacity="1">
+    <title>Canvas 1</title>
+    <!-- <rect fill="white" width="60.188" height="60.188"/> -->
+    <g>
+      <title>Layer 1</title>
+      <circle cx="51.494" cy="32.563" r="30.094048" fill="#23aae2"/>
+      <text transform="translate(37.994 19.563)" fill="white">
+        <tspan font-family="FontAwesome" font-size="26.04" font-weight="500" x=".48" y="22" textLength="26.04"></tspan>
+      </text>
+    </g>
+  </g>
+</svg>

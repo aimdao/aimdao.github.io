@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="708.5 386.5 41 43" width="41pt" height="43pt">
+  <g stroke="none" stroke-opacity="1" stroke-dasharray="none" fill="none" fill-opacity="1">
+    <title>Canvas 1</title>
+    <!-- <rect fill="white" width="41" height="43"/> -->
+    <g>
+      <title>Layer 1</title>
+      <path d="M 743.1421 393.8579 C 750.9526 401.66836 750.9526 414.33164 743.1421 422.1421 C 735.3316 429.95263 722.6684 429.95263 714.8579 422.1421 C 707.0474 414.33164 707.0474 401.66836 714.8579 393.8579 C 722.6684 386.04737 735.3316 386.04737 743.1421 393.8579" stroke="white" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1" stroke-dasharray="4,4"/>
+      <text transform="translate(718.5 392)" fill="black">
+        <tspan font-family="FontAwesome" font-size="32" font-weight="500" fill="white" x=".21428571" y="27" textLength="20.571429"></tspan>
+      </text>
+    </g>
+  </g>
+</svg>

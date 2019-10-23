@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- *
+    Кодировка страницы: -->
+    <meta charset="UTF-8">
+    <!-- *
+    Адаптивная веб-страницa:
+    Метатега viewport со значением width определяет, соответственно, ширину области просмотра.
+    С помощью ключевого слова device-width будет наследоваться ширина устройства по умолчанию.
+    Для масштабирования сайта на мобильном устройстве, применяются свойства minimum-scale, maximum-scale, initial-scale и user-scalable.
+    Значением initial-scale всегда должно быть положительное целое число от 0 до 10. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Вариант viewport для подключения bootstrap: (ПОКА ОТКЛЮЧЕН) -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+    <!-- *
+    Bootstrap CSS:
+    или через BootstrapCDN или скачиваем и добавляем библиотеки Bootstrap через
+    файл bootstrap.min.css. Выбираем только один вариант. -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Вариант c файлом bootstrap.min.css для подключения bootstrap: (ПОКА ОТКЛЮЧЕН) -->
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <!-- *
+    Заголового страницы: -->
+    <title>contacts_aimSiteBulgaria_(Bootstrap)</title>
+    <!-- *
+    Кскадная таблица стилей CSS. -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- *
+    Шрифт Roboto Slab с сайта fonts.google.com -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700&display=swap" rel="stylesheet">
+    <!-- *
+    Сторонние (кастомные) шрифты (подключаем вручную), лежащие в отдельном файле fonts.css. -->
+    <link rel="stylesheet" href="css/fonts.css">
+    <!-- *
+    Шрифты (иконки) Font Awesome (https://fontawesome.com): -->
+    <!-- 1 вариант подключения (ПОКА ОТКЛЮЧЕН): онлайн, просто прописываем адрес скрипта, находящегося на сайте https://fontawesome.com -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" integrity="sha384-rtJEYb85SiYWgfpCr0jn174XgJTn4rptSOQsMroFBPQSGLdOC5IbubP6lJ35qoM9" crossorigin="anonymous"> -->
+    <!-- 2 вариант подключения: скачиваем библиотеку со шрифтами с сайта https://fontawesome.com, и указываем путь к библиотеке. -->
+    <link rel="stylesheet" href="libs/fontawesome/all.min.css">
+    <!-- *
+    Медиа-запросы: media-for-width.css и media-for-height.css - файлы с медиа-запросами для адаптивной верстки. -->
+    <link rel="stylesheet" href="css/media-for-width.css">
+    <link rel="stylesheet" href="css/media-for-height.css">
+</head>
+<body>
+<!-- Классы для сетки Bootstrap: col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 -->
+
+<!-- ======= contactsH: header ======= -->
+<header id="contactsH">
+    <!-- Фильтр для главного меню (расположить до container). -->
+    <div class="row p-0 m-0">
+        <div class="col-xl-12 p-0 m-0">
+            <div class="filterMineMenu">
+                <!-- Пустой div для фильтра. -->
+            </div>
+        </div>
+    </div>
+    <div class="container p-0">
+        <div class="contactsH">
+            <div class="row p-0 m-0">
+                <div class="col-xl-2 col-lg-8 col-md-6 col-sm-5 col-3 p-0 m-0">
+                    <div class="contactsH-logo">
+                        <img class="contactsH-logo__img" src="img/home/header/header_logo.png" alt="logo">
+                    </div>
+                </div>
+                <div class="col-xl-7 d-xl-block d-none p-0 m-0">
+                    <nav class="contactsH-nav">
+                        <ul class="contactsH-menu homeH-menu clearfix">
+                            <li class="contactsH-menu__item float-left">
+                                <a class="contactsH-menu__item-link homeH-menu__item-link homeH-menu__item-link_active"
+                                   href="index.html">
+                                    Главная
+                                </a>
+                            </li>
+                            <li class="contactsH-menu__item float-left">
+                                <a class="contactsH-menu__item-link homeH-menu__item-link homeH-menu__item-link_active"
+                                   href="about.html">
+                                    О компании
+                                </a>
+                            </li>
+                            <li class="contactsH-menu__item float-left">
+                                <a class="contactsH-menu__item-link homeH-menu__item-link homeH-menu__item-link_active"
+                                   href="move.html">
+                                    Переезд в Болгарию
+                                </a>
+                            </li>
+                            <li class="contactsH-menu__item float-left">
+                                <a class="contactsH-menu__item-link homeH-menu__item-link homeH-menu__item-link_active"
+                                   href="#">
+                                    Открытие представительства
+                                </a>
+                            </li>
+                            <li class="contactsH-menu__item float-left">
+                                <a class="contactsH-menu__item-link homeH-menu__item-link homeH-menu__item-link_active"
+                                   href="contacts.html">
+                                    Контакты
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-7 col-9 p-0 m-0">
+                    <div class="homeH-phone-i-sandwichMenu clearfix">
+                        <div class="homeH-phone float-left">
+                            <p class="homeH-phone__text">
+                                +7 (495) 12-321-345 <br>
+                                +7 (495) 12-321-345
+                            </p>
+                        </div>
+                        <div class="homeH-sandwichMenu float-right">
+                            <a class="homeH-sandwichMenu__link" href="#">
+                                <img class="homeH-sandwichMenu__img" src="./img/home/header/header_sandwichMenu.svg"
+                                     alt="Img">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row p-0 m-0">
+                <div class="col-xl-12 p-0 m-0">
+                    <div class="contactsH-boxTitle aboutH-boxTitle homeH-boxTitle">
+                        <h1 class="contactsH-boxTitle__title aboutH-boxTitle__title">
+                            Контакты
+                        </h1>
+                    </div>
+                    <button class="contactsH-arrowButton aboutH-arrowButton homeH-arrowButton" type="button">
+                        <!-- Кнопка без надписи. -->
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+    <!-- ======= contacts1: section#1 (communicationAndQuestions) ======= -->
+    <section id="contacts1">
+        <div class="container p-0">
+            <div class="contacts1 about1">
+                <div class="row justify-content-center p-0 m-0">
+                    <div class="col-xl-10 p-0 m-0">
+                        <div class="contacts1-panel about1-panel">
+                            <div class="contacts1-motto about1-motto">
+                                <div class="row p-0 m-0">
+                                    <div class="col-xl-12 p-0 m-0">
+                                        <p class="contacts1-motto__text about1-motto__text">
+                                            Мы всегда на связи и ответим на все интересующие Вас вопросы!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contacts1-communication-i-questions">
+                                <div class="row p-0 m-0 justify-content-around">
+                                    <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 p-0 m-0">
+                                        <div class="contacts1-communication">
+                                            <div class="contacts1-communication__phone">
+                                                <h4 class="contacts1-communication__titles">
+                                                    Телефоны
+                                                </h4>
+                                                <p class="contacts1-communication__subtitles">
+                                                    В Болгарии 8 (123) 12-123-123
+                                                    <br>
+                                                    В России 8 (495) 12-123-123
+                                                </p>
+                                            </div>
+                                            <div class="contacts1-communication__email">
+                                                <h4 class="contacts1-communication__titles">
+                                                    E-mail
+                                                </h4>
+                                                <p class="contacts1-communication__subtitles">
+                                                    info@sitename.ru
+                                                </p>
+                                            </div>
+                                            <div class="contacts1-communication__skype">
+                                                <h4 class="contacts1-communication__titles">
+                                                    Skype
+                                                </h4>
+                                                <p class="contacts1-communication__subtitles">
+                                                    skypename
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 p-0 m-0">
+                                        <div class="contacts1-questions">
+                                            <div class="row p-0 m-0">
+                                                <div class="col-xl-12 p-0 m-0">
+                                                    <div class="contacts1-boxTitle">
+                                                        <h3 class="contacts1-boxTitle__title about2-boxTitle__title home1-boxTitle__titlesH3">
+                                                            <strong class="contacts1__title-bigText">Есть
+                                                                вопросы</strong>
+                                                            <br>
+                                                            по переезду в Болгарию?
+                                                        </h3>
+                                                        <p class="contacts1-boxTitle__subtitle about2-boxTitle__subtitle home5-boxTitle__subtitle">
+                                                            Мы проконсультируем
+                                                            <br>
+                                                            Вас бесплатно!
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-12 p-0 m-0">
+                                                    <form class="contacts1-form" action="#">
+                                                        <input class="contacts1-form__nameField contacts1-form__userFields home5-form__userFields"
+                                                               type="text" placeholder="Имя" required>
+                                                        <input class="contacts1-form__emailField contacts1-form__userFields home5-form__userFields"
+                                                               type="email" placeholder="E-mail" required>
+                                                        <input class="contacts1-form__telField contacts1-form__userFields home5-form__userFields"
+                                                               type="tel" placeholder="Телефон" required>
+                                                        <button class="contacts1-form__orderField contacts1-form__userFields home5-form__userFields contacts1-form__userOrder home5-form__userOrder"
+                                                                type="submit">
+                                                            Заказать консультацию
+                                                        </button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<!-- ======= contactsF: footer ======= -->
+<footer id="contactsF">
+    <div class="container p-0">
+        <div class="contactsF">
+            <div class="row p-0 m-0">
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 p-0 m-0">
+                    <div class="contactsF-logo homeF-logo">
+                        <img class="contactsF-logo__img" src="img/home/footer/footer_logo.png" alt="logo">
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 p-0 m-0">
+                    <div class="contactsF-copyright">
+                        <p class="contactsF-copyright__text homeF-copyright__text">
+                            2019 / Все права защищены
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-4 d-md-block d-none p-0 m-0">
+                    <div class="contactsF-confidentiality">
+                        <a class="contactsF-confidentiality__text homeF-confidentiality__text" href="#">
+                            Политика конфиденциальности
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 d-lg-block d-none p-0 m-0">
+                    <div class="contactsF-phone homeF-phone float-right">
+                        <p class="contactsF-phone__text homeH-phone__text">
+                            +7 (495) 12-321-345 <br>
+                            +7 (495) 12-321-345
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

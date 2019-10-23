@@ -1,0 +1,1014 @@
+/* ======= SPECIFICATION: START (поместить это код в начало файла maim.css) ======= */
+
+/* aimRedBox - временный красный контур для удобства отображения границ всего контента страницы. */
+.container {
+    /*border: 0.5px solid red;*/
+}
+
+html {
+    /* Если проект будет верстаться в единицах rem, зададим исходный размер шрифта.
+    Если даже верстать в единицах px, то все равно зададим исходный размер шрифта.  */
+    font-size: 14px;
+}
+
+/* ПРОВЕРКА АДАПТИВНОСТИ: при закоментированном свойстве overflow-x: hidden;
+  не должна появляться горизонтальная прокрутка (скролл). */
+body {
+    /*overflow-x: hidden; !* Все что выпирает за пределы body, будет обрезано. *!*/
+}
+
+body {
+    font-family: 'MuseoSansRegular', Arial, Tahoma, sans-serif;
+    color: #000;
+    padding: 0;
+    margin: 0;
+}
+
+* { /* Включаем Плавность (знак звездочки (*) означает - универсальный селектор для всех элементов). */
+    -moz-transition: all 0.3s ease;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease;
+}
+
+/* Отключаем влияние padding на width и height. */
+div, p, input, textarea, button, form, section, article, header, footer {
+    box-sizing: border-box;
+}
+
+/* Обнуляем padding и margin. */
+div, p, input, textarea, button, form, ul, ol, section, article, header, footer, h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+    margin: 0;
+}
+
+/* Отключаем декорирование по умолчанию. */
+a, a:hover, a:active, a:focus, button, button:hover, button:active, button:focus, input, input:active, input:focus, textarea, textarea:active, textarea:focus {
+    text-decoration: none; /* Отключаем подчеркивание у ссылок и т.д. */
+    outline: none; /* Отключаем подсветку контура кнопки при нажатии (данный эффект добавляется некоторыми браузерами и мешает дизайну). */
+}
+
+p {
+    line-height: 1.5em; /* Высота строки. */
+    letter-spacing: 0.05em; /* Межбуквенный интервал. */
+}
+
+/* Отключаем нумерацию и маркеры у списков. */
+ul, ol {
+    list-style: none;
+}
+
+/* Подсветка активных полей ввода. */
+input:focus {
+    border: 3px solid blueviolet;
+}
+
+/* ------- Глобальный код: START ------- */
+
+section {
+    padding: 90px 0;
+}
+
+.container { /* Для абсолютного позиционирования относительно container. */
+    position: relative;
+}
+
+/* Отключил размер своего container, т.к. у Bootstrap размер уже задан. */
+/*!* Главный контейнер для контента всей страницы (идет вертикально через всю страницу).*/
+/*Большенство сайтов в десктопной верси имеют фиксировнную ширину контейнера: 1170px или 940px или 1366px. *!*/
+/*.container {*/
+/*width: 940px; !* Надо поставить нужное значение для свойства. *!*/
+/*margin: 0 auto;*/
+/*}*/
+
+/* Отключил свой clearfix, т.к. у Bootstrap он уже есть. */
+/*.clearfix::after { !* Это надо в каждом проекте, для float!!! *!*/
+/*content: '';*/
+/*display: table;*/
+/*width: 100%;*/
+/*clear: both;*/
+/*}*/
+
+/* ------- Глобальный код: END ------- */
+
+/* ------- aim Custom Class: START ------- */
+
+.upper { /* aimCustomClass */
+    text-transform: uppercase;
+}
+
+.bolder { /* aimCustomClass */
+    font-weight: 800;
+}
+
+/* ------- aim Custom Class: END ------- */
+
+/* ======= SPECIFICATION: END (поместить это код в начало файла maim.css) ======= */
+
+/* ===================================== */
+/* =========== page: H O M E =========== */
+/* ===================================== */
+
+/* ======= homeH: header ======= */
+
+#homeH, #aboutH, #whyH, #contactsH, #photosH { /* General code. */
+    background: url("../img/home/header/header-webdev-bg.jpg") no-repeat center center / cover;
+    position: relative; /* Для позиционирования .filter-bg. */
+}
+
+.filterMineMenu {
+    height: 77px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.25);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.homeH-logo__img, .aboutH-logo__img, .whyH-logo__img, .contactsH-logo__img, .photosH-logo__img {
+    width: 71%;
+}
+
+.homeH-menu {
+    margin-top: 30px;
+}
+
+.homeH-menu__item-link {
+    font-family: "MuseoSansBlack";
+    text-transform: uppercase;
+    font-size: 0.786rem;
+    letter-spacing: 0.02em;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+.homeH-menu__item-link_active:hover {
+    background: #2A2A2A;
+    color: #fff;
+}
+
+.homeH-phone { /* Общий код в .homeH-phone__text. */
+    background: url("../img/home/footer/footer_phone-dashed-circle.svg") no-repeat left center;
+    margin-top: 19px;
+    padding-left: 46px;
+}
+
+.homeH-phone__text {
+    font-family: "MuseoSansBlack";
+    font-size: 1.143rem;
+    color: #fff;
+}
+
+.homeH-sandwichMenu { /* Для адаптивности. */
+    display: none;
+    padding-right: 3%;
+}
+
+.homeH-sandwichMenu__img {
+    padding-top: 27px;
+    margin-left: 28px;
+}
+
+.homeH-boxTitle {
+    font-family: "MuseoSansLight";
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 203px 0 175px 0;
+}
+
+.homeH-boxTitle__title {
+    font-size: 6.429rem;
+    letter-spacing: 0.37em;
+    padding-bottom: 25px;
+}
+
+.homeH-boxTitle__subtitle {
+    font-size: 3.643rem;
+    letter-spacing: 0.25em;
+}
+
+.homeH-arrowButton {
+    width: 56px;
+    height: 56px;
+    border: none;
+    border-radius: 50%;
+    margin: 0 auto 100px auto;
+    display: block;
+    background: url("../img/home/header/header_arrow-dashed-circle.svg") no-repeat center center;
+}
+
+/* ======= home1: section#1 (advantages) ======= */
+
+#home1 {
+    background: #fff;
+}
+
+.home1-boxTitle__title { /* Общий код в .home1-boxTitle__titlesH3. */
+    padding-bottom: 68px;
+}
+
+.home1-boxTitle__titlesH3 {
+    font-family: "MuseoSansBlack";
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.15em;
+    color: #434343;
+}
+
+.home1-box__items {
+    width: 360px;
+    height: 357px;
+    background: #F4F4F4;
+    text-align: center;
+    box-shadow: 1px 3px 7px rgba(0, 0, 0, 0.2);
+    padding-top: 50px;
+    margin: 0 14px;
+}
+
+.home1-box__items-img {
+    margin: 0 auto;
+    display: block;
+    padding-bottom: 28px;
+}
+
+.home1-box__items-slogan {
+    font-family: "MuseoSansBlack";
+    font-size: 1.429rem;
+    text-transform: uppercase;
+    color: #434343;
+}
+
+.home1-box__items-underline {
+    width: 37px;
+    height: 1px;
+    background: #C6C6C6;
+    margin: 17px auto;
+}
+
+.home1-box__items-text {
+    font-family: "MuseoSansLight";
+    font-size: 1.214rem;
+    color: #636363;
+}
+
+/* ======= home2: section#2 (relocation) ======= */
+
+#home2 {
+    background: url("../img/home/section2/webdev-bg.png") no-repeat center center / cover;
+}
+
+.home2 {
+    color: #fff;
+}
+
+.home2-boxTitle {
+    text-align: center;
+}
+
+.home2-boxTitle__title { /* Общий код в .home1-boxTitle__titlesH3. */
+    padding-bottom: 34px;
+    color: #fff;
+}
+
+.home2-boxTitle__quote {
+    font-family: "MuseoSansLightItalic";
+    font-size: 1.286rem;
+    padding-bottom: 18px;
+}
+
+.home2-boxTitle__author {
+    font-family: "MuseoSansBlack";
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    padding-bottom: 57px;
+}
+
+.home2-question {
+    padding: 57px 0;
+    text-transform: uppercase;
+    text-align: center;
+    border: 2px dashed white;
+    position: relative;
+    margin-bottom: 71px;
+}
+
+.home2-question__arrows {
+    width: 48px;
+    height: 48px;
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.home2-question__arrow1 { /* Общий код в .home2-question__arrows. */
+    top: -13%;
+    left: 47.3%;
+    background: url("../img/home/section2/arrow-dashed-circle.svg") no-repeat center center;
+}
+
+.home2-question__arrow2 { /* Общий код в .home2-question__arrows. */
+    top: 88%;
+    left: 47.3%;
+    background: url("../img/home/section2/arrow-dashed-circle.svg") no-repeat center center;
+}
+
+.home2-question__text1 {
+    font-family: "MuseoSansLight";
+    font-size: 1.357rem;
+    letter-spacing: 0.13em;
+    padding-bottom: 10px;
+}
+
+.home2-question__text2 {
+    font-family: "MuseoSansBlack";
+    font-size: 1.643rem;
+    letter-spacing: 0.15em;
+}
+
+.home2-answer {
+    text-align: center;
+}
+
+.home2-answer__title {
+    font-family: "MuseoSansBlack";
+    font-size: 2.643rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding-bottom: 21px;
+}
+
+.home2-answer__text {
+    font-family: "MuseoSansLight";
+    font-size: 1.286rem;
+    letter-spacing: 0.18em;
+}
+
+/* ======= home3: section#3 (estate) ======= */
+
+#home3 {
+    background: url("../img/home/section3/estate_bg.png") no-repeat center center / cover;
+}
+
+.home3-boxTitle__title { /* Общий код в .home1-boxTitle__titlesH3. */
+    letter-spacing: 0.09em;
+    padding-bottom: 165px;
+    position: relative; /* Для позиционирования .home3-images__houses. */
+    text-align: center;
+}
+
+.home3-images__houses {
+    position: absolute;
+}
+
+.home3-images__house1 {
+    top: 13%;
+    left: 29.5%;
+    z-index: 1;
+    width: 14%;
+    transform: rotate(-22deg);
+}
+
+.home3-images__house2 {
+    top: 11%;
+    left: 42%;
+    z-index: 3; /* Класс .home3-images__house2 выше всех.  */
+    width: 15%;
+}
+
+.home3-images__house3 {
+    top: 14%;
+    left: 55.5%;
+    z-index: 1;
+    width: 14%;
+    transform: rotate(22deg);
+}
+
+/* Для перекрытия классов .home3-images__house1 и .home3-images__house3. */
+.home3-box {
+    position: relative; /* Для работы z-index и для позиционирования .home3-box__imgCircle. */
+    z-index: 2;
+    text-align: center;
+}
+
+.home3-box__sets {
+    font-family: "MuseoSansLight";
+    font-size: 1.214rem;
+    width: 850px;
+    background: #F4F4F4;
+    margin: 0 auto;
+    padding-top: 44px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.home3-box__set1 {
+    height: 194px;
+    margin-bottom: 6px;
+}
+
+.home3-box__imgCircle {
+    position: absolute;
+    top: 49%;
+    left: 46%;
+}
+
+.home3-box__set2 {
+    height: 118px;
+    padding-top: 46px;
+}
+
+/* ======= home4: section#4 (reviews) ======= */
+
+#home4{
+    box-shadow: 61px 3px 40px rgba(112, 115, 122, 0.5);
+}
+
+.home4-boxTitle__title { /* Общий код в .home1-boxTitle__titlesH3. */
+    padding-bottom: 68px;
+}
+
+.home4-box__arrowsLeftRight {
+    width: 20px;
+    height: 34px;
+    margin-top: 88px;
+    margin-left: 60px;
+}
+
+.home4-box__arrowLeft { /* Общий код в .home4-box__arrowsLeftRight. */
+    background: url("../img/home/section4/reviews_arrow-left.svg") no-repeat center center;
+}
+
+.home4-box__arrowRight { /* Общий код в .home4-box__arrowsLeftRight. */
+    background: url("../img/home/section4/reviews_arrow-right.svg") no-repeat center center;
+}
+
+.home4-teacherReview {
+    padding: 44px 42px 0 127px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    position: relative; /* Для позиционирования .home4-teacherReview__userPhoto. */
+}
+
+.home4-teacherReview__userPhoto {
+    position: absolute;
+    top: 11%;
+    right: 89%;
+    width: 21%;
+}
+
+.home4-teacherReview__userProfile {
+    padding-bottom: 14px;
+    font-family: "MuseoSansBlack";
+    text-transform: uppercase;
+}
+
+.home4-teacherReview__userProfile-name {
+    font-size: 1.143rem;
+    letter-spacing: 0.15rem;
+    margin-right: 42px;
+    color: #434343;
+}
+
+.home4-teacherReview__userProfile-vk {
+    font-size: 0.857rem;
+    letter-spacing: 0.1rem;
+    text-decoration: underline;
+    padding-top: 3px;
+    color: #434343;
+}
+
+.home4-teacherReview__userProfile-subject {
+    font-size: 0.857rem;
+    letter-spacing: 0.08rem;
+    padding-top: 3px;
+    color: #434343;
+}
+
+.home4-teacherReview__userArticle {
+    font-family: "MuseoSansLightItalic";
+    font-size: 1rem;
+    padding-bottom: 48px;
+}
+
+.home4-navDots {
+    margin-top: 51px;
+}
+
+.home4-navDots__dots {
+    width: 18px;
+    height: 18px;
+    border: 1px dashed #434343;
+    border-radius: 50%;
+}
+
+.home4-navDots__dot1 { /* Общий код в .home4-navDots__dots. */
+    margin: 0 3% 0 43%;
+}
+
+.home4-navDots__dot2 { /* Общий код в .home4-navDots__dots. */
+    margin-right: 3%;
+    background: #434343;
+}
+
+/* ======= home5: section#5 (questions) ======= */
+
+#home5, #about2, #why2, #photos2 {
+    background: #34383B url("../img/home/section5/questions_bg.png") no-repeat center center / cover;
+    box-shadow: 2px 4px 77px rgba(67, 67, 67, 1);
+}
+
+.home5 {
+    color: #fff;
+}
+
+.home5-boxTitle__title { /* Общий код в .home1-boxTitle__titlesH3. */
+    padding-bottom: 28px;
+    color: #fff;
+}
+
+.home5-boxTitle__subtitle {
+    font-family: "MuseoSansLight";
+    font-size: 1.5rem;
+    letter-spacing: 0.15rem;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 122px;
+    position: relative; /* Для позиционирования стрелки в .home5-boxTitle__arrow. */
+}
+
+.home5-boxTitle__arrow { /* Общий код в .home2-question__arrows. */
+    top: 71%;
+    left: 47.8%;
+    background: url("../img/home/section5/questions_arrow-dashed-circle.svg") no-repeat center center;
+}
+
+.home5-form__userFields {
+    display: block;
+    width: 370px;
+    height: 67px;
+    color: white;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    background: #545657d4;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    margin: 0 auto 9px auto;
+}
+
+.home5-form__userFields::placeholder {
+    color: #fff;
+    opacity: 0.5;
+    font-size: 0.929rem;
+    padding-left: 34px;
+}
+
+.home5-form__userFields:hover {
+    border: 2px solid #fff;
+}
+
+.home5-form__userFields:hover::placeholder {
+    opacity: 1;
+}
+
+.home5-form__userFields:focus {
+    border: 2px solid #fff;
+}
+
+.home5-form__userOrder {
+    font-family: "MuseoSansBlack";
+    font-size: 1.071rem;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.home5-form__messageField {
+    display: block;
+    width: 370px;
+    height: 134px;
+    color: white;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    background: #545657d4;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    margin: 0 auto 9px auto;
+}
+
+.home5-form__messageField::placeholder {
+    color: #fff;
+    opacity: 0.5;
+    font-size: 0.929rem;
+    padding-left: 34px;
+}
+
+.home5-form__messageField:hover {
+    border: 2px solid #fff;
+}
+
+.home5-form__messageField:hover::placeholder {
+    opacity: 1;
+}
+
+.home5-form__messageField:focus {
+    border: 2px solid #fff;
+}
+
+/* ======= homeF: footer ======= */
+
+#homeF, #aboutF, #whyF, #contactsF, #photosF {
+    background: #2c3236;
+    box-shadow: 61px 3px 40px rgba(112, 115, 122, 0.5);
+}
+
+.homeF-logo__img, .aboutF-logo__img, .whyF-logo__img, .contactsF-logo__img, .photosF-logo__img {
+    width: 52%;
+}
+
+.homeF-copyright__text, .homeF-e-mail__text {
+    font-family: "MuseoSansLight";
+    font-size: 1rem;
+    color: #fff;
+    padding-top: 34px;
+    display: inline-block;
+}
+
+.homeF-e-mail__text:hover {
+    color: #fff;
+}
+
+.homeF-e-mail__text:hover::after {
+    content: '.................................................';
+    display: block;
+    color: #fff;
+    margin-top: -12px;
+}
+
+.homeF-phone { /* Общий код в .homeH-phone__text. */
+    background: url("../img/home/footer/footer_phone-dashed-circle.svg") no-repeat left center;
+    margin: 19px 0;
+    padding-left: 46px;
+}
+
+/* =================================== */
+/* =========== page: W H Y =========== */
+/* =================================== */
+
+/* ======= whyH: header ======= */
+
+.whyH-boxTitle {
+    padding: 84px 0 42px 0;
+}
+
+.whyH-boxTitle__title {
+    font-size: 3.643rem;
+    letter-spacing: 0.25em;
+}
+
+.whyH-arrowButton {
+    margin-bottom: 121px;
+}
+
+/* ======= why1: section#1 (partners) ======= */
+
+#why1, #about1, #contacts1 {
+    background: url("../img/why/section1/gears_bg.png") rgba(0,0,0,0.1) no-repeat center center / cover;
+}
+
+.why1 {
+    position: relative; /* Для позиционирования панели в .why1-panel. */
+    height: 1962px;
+}
+
+.why1-panel {
+    background: #fff;
+    padding-top: 50px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: -173px;
+}
+
+.why1-bigMessage {
+    font-family: "MuseoSansBlack";
+    text-transform: uppercase;
+    padding-bottom: 52px;
+}
+
+.why1-slogan__text {
+    background: #434343;
+    font-family: "MuseoSansBlack";
+    font-size: 1.643rem;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+    margin-bottom: 65px;
+}
+
+.why1-boxTitle__title { /* Общий код в .home1-boxTitle__titlesH3. */
+    font-size: 2.071rem;
+    padding-bottom: 68px;
+}
+
+.why1-advantages {
+    padding-bottom: 74px;
+}
+
+.why1-advantages__items {
+    background: #F4F4F4;
+    text-align: center;
+    height: 647px;
+    padding: 37px 35px 0;
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.why1-advantages__items-img {
+    padding-bottom: 30px;
+}
+
+.why1-advantages__items-title {
+    font-family: "MuseoSansBlack";
+    font-size: 2rem;
+    padding-bottom: 18px;
+    color: #434343;
+}
+
+.why1-advantages__items-underline {
+    width: 37px;
+    height: 1px;
+    background: #C6C6C6;
+    margin: 0 auto 23px;
+}
+
+.why1-advantages__items-quote {
+    font-family: "MuseoSansLight";
+    font-size: 1.143rem;
+    color: #636363;
+    text-align: justify;
+}
+
+.why1-advantages__item5 {
+    width: 91.6%;
+    margin: 0 auto;
+    height: 418px;
+}
+
+/* ======= why2: section#2 (questions) ======= */
+
+.why2-boxTitle__title { /* Общий код в .home1-boxTitle__titlesH3. */
+    padding-bottom: 8px;
+    color: #fff;
+}
+
+.why2-boxTitle__subtitle { /* Общий код в .home5-boxTitle__subtitle. */
+    position: relative; /* Для позиционирования стрелки в .home5-boxTitle__arrow. */
+}
+
+.why2-boxTitle__arrow { /* Общий код в .home5-boxTitle__arrow и в .home2-question__arrows. */
+    top: 63%;
+}
+
+/* ======= whyF: footer ======= */
+
+/* Код в whyF полностью замещен общим кодом. */
+
+/* ======================================= */
+/* =========== page: A B O U T =========== */
+/* ======================================= */
+
+/* ======= aboutH: header ======= */
+
+/* Код в aboutH полностью замещен общим кодом. */
+
+/* ======= about1: section#1 (moveThings) ======= */
+
+.about1 { /* Общий код в .why1. */
+    height: 1240px;
+}
+
+.about1-motto__text {
+    font-size: 1.8rem;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.about1-motto__bigText {
+    font-family: "MuseoSansBlack";
+    color: #434343;
+}
+
+.about1-infoAboutMe {
+    padding-bottom: 70px;
+}
+
+.about1-infoAboutMe__part1, .about1-infoAboutMe__part2, .about1-infoAboutMe__part3 {
+    padding-bottom: 60px;
+}
+
+.about1-infoAboutMe__parts-img {
+    border: 2px solid #434343;
+}
+
+.about1-infoAboutMe__part1-img {
+    width: 100%;
+    margin-top: 1%;
+}
+
+.about1-infoAboutMe__part2-img {
+    width: 102%;
+    margin-top: 4%;
+}
+
+.about1-infoAboutMe__part3-img {
+    width: 100%;
+    margin-top: 6%;
+}
+
+.about1-infoAboutMe__part4-img {
+    width: 100%;
+    margin-top: 6%;
+}
+
+.about1-infoAboutMe__part1-text, .about1-infoAboutMe__part2-text, .about1-infoAboutMe__part3-text, .about1-infoAboutMe__part4-text {
+    font-family: "MuseoSansLight";
+    font-size: 1.143rem;
+    color: #636363;
+    text-align: justify;
+}
+
+.about1-infoAboutMe__part2-text {
+    margin-top: 3%;
+}
+
+.about1-infoAboutMe__part3-text {
+    margin-top: 13%;
+}
+
+.about1-infoAboutMe__part4-text {
+    margin-top: 21%;
+}
+
+/* ======= about2: section#2 (questions) ======= */
+
+/* Код в about2 полностью замещен общим кодом. */
+
+/* ======= aboutF: footer ======= */
+
+/* Код в aboutF полностью замещен общим кодом. */
+
+/* ============================================= */
+/* =========== page: C O N T A C T S =========== */
+/* ============================================= */
+
+/* ======= contactsH: header ======= */
+
+/* Код в contactsH полностью замещен общим кодом. */
+
+/* ======= contacts1: section#1 (communicationAndQuestions) ======= */
+
+.contacts1 {
+    height: 505px;
+}
+
+.contacts1-communication-i-questions {
+    padding-bottom: 62px;
+}
+
+.contacts1-communication {
+    padding-left: 54px;
+}
+
+.contacts1-communication__facebook {
+    background: url("../img/contacts/section1/facebook.svg") no-repeat left center;
+    padding: 23px 0 23px 60px;
+}
+
+.contacts1-communication__email {
+    background: url("../img/contacts/section1/email.svg") no-repeat left center;
+    padding: 23px 0 23px 60px;
+}
+
+.contacts1-communication__skype {
+    background: url("../img/contacts/section1/skype.svg") no-repeat left center;
+    padding: 23px 0 23px 60px;
+}
+
+.contacts1-communication__instagram {
+    background: url("../img/contacts/section1/instagram.svg") no-repeat left center;
+    padding: 23px 0 23px 60px;
+}
+
+.contacts1-communication__telegram {
+    background: url("../img/contacts/section1/telegram.svg") no-repeat left center;
+    padding: 23px 0 23px 60px;
+}
+
+.contacts1-communication__whatsapp {
+    background: url("../img/contacts/section1/whatsapp.svg") no-repeat left center;
+    padding: 23px 0 23px 60px;
+}
+
+.contacts1-communication__titles {
+    font-family: "MuseoSansBlack";
+    font-size: 1.286rem;
+    text-transform: uppercase;
+    color: #434343;
+}
+
+.contacts1-communication__subtitles {
+    font-family: "MuseoSansLight";
+    font-size: 1.143rem;
+}
+
+.contacts1-questions {
+    background: #434343;
+    color: #fff;
+    padding: 42px 33px;
+    margin: 21px 56px 0 -30px;
+}
+
+.contacts1-boxTitle__title { /* Общий код в .why2-boxTitle__title. и в .home1-boxTitle__titlesH3. */
+    font-size: 1.17rem;
+    color: #fff;
+}
+
+.contacts1__title-bigText {
+    font-size: 1.786rem;
+}
+
+.contacts1-boxTitle__subtitle { /* Общий код в .why2-boxTitle__subtitle. и в .home5-boxTitle__subtitle. */
+    font-size: 1.286rem;
+    padding-bottom: 32px;
+}
+
+.contacts1-form__userFields { /* Общий код в .home5-form__userFields. */
+    width: 290px;
+    height: 52px;
+}
+
+.contacts1-form__userFields::placeholder { /* Общий код в .home5-form__userFields. */
+    font-size: 0.786rem;
+}
+
+.contacts1-form__messageField {
+    height: 134px;
+}
+
+.contacts1-form__userOrder { /* Общий код в .home5-form__userFields. */
+    font-size: 0.929rem;
+}
+
+/* ======= contactsF: footer ======= */
+
+.contactsF {
+    box-shadow: 2px 4px 77px rgba(67, 67, 67, 1);
+}
+
+/* ============================================= */
+/* =========== page: P H O T O S =============== */
+/* ============================================= */
+
+/* ======= photosH: header ======= */
+
+/* Код в photosH полностью замещен общим кодом. */
+
+/* ======= photos1: section#1 (communicationAndQuestions) ======= */
+
+#photos1 {
+    background: url("../img/photos/flower_bg.jpg") rgba(0,0,0,0.1) no-repeat center center/cover;
+}
+
+.photos1 {
+    height: 7260px;
+}
+
+.photos1-myPhotos__vertical {
+    margin-bottom: 30px;
+}
+
+.photos1-myPhotos__vertical-img {
+    width: 100%;
+    border: 2px solid #434343;
+}
+
+.photos1-myPhotos__horizontal {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.photos1-myPhotos__horizontal-img {
+    width: 75%;
+    border: 2px solid #434343;
+}
+
+/* ======= photos2: section#1 (communicationAndQuestions) ======= */
+
+/* Код в photos2 полностью замещен общим кодом. */
+
+/* ======= photosF: footer ======= */
+
+/* Код в photosF полностью замещен общим кодом. */

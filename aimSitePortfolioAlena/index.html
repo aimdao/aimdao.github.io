@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- *
+    Кодировка страницы: -->
+    <meta charset="UTF-8">
+    <!-- *
+    Адаптивная веб-страницa:
+    Метатег viewport со значением width определяет, соответственно, ширину области просмотра.
+    С помощью ключевого слова device-width будет наследоваться ширина устройства по умолчанию.
+    Для масштабирования сайта на мобильном устройстве, применяются свойства minimum-scale, maximum-scale, initial-scale и user-scalable.
+    Значением initial-scale всегда должно быть положительное целое число от 0 до 10. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Вариант viewport для подключения bootstrap: (ПОКА ОТКЛЮЧЕН) -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+    <!-- *
+    Bootstrap CSS:
+    или через BootstrapCDN или скачиваем и добавляем библиотеки Bootstrap через 
+    файл bootstrap.min.css. Выбираем только один вариант. -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Вариант c файлом bootstrap.min.css для подключения bootstrap: (ПОКА ОТКЛЮЧЕН) -->
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <!-- * 
+    Заголового страницы: -->
+    <title>home_aim_4.4_(Bootstrap)</title>
+    <!-- *
+    Кскадная таблица стилей CSS. -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- * 
+    Шрифт Roboto Slab с сайта fonts.google.com -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700&display=swap" rel="stylesheet">
+    <!-- *
+    Сторонние (кастомные) шрифты (подключаем вручную), лежащие в отдельном файле fonts.css. -->
+    <link rel="stylesheet" href="css/fonts.css">
+    <!-- *
+    Шрифты (иконки) Font Awesome (https://fontawesome.com): -->
+    <!-- 1 вариант подключения (ПОКА ОТКЛЮЧЕН): онлайн, просто прописываем адрес скрипта, находящегося на сайте https://fontawesome.com -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" integrity="sha384-rtJEYb85SiYWgfpCr0jn174XgJTn4rptSOQsMroFBPQSGLdOC5IbubP6lJ35qoM9" crossorigin="anonymous"> -->
+    <!-- 2 вариант подключения: скачиваем библиотеку со шрифтами с сайта https://fontawesome.com, и указываем путь к библиотеке. -->
+    <link rel="stylesheet" href="libs/fontawesome/all.min.css">
+    <!-- *
+    Медиа-запросы: media-for-width.css и media-for-height.css - файлы с медиа-запросами для адаптивной верстки. -->
+    <link rel="stylesheet" href="css/media-for-width.css">
+    <link rel="stylesheet" href="css/media-for-height.css">
+</head>
+<body>
+<!-- Классы для сетки Bootstrap: col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 -->
+
+<!-- ======= homeH: header ======= -->
+<header id="homeH">
+    <!-- Фильтр для главного меню (расположить до container). -->
+    <div class="row p-0 m-0">
+        <div class="col-xl-12 p-0 m-0">
+            <div class="filterMineMenu">
+                <!-- Пустой div для фильтра. -->
+            </div>
+        </div>
+    </div>
+    <div class="container p-0">
+        <div class="homeH">
+            <div class="row p-0 m-0">
+                <div class="col-xl-2 col-lg-8 col-md-6 col-sm-5 col-3 p-0 m-0">
+                    <div class="homeH-logo">
+                        <img class="homeH-logo__img" src="img/home/header/logo-Alena.png" alt="logo">
+                    </div>
+                </div>
+                <div class="col-xl-7 d-xl-block d-none p-0 m-0">
+                    <nav class="homeH-nav">
+                        <ul class="homeH-menu clearfix">
+                            <li class="homeH-menu__item float-left">
+                                <a class="homeH-menu__item-link homeH-menu__item-link_active" href="index.html">
+                                    Home
+                                </a>
+                            </li>
+                            <li class="homeH-menu__item float-left">
+                                <a class="homeH-menu__item-link homeH-menu__item-link_active" href="about_me.html">
+                                    About me
+                                </a>
+                            </li>
+                            <li class="homeH-menu__item float-left">
+                                <a class="homeH-menu__item-link homeH-menu__item-link_active" href="why_humber.html">
+                                    Why Humber?
+                                </a>
+                            </li>
+                            <li class="homeH-menu__item float-left">
+                                <a class="homeH-menu__item-link homeH-menu__item-link_active" href="photos.html">
+                                    My photos
+                                </a>
+                            </li>
+                            <li class="homeH-menu__item float-left">
+                                <a class="homeH-menu__item-link homeH-menu__item-link_active" href="contacts.html">
+                                    Contacts
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-7 col-9 p-0 m-0">
+                    <div class="homeH-phone-i-sandwichMenu clearfix">
+                        <div class="homeH-phone float-left">
+                            <p class="homeH-phone__text">
+                                +7 (960) 874-89-59  <br>
+                                +7 (961) 692-07-77
+                            </p>
+                        </div>
+                        <div class="homeH-sandwichMenu float-right">
+                            <a class="homeH-sandwichMenu__link" href="#">
+                                <img class="homeH-sandwichMenu__img" src="./img/home/header/header_sandwichMenu.svg"
+                                     alt="Img">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row p-0 m-0">
+                <div class="col-xl-12 p-0 m-0">
+                    <div class="homeH-boxTitle">
+                        <h1 class="homeH-boxTitle__title">
+                            Alena Ryakhovskaya
+                        </h1>
+                        <h2 class="homeH-boxTitle__subtitle">
+                            @lionessoul
+                        </h2>
+                    </div>
+                    <button class="homeH-arrowButton" type="button">
+                        <!-- Кнопка без надписи. -->
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+    <!-- ======= home1: section#1 (advantages) ======= -->
+    <section id="home1">
+        <div class="container p-0">
+            <div class="home1">
+                <div class="row p-0 m-0">
+                    <div class="col-xl-12 p-0 m-0">
+                        <div class="home1-boxTitle">
+                            <h3 class="home1-boxTitle__title home1-boxTitle__titlesH3">
+                                I am ready for…
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="home1-box">
+                        <div class="row p-0 m-0">
+                            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 p-0 m-0">
+                                <div class="home1-box__items home1-box__item1">
+                                    <img class="home1-box__items-img"
+                                         src="img/home/section1/diligence.svg" alt="img">
+                                    <h3 class="home1-box__items-slogan">
+                                        Diligence
+                                    </h3>
+                                    <div class="home1-box__items-underline">
+                                        <!-- Пустой блок для линии подчеркивания. -->
+                                    </div>
+                                    <p class="home1-box__items-text">
+                                        I am ready for hard and diligent work. I really want
+                                        to get new knowledge and become a specialist.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 p-0 m-0">
+                                <div class="home1-box__items home1-box__item2">
+                                    <img class="home1-box__items-img" src="img/home/section1/responsible.svg"
+                                         alt="img">
+                                    <h3 class="home1-box__items-slogan">
+                                        Responsible
+                                    </h3>
+                                    <div class="home1-box__items-underline">
+                                        <!-- Пустой блок для линии подчеркивания. -->
+                                    </div>
+                                    <p class="home1-box__items-text">
+                                        I am ready for important tasks, projects and you can
+                                        be sure that I will perform everything in the right time.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 p-0 m-0">
+                                <div class="home1-box__items home1-box__item3">
+                                    <img class="home1-box__items-img" src="img/home/section1/sociability.svg" alt="img">
+                                    <h3 class="home1-box__items-slogan">
+                                        Sociability
+                                    </h3>
+                                    <div class="home1-box__items-underline">
+                                        <!-- Пустой блок для линии подчеркивания. -->
+                                    </div>
+                                    <p class="home1-box__items-text">
+                                        I am ready to work in a team, ready to combine my ideas
+                                        with someone and create joint projects.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ======= home2: section#2 (relocation) ======= -->
+    <section id="home2">
+        <div class="container p-0">
+            <div class="home2">
+                <div class="row p-0 m-0">
+                    <div class="col-xl-12 p-0 m-0">
+                        <div class="home2-boxTitle">
+                            <h3 class="home2-boxTitle__title home1-boxTitle__titlesH3">
+                                Big chance for a little person
+                            </h3>
+                            <p class="home2-boxTitle__quote">
+                                «In the end, only one life is given to man -why not live it properly?»
+                            </p>
+                            <p class="home2-boxTitle__author">
+                                Jack London
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xl-12 p-0 m-0">
+                        <div class="home2-question">
+                            <div class="home2-question__arrow1 home2-question__arrows">
+                                <!-- Для фигуры: arrow-dashed-circle. -->
+                            </div>
+                            <div class="home2-question__arrow2 home2-question__arrows">
+                                <!-- Для фигуры: arrow-dashed-circle. -->
+                            </div>
+                            <p class="home2-question__text1">
+                                Once I asked myself a question
+                            </p>
+                            <p class="home2-question__text2">
+                                Who do I want to be in this life?
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xl-12 p-0 m-0">
+                        <div class="home2-answer">
+                            <h4 class="home2-answer__title">
+                                The answer was obvious
+                            </h4>
+                            <p class="home2-answer__text">
+                                First of all, I want to be a person with a purpose and a
+                                favorite business. That's what Computer Programming has become!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ======= home3: section#3 (estate) ======= -->
+    <section id="home3">
+        <div class="container p-0">
+            <div class="home3">
+                <div class="row p-0 m-0">
+                    <div class="col-xl-12 p-0 m-0">
+                        <div class="home3-boxTitle">
+                            <h3 class="home3-boxTitle__title home1-boxTitle__titlesH3">
+                                What does going to College mean to me
+                            </h3>
+                            <div class="home3-images">
+                                <img class="home3-images__house1 home3-images__houses"
+                                     src="img/home/section3/humber-logo.png" alt="img">
+                                <img class="home3-images__house2 home3-images__houses"
+                                     src="img/home/section3/web-logo.png" alt="img">
+                                <img class="home3-images__house3 home3-images__houses"
+                                     src="img/home/section3/canada-logo.png" alt="img">
+                            </div>
+                        </div>
+                        <div class="home3-box">
+                            <div class="home3-box__set1 home3-box__sets">
+                                <p class="home3-box__set1-text">
+                                    Going to college is a very serious and thoughtful step for me.
+                                    This stage of my life will allow me to become a qualified specialist
+                                    who is really interested in his field of activity. The college will
+                                    help develop my talents and join the teamwork, which is very
+                                    important for a web developer and web-designer
+                                </p>
+                            </div>
+                            <img class="home3-box__imgCircle" src="img/home/section3/estate_circle.svg" alt="img">
+                            <div class="home3-box__set2 home3-box__sets">
+                                <p class="home3-box__set2-text">
+                                    In addition, college education will help to find a prestigious
+                                    job and have a high social status!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ======= home4: section#4 (reviews) ======= -->
+    <section id="home4">
+        <div class="container p-0">
+            <div class="home4">
+                <div class="row p-0 m-0">
+                    <div class="col-xl-12 p-0 m-0">
+                        <div class="home4-boxTitle">
+                            <h3 class="home4-boxTitle__title home1-boxTitle__titlesH3">
+                                Recommendations from my teachers
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="home4-box">
+                    <div class="row p-0 m-0">
+                        <div class="col-xl-2 col-lg-2 col-md-2 d-md-block d-sm-none d-none p-0 m-0">
+                            <div class="home4-box__arrowLeft home4-box__arrowsLeftRight">
+                                <!-- Для фигуры: arrowLeft. -->
+                            </div>
+                        </div>
+                        <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 p-0 m-0">
+                            <div class="home4-teacherReview">
+                                <img class="home4-teacherReview__userPhoto" src="img/home/section4/informatics-teacher.png"
+                                     alt="img">
+                                <div class="home4-teacherReview__userProfile clearfix">
+                                    <p class="home4-teacherReview__userProfile-name float-sm-left float-none">
+                                        Maria Asyutina
+                                    </p>
+                                    <a class="home4-teacherReview__userProfile-vk float-sm-left float-none" href="#">
+                                        vk.com/asyutina
+                                    </a>
+                                    <a class="home4-teacherReview__userProfile-subject float-sm-right float-none" href="#">
+                                        Informatics teacher
+                                    </a>
+                                </div>
+                                <p class="home4-teacherReview__userArticle">
+                                    Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum ac diam sit amet
+                                    quam vehicula elementum sed sit amet dui. Mauris blandit aliquet elit, eget
+                                    tincidunt nibh pulvinar a. Nulla quis lorem ut libero malesuada feugiat. Nulla
+                                    quis lorem ut libero malesuada feugiat.
+                                </p>
+                            </div>
+                            <div class="home4-navDots clearfix">
+                                <div class="home4-navDots__dot1 home4-navDots__dots float-left">
+                                    <!-- Для фигуры: навигационная точка. -->
+                                </div>
+                                <div class="home4-navDots__dot2 home4-navDots__dots float-left">
+                                    <!-- Для фигуры: навигационная точка. -->
+                                </div>
+                                <div class="home4-navDots__dot3 home4-navDots__dots float-left">
+                                    <!-- Для фигуры: навигационная точка. -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-2 col-md-2 d-md-block d-sm-none d-none p-0 m-0">
+                            <div class="home4-box__arrowRight home4-box__arrowsLeftRight">
+                                <!-- Для фигуры: arrow-right. -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ======= home5: section#5 (questions) ======= -->
+    <section id="home5">
+        <div class="container p-0">
+            <div class="home5">
+                <div class="row p-0 m-0">
+                    <div class="col-xl-12 p-0 m-0">
+                        <div class="home5-boxTitle">
+                            <h3 class="home5-boxTitle__title home1-boxTitle__titlesH3">
+                                Contact with me
+                            </h3>
+                            <p class="home5-boxTitle__subtitle">
+                                I'm always on-line!
+                            </p>
+                            <div class="home5-boxTitle__arrow home2-question__arrows">
+                                <!-- Для фигуры: arrow-dashed-circle. -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-12 p-0 m-0">
+                        <form class="home5-form" action="#">
+                            <input class="home5-form__nameField home5-form__userFields" type="text" placeholder="Your name"
+                                   required>
+                            <input class="home5-form__emailField home5-form__userFields" type="email"
+                                   placeholder="Your e-mail" required>
+                            <textarea class="home5-form__messageField" name="message" maxlength="300" placeholder="Your message" required></textarea>
+                            <button class="home5-form__orderField home5-form__userFields home5-form__userOrder"
+                                    type="submit">
+                                Submit
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<!-- ======= homeF: footer ======= -->
+<footer id="homeF">
+    <div class="container p-0">
+        <div class="homeF">
+            <div class="row p-0 m-0">
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 p-0 m-0">
+                    <div class="homeF-logo">
+                        <img class="homeF-logo__img" src="img/home/header/logo-Alena.png" alt="logo">
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 p-0 m-0">
+                    <div class="homeF-copyright">
+                        <p class="homeF-copyright__text">
+                            ©2019 Ryakhovskaya A.V.
+                            <br>
+                            All Rights Reserved
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-4 d-md-block d-none p-0 m-0">
+                    <div class="homeF-e-mail">
+                        <a class="homeF-e-mail__text" href="#">
+                            lionnessoul@gmail.com
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 d-lg-block d-none p-0 m-0">
+                    <div class="homeF-phone float-right">
+                        <p class="homeF-phone__text homeH-phone__text">
+                            +7 (960) 874-89-59  <br>
+                            +7 (961) 692-07-77
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

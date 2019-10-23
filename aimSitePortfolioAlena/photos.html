@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- *
+    Кодировка страницы: -->
+    <meta charset="UTF-8">
+    <!-- *
+    Адаптивная веб-страницa:
+    Метатега viewport со значением width определяет, соответственно, ширину области просмотра.
+    С помощью ключевого слова device-width будет наследоваться ширина устройства по умолчанию.
+    Для масштабирования сайта на мобильном устройстве, применяются свойства minimum-scale, maximum-scale, initial-scale и user-scalable.
+    Значением initial-scale всегда должно быть положительное целое число от 0 до 10. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Вариант viewport для подключения bootstrap: (ПОКА ОТКЛЮЧЕН) -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+    <!-- *
+    Bootstrap CSS:
+    или через BootstrapCDN или скачиваем и добавляем библиотеки Bootstrap через
+    файл bootstrap.min.css. Выбираем только один вариант. -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Вариант c файлом bootstrap.min.css для подключения bootstrap: (ПОКА ОТКЛЮЧЕН) -->
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <!-- *
+    Заголового страницы: -->
+    <title>photos_aim_4.4_(Bootstrap)</title>
+    <!-- *
+    Кскадная таблица стилей CSS. -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- *
+    Шрифт Roboto Slab с сайта fonts.google.com -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700&display=swap" rel="stylesheet">
+    <!-- *
+    Сторонние (кастомные) шрифты (подключаем вручную), лежащие в отдельном файле fonts.css. -->
+    <link rel="stylesheet" href="css/fonts.css">
+    <!-- *
+    Шрифты (иконки) Font Awesome (https://fontawesome.com): -->
+    <!-- 1 вариант подключения (ПОКА ОТКЛЮЧЕН): онлайн, просто прописываем адрес скрипта, находящегося на сайте https://fontawesome.com -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" integrity="sha384-rtJEYb85SiYWgfpCr0jn174XgJTn4rptSOQsMroFBPQSGLdOC5IbubP6lJ35qoM9" crossorigin="anonymous"> -->
+    <!-- 2 вариант подключения: скачиваем библиотеку со шрифтами с сайта https://fontawesome.com, и указываем путь к библиотеке. -->
+    <link rel="stylesheet" href="libs/fontawesome/all.min.css">
+    <!-- *
+    Медиа-запросы: media-for-width.css и media-for-height.css - файлы с медиа-запросами для адаптивной верстки. -->
+    <link rel="stylesheet" href="css/media-for-width.css">
+    <link rel="stylesheet" href="css/media-for-height.css">
+</head>
+<body>
+<!-- Классы для сетки Bootstrap: col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 -->
+
+<!-- ======= photosH: header ======= -->
+<header id="photosH">
+    <!-- Фильтр для главного меню (расположить до container). -->
+    <div class="row p-0 m-0">
+        <div class="col-xl-12 p-0 m-0">
+            <div class="filterMineMenu">
+                <!-- Пустой div для фильтра. -->
+            </div>
+        </div>
+    </div>
+    <div class="container p-0">
+        <div class="photosH">
+            <div class="row p-0 m-0">
+                <div class="col-xl-2 col-lg-8 col-md-6 col-sm-5 col-3 p-0 m-0">
+                    <div class="photosH-logo">
+                        <img class="photosH-logo__img" src="img/home/header/logo-Alena.png" alt="logo">
+                    </div>
+                </div>
+                <div class="col-xl-7 d-xl-block d-none p-0 m-0">
+                    <nav class="photosH-nav">
+                        <ul class="photosH-menu homeH-menu clearfix">
+                            <li class="photosH-menu__item float-left">
+                                <a class="photosH-menu__item-link homeH-menu__item-link homeH-menu__item-link_active"
+                                   href="index.html">
+                                    Home
+                                </a>
+                            </li>
+                            <li class="photosH-menu__item float-left">
+                                <a class="photosH-menu__item-link homeH-menu__item-link homeH-menu__item-link_active"
+                                   href="about_me.html">
+                                    About me
+                                </a>
+                            </li>
+                            <li class="photosH-menu__item float-left">
+                                <a class="photosH-menu__item-link homeH-menu__item-link homeH-menu__item-link_active"
+                                   href="why_humber.html">
+                                    Why Humber?
+                                </a>
+                            </li>
+                            <li class="photosH-menu__item float-left">
+                                <a class="photosH-menu__item-link homeH-menu__item-link homeH-menu__item-link_active"
+                                   href="photos.html">
+                                    My photos
+                                </a>
+                            </li>
+                            <li class="photosH-menu__item float-left">
+                                <a class="photosH-menu__item-link homeH-menu__item-link homeH-menu__item-link_active"
+                                   href="contacts.html">
+                                    Contacts
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-7 col-9 p-0 m-0">
+                    <div class="homeH-phone-i-sandwichMenu clearfix">
+                        <div class="homeH-phone float-left">
+                            <p class="homeH-phone__text">
+                                +7 (960) 874-89-59  <br>
+                                +7 (961) 692-07-77
+                            </p>
+                        </div>
+                        <div class="homeH-sandwichMenu float-right">
+                            <a class="homeH-sandwichMenu__link" href="#">
+                                <img class="homeH-sandwichMenu__img" src="./img/home/header/header_sandwichMenu.svg"
+                                     alt="Img">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row p-0 m-0">
+                <div class="col-xl-12 p-0 m-0">
+                    <div class="photosH-boxTitle whyH-boxTitle homeH-boxTitle">
+                        <h1 class="photosH-boxTitle__title whyH-boxTitle__title">
+                            My photos
+                        </h1>
+                    </div>
+                    <button class="photosH-arrowButton whyH-arrowButton homeH-arrowButton" type="button">
+                        <!-- Кнопка без надписи. -->
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+    <!-- ======= photos1: section#1 (partners) ======= -->
+    <section id="photos1">
+        <div class="container p-0">
+            <div class="photos1 why1">
+                <div class="photos1-myPhotos">
+                    <div class="row p-0 m-0 justify-content-md-around">
+                        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 p-0 m-0">
+                            <div class="photos1-myPhotos__vertical">
+                                <img class="photos1-myPhotos__vertical-img" src="img/photos/ver/ver_01_photos.jpg"
+                                     alt="Img">
+                            </div>
+                        </div>
+                        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 p-0 m-0">
+                            <div class="photos1-myPhotos__vertical">
+                                <img class="photos1-myPhotos__vertical-img" src="img/photos/ver/ver_02_photos.jpg"
+                                     alt="Img">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row p-0 m-0">
+                        <div class="col-xl-12 p-0 m-0">
+                            <div class="photos1-myPhotos__horizontal">
+                                <img class="photos1-myPhotos__horizontal-img" src="img/photos/hor/hor_01_photos.jpg"
+                                     alt="Img">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row p-0 m-0 justify-content-md-around">
+                        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 p-0 m-0">
+                            <div class="photos1-myPhotos__vertical">
+                                <img class="photos1-myPhotos__vertical-img" src="img/photos/ver/ver_03_photos.jpg"
+                                     alt="Img">
+                            </div>
+                        </div>
+                        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 p-0 m-0">
+                            <div class="photos1-myPhotos__vertical">
+                                <img class="photos1-myPhotos__vertical-img" src="img/photos/ver/ver_04_photos.jpg"
+                                     alt="Img">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row p-0 m-0">
+                        <div class="col-xl-12 p-0 m-0">
+                            <div class="photos1-myPhotos__horizontal">
+                                <img class="photos1-myPhotos__horizontal-img" src="img/photos/hor/hor_02_photos.jpg"
+                                     alt="Img">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row p-0 m-0 justify-content-md-around">
+                        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 p-0 m-0">
+                            <div class="photos1-myPhotos__vertical">
+                                <img class="photos1-myPhotos__vertical-img" src="img/photos/ver/ver_05_photos.jpg"
+                                     alt="Img">
+                            </div>
+                        </div>
+                        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 p-0 m-0">
+                            <div class="photos1-myPhotos__vertical">
+                                <img class="photos1-myPhotos__vertical-img" src="img/photos/ver/ver_06_photos.jpg"
+                                     alt="Img">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row p-0 m-0">
+                        <div class="col-xl-12 p-0 m-0">
+                            <div class="photos1-myPhotos__horizontal">
+                                <img class="photos1-myPhotos__horizontal-img" src="img/photos/hor/hor_03_photos.jpg"
+                                     alt="Img">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row p-0 m-0 justify-content-md-around">
+                        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 p-0 m-0">
+                            <div class="photos1-myPhotos__vertical">
+                                <img class="photos1-myPhotos__vertical-img" src="img/photos/ver/ver_07_photos.jpg"
+                                     alt="Img">
+                            </div>
+                        </div>
+                        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 p-0 m-0">
+                            <div class="photos1-myPhotos__vertical">
+                                <img class="photos1-myPhotos__vertical-img" src="img/photos/ver/ver_08_photos.jpg"
+                                     alt="Img">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row p-0 m-0">
+                        <div class="col-xl-12 p-0 m-0">
+                            <div class="photos1-myPhotos__horizontal">
+                                <img class="photos1-myPhotos__horizontal-img" src="img/photos/hor/hor_04_photos.jpg"
+                                     alt="Img">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row p-0 m-0 justify-content-md-around">
+                        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 p-0 m-0">
+                            <div class="photos1-myPhotos__vertical">
+                                <img class="photos1-myPhotos__vertical-img" src="img/photos/ver/ver_09_photos.jpg"
+                                     alt="Img">
+                            </div>
+                        </div>
+                        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 p-0 m-0">
+                            <div class="photos1-myPhotos__vertical">
+                                <img class="photos1-myPhotos__vertical-img" src="img/photos/ver/ver_10_photos.jpg"
+                                     alt="Img">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row p-0 m-0">
+                        <div class="col-xl-12 p-0 m-0">
+                            <div class="photos1-myPhotos__horizontal">
+                                <img class="photos1-myPhotos__horizontal-img" src="img/photos/hor/hor_05_photos.jpg"
+                                     alt="Img">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row p-0 m-0 justify-content-md-around">
+                        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 p-0 m-0">
+                            <div class="photos1-myPhotos__vertical">
+                                <img class="photos1-myPhotos__vertical-img" src="img/photos/ver/ver_11_photos.jpg"
+                                     alt="Img">
+                            </div>
+                        </div>
+                        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 p-0 m-0">
+                            <div class="photos1-myPhotos__vertical">
+                                <img class="photos1-myPhotos__vertical-img" src="img/photos/ver/ver_12_photos.jpg"
+                                     alt="Img">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row p-0 m-0">
+                        <div class="col-xl-12 p-0 m-0">
+                            <div class="photos1-myPhotos__horizontal">
+                                <img class="photos1-myPhotos__horizontal-img" src="img/photos/hor/hor_06_photos.jpg"
+                                     alt="Img">
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ======= photos2: section#2 (questions) ======= -->
+    <section id="photos2">
+        <div class="container p-0">
+            <div class="photos2 home5">
+                <div class="row p-0 m-0">
+                    <div class="col-xl-12 p-0 m-0">
+                        <div class="photos2-boxTitle">
+                            <h3 class="photos2-boxTitle__title why2-boxTitle__title home1-boxTitle__titlesH3">
+                                Contact with me
+                            </h3>
+                            <p class="photos2-boxTitle__subtitle home5-boxTitle__subtitle">
+                                I'm always on-line!
+                            </p>
+                            <div class="photos2-boxTitle__arrow why2-boxTitle__arrow home5-boxTitle__arrow home2-question__arrows">
+                                <!-- Для фигуры: arrow-dashed-circle. -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-12 p-0 m-0">
+                        <form class="photos2-form" action="#">
+                            <input class="photos2-form__nameField photos2-form__userFields home5-form__userFields"
+                                   type="text" placeholder="Your name"
+                                   required>
+                            <input class="photos2-form__emailField photos2-form__userFields home5-form__userFields"
+                                   type="email"
+                                   placeholder="Your e-mail" required>
+                            <textarea class="photos2-form__messageField home5-form__messageField" name="message" maxlength="300" placeholder="Your message" required></textarea>
+                            <button class="photos2-form__orderField photos2-form__userFields home5-form__userFields photos2-form__userOrder home5-form__userOrder"
+                                    type="submit">
+                                Submit
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<!-- ======= photosF: footer ======= -->
+<footer id="photosF">
+    <div class="container p-0">
+        <div class="photosF">
+            <div class="row p-0 m-0">
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 p-0 m-0">
+                    <div class="photosF-logo homeF-logo">
+                        <img class="photosF-logo__img" src="img/home/header/logo-Alena.png" alt="logo">
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 p-0 m-0">
+                    <div class="photosF-copyright">
+                        <p class="photosF-copyright__text homeF-copyright__text">
+                            ©2019 Ryakhovskaya A.V.
+                            <br>
+                            All Rights Reserved
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-4 d-md-block d-none p-0 m-0">
+                    <div class="photosF-e-mail">
+                        <a class="photosF-e-mail__text homeF-e-mail__text" href="#">
+                            lionnessoul@gmail.com
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 d-lg-block d-none p-0 m-0">
+                    <div class="photosF-phone homeF-phone float-right">
+                        <p class="photosF-phone__text homeH-phone__text">
+                            +7 (960) 874-89-59  <br>
+                            +7 (961) 692-07-77
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

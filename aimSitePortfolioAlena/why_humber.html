@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- *
+    Кодировка страницы: -->
+    <meta charset="UTF-8">
+    <!-- *
+    Адаптивная веб-страницa:
+    Метатега viewport со значением width определяет, соответственно, ширину области просмотра.
+    С помощью ключевого слова device-width будет наследоваться ширина устройства по умолчанию.
+    Для масштабирования сайта на мобильном устройстве, применяются свойства minimum-scale, maximum-scale, initial-scale и user-scalable.
+    Значением initial-scale всегда должно быть положительное целое число от 0 до 10. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Вариант viewport для подключения bootstrap: (ПОКА ОТКЛЮЧЕН) -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+    <!-- *
+    Bootstrap CSS:
+    или через BootstrapCDN или скачиваем и добавляем библиотеки Bootstrap через
+    файл bootstrap.min.css. Выбираем только один вариант. -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Вариант c файлом bootstrap.min.css для подключения bootstrap: (ПОКА ОТКЛЮЧЕН) -->
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <!-- *
+    Заголового страницы: -->
+    <title>why_aim_4.4_(Bootstrap)</title>
+    <!-- *
+    Кскадная таблица стилей CSS. -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- *
+    Шрифт Roboto Slab с сайта fonts.google.com -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700&display=swap" rel="stylesheet">
+    <!-- *
+    Сторонние (кастомные) шрифты (подключаем вручную), лежащие в отдельном файле fonts.css. -->
+    <link rel="stylesheet" href="css/fonts.css">
+    <!-- *
+    Шрифты (иконки) Font Awesome (https://fontawesome.com): -->
+    <!-- 1 вариант подключения (ПОКА ОТКЛЮЧЕН): онлайн, просто прописываем адрес скрипта, находящегося на сайте https://fontawesome.com -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" integrity="sha384-rtJEYb85SiYWgfpCr0jn174XgJTn4rptSOQsMroFBPQSGLdOC5IbubP6lJ35qoM9" crossorigin="anonymous"> -->
+    <!-- 2 вариант подключения: скачиваем библиотеку со шрифтами с сайта https://fontawesome.com, и указываем путь к библиотеке. -->
+    <link rel="stylesheet" href="libs/fontawesome/all.min.css">
+    <!-- *
+    Медиа-запросы: media-for-width.css и media-for-height.css - файлы с медиа-запросами для адаптивной верстки. -->
+    <link rel="stylesheet" href="css/media-for-width.css">
+    <link rel="stylesheet" href="css/media-for-height.css">
+</head>
+<body>
+<!-- Классы для сетки Bootstrap: col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 -->
+
+<!-- ======= whyH: header ======= -->
+<header id="whyH">
+    <!-- Фильтр для главного меню (расположить до container). -->
+    <div class="row p-0 m-0">
+        <div class="col-xl-12 p-0 m-0">
+            <div class="filterMineMenu">
+                <!-- Пустой div для фильтра. -->
+            </div>
+        </div>
+    </div>
+    <div class="container p-0">
+        <div class="whyH">
+            <div class="row p-0 m-0">
+                <div class="col-xl-2 col-lg-8 col-md-6 col-sm-5 col-3 p-0 m-0">
+                    <div class="whyH-logo">
+                        <img class="whyH-logo__img" src="img/home/header/logo-Alena.png" alt="logo">
+                    </div>
+                </div>
+                <div class="col-xl-7 d-xl-block d-none p-0 m-0">
+                    <nav class="whyH-nav">
+                        <ul class="whyH-menu homeH-menu clearfix">
+                            <li class="whyH-menu__item float-left">
+                                <a class="whyH-menu__item-link homeH-menu__item-link homeH-menu__item-link_active"
+                                   href="index.html">
+                                    Home
+                                </a>
+                            </li>
+                            <li class="whyH-menu__item float-left">
+                                <a class="whyH-menu__item-link homeH-menu__item-link homeH-menu__item-link_active"
+                                   href="about_me.html">
+                                    About me
+                                </a>
+                            </li>
+                            <li class="whyH-menu__item float-left">
+                                <a class="whyH-menu__item-link homeH-menu__item-link homeH-menu__item-link_active"
+                                   href="why_humber.html">
+                                    Why Humber?
+                                </a>
+                            </li>
+                            <li class="whyH-menu__item float-left">
+                                <a class="whyH-menu__item-link homeH-menu__item-link homeH-menu__item-link_active"
+                                   href="photos.html">
+                                    My photos
+                                </a>
+                            </li>
+                            <li class="whyH-menu__item float-left">
+                                <a class="whyH-menu__item-link homeH-menu__item-link homeH-menu__item-link_active"
+                                   href="contacts.html">
+                                    Contacts
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-7 col-9 p-0 m-0">
+                    <div class="homeH-phone-i-sandwichMenu clearfix">
+                        <div class="homeH-phone float-left">
+                            <p class="homeH-phone__text">
+                                +7 (960) 874-89-59  <br>
+                                +7 (961) 692-07-77
+                            </p>
+                        </div>
+                        <div class="homeH-sandwichMenu float-right">
+                            <a class="homeH-sandwichMenu__link" href="#">
+                                <img class="homeH-sandwichMenu__img" src="./img/home/header/header_sandwichMenu.svg"
+                                     alt="Img">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row p-0 m-0">
+                <div class="col-xl-12 p-0 m-0">
+                    <div class="whyH-boxTitle homeH-boxTitle">
+                        <h1 class="whyH-boxTitle__title">
+                            Why Humber?
+                        </h1>
+                    </div>
+                    <button class="whyH-arrowButton homeH-arrowButton" type="button">
+                        <!-- Кнопка без надписи. -->
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+    <!-- ======= why1: section#1 (partners) ======= -->
+    <section id="why1">
+        <div class="container p-0">
+            <div class="why1">
+                <div class="row justify-content-center p-0 m-0">
+                    <div class="col-xl-10 p-0 m-0">
+                        <div class="why1-panel">
+                            <div class="why1-slogan">
+                                <div class="row p-0 m-0">
+                                    <div class="col-xl-12 p-0 m-0">
+                                        <p class="why1-slogan__text">
+                                            Because
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="why1-boxTitle">
+                                <div class="row p-0 m-0">
+                                    <div class="col-xl-12 p-0 m-0">
+                                        <h3 class="why1-boxTitle__title home1-boxTitle__titlesH3">
+                                            The most important for me is...
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="why1-advantages">
+                                <div class="row p-0 m-0 justify-content-md-around">
+                                    <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 p-0 m-0">
+                                        <div class="why1-advantages__items why1-advantages__item1">
+                                            <img class="why1-advantages__items-img" src="img/why/section1/specialty.svg"
+                                                 alt="Img">
+                                            <h4 class="why1-advantages__items-title">
+                                                Specialty
+                                            </h4>
+                                            <div class="why1-advantages__items-underline">
+                                                <!-- Пустой div для линии подчеркивания. -->
+                                            </div>
+                                            <blockquote class="why1-advantages__items-quote">
+                                                I am amazed at the number of specialties offered, their diversity
+                                                and the social life of Humber. It was in "Humber" that I managed
+                                                to find the specialty that I had been looking for so long, or rather,
+                                                "Multimedia Design and Development". Someone may ask why “Humber”,
+                                                when other colleges also have this specialty? The main reason I
+                                                chose is a detailed description of the classes of each semester,
+                                                which ideally fit the criteria I have expected.  Photoshop, Final Cut Pro;
+                                                web technologies such as HTML5, Cascading Style Sheets (CSS3),
+                                                JavaScript, jQuery. This is exactly the development environments
+                                                that I would like to work in!
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 p-0 m-0">
+                                        <div class="why1-advantages__items why1-advantages__item2">
+                                            <img class="why1-advantages__items-img" src="img/why/section1/workAfterGraduation.svg"
+                                                 alt="Img">
+                                            <h4 class="why1-advantages__items-title">
+                                                Work after graduation
+                                            </h4>
+                                            <div class="why1-advantages__items-underline">
+                                                <!-- Пустой div для линии подчеркивания. -->
+                                            </div>
+                                            <blockquote class="why1-advantages__items-quote">
+                                                After reading a lot of information about the Humber, I found out that
+                                                83% of students who graduated from your college find work within 6
+                                                months, which is a very high rate! For me personally, this means that
+                                                you provide very high-quality knowledge because of which the employer
+                                                is ready to accept prospective employees in his company. This is important
+                                                for me, because in the future I want to have a good career growth!
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row p-0 m-0 justify-content-md-around">
+                                    <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 p-0 m-0">
+                                        <div class="why1-advantages__items why1-advantages__item3">
+                                            <img class="why1-advantages__items-img" src="img/why/section1/practice.svg"
+                                                 alt="Img">
+                                            <h4 class="why1-advantages__items-title">
+                                                Practice
+                                            </h4>
+                                            <div class="why1-advantages__items-underline">
+                                                <!-- Пустой div для линии подчеркивания. -->
+                                            </div>
+                                            <blockquote class="why1-advantages__items-quote">
+                                                I am very attracted to the fact that "Humber" provides work practice
+                                                already during the educational process. I believe that this will help
+                                                me develop my skills at a higher level and prepare for the beginning
+                                                of the work process during the last semester. Practice in computer
+                                                programming is one of the main components of becoming a good specialist,
+                                                which is why I would like to study at Humber!
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 p-0 m-0">
+                                        <div class="why1-advantages__items why1-advantages__item4">
+                                            <img class="why1-advantages__items-img" src="img/why/section1/reviews.svg"
+                                                 alt="Img">
+                                            <h4 class="why1-advantages__items-title">
+                                                Reviews
+                                            </h4>
+                                            <div class="why1-advantages__items-underline">
+                                                <!-- Пустой div для линии подчеркивания. -->
+                                            </div>
+                                            <blockquote class="why1-advantages__items-quote">
+                                                As a rule, we all draw our conclusions about something based on feedback
+                                                and recommendations. Before submitting documents to "Humber" I carefully
+                                                studied the reviews about this institution and made sure that my choice
+                                                was correct. Most of the real Humber students talk about the high
+                                                professionalism of your teachers, the high quality of the knowledge
+                                                provided, the friendly atmosphere and the wonderful working atmosphere
+                                                in your institution!
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row p-0 m-0">
+                                    <div class="col-xl-12 p-0 m-0">
+                                        <div class="why1-advantages__items why1-advantages__item5">
+                                            <img class="why1-advantages__items-img" src="img/why/section1/questionWhy.svg"
+                                                 alt="Img">
+                                            <h4 class="why1-advantages__items-title">
+                                                Still why Humber?
+                                            </h4>
+                                            <div class="why1-advantages__items-underline">
+                                                <!-- Пустой div для линии подчеркивания. -->
+                                            </div>
+                                            <blockquote class="why1-advantages__items-quote">
+                                                In general, I would like to say that Humber really attracted me with
+                                                the quality of the education offered, the reviews from former and current
+                                                students, the practice provided, it’s active social life, and the friendly
+                                                atmosphere. Study in your College would be a significant step in my life,
+                                                after which I could proudly say that I became a "Humber" graduate and
+                                                prove myself as a real specialist.
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ======= why2: section#2 (questions) ======= -->
+    <section id="why2">
+        <div class="container p-0">
+            <div class="why2 home5">
+                <div class="row p-0 m-0">
+                    <div class="col-xl-12 p-0 m-0">
+                        <div class="why2-boxTitle">
+                            <h3 class="why2-boxTitle__title home1-boxTitle__titlesH3">
+                                Contact with me
+                            </h3>
+                            <p class="why2-boxTitle__subtitle home5-boxTitle__subtitle">
+                                I'm always on-line!
+                            </p>
+                            <div class="why2-boxTitle__arrow home5-boxTitle__arrow home2-question__arrows">
+                                <!-- Для фигуры: arrow-dashed-circle. -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-12 p-0 m-0">
+                        <form class="why2-form" action="#">
+                            <input class="why2-form__nameField why2-form__userFields home5-form__userFields"
+                                   type="text" placeholder="Your name"
+                                   required>
+                            <input class="why2-form__emailField why2-form__userFields home5-form__userFields"
+                                   type="email"
+                                   placeholder="Your e-mail" required>
+                            <textarea class="why2-form__messageField home5-form__messageField" name="message" maxlength="300" placeholder="Your message" required></textarea>
+                            <button class="why2-form__orderField why2-form__userFields home5-form__userFields why2-form__userOrder home5-form__userOrder"
+                                    type="submit">
+                                Submit
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<!-- ======= whyF: footer ======= -->
+<footer id="whyF">
+    <div class="container p-0">
+        <div class="whyF">
+            <div class="row p-0 m-0">
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 p-0 m-0">
+                    <div class="whyF-logo homeF-logo">
+                        <img class="whyF-logo__img" src="img/home/header/logo-Alena.png" alt="logo">
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 p-0 m-0">
+                    <div class="whyF-copyright">
+                        <p class="whyF-copyright__text homeF-copyright__text">
+                            ©2019 Ryakhovskaya A.V.
+                            <br>
+                            All Rights Reserved
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-4 d-md-block d-none p-0 m-0">
+                    <div class="whyF-e-mail">
+                        <a class="whyF-e-mail__text homeF-e-mail__text" href="#">
+                            lionnessoul@gmail.com
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 d-lg-block d-none p-0 m-0">
+                    <div class="whyF-phone homeF-phone float-right">
+                        <p class="whyF-phone__text homeH-phone__text">
+                            +7 (960) 874-89-59  <br>
+                            +7 (961) 692-07-77
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

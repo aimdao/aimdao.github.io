@@ -1,0 +1,120 @@
+/*
+Высота экранов (height) для медиа-запросов:
+- iPad Pro (12.9inch) (portrait)
+    (height от ... до 1366px включительно)
+- iPad Pro (10.5inch) (portrait)
+    (height от ... до 1112px включительно)
+- iPad Pro (12.9inch) (landscape), iPad (portrait), iPad mini (portrait)
+    (height от ... до 1024px включительно)
+- iPhone X Max (portrait)
+    (height от ... до 896px включительно)
+- iPad Pro (10.5inch) (landscape)
+    (height от ... до 834px включительно)
+- iPhone X (portrait)
+    (height от ... до 812px включительно)
+- iPad (landscape), iPad mini (landscape)
+    (height от ... до 768px включительно)
+- iPhone 6,7,8 Plus (portrait)
+    (height от ... до 736px включительно)
+- iPhone 6,7,8 (portrait)
+    (height от ... до 667px включительно)
+- iPhone 5,SE (portrait)
+    (height от ... до 568px включительно)
+- iPhone X Max (landscape), iPhone 6,7,8 Plus (landscape)
+    (height от ... до 414px включительно)
+- iPhone X (landscape), iPhone 6,7,8 (landscape)
+    (height от ... до 375px включительно)
+- iPhone 5,SE (landscape)
+    (height от ... до 320px включительно)
+*/
+
+/* iPad Pro (12.9inch) (portrait) (height от ... до 1366px включительно) */
+@media screen and (max-height: 1366px) {
+    .main-screen-middle__header-box {
+        padding: 480px 0 550px;
+    }
+}
+
+/* iPad Pro (10.5inch) (portrait) (height от ... до 1112px включительно) */
+@media screen and (max-height: 1112px) {
+    .main-screen-middle__header-box {
+        padding: 384px 0 430px;
+    }
+}
+
+/* iPad Pro (12.9inch) (landscape), iPad (portrait), iPad mini (portrait) (height от ... до 1024px включительно) */
+@media screen and (max-height: 1024px) {
+    .main-screen-middle__header-box {
+        padding: 300px 0 374px;
+    }
+}
+
+/* iPhone X Max (portrait) (height от ... до 896px включительно) */
+@media screen and (max-height: 896px) {
+    .main-screen-middle__header-box {
+        padding: 234px 0 242px;
+    }
+}
+
+/* iPad Pro (10.5inch) (landscape) (height от ... до 834px включительно) */
+@media screen and (max-height: 834px) {
+    .main-screen-middle__header-box {
+        padding: 262px 0 258px;
+    }
+}
+
+/* iPhone X (portrait) (height от ... до 812px включительно) */
+@media screen and (max-height: 812px) {
+    .main-screen-middle__header-box {
+        padding: 210px 0 182px;
+    }
+}
+
+/* iPad (landscape), iPad mini (landscape) (height от ... до 768px включительно) */
+@media screen and (max-height: 768px) {
+    .main-screen-middle__header-box {
+        padding: 236px 0 228px;
+    }
+}
+
+/* iPhone 6,7,8 Plus (portrait) (height от ... до 736px включительно) */
+@media screen and (max-height: 736px) {
+    .main-screen-middle__header-box {
+        padding: 164px 0 154px;
+    }
+}
+
+/* iPhone 6,7,8 (portrait) (height от ... до 667px включительно) */
+@media screen and (max-height: 667px) {
+    .main-screen-middle__header-box {
+        padding: 120px 0 130px;
+    }
+}
+
+/* iPhone 5,SE (portrait) (height от ... до 568px включительно) */
+@media screen and (max-height: 568px) {
+    .main-screen-middle__header-box {
+        padding: 82px 0 72px;
+    }
+}
+
+/* iPhone X Max (landscape), iPhone 6,7,8 Plus (landscape) (height от ... до 414px включительно) */
+@media screen and (max-height: 414px) {
+    .main-screen-middle__header-box {
+        padding: 54px 0 44px;
+    }
+}
+
+/* iPhone X (landscape), iPhone 6,7,8 (landscape) (height от ... до 375px включительно) */
+@media screen and (max-height: 375px) {
+    .main-screen-middle__header-box {
+        padding: 38px 0 28px;
+    }
+}
+
+/* iPhone 5,SE (landscape) (height от ... до 320px включительно) */
+@media screen and (max-height: 320px) {
+    .main-screen-middle__header-box {
+        padding: 16px 0 6px;
+    }
+}

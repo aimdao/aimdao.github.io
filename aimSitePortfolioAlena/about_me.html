@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- *
+    Кодировка страницы: -->
+    <meta charset="UTF-8">
+    <!-- *
+    Адаптивная веб-страницa:
+    Метатега viewport со значением width определяет, соответственно, ширину области просмотра.
+    С помощью ключевого слова device-width будет наследоваться ширина устройства по умолчанию.
+    Для масштабирования сайта на мобильном устройстве, применяются свойства minimum-scale, maximum-scale, initial-scale и user-scalable.
+    Значением initial-scale всегда должно быть положительное целое число от 0 до 10. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Вариант viewport для подключения bootstrap: (ПОКА ОТКЛЮЧЕН) -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+    <!-- *
+    Bootstrap CSS:
+    или через BootstrapCDN или скачиваем и добавляем библиотеки Bootstrap через
+    файл bootstrap.min.css. Выбираем только один вариант. -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Вариант c файлом bootstrap.min.css для подключения bootstrap: (ПОКА ОТКЛЮЧЕН) -->
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <!-- *
+    Заголового страницы: -->
+    <title>about_aim_4.4_(Bootstrap)</title>
+    <!-- *
+    Кскадная таблица стилей CSS. -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- *
+    Шрифт Roboto Slab с сайта fonts.google.com -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700&display=swap" rel="stylesheet">
+    <!-- *
+    Сторонние (кастомные) шрифты (подключаем вручную), лежащие в отдельном файле fonts.css. -->
+    <link rel="stylesheet" href="css/fonts.css">
+    <!-- *
+    Шрифты (иконки) Font Awesome (https://fontawesome.com): -->
+    <!-- 1 вариант подключения (ПОКА ОТКЛЮЧЕН): онлайн, просто прописываем адрес скрипта, находящегося на сайте https://fontawesome.com -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" integrity="sha384-rtJEYb85SiYWgfpCr0jn174XgJTn4rptSOQsMroFBPQSGLdOC5IbubP6lJ35qoM9" crossorigin="anonymous"> -->
+    <!-- 2 вариант подключения: скачиваем библиотеку со шрифтами с сайта https://fontawesome.com, и указываем путь к библиотеке. -->
+    <link rel="stylesheet" href="libs/fontawesome/all.min.css">
+    <!-- *
+    Медиа-запросы: media-for-width.css и media-for-height.css - файлы с медиа-запросами для адаптивной верстки. -->
+    <link rel="stylesheet" href="css/media-for-width.css">
+    <link rel="stylesheet" href="css/media-for-height.css">
+</head>
+<body>
+<!-- Классы для сетки Bootstrap: col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 -->
+
+<!-- ======= aboutH: header ======= -->
+<header id="aboutH">
+    <!-- Фильтр для главного меню (расположить до container). -->
+    <div class="row p-0 m-0">
+        <div class="col-xl-12 p-0 m-0">
+            <div class="filterMineMenu">
+                <!-- Пустой div для фильтра. -->
+            </div>
+        </div>
+    </div>
+    <div class="container p-0">
+        <div class="aboutH">
+            <div class="row p-0 m-0">
+                <div class="col-xl-2 col-lg-8 col-md-6 col-sm-5 col-3 p-0 m-0">
+                    <div class="aboutH-logo">
+                        <img class="aboutH-logo__img" src="img/home/header/logo-Alena.png" alt="logo">
+                    </div>
+                </div>
+                <div class="col-xl-7 d-xl-block d-none p-0 m-0">
+                    <nav class="aboutH-nav">
+                        <ul class="aboutH-menu homeH-menu clearfix">
+                            <li class="aboutH-menu__item float-left">
+                                <a class="aboutH-menu__item-link homeH-menu__item-link homeH-menu__item-link_active"
+                                   href="index.html">
+                                    Home
+                                </a>
+                            </li>
+                            <li class="aboutH-menu__item float-left">
+                                <a class="aboutH-menu__item-link homeH-menu__item-link homeH-menu__item-link_active"
+                                   href="about_me.html">
+                                    About me
+                                </a>
+                            </li>
+                            <li class="aboutH-menu__item float-left">
+                                <a class="aboutH-menu__item-link homeH-menu__item-link homeH-menu__item-link_active"
+                                   href="why_humber.html">
+                                    Why Humber?
+                                </a>
+                            </li>
+                            <li class="aboutH-menu__item float-left">
+                                <a class="aboutH-menu__item-link homeH-menu__item-link homeH-menu__item-link_active"
+                                   href="photos.html">
+                                    My photos
+                                </a>
+                            </li>
+                            <li class="aboutH-menu__item float-left">
+                                <a class="aboutH-menu__item-link homeH-menu__item-link homeH-menu__item-link_active"
+                                   href="contacts.html">
+                                    Contacts
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-7 col-9 p-0 m-0">
+                    <div class="homeH-phone-i-sandwichMenu clearfix">
+                        <div class="homeH-phone float-left">
+                            <p class="homeH-phone__text">
+                                +7 (960) 874-89-59  <br>
+                                +7 (961) 692-07-77
+                            </p>
+                        </div>
+                        <div class="homeH-sandwichMenu float-right">
+                            <a class="homeH-sandwichMenu__link" href="#">
+                                <img class="homeH-sandwichMenu__img" src="./img/home/header/header_sandwichMenu.svg"
+                                     alt="Img">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row p-0 m-0">
+                <div class="col-xl-12 p-0 m-0">
+                    <div class="aboutH-boxTitle whyH-boxTitle homeH-boxTitle">
+                        <h1 class="aboutH-boxTitle__title whyH-boxTitle__title">
+                            About me
+                        </h1>
+                    </div>
+                    <button class="aboutH-arrowButton whyH-arrowButton homeH-arrowButton" type="button">
+                        <!-- Кнопка без надписи. -->
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+    <!-- ======= about1: section#1 (moveThings) ======= -->
+    <section id="about1">
+        <div class="container p-0">
+            <div class="about1 why1">
+                <div class="row justify-content-center p-0 m-0">
+                    <div class="col-xl-10 p-0 m-0">
+                        <div class="about1-panel why1-panel">
+                            <div class="about1-motto why1-motto">
+                                <div class="row p-0 m-0">
+                                    <div class="col-xl-12 p-0 m-0">
+                                        <p class="about1-motto__text why1-motto__text">
+                                            Every College would like to know more about the students it accepts
+                                            <br>
+                                            <br>
+                                            <strong class="about1-motto__bigText">That's why I want to share
+                                                <br> with you
+                                                <br> information about myself</strong>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="about1-infoAboutMe">
+                                <div class="row p-0 m-0 justify-content-around">
+                                    <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-12 p-0 m-0">
+                                        <div class="about1-infoAboutMe__part1">
+                                            <img class="about1-infoAboutMe__part1-img about1-infoAboutMe__parts-img" src="img/about/section1/webDesignDev.jpg"
+                                                 alt="Img">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-12 p-0 m-0">
+                                        <div class="about1-infoAboutMe__part1">
+                                            <p class="about1-infoAboutMe__part1-text">
+                                                Hello, I'm Alena Ryakhovskaya. My main interest is computer programming,
+                                                and more specifically web development and web design. I have already
+                                                developed several sites one of which you are currently viewing.
+                                                I am a creative person that is why I have always been interested
+                                                in this area of computer programming. web development and web design
+                                                will allow me to show my talents and observe the development of
+                                                projects in real time.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row p-0 m-0 justify-content-around">
+                                    <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-12 p-0 m-0">
+                                        <div class="about1-infoAboutMe__part2">
+                                            <p class="about1-infoAboutMe__part2-text">
+                                                I also want to tell you that I write poems in Russian that most
+                                                of my readers like. An example of my poems I will put in my
+                                                portfolio in video format. Also, I always try to participate in
+                                                various activities, such as charity, various school events and
+                                                performances. It helps me feel useful and needed.  I try to spend
+                                                my free time mainly on studying and getting new knowledge, but I
+                                                also love to visit various exhibitions and theaters.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-12 p-0 m-0">
+                                        <div class="about1-infoAboutMe__part2">
+                                            <img class="about1-infoAboutMe__part2-img about1-infoAboutMe__parts-img" src="img/about/section1/poetry.jpg"
+                                                 alt="Img">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row p-0 m-0 justify-content-around">
+                                    <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-12 p-0 m-0">
+                                        <div class="about1-infoAboutMe__part3">
+                                            <img class="about1-infoAboutMe__part3-img about1-infoAboutMe__parts-img" src="img/about/section1/study.jpg"
+                                                 alt="Img">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-12 p-0 m-0">
+                                        <div class="about1-infoAboutMe__part3">
+                                            <p class="about1-infoAboutMe__part3-text">
+                                                My priority is to become a highly qualified specialist. In this I will
+                                                help my desire to learn, my diligence and my punctuality. I want you
+                                                to see me as a student who can be relied upon and entrusted with an
+                                                important task that I will try to accomplish with the utmost precision.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row p-0 m-0 justify-content-around">
+                                    <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-12 p-0 m-0">
+                                        <div class="about1-infoAboutMe__part4">
+                                            <p class="about1-infoAboutMe__part4-text">
+                                                I am a person who is diligently ready for hard work, teamwork and the
+                                                use of my critical thinking, which is why I hope to become your student!
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-12 p-0 m-0">
+                                        <div class="about1-infoAboutMe__part4">
+                                            <img class="about1-infoAboutMe__part4-img about1-infoAboutMe__parts-img" src="img/about/section1/teamwork.jpg"
+                                                 alt="Img">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ======= about2: section#2 (questions) ======= -->
+    <section id="about2">
+        <div class="container p-0">
+            <div class="about2 home5">
+                <div class="row p-0 m-0">
+                    <div class="col-xl-12 p-0 m-0">
+                        <div class="about2-boxTitle">
+                            <h3 class="about2-boxTitle__title why2-boxTitle__title home1-boxTitle__titlesH3">
+                                Contact with me
+                            </h3>
+                            <p class="about2-boxTitle__subtitle why2-boxTitle__subtitle home5-boxTitle__subtitle">
+                                I'm always on-line!
+                            </p>
+                            <div class="about2-boxTitle__arrow why2-boxTitle__arrow home5-boxTitle__arrow home2-question__arrows">
+                                <!-- Для фигуры: arrow-dashed-circle. -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-12 p-0 m-0">
+                        <form class="about2-form" action="#">
+                            <input class="about2-form__nameField about2-form__userFields home5-form__userFields"
+                                   type="text" placeholder="Your name"
+                                   required>
+                            <input class="about2-form__emailField about2-form__userFields home5-form__userFields"
+                                   type="email"
+                                   placeholder="Your e-mail" required>
+                            <textarea class="about2-form__messageField home5-form__messageField" name="message" maxlength="300" placeholder="Your message" required></textarea>
+                            <button class="about2-form__orderField about2-form__userFields home5-form__userFields about2-form__userOrder home5-form__userOrder"
+                                    type="submit">
+                                Submit
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<!-- ======= aboutF: footer ======= -->
+<footer id="aboutF">
+    <div class="container p-0">
+        <div class="aboutF">
+            <div class="row p-0 m-0">
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 p-0 m-0">
+                    <div class="aboutF-logo homeF-logo">
+                        <img class="aboutF-logo__img" src="img/home/header/logo-Alena.png" alt="logo">
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 p-0 m-0">
+                    <div class="aboutF-copyright">
+                        <p class="aboutF-copyright__text homeF-copyright__text">
+                            ©2019 Ryakhovskaya A.V.
+                            <br>
+                            All Rights Reserved
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-4 d-md-block d-none p-0 m-0">
+                    <div class="aboutF-e-mail">
+                        <a class="aboutF-e-mail__text homeF-e-mail__text" href="#">
+                            lionnessoul@gmail.com
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 d-lg-block d-none p-0 m-0">
+                    <div class="aboutF-phone homeF-phone float-right">
+                        <p class="aboutF-phone__text homeH-phone__text">
+                            +7 (960) 874-89-59  <br>
+                            +7 (961) 692-07-77
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- *
+    Кодировка страницы: -->
+    <meta charset="UTF-8">
+    <!-- *
+    Адаптивная веб-страницa:
+    Метатега viewport со значением width определяет, соответственно, ширину области просмотра.
+    С помощью ключевого слова device-width будет наследоваться ширина устройства по умолчанию.
+    Для масштабирования сайта на мобильном устройстве, применяются свойства minimum-scale, maximum-scale, initial-scale и user-scalable.
+    Значением initial-scale всегда должно быть положительное целое число от 0 до 10. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Вариант viewport для подключения bootstrap: (ПОКА ОТКЛЮЧЕН) -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+    <!-- *
+    Bootstrap CSS:
+    или через BootstrapCDN или скачиваем и добавляем библиотеки Bootstrap через
+    файл bootstrap.min.css. Выбираем только один вариант. -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Вариант c файлом bootstrap.min.css для подключения bootstrap: (ПОКА ОТКЛЮЧЕН) -->
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <!-- *
+    Заголового страницы: -->
+    <title>contacts_aim_4.4_(Bootstrap)</title>
+    <!-- *
+    Кскадная таблица стилей CSS. -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- *
+    Шрифт Roboto Slab с сайта fonts.google.com -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700&display=swap" rel="stylesheet">
+    <!-- *
+    Сторонние (кастомные) шрифты (подключаем вручную), лежащие в отдельном файле fonts.css. -->
+    <link rel="stylesheet" href="css/fonts.css">
+    <!-- *
+    Шрифты (иконки) Font Awesome (https://fontawesome.com): -->
+    <!-- 1 вариант подключения (ПОКА ОТКЛЮЧЕН): онлайн, просто прописываем адрес скрипта, находящегося на сайте https://fontawesome.com -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" integrity="sha384-rtJEYb85SiYWgfpCr0jn174XgJTn4rptSOQsMroFBPQSGLdOC5IbubP6lJ35qoM9" crossorigin="anonymous"> -->
+    <!-- 2 вариант подключения: скачиваем библиотеку со шрифтами с сайта https://fontawesome.com, и указываем путь к библиотеке. -->
+    <link rel="stylesheet" href="libs/fontawesome/all.min.css">
+    <!-- *
+    Медиа-запросы: media-for-width.css и media-for-height.css - файлы с медиа-запросами для адаптивной верстки. -->
+    <link rel="stylesheet" href="css/media-for-width.css">
+    <link rel="stylesheet" href="css/media-for-height.css">
+</head>
+<body>
+<!-- Классы для сетки Bootstrap: col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 -->
+
+<!-- ======= contactsH: header ======= -->
+<header id="contactsH">
+    <!-- Фильтр для главного меню (расположить до container). -->
+    <div class="row p-0 m-0">
+        <div class="col-xl-12 p-0 m-0">
+            <div class="filterMineMenu">
+                <!-- Пустой div для фильтра. -->
+            </div>
+        </div>
+    </div>
+    <div class="container p-0">
+        <div class="contactsH">
+            <div class="row p-0 m-0">
+                <div class="col-xl-2 col-lg-8 col-md-6 col-sm-5 col-3 p-0 m-0">
+                    <div class="contactsH-logo">
+                        <img class="contactsH-logo__img" src="img/home/header/logo-Alena.png" alt="logo">
+                    </div>
+                </div>
+                <div class="col-xl-7 d-xl-block d-none p-0 m-0">
+                    <nav class="contactsH-nav">
+                        <ul class="contactsH-menu homeH-menu clearfix">
+                            <li class="contactsH-menu__item float-left">
+                                <a class="contactsH-menu__item-link homeH-menu__item-link homeH-menu__item-link_active"
+                                   href="index.html">
+                                    Home
+                                </a>
+                            </li>
+                            <li class="contactsH-menu__item float-left">
+                                <a class="contactsH-menu__item-link homeH-menu__item-link homeH-menu__item-link_active"
+                                   href="about_me.html">
+                                    About me
+                                </a>
+                            </li>
+                            <li class="contactsH-menu__item float-left">
+                                <a class="contactsH-menu__item-link homeH-menu__item-link homeH-menu__item-link_active"
+                                   href="why_humber.html">
+                                    Why Humber?
+                                </a>
+                            </li>
+                            <li class="contactsH-menu__item float-left">
+                                <a class="contactsH-menu__item-link homeH-menu__item-link homeH-menu__item-link_active"
+                                   href="photos.html">
+                                    My photos
+                                </a>
+                            </li>
+                            <li class="contactsH-menu__item float-left">
+                                <a class="contactsH-menu__item-link homeH-menu__item-link homeH-menu__item-link_active"
+                                   href="contacts.html">
+                                    Contacts
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-7 col-9 p-0 m-0">
+                    <div class="homeH-phone-i-sandwichMenu clearfix">
+                        <div class="homeH-phone float-left">
+                            <p class="homeH-phone__text">
+                                +7 (960) 874-89-59  <br>
+                                +7 (961) 692-07-77
+                            </p>
+                        </div>
+                        <div class="homeH-sandwichMenu float-right">
+                            <a class="homeH-sandwichMenu__link" href="#">
+                                <img class="homeH-sandwichMenu__img" src="./img/home/header/header_sandwichMenu.svg"
+                                     alt="Img">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row p-0 m-0">
+                <div class="col-xl-12 p-0 m-0">
+                    <div class="contactsH-boxTitle whyH-boxTitle homeH-boxTitle">
+                        <h1 class="contactsH-boxTitle__title whyH-boxTitle__title">
+                            My contacts
+                        </h1>
+                    </div>
+                    <button class="contactsH-arrowButton whyH-arrowButton homeH-arrowButton" type="button">
+                        <!-- Кнопка без надписи. -->
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+    <!-- ======= contacts1: section#1 (communicationAndQuestions) ======= -->
+    <section id="contacts1">
+        <div class="container p-0">
+            <div class="contacts1 why1">
+                <div class="row justify-content-center p-0 m-0">
+                    <div class="col-xl-10 p-0 m-0">
+                        <div class="contacts1-panel why1-panel">
+                            <div class="contacts1-communication-i-questions">
+                                <div class="row p-0 m-0 justify-content-around">
+                                    <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 p-0 m-0">
+                                        <div class="contacts1-communication">
+                                            <div class="contacts1-communication__facebook">
+                                                <h4 class="contacts1-communication__titles">
+                                                    Facebook
+                                                </h4>
+                                                <p class="contacts1-communication__subtitles">
+                                                    facebook.com/lionessoul
+                                                </p>
+                                            </div>
+                                            <div class="contacts1-communication__email">
+                                                <h4 class="contacts1-communication__titles">
+                                                    E-mail
+                                                </h4>
+                                                <p class="contacts1-communication__subtitles">
+                                                    lionnessoul@gmail.com
+                                                </p>
+                                            </div>
+                                            <div class="contacts1-communication__skype">
+                                                <h4 class="contacts1-communication__titles">
+                                                    Skype
+                                                </h4>
+                                                <p class="contacts1-communication__subtitles">
+                                                    lionessoul
+                                                </p>
+                                            </div>
+                                            <div class="contacts1-communication__instagram">
+                                                <h4 class="contacts1-communication__titles">
+                                                    Instagram
+                                                </h4>
+                                                <p class="contacts1-communication__subtitles">
+                                                    @lionessoul
+                                                </p>
+                                            </div>
+                                            <div class="contacts1-communication__telegram">
+                                                <h4 class="contacts1-communication__titles">
+                                                    Telegram
+                                                </h4>
+                                                <p class="contacts1-communication__subtitles">
+                                                    lionessoul
+                                                </p>
+                                            </div>
+                                            <div class="contacts1-communication__whatsapp">
+                                                <h4 class="contacts1-communication__titles">
+                                                    WhatsApp
+                                                </h4>
+                                                <p class="contacts1-communication__subtitles">
+                                                    lionessoul
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 p-0 m-0">
+                                        <div class="contacts1-questions">
+                                            <div class="row p-0 m-0">
+                                                <div class="col-xl-12 p-0 m-0">
+                                                    <div class="contacts1-boxTitle">
+                                                        <h3 class="contacts1-boxTitle__title why2-boxTitle__title home1-boxTitle__titlesH3">
+                                                            <strong class="contacts1__title-bigText">Contact</strong>
+                                                            <br>
+                                                            with me
+                                                        </h3>
+                                                        <p class="contacts1-boxTitle__subtitle why2-boxTitle__subtitle home5-boxTitle__subtitle">
+                                                            I'm always on-line!
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-12 p-0 m-0">
+                                                    <form class="contacts1-form" action="#">
+                                                        <input class="contacts1-form__nameField contacts1-form__userFields home5-form__userFields"
+                                                               type="text" placeholder="Your name" required>
+                                                        <input class="contacts1-form__emailField contacts1-form__userFields home5-form__userFields"
+                                                               type="email" placeholder="Your e-mail" required>
+                                                        <textarea class="contacts1-form__messageField contacts1-form__userFields home5-form__messageField" name="message" maxlength="300" placeholder="Your message" required></textarea>
+                                                        <button class="contacts1-form__orderField contacts1-form__userFields home5-form__userFields contacts1-form__userOrder home5-form__userOrder"
+                                                                type="submit">
+                                                            Submit
+                                                        </button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<!-- ======= contactsF: footer ======= -->
+<footer id="contactsF">
+    <div class="container p-0">
+        <div class="contactsF">
+            <div class="row p-0 m-0">
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 p-0 m-0">
+                    <div class="contactsF-logo homeF-logo">
+                        <img class="contactsF-logo__img" src="img/home/header/logo-Alena.png" alt="logo">
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 p-0 m-0">
+                    <div class="contactsF-copyright">
+                        <p class="contactsF-copyright__text homeF-copyright__text">
+                            ©2019 Ryakhovskaya A.V.
+                            <br>
+                            All Rights Reserved
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-4 d-md-block d-none p-0 m-0">
+                    <div class="contactsF-e-mail">
+                        <a class="contactsF-e-mail__text homeF-e-mail__text" href="#">
+                            lionnessoul@gmail.com
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 d-lg-block d-none p-0 m-0">
+                    <div class="contactsF-phone homeF-phone float-right">
+                        <p class="contactsF-phone__text homeH-phone__text">
+                            +7 (960) 874-89-59  <br>
+                            +7 (961) 692-07-77
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

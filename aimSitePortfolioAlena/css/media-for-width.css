@@ -1,0 +1,965 @@
+/*
+Прописать это в html для адаптивной верстки:
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+*/
+
+/*
+Медиа-запрос может включать следующие типы носителя: all, screen, print, tv, braille, 3d-glasses и т.д. По умолчанию тип носителя: screen.
+Логические операторы в медиа-запросах: and, not и only.
+Префиксы min и max могут быть использованы со многими медиа-функциями. Префикс min указывает значения больше или равно, тогда как префикс max указывает значения меньше или равно.
+*/
+
+/*
+Медиа-функция orientation определяет, находится ли устройство в альбомной (landscape) или портретной (portrait) ориентации.
+Режим landscape срабатывает, когда ширина дисплея больше, чем высота, режим portrait срабатывает, когда высота дисплея больше ширины.
+Пример:
+    @media all and (orientation: landscape) {...}
+*/
+
+/*
+Пояснения:
+* @media only screen — только для экранов монитора;
+* min-width — условие «истина», когда ширина окна браузера больше установленного значения;
+* max-width — условие «истина», когда ширина окна браузера меньше установленного значения;
+* min-device-width — условие «истина», когда размер экрана устройства больше установленного значения;
+* max-device-width — условие «истина», когда размер экрана устройства меньше установленного значения.
+Пример: 
+    @media all and (min-width: 320px) and (max-width: 780px) {...}
+*/
+
+/*
+Breakpoint для медиа-запросов по ширине (width) дисплея:
+- Breakpoint Extra large (col-xl):                       width >= 1200px
+- Breakpoint Large (col-lg):                    992px <= width < 1200px
+- Breakpoint Medium (col-md):                   768px <= width < 992px
+- Breakpoint Small (col-sm):                    576px <= width < 768px
+- Breakpoint Extra small (col-xs или col-):     425px <= width < 576px
+- Breakpoint Google (mobile L) :                375px <= width < 425px
+- Breakpoint Google (mobile M) :                320px <= width < 375px
+- Breakpoint Google (mobile S) :                         width < 320px
+*/
+
+/* ==================================================================================================================== */
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* Breakpoint Extra large (col-xl): width >= 1200px */
+@media screen and (max-width: 1699px) {
+    .container { /* Сквозной вертикальный контейнер сайта. */
+        /*width: 90%;*/
+    }
+
+    /* НЕ ИСПОЛЬЗОВАНО. */
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* Breakpoint Large (col-lg): 992px <= width < 1200px */
+@media screen and (max-width: 1199px) {
+    .container { /* Сквозной вертикальный контейнер сайта. */
+        width: 90%;
+    }
+
+    /* ===================================== */
+    /* =========== page: H O M E =========== */
+    /* ===================================== */
+    /* Breakpoint Large (col-lg): 992px <= width < 1200px */
+    .homeH-sandwichMenu { /* Включаем элемент. */
+        display: block;
+    }
+
+    .homeH-boxTitle__title {
+        font-size: 4.571rem;
+    }
+
+    .homeH-boxTitle__subtitle {
+        font-size: 3.143rem;
+    }
+
+    .home1-box__item1, .home1-box__item2 {
+        width: 94%;
+        margin: 0 auto;
+    }
+
+    .home1-box__item3 {
+        width: 97%;
+        margin: 26px auto 0;
+    }
+
+    .home3-boxTitle__title {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .home3-images__house1 {
+        top: 25%;
+        left: 29%;
+    }
+
+    .home3-images__house2 {
+        top: 17%;
+        left: 39%;
+    }
+
+    .home3-images__house3 {
+        top: 26%;
+        left: 55%;
+    }
+
+    .home3-box__sets {
+        width: 100%;
+        padding-left: 3px;
+        padding-right: 3px;
+        font-size: 1.05rem;
+    }
+
+    .home3-box__imgCircle {
+        left: 45.5%;
+    }
+
+    .home4-teacherReview {
+        padding-left: 88px;
+    }
+
+    .home4-teacherReview__userProfile-name {
+        margin-right: 20px;
+    }
+
+    .home4-teacherReview__userPhoto {
+        top: 19%;
+        right: 88%;
+    }
+
+    .home4-box__arrowsLeftRight {
+        margin-left: 54px;
+    }
+
+    .home5-boxTitle__arrow {
+        left: 47%;
+    }
+
+    /* =================================== */
+    /* =========== page: W H Y =========== */
+    /* =================================== */
+    /* Breakpoint Large (col-lg): 992px <= width < 1200px */
+
+
+    /* ======================================= */
+    /* =========== page: A B O U T =========== */
+    /* ======================================= */
+    /* Breakpoint Large (col-lg): 992px <= width < 1200px */
+    .about1-motto__text {
+        padding: 0 90px;
+    }
+
+    /* ============================================= */
+    /* =========== page: C O N T A C T S =========== */
+    /* ============================================= */
+    /* Breakpoint Large (col-lg): 992px <= width < 1200px */
+
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* Breakpoint Medium (col-md): 768px <= width < 992px */
+@media screen and (max-width: 991px) {
+    .container { /* Сквозной вертикальный контейнер сайта. */
+        width: 90%;
+    }
+
+    /* ===================================== */
+    /* =========== page: H O M E =========== */
+    /* ===================================== */
+    /* Breakpoint Medium (col-md): 768px <= width < 992px */
+    .homeH-sandwichMenu {
+        padding-right: 16%;
+    }
+
+    .home1-box__item1, .home1-box__item2 {
+        width: 96%;
+        margin: 0 auto;
+    }
+
+    .home1-box__item3 {
+        width: 98%;
+        margin: 12px auto 0;
+    }
+
+    .home1-box__items-text {
+        font-size: 1.15rem;
+    }
+
+    .home2-question__text2 {
+        font-size: 1.5rem;
+    }
+
+    .home3-boxTitle__title {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .home4-teacherReview {
+        padding-left: 102px;
+    }
+
+    .home4-teacherReview__userPhoto {
+        top: 26%;
+        right: 82%;
+    }
+
+    .home4-box__arrowsLeftRight {
+        margin-left: 36px;
+        margin-top: 125px;
+    }
+
+    .home5-boxTitle__arrow {
+        top: 75%;
+        left: 45.5%;
+    }
+
+    /* =================================== */
+    /* =========== page: W H Y =========== */
+    /* =================================== */
+    /* Breakpoint Medium (col-md): 768px <= width < 992px */
+
+    .why1-slogan__text {
+        font-size: 1.4rem;
+        padding: 20px 0;
+        margin-bottom: 52px;
+    }
+
+    .why1-advantages__items {
+        height: 624px;
+        padding: 18px 24px;
+    }
+
+    .why1-advantages__items-underline {
+        margin-bottom: 14px;
+    }
+
+    .why2-boxTitle__arrow {
+        top: 57%;
+        left: 46.4%;
+    }
+
+    /* ======================================= */
+    /* =========== page: A B O U T =========== */
+    /* ======================================= */
+    /* Breakpoint Medium (col-md): 768px <= width < 992px */
+    .about1-motto__text {
+        padding: 0 30px;
+    }
+
+    .about1-infoAboutMe__part1-img {
+        padding-left: 0;
+        width: 103%;
+        margin-top: 7%;
+    }
+
+    .about1-infoAboutMe__part2-text {
+        padding-top: 8%;
+    }
+
+    .about1-infoAboutMe__part2-img {
+        padding-left: 0;
+        width: 98%;
+        margin-top: 7%;
+    }
+
+    /* ============================================= */
+    /* =========== page: C O N T A C T S =========== */
+    /* ============================================= */
+    /* Breakpoint Medium (col-md): 768px <= width < 992px */
+    .contacts1 {
+        height: 552px;
+    }
+
+    .contacts1-communication {
+        padding: 60px 0 0 0;
+    }
+
+    .contacts1-communication__subtitles {
+        font-size: 1.04rem;
+    }
+
+    .contacts1-questions {
+        margin-right: 0;
+    }
+
+    .contacts1-form__userFields {
+        width: 100%;
+    }
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* Breakpoint Small (col-sm): 576px <= width < 768px */
+@media screen and (max-width: 767px) {
+    .container { /* Сквозной вертикальный контейнер сайта. */
+        width: 95%;
+    }
+
+    /* ===================================== */
+    /* =========== page: H O M E =========== */
+    /* ===================================== */
+    /* Breakpoint Small (col-sm): 576px <= width < 768px */
+    .homeH-sandwichMenu {
+        padding-right: 7%;
+    }
+
+    .home1-box__items {
+        width: 95%;
+        margin: 0 auto 15px;
+    }
+
+    .home1-box__items-text {
+        font-size: 1.214rem;
+    }
+
+    .home2-question__arrow1 {
+        top: -10%;
+        left: 46%;
+    }
+
+    .home2-question__arrow2 {
+        top: 90%;
+        left: 46%;
+    }
+
+    .home3-images__house1 {
+        top: 23%;
+        left: 18%;
+    }
+
+    .home3-images__house2 {
+        top: 17%;
+        left: 35%;
+    }
+
+    .home3-images__house3 {
+        top: 24%;
+        left: 60%;
+    }
+
+    .home3-box__sets {
+        font-size: 1.3rem;
+    }
+
+    .home3-box__set1 {
+        height: 347px;
+    }
+
+    .home3-box__imgCircle {
+        top: 51%;
+        left: 43.5%;
+    }
+
+    .home3-box__set2 {
+        height: 259px;
+    }
+
+    .home4-boxTitle__title {
+        padding-bottom: 170px;
+    }
+
+    .home4-teacherReview {
+        padding: 44px 42px 0;
+    }
+
+    .home4-teacherReview__userPhoto {
+        top: -50%;
+        right: 38%;
+    }
+
+    .home5-boxTitle__arrow {
+        top: 76%;
+        left: 45%;
+    }
+
+    /* =================================== */
+    /* =========== page: W H Y =========== */
+    /* =================================== */
+    /* Breakpoint Small (col-sm): 576px <= width < 768px */
+    .why1 {
+        height: 1587px;
+    }
+
+    .why1-advantages__items {
+        height: 476px;
+        width: 90%;
+        padding: 18px 34px;
+        margin: 0 auto 24px;
+    }
+
+    .why2-boxTitle__arrow {
+        top: 58%;
+        left: 45%;
+    }
+
+    /* ======================================= */
+    /* =========== page: A B O U T =========== */
+    /* ======================================= */
+    /* Breakpoint Small (col-sm): 576px <= width < 768px */
+    .about1 {
+        height: 680px;
+    }
+
+    .aboutH-boxTitle__title {
+        font-size: 3.2rem;
+    }
+
+    .about1-motto__text {
+        padding: 0 6px;
+    }
+
+    .about1-infoAboutMe__part1-img {
+        margin-top: 21%;
+    }
+
+    .about1-infoAboutMe__part2-text {
+        padding-top: 8%;
+    }
+
+    .about1-infoAboutMe__part2-img {
+        margin-top: 30%;
+    }
+
+    /* ============================================= */
+    /* =========== page: C O N T A C T S =========== */
+    /* ============================================= */
+    /* Breakpoint Small (col-sm): 576px <= width < 768px */
+    .contacts1 {
+        height: 962px;
+    }
+
+    .contacts1-communication {
+        padding: 6% 0 8% 19%;
+    }
+
+    .contacts1-communication__subtitles {
+        font-size: 1.3rem;
+    }
+
+    .contacts1-questions {
+        margin-left: 0;
+    }
+
+    .contacts1-boxTitle__title {
+        font-size: 2.6rem;
+    }
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* Breakpoint Extra small (col-xs или col-): 425px <=  width < 576px */
+@media screen and (max-width: 575px) {
+    .container { /* Сквозной вертикальный контейнер сайта. */
+        /*width: 90%;*/
+    }
+
+    /* ===================================== */
+    /* =========== page: H O M E =========== */
+    /* ===================================== */
+    /* Breakpoint Extra small (col-xs или col-): 425px <=  width < 576px */
+    .homeH-phone { /* Отключаем элемент. */
+        display: none;
+    }
+
+    .homeH-boxTitle__title {
+        font-size: 3.357rem;
+    }
+
+    .homeH-boxTitle__subtitle {
+        font-size: 2.357rem;
+    }
+
+    .home1-boxTitle__titlesH3 {
+        font-size: 2.6rem;
+    }
+
+    .home2-question__arrow1 {
+        left: 44.5%;
+    }
+
+    .home2-question__arrow2 {
+        left: 44.5%;
+    }
+
+    .home3-boxTitle__title {
+        font-size: 2.65rem
+    }
+
+    .home3-images__house1 {
+        top: 26%;
+        left: 27%;
+        width: 18%;
+    }
+
+    .home3-images__house2 {
+        top: 24%;
+        left: 38.5%;
+        width: 22%;
+    }
+
+    .home3-images__house3 {
+        top: 27%;
+        left: 54%;
+        width: 17%;
+    }
+
+    .home3-box__sets {
+        font-size: 1rem;
+    }
+
+    .home3-box__set1 {
+        height: 327px;
+    }
+
+    .home3-box__imgCircle {
+        top: 55%;
+        left: 42%;
+        width: 16%;
+    }
+
+    .home3-box__set2 {
+        height: 205px;
+    }
+
+    .home4-teacherReview__userProfile {
+        text-align: center;
+    }
+
+    .home4-teacherReview__userProfile-name {
+        margin-right: 0;
+    }
+
+    .home4-teacherReview__userProfile-vk, .home4-teacherReview__userProfile-subject {
+        display: block;
+    }
+
+    .home4-teacherReview__userPhoto {
+        top: -37%;
+        right: 34%;
+    }
+
+    .home5-boxTitle__arrow {
+        top: 74%;
+        left: 43%;
+    }
+
+    .homeF-logo, .homeF-copyright {
+        text-align: center;
+    }
+
+    .homeF-copyright {
+        margin: 20px 0;
+    }
+
+    .homeF-copyright__text {
+        padding: 0;
+    }
+
+    /* =================================== */
+    /* =========== page: W H Y =========== */
+    /* =================================== */
+    /* Breakpoint Extra small (col-xs или col-): 425px <=  width < 576px */
+    .whyH-boxTitle__title {
+        font-size: 2.8rem;
+    }
+
+    .why1 {
+        height: 1754px;
+    }
+
+    .why1-advantages__items {
+        height: 532px;
+        padding: 18px 22px;
+    }
+
+    .why2-boxTitle__arrow {
+        top: 57%;
+        left: 44%;
+    }
+
+    .whyF-copyright {
+        text-align: center;
+    }
+
+    .whyF-copyright__text {
+        padding: 20px 0;
+    }
+
+    /* ======================================= */
+    /* =========== page: A B O U T =========== */
+    /* ======================================= */
+    /* Breakpoint Extra small (col-xs или col-): 425px <=  width < 576px */
+    .about1 {
+        height: 1080px;
+    }
+
+    .aboutH-boxTitle__title {
+        font-size: 2.4rem;
+    }
+
+    .about1-infoAboutMe__part1-img {
+        margin-top: 0;
+        width: 87%;
+        margin-left: 6%;
+    }
+
+    .about1-infoAboutMe__part1-text {
+        padding: 3% 5% 0;
+    }
+
+    .about1-infoAboutMe__part2-text {
+        padding: 105% 5% 0;
+    }
+
+    .about1-infoAboutMe__part2-img {
+        margin-top: -210%;
+        width: 88%;
+        margin-left: 4%;
+    }
+
+    .aboutF-copyright {
+        text-align: center;
+    }
+
+    .aboutF-copyright__text {
+        padding: 20px 0;
+    }
+
+    /* ============================================= */
+    /* =========== page: C O N T A C T S =========== */
+    /* ============================================= */
+    /* Breakpoint Extra small (col-xs или col-): 425px <=  width < 576px */
+    .contacts1 {
+        height: 926px;
+    }
+
+    .contacts1-communication {
+        padding: 0 0 8% 10%;
+    }
+
+    .contactsF-copyright {
+        text-align: center;
+    }
+
+    .contactsF-copyright__text {
+        padding: 20px 0;
+    }
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* Breakpoint Google (mobile L) : 375px <= width < 425px */
+@media screen and (max-width: 424px) {
+    .container { /* Сквозной вертикальный контейнер сайта. */
+        /*width: 90%;*/
+    }
+
+    /* ===================================== */
+    /* =========== page: H O M E =========== */
+    /* ===================================== */
+    /* Breakpoint Google (mobile L) : 375px <= width < 425px */
+    .homeH-boxTitle__title {
+        font-size: 2.9rem;
+    }
+
+    .homeH-boxTitle__subtitle {
+        font-size: 1.9rem;
+    }
+
+    .home1-boxTitle__titlesH3 {
+        font-size: 2.2rem;
+    }
+
+    .home2-question__arrow1 {
+        top: -9%;
+        left: 43%;
+    }
+
+    .home2-question__arrow2 {
+        top: 92%;
+        left: 43%;
+    }
+
+    .home4-teacherReview__userPhoto {
+        top: -36%;
+        right: 31%;
+    }
+
+    .home5-boxTitle__arrow {
+        top: 74%;
+        left: 43%;
+    }
+
+    .home5-form__userFields {
+        width: 92%;
+    }
+
+    /* =================================== */
+    /* =========== page: W H Y =========== */
+    /* =================================== */
+    /* Breakpoint Google (mobile L) : 375px <= width < 425px */
+    .whyH-boxTitle__title {
+        font-size: 2.3rem;
+    }
+
+    .why1 {
+        height: 1837px;
+    }
+
+    .why1-advantages__items {
+        height: 580px;
+    }
+
+    .why2-boxTitle__arrow {
+        top: 57%;
+        left: 43%;
+    }
+
+    /* ======================================= */
+    /* =========== page: A B O U T =========== */
+    /* ======================================= */
+    /* Breakpoint Google (mobile L) : 375px <= width < 425px */
+    .about1 {
+        height: 1072px;
+    }
+
+    .aboutH-boxTitle__title {
+        font-size: 2.1rem;
+    }
+
+    .about1-infoAboutMe__part1-text {
+        padding: 3% 5% 0;
+    }
+
+    .about1-infoAboutMe__part2-text {
+        padding: 100% 5% 0;
+    }
+
+    .about1-infoAboutMe__part2-img {
+        margin-top: -232%;
+    }
+
+    /* ============================================= */
+    /* =========== page: C O N T A C T S =========== */
+    /* ============================================= */
+    /* Breakpoint Google (mobile L) : 375px <= width < 425px */
+    .contacts1 {
+        height: 884px;
+    }
+
+    .contacts1-communication {
+        padding: 0 0 8% 8%;
+    }
+
+    .contacts1-communication__subtitles {
+        font-size: 1.1rem;
+    }
+
+    .contacts1-form__userFields {
+        width: 100%;
+    }
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* Breakpoint Google (mobile M) : 320px <= width < 375px */
+@media screen and (max-width: 374px) {
+    .container { /* Сквозной вертикальный контейнер сайта. */
+        /*width: 90%;*/
+    }
+
+    /* ===================================== */
+    /* =========== page: H O M E =========== */
+    /* ===================================== */
+    /* Breakpoint Google (mobile M) : 320px <= width < 375px */
+    .homeH-boxTitle__title {
+        font-size: 2.6rem;
+    }
+
+    .homeH-boxTitle__subtitle {
+        font-size: 1.6rem;
+    }
+
+    .home1-boxTitle__titlesH3 {
+        font-size: 1.9rem;
+    }
+
+    .home1-box__items-text {
+        font-size: 1rem;
+    }
+
+    .home3-images__house1 {
+        top: 23%;
+        left: 27%;
+        width: 18%;
+    }
+
+    .home3-images__house2 {
+        top: 21%;
+        left: 38.5%;
+        width: 22%;
+    }
+
+    .home3-images__house3 {
+        top: 23%;
+        left: 54%;
+        width: 17%;
+    }
+
+    .home3-box__sets {
+        font-size: 1rem;
+    }
+
+    .home3-box__set1 {
+        height: 379px;
+    }
+
+    .home3-box__imgCircle {
+        top: 58%;
+        left: 42%;
+        width: 16%;
+    }
+
+    .home3-box__set2 {
+        height: 228px;
+    }
+
+    .home4-teacherReview__userPhoto {
+        top: -31%;
+        right: 29%;
+    }
+
+    .home4-navDots__dot1 {
+        margin-left: 38%;
+    }
+
+    .home5-boxTitle__arrow {
+        top: 71%;
+        left: 41%;
+    }
+
+    /* =================================== */
+    /* =========== page: W H Y =========== */
+    /* =================================== */
+    /* Breakpoint Google (mobile M) : 320px <= width < 375px */
+    .whyH-boxTitle__title {
+        font-size: 2rem;
+    }
+
+    .why1 {
+        height: 2021px;
+    }
+
+    .why1-advantages__items {
+        height: 650px;
+    }
+
+    .why2-boxTitle__arrow {
+        top: 59%;
+        left: 41%;
+    }
+
+    /* ======================================= */
+    /* =========== page: A B O U T =========== */
+    /* ======================================= */
+    /* Breakpoint Google (mobile M) : 320px <= width < 375px */
+    .about1 {
+        height: 1072px;
+    }
+
+    .aboutH-boxTitle__title {
+        font-size: 1.8rem;
+    }
+
+    .about1-infoAboutMe__part2-text {
+        padding: 93% 5% 0;
+    }
+
+    .about1-infoAboutMe__part2-img {
+        margin-top: -282%;
+    }
+
+    /* ============================================= */
+    /* =========== page: C O N T A C T S =========== */
+    /* ============================================= */
+    /* Breakpoint Google (mobile M) : 320px <= width < 375px */
+    .contacts1 {
+        height: 846px;
+    }
+
+    .contacts1-communication {
+        padding: 0 0 8% 6%;
+    }
+
+    .contacts1-communication__subtitles {
+        font-size: 1rem;
+    }
+
+    .contacts1-boxTitle__title {
+        font-size: 1.4rem;
+    }
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* Breakpoint Google (mobile S) : width < 320px */
+@media screen and (max-width: 319px) {
+    .container { /* Сквозной вертикальный контейнер сайта. */
+        /*width: 90%;*/
+    }
+
+    /* ===================================== */
+    /* =========== page: H O M E =========== */
+    /* ===================================== */
+    /* Breakpoint Google (mobile S) : width < 320px */
+    .homeH-boxTitle__title {
+        font-size: 2.4rem;
+    }
+
+    .homeH-boxTitle__subtitle {
+        font-size: 1.4rem;
+    }
+
+    /* =================================== */
+    /* =========== page: W H Y =========== */
+    /* =================================== */
+    /* Breakpoint Google (mobile S) : width < 320px */
+    .whyH-boxTitle__title {
+        font-size: 1.7rem;
+    }
+
+    /* ======================================= */
+    /* =========== page: A B O U T =========== */
+    /* ======================================= */
+    /* Breakpoint Google (mobile S) : width < 320px */
+    .about1 {
+        height: 1105px;
+    }
+
+    .aboutH-boxTitle__title {
+        font-size: 1.6rem;
+    }
+
+    .about1-infoAboutMe__part2-text {
+        padding: 90% 5% 0;
+    }
+
+    .about1-infoAboutMe__part2-img {
+        margin-top: -304%;
+    }
+
+    /* ============================================= */
+    /* =========== page: C O N T A C T S =========== */
+    /* ============================================= */
+    /* Breakpoint Google (mobile S) : width < 320px */
+    .contacts1 {
+        height: 860px;
+    }
+
+    .contacts1-communication__subtitles {
+        font-size: 0.9rem;
+    }
+}
+
+
+
+
+
+
+

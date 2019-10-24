@@ -202,7 +202,7 @@ section {
 /* ======= home1: section#1 (advantages) ======= */
 
 #home1 {
-    background: #fff;
+    background: #43434312;
 }
 
 .home1-boxTitle__title { /* Общий код в .home1-boxTitle__titlesH3. */
@@ -350,7 +350,7 @@ section {
 /* ======= home3: section#3 (estate) ======= */
 
 #home3 {
-    background: url("../img/home/section3/estate_bg.png") no-repeat center center / cover;
+    background: #43434329 url("../img/home/section3/estate_bg.png") no-repeat center center / cover;
 }
 
 .home3-boxTitle__title { /* Общий код в .home1-boxTitle__titlesH3. */
@@ -424,6 +424,7 @@ section {
 
 #home4{
     box-shadow: 61px 3px 40px rgba(112, 115, 122, 0.5);
+    background: #43434312;
 }
 
 .home4-boxTitle__title { /* Общий код в .home1-boxTitle__titlesH3. */

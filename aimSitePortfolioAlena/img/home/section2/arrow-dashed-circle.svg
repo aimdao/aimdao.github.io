@@ -1,14 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="207.5 50.5 34 34" width="34pt" height="34pt">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="830.5 423.5 35 35" width="35pt" height="35pt">
+  <defs/>
   <g stroke="none" stroke-opacity="1" stroke-dasharray="none" fill="none" fill-opacity="1">
     <title>Canvas 1</title>
-    <!-- <rect fill="white" width="34" height="34"/> -->
+    <!-- <rect fill="white" width="35" height="35"/> -->
     <g>
       <title>Layer 1</title>
-      <circle cx="224.5" cy="67.5" r="16.500026" fill="black"/>
-      <path d="M 236.16725 55.83275 C 242.61093 62.2764 242.61093 72.7236 236.16725 79.16725 C 229.7236 85.61093 219.2764 85.61093 212.83275 79.16725 C 206.38907 72.7236 206.38907 62.2764 212.83275 55.83275 C 219.2764 49.38907 229.7236 49.38907 236.16725 55.83275" stroke="white" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1" stroke-dasharray="4,4"/>
-      <text transform="translate(219.5625 59.998)" fill="white">
-        <tspan font-family="FontAwesome" font-size="15" font-weight="500" x=".21428571" y="13" textLength="8.571429"></tspan>
-      </text>
+      <circle cx="848" cy="441" r="17.000027" fill="black"/>
+      <path d="M 860.0208 428.9792 C 866.6597 435.6181 866.6597 446.3819 860.0208 453.0208 C 853.3819 459.65974 842.6181 459.65974 835.9792 453.0208 C 829.3403 446.3819 829.3403 435.6181 835.9792 428.9792 C 842.6181 422.34026 853.3819 422.34026 860.0208 428.9792" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" stroke-dasharray="4,4"/>
+      <path d="M 842 439 L 848 446 L 854 439 Z" fill="white"/>
+      <path d="M 842 439 L 848 446 L 854 439 Z" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
     </g>
   </g>
 </svg>

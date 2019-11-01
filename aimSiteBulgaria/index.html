@@ -14,20 +14,35 @@
     <!-- Вариант viewport для подключения bootstrap: (ПОКА ОТКЛЮЧЕН) -->
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
     <!-- *
-    Bootstrap CSS:
-    или через BootstrapCDN или скачиваем и добавляем библиотеки Bootstrap через 
-    файл bootstrap.min.css. Выбираем только один вариант. -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!-- Вариант c файлом bootstrap.min.css для подключения bootstrap: (ПОКА ОТКЛЮЧЕН) -->
-    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
-    <!-- * 
     Заголового страницы: -->
     <title>home_aimSiteBulgaria_(Bootstrap)</title>
     <!-- *
-    Кскадная таблица стилей CSS. -->
+    Bootstrap CSS: -->
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- *
+    Slick-carousel CSS: -->
+    <link rel="stylesheet" href="css/slick-carousel/slick-carousel-1.8.1.css">
+    <link rel="stylesheet" href="css/slick-carousel/slick-theme.css">
+    <!-- *
+    Main CSS. -->
     <link rel="stylesheet" href="css/main.css">
-    <!-- * 
+    <!-- *
+    Медиа-запросы: media-for-width.css и media-for-height.css - файлы с медиа-запросами для адаптивной верстки. -->
+    <link rel="stylesheet" href="css/media-for-width.css">
+    <link rel="stylesheet" href="css/media-for-height.css">
+    <!-- *
+     jQuery: -->
+    <script src="js/jquery-3.4.1.min.js" defer></script>
+    <!-- *
+     Bootstrap JS:-->
+    <script src="js/bootstrap.min.js" defer></script>
+    <!-- *
+    Slick-carousel JS: -->
+    <script src="js/slick-carousel/slick-carousel-1.8.1.min.js" defer></script>
+    <!-- *
+     Main JS -->
+    <script src="js/main.js" defer></script>
+    <!-- *
     Шрифт Roboto Slab с сайта fonts.google.com -->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700&display=swap" rel="stylesheet">
     <!-- *
@@ -39,10 +54,6 @@
     <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" integrity="sha384-rtJEYb85SiYWgfpCr0jn174XgJTn4rptSOQsMroFBPQSGLdOC5IbubP6lJ35qoM9" crossorigin="anonymous"> -->
     <!-- 2 вариант подключения: скачиваем библиотеку со шрифтами с сайта https://fontawesome.com, и указываем путь к библиотеке. -->
     <link rel="stylesheet" href="libs/fontawesome/all.min.css">
-    <!-- *
-    Медиа-запросы: media-for-width.css и media-for-height.css - файлы с медиа-запросами для адаптивной верстки. -->
-    <link rel="stylesheet" href="css/media-for-width.css">
-    <link rel="stylesheet" href="css/media-for-height.css">
 </head>
 <body>
 <!-- Классы для сетки Bootstrap: col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 -->
@@ -319,55 +330,89 @@
                         </div>
                     </div>
                 </div>
-                <div class="home4-box">
-                    <div class="row p-0 m-0">
-                        <div class="col-xl-2 col-lg-2 col-md-2 d-md-block d-sm-none d-none p-0 m-0">
-                            <div class="home4-box__arrowLeft home4-box__arrowsLeftRight">
-                                <!-- Для фигуры: arrowLeft. -->
-                            </div>
-                        </div>
-                        <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 p-0 m-0">
-                            <div class="home4-review">
-                                <img class="home4-review__userPhoto" src="img/home/section4/reviews_user.png"
-                                     alt="img">
-                                <div class="home4-review__userProfile clearfix">
-                                    <p class="home4-review__userProfile-name float-sm-left float-none">
-                                        Диана апасова
+                <div class="home4-slider">
+                    <div class="home4-slider__item">
+                        <div class="row p-0 m-0">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 p-0">
+                                <div class="home4-review">
+                                    <img class="home4-review__userPhoto" src="img/home/section4/reviews_user.png"
+                                         alt="img">
+                                    <div class="home4-review__userProfile clearfix">
+                                        <p class="home4-review__userProfile-name float-lg-left float-none">
+                                            Диана апасова
+                                        </p>
+                                        <a class="home4-review__userProfile-vk float-lg-left float-none" href="#">
+                                            vk.com/apasova
+                                        </a>
+                                        <a class="home4-review__userProfile-city float-lg-right float-none" href="#">
+                                            Москва → София
+                                        </a>
+                                    </div>
+                                    <p class="home4-review__userArticle">
+                                        Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum ac diam sit amet
+                                        quam vehicula elementum sed sit amet dui. Mauris blandit aliquet elit, eget
+                                        tincidunt nibh pulvinar a. Nulla quis lorem ut libero malesuada feugiat. Nulla
+                                        quis lorem ut libero malesuada feugiat.
                                     </p>
-                                    <a class="home4-review__userProfile-vk float-sm-left float-none" href="#">
-                                        vk.com/apasova
-                                    </a>
-                                    <a class="home4-review__userProfile-city float-sm-right float-none" href="#">
-                                        Москва → София
-                                    </a>
-                                </div>
-                                <p class="home4-review__userArticle">
-                                    Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum ac diam sit amet
-                                    quam vehicula elementum sed sit amet dui. Mauris blandit aliquet elit, eget
-                                    tincidunt nibh pulvinar a. Nulla quis lorem ut libero malesuada feugiat. Nulla
-                                    quis lorem ut libero malesuada feugiat.
-                                </p>
-                            </div>
-                            <div class="home4-navDots clearfix">
-                                <div class="home4-navDots__dot1 home4-navDots__dots float-left">
-                                    <!-- Для фигуры: навигационная точка. -->
-                                </div>
-                                <div class="home4-navDots__dot2 home4-navDots__dots float-left">
-                                    <!-- Для фигуры: навигационная точка. -->
-                                </div>
-                                <div class="home4-navDots__dot3 home4-navDots__dots float-left">
-                                    <!-- Для фигуры: навигационная точка. -->
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-2 col-lg-2 col-md-2 d-md-block d-sm-none d-none p-0 m-0">
-                            <div class="home4-box__arrowRight home4-box__arrowsLeftRight">
-                                <!-- Для фигуры: arrow-right. -->
+                    </div>
+                    <div class="home4-slider__item">
+                        <div class="row p-0 m-0">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 p-0">
+                                <div class="home4-review">
+                                    <img class="home4-review__userPhoto" src="img/home/section4/reviews_user.png"
+                                         alt="img">
+                                    <div class="home4-review__userProfile clearfix">
+                                        <p class="home4-review__userProfile-name float-lg-left float-none">
+                                            Диана апасова
+                                        </p>
+                                        <a class="home4-review__userProfile-vk float-lg-left float-none" href="#">
+                                            vk.com/apasova
+                                        </a>
+                                        <a class="home4-review__userProfile-city float-lg-right float-none" href="#">
+                                            Москва → София
+                                        </a>
+                                    </div>
+                                    <p class="home4-review__userArticle">
+                                        Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum ac diam sit amet
+                                        quam vehicula elementum sed sit amet dui. Mauris blandit aliquet elit, eget
+                                        tincidunt nibh pulvinar a. Nulla quis lorem ut libero malesuada feugiat. Nulla
+                                        quis lorem ut libero malesuada feugiat.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="home4-slider__item">
+                        <div class="row p-0 m-0">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 p-0">
+                                <div class="home4-review">
+                                    <img class="home4-review__userPhoto" src="img/home/section4/reviews_user.png"
+                                         alt="img">
+                                    <div class="home4-review__userProfile clearfix">
+                                        <p class="home4-review__userProfile-name float-lg-left float-none">
+                                            Диана апасова
+                                        </p>
+                                        <a class="home4-review__userProfile-vk float-lg-left float-none" href="#">
+                                            vk.com/apasova
+                                        </a>
+                                        <a class="home4-review__userProfile-city float-lg-right float-none" href="#">
+                                            Москва → София
+                                        </a>
+                                    </div>
+                                    <p class="home4-review__userArticle">
+                                        Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum ac diam sit amet
+                                        quam vehicula elementum sed sit amet dui. Mauris blandit aliquet elit, eget
+                                        tincidunt nibh pulvinar a. Nulla quis lorem ut libero malesuada feugiat. Nulla
+                                        quis lorem ut libero malesuada feugiat.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>

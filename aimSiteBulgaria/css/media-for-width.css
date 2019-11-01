@@ -115,6 +115,10 @@ Breakpoint для медиа-запросов по ширине (width) дисп
         left: 45.5%;
     }
 
+    .slick-next {
+        margin-right: 34px;
+    }
+
     .home4-review {
         padding-left: 88px;
     }
@@ -125,11 +129,7 @@ Breakpoint для медиа-запросов по ширине (width) дисп
 
     .home4-review__userPhoto {
         top: 19%;
-        right: 88%;
-    }
-
-    .home4-box__arrowsLeftRight {
-        margin-left: 54px;
+        right: 91%;
     }
 
     .home5-boxTitle__arrow {
@@ -197,18 +197,31 @@ Breakpoint для медиа-запросов по ширине (width) дисп
         padding-right: 0;
     }
 
+    .slick-prev {
+        margin-left: 10px;
+    }
+
+    .slick-next {
+        margin-right: 32px;
+    }
+
     .home4-review {
         padding-left: 102px;
     }
 
     .home4-review__userPhoto {
         top: 26%;
-        right: 82%;
+        right: 84.5%;
     }
 
-    .home4-box__arrowsLeftRight {
-        margin-left: 36px;
-        margin-top: 125px;
+    .home4-review__userProfile-vk, .home4-review__userProfile-city {
+        display: block;
+        padding-top: 5px;
+    }
+
+    .home4-review__userProfile-name, .home4-review__userProfile-vk, .home4-review__userProfile-city {
+        text-align: center;
+        margin: 0;
     }
 
     .home5-boxTitle__arrow {
@@ -376,17 +389,25 @@ Breakpoint для медиа-запросов по ширине (width) дисп
         height: 259px;
     }
 
+    .slick-prev {
+        margin-left: 14px;
+    }
+
+    .slick-next {
+        margin-right: 23px;
+    }
+
     .home4-boxTitle__title {
-        padding-bottom: 170px;
+        padding-bottom: 80px;
     }
 
     .home4-review {
-        padding: 44px 42px 0;
+        padding: 156px 42px 0;
     }
 
     .home4-review__userPhoto {
-        top: -50%;
-        right: 38%;
+        top: 2%;
+        right: 35%;
     }
 
     .home5-boxTitle__arrow {
@@ -579,8 +600,8 @@ Breakpoint для медиа-запросов по ширине (width) дисп
     }
 
     .home4-review__userPhoto {
-        top: -37%;
-        right: 34%;
+        top: 2%;
+        right: 30.5%;
     }
 
     .home5-boxTitle__arrow {
@@ -725,8 +746,8 @@ Breakpoint для медиа-запросов по ширине (width) дисп
     }
 
     .home4-review__userPhoto {
-        top: -36%;
-        right: 31%;
+        top: 2%;
+        right: 26%;
     }
 
     .home5-boxTitle__arrow {
@@ -867,13 +888,13 @@ Breakpoint для медиа-запросов по ширине (width) дисп
         height: 228px;
     }
 
-    .home4-review__userPhoto {
-        top: -31%;
-        right: 29%;
+    .home4-review {
+        padding: 156px 14px 0;
     }
 
-    .home4-navDots__dot1 {
-        margin-left: 38%;
+    .home4-review__userPhoto {
+        top: 2%;
+        right: 23%;
     }
 
     .home5-boxTitle__arrow {

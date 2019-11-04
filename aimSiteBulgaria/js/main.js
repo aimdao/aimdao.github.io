@@ -14,3 +14,15 @@ $(document).ready(function () {
         ]
     });
 });
+
+
+/* Modal (модальное окно bootstrap). */
+$(function(){
+    $('.homeH-phone__link').click(function () {
+        $('#myModal').modal();
+    });
+});
+
+
+
+

@@ -145,9 +145,11 @@ section {
 }
 
 .homeH-phone { /* Общий код в .homeH-phone__text. */
-    background: url("../img/home/header/header_phone-dashed-circle.svg") no-repeat left center;
     margin-top: 19px;
-    padding-left: 46px;
+}
+
+.homeH-phone__link {
+    margin: 6px 14px 0 0;
 }
 
 .homeH-phone__text {
@@ -639,10 +641,14 @@ section {
 }
 
 .homeF-phone { /* Общий код в .homeH-phone__text. */
-    background: url("../img/home/footer/footer_phone-dashed-circle.svg") no-repeat left center;
     margin: 19px 0;
     padding-left: 46px;
 }
+
+.homeF-phone__link {
+    margin-left: 17px;
+}
+
 
 /* ======================================= */
 /* =========== page: A B O U T =========== */
@@ -949,4 +955,23 @@ section {
 /* ======= contactsF: footer ======= */
 
 /* Код в contactsF полностью замещен общим кодом. */
+
+/* ============================================================================= */
+/* ============================================================================= */
+
+/* ========================== */
+/* Модальное окно (исходник окна взят из page Contacts). */
+
+.modal-dialog {
+    max-width: 17%;
+}
+
+.modal-question {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.modal-form__userFields {
+    width: 100%;
+}
 

@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <!-- *
     Адаптивная веб-страницa:
-    Метатега viewport со значением width определяет, соответственно, ширину области просмотра.
+    Метатег viewport со значением width определяет, соответственно, ширину области просмотра.
     С помощью ключевого слова device-width будет наследоваться ширина устройства по умолчанию.
     Для масштабирования сайта на мобильном устройстве, применяются свойства minimum-scale, maximum-scale, initial-scale и user-scalable.
     Значением initial-scale всегда должно быть положительное целое число от 0 до 10. -->
@@ -14,19 +14,34 @@
     <!-- Вариант viewport для подключения bootstrap: (ПОКА ОТКЛЮЧЕН) -->
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
     <!-- *
-    Bootstrap CSS:
-    или через BootstrapCDN или скачиваем и добавляем библиотеки Bootstrap через
-    файл bootstrap.min.css. Выбираем только один вариант. -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!-- Вариант c файлом bootstrap.min.css для подключения bootstrap: (ПОКА ОТКЛЮЧЕН) -->
-    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
-    <!-- *
-    Заголового страницы: -->
+    Заголовок страницы: -->
     <title>move_aimSiteBulgaria_(Bootstrap)</title>
     <!-- *
-    Кскадная таблица стилей CSS. -->
+    Bootstrap CSS: -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- *
+    Slick-carousel CSS: -->
+    <link rel="stylesheet" href="css/slick-carousel/slick-carousel-1.8.1.css">
+    <link rel="stylesheet" href="css/slick-carousel/slick-theme.css">
+    <!-- *
+    Main CSS. -->
     <link rel="stylesheet" href="css/main.css">
+    <!-- *
+    Медиа-запросы: media-for-width.css и media-for-height.css - файлы с медиа-запросами для адаптивной верстки. -->
+    <link rel="stylesheet" href="css/media-for-width.css">
+    <link rel="stylesheet" href="css/media-for-height.css">
+    <!-- *
+     jQuery: -->
+    <script src="js/jquery-3.4.1.min.js" defer></script>
+    <!-- *
+     Bootstrap JS:-->
+    <script src="js/bootstrap.min.js" defer></script>
+    <!-- *
+    Slick-carousel JS: -->
+    <script src="js/slick-carousel/slick-carousel-1.8.1.min.js" defer></script>
+    <!-- *
+     Main JS -->
+    <script src="js/main.js" defer></script>
     <!-- *
     Шрифт Roboto Slab с сайта fonts.google.com -->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700&display=swap" rel="stylesheet">
@@ -39,10 +54,6 @@
     <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" integrity="sha384-rtJEYb85SiYWgfpCr0jn174XgJTn4rptSOQsMroFBPQSGLdOC5IbubP6lJ35qoM9" crossorigin="anonymous"> -->
     <!-- 2 вариант подключения: скачиваем библиотеку со шрифтами с сайта https://fontawesome.com, и указываем путь к библиотеке. -->
     <link rel="stylesheet" href="libs/fontawesome/all.min.css">
-    <!-- *
-    Медиа-запросы: media-for-width.css и media-for-height.css - файлы с медиа-запросами для адаптивной верстки. -->
-    <link rel="stylesheet" href="css/media-for-width.css">
-    <link rel="stylesheet" href="css/media-for-height.css">
 </head>
 <body>
 <!-- Классы для сетки Bootstrap: col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 -->
@@ -103,8 +114,11 @@
                 </div>
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-7 col-9 p-0 m-0">
                     <div class="homeH-phone-i-sandwichMenu clearfix">
-                        <div class="homeH-phone float-left">
-                            <p class="homeH-phone__text">
+                        <div class="homeH-phone float-left clearfix">
+                            <a class="homeH-phone__link float-left" href="#">
+                                <img class="homeH-phone__img" src="img/home/header/header_phone-dashed-circle.svg" alt="Img">
+                            </a>
+                            <p class="homeH-phone__text float-right">
                                 +7 (495) 12-321-345 <br>
                                 +7 (495) 12-321-345
                             </p>
@@ -263,8 +277,11 @@
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-3 d-lg-block d-none p-0 m-0">
-                    <div class="moveF-phone homeF-phone float-right">
-                        <p class="moveF-phone__text homeH-phone__text">
+                    <div class="moveF-phone homeF-phone clearfix">
+                        <a class="moveF-phone__link homeF-phone__link homeH-phone__link float-left" href="#">
+                            <img class="homeH-phone__img" src="img/home/footer/footer_phone-dashed-circle.svg" alt="Img">
+                        </a>
+                        <p class="moveF-phone__text homeH-phone__text float-right">
                             +7 (495) 12-321-345 <br>
                             +7 (495) 12-321-345
                         </p>
@@ -274,5 +291,60 @@
         </div>
     </div>
 </footer>
+
+<!-- ========================================================== -->
+<!-- Модальное окно bootstrap (мой код для модального окна взят из page Contacts.html). -->
+<div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Мой код для модального окна bootstrap. -->
+                <div class="modal-question contacts1-questions">
+                    <div class="row p-0 m-0">
+                        <div class="col-xl-12 p-0 m-0">
+                            <div class="contacts1-boxTitle">
+                                <h3 class="contacts1-boxTitle__title about2-boxTitle__title home1-boxTitle__titlesH3">
+                                    <strong class="contacts1__title-bigText">Есть вопросы</strong>
+                                    <br>
+                                    по переезду в Болгарию?
+                                </h3>
+                                <p class="contacts1-boxTitle__subtitle about2-boxTitle__subtitle home5-boxTitle__subtitle">
+                                    Мы проконсультируем
+                                    <br>
+                                    Вас бесплатно!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-xl-12 p-0 m-0">
+                            <form class="modal-form contacts1-form" action="#">
+                                <input class="contacts1-form__nameField modal-form__userFields contacts1-form__userFields home5-form__userFields"
+                                       type="text" placeholder="Имя" required>
+                                <input class="contacts1-form__emailField modal-form__userFields contacts1-form__userFields home5-form__userFields"
+                                       type="email" placeholder="E-mail" required>
+                                <input class="contacts1-form__telField modal-form__userFields contacts1-form__userFields home5-form__userFields"
+                                       type="tel" placeholder="Телефон" required>
+                                <button class="contacts1-form__orderField modal-form__userFields contacts1-form__userFields home5-form__userFields contacts1-form__userOrder home5-form__userOrder"
+                                        type="submit">
+                                    Заказать консультацию
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+            </div>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>

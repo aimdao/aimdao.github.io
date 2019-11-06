@@ -295,7 +295,7 @@
 
 <!-- ========================================================== -->
 <!-- Модальное окно bootstrap (мой код для модального окна взят из page Contacts.html). -->
-<div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+<div id="modalForm" class="modal fade" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -337,6 +337,37 @@
                             </form>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ========================================================== -->
+<!-- Модальное окно bootstrap (всплывающее окно с инфой об успешной отправке
+данных из формы в нижней части страницы). -->
+<div id="modalFormSend" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Мой код для модального окна bootstrap. -->
+                <div class="modalFormSend">
+                    <h3 class="modalFormSend__title">
+                        Ваша заявка успешно отправлена
+                    </h3>
+                    <p class="modalFormSend__subtitle">
+                        Мы свяжимся с Вами в ближайшее время
+                    </p>
                 </div>
             </div>
             <div class="modal-footer">

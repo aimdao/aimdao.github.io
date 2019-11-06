@@ -21,7 +21,17 @@ $(document).ready(function () {
 /* Modal (модальное окно bootstrap). */
 $(function () {
     $('.homeH-phone__link').click(function () {
-        $('#myModal').modal();
+        $('#modalForm').modal();
+    });
+});
+
+//================================================================
+
+/* Modal - модальное окно bootstrap (всплывающее окно с инфой об успешной отправке
+данных из формы в нижней части страницы). */
+$(function () {
+    $('.home5-form__userOrder').click(function () {
+        $('#modalFormSend').modal();
     });
 });
 

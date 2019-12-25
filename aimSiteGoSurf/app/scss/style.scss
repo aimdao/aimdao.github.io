@@ -1,0 +1,833 @@
+// ### ИМПОРТЫ ########################
+// Переменные.
+@import "vars";
+// Объединение (конкатенация) библиотек (normalize.css, slick.css, animate.css).
+@import "libs";
+// Шрифты.
+@import "fonts";
+// Глобальные стили.
+@import "global";
+
+// ###################################
+// ### header ########################
+// ###################################
+.header {
+    position: relative;
+    height: 100vh;
+}
+
+.header__slider { // Первый слайдер header__slider листает весь header.
+    &-item { // Элемент слайдера.
+        height: 100vh; // Каждый элемент слайдера занимает всю высоту дисплея.
+        background-image: url("../images/header-bg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+}
+
+.slider-item__info {
+    position: absolute; // Позиционирование относительно header__slider.
+    right: 80px;
+    bottom: 116px;
+    text-align: right;
+}
+
+.slider-item__info-suptitle {
+    margin-bottom: 5px;
+}
+
+.slider-item__info-suptext {
+    margin-bottom: 8px;
+}
+
+.slider-item__info-title {
+    font-size: 80px;
+    line-height: 86px;
+    font-weight: 800;
+    margin-bottom: 48px;
+}
+
+.slider-item__info-text {
+    font-size: 40px;
+    line-height: 46px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.slider-arrows { // Стрелки перелкючения слайдера header__slider (подключены в main.js вместо стандартных кнопок slick: prevArrow и nextArrow).
+    position: absolute;
+    top: 40px;
+    right: 80px;
+    cursor: pointer;
+    z-index: 4; // Чтобы стрелки были над картинкой бекграунда.
+}
+
+.slider-arrows__left {
+    right: 125px;
+}
+
+.slider-dotsHead { // Сдайдер slider-dotsHead подключен к сдайдер header__slider и показывает его пролистывание.
+    position: absolute; // Позиционирование относительно header.
+    right: 50px;
+    bottom: 36px;
+    max-width: 920px;
+    width: 100%;
+    .slick-current { // Класс slick-current - это класс текущего слайда slick.
+        .dots-box {
+            border-top: 4px solid $green; // Выделяем текущую линию для подсветки.
+        }
+    }
+}
+
+.dots-box {
+    width: 200px;
+    display: flex; // Активируем flex у родителя dots-box для выравнивания детей (классов внутри) в одноу строку.
+    justify-content: space-between; // Задаем у родителя выравниваем детей по горизонтали.
+    height: 28px;
+    align-items: center; // Задаем у родителя выравниваем детей по вертикали.
+    border-top: 4px solid #fff; // Верхняя граница dots-box (линия для подсветки).
+    padding-top: 6px;
+    &__number {
+        font-size: 24px;
+        line-height: 34px;
+        font-weight: 800;
+    }
+    &__name {
+        font-weight: 300;
+        line-height: 19px;
+        text-transform: capitalize;
+    }
+}
+
+.header__aside { // Боковое меню.
+    position: absolute; // Позиционирование относительно header.
+    top: 0;
+    left: 0;
+    z-index: 5; // Чтобы боковое меню было над картинкой бекграунда.
+    border-right: 1px solid rgba(#fff, 0.25); // Линия, отделяющая боковое меню (с прозрачностью 0.25).
+    height: 100vh;
+    text-align: center;
+}
+
+.header__title { // Прозрачный логотип.
+    font-size: 200px;
+    line-height: 156px;
+    opacity: 0.07;
+    font-weight: 800;
+    max-width: 467px;
+    position: absolute; // Позиционирование относительно header.
+    top: 0;
+    left: 0;
+    z-index: 4; // Чтобы прозрачный логотип был над картинкой бекграунда.
+}
+
+.menu {
+    padding-top: 40px;
+    a {
+        span {
+            display: block;
+            font-size: 12px;
+            line-height: 14px;
+            letter-spacing: 3px;
+            font-weight: 500;
+            padding-top: 6px;
+            margin-bottom: 20px;
+            text-transform: capitalize;
+        }
+    }
+}
+
+.menu-btn { // Кнопка меню, появляется при адаптивности.
+    display: none;
+    width: 60px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    position: absolute; // Позиционирование относительно header.
+    z-index: 20;
+    right: 20px;
+    top: 75px;
+    &__inner {
+        width: 40px;
+    }
+    &__line {
+        height: 5px;
+        background-color: $green;
+        + .menu-btn__line { // Выравниваем черточки в кнопке.
+            margin-top: 5px;
+        }
+    }
+}
+
+.header__date {
+    font-size: 72px;
+    line-height: 64px;
+    font-weight: 800;
+    span {
+        padding-top: 15px;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 1.4px;
+        margin-bottom: 30px;
+        display: block;
+    }
+}
+
+.header__search {
+    padding-top: 15px;
+    padding-bottom: 35px;
+}
+
+.header__location {
+    display: inline-block;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 1.05px;
+    position: relative;
+    padding-left: 19px;
+    text-transform: capitalize;
+    &::before {
+        content: "";
+        position: absolute; // Позиционирование относительно header__location.
+        left: 0;
+        top: 0;
+        width: 11px;
+        height: 13px;
+        background-image: url("../images/marker.svg");
+    }
+}
+
+.header__map {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 3; // Чтобы карта была под стрелками (z-index: 4), но над картинкой бекграунда.
+}
+
+.header__arrows {
+    position: absolute;
+    left: 210px;
+    bottom: 30px;
+    z-index: 3; // Чтобы стрелка движения вниз была над картинкой бекграунда.
+}
+
+// ТУТ МОЖНО ОТКЛЮЧИТЬ АНИМАЦИЮ ЧТОБЫ НЕ ГРЕТЬ MAC !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+.line-animation { // Анимация появления линии на карте.
+    stroke-dashoffset: 100%; // Свойство позволяет задать смещение пунктирной обводки относительно первоначального положения. Значение задается в единицах длины или в процентах, значения могут быть отрицательными (тогда изменится направление смещения). Значение по умолчанию: 0.
+    stroke-dasharray: 100%; // Управляет видом пунктирной обводки. Можно задавать в единицах длины или в процентах. Если задано одно значение, второе значение считается равным первому. Например, stroke-dasharray="1" нарисует линию из отрезков длиной одну единицу разделенных пробелами такой же ширины.
+    animation: animdash 8s infinite 6s; // Анимация отработает в течении 3 сек. с задержкой 6 сек (и так бесконечно).
+}
+
+@keyframes animdash { // Правило @keyframes устанавливает ключевые кадры при анимации элемента. Ключевой кадр это свойства элемента (прозрачность, цвет, положение и др.), которые должны применяться к элементу в заданный момент времени. Таким образом, анимация представляет собой плавный переход стилевых свойств от одного ключевого кадра к другому.
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+// ##########################################
+// ### section: surf ########################
+// ##########################################
+
+.surf {
+    background-image: url("../images/surf-bg.png");
+    background-position: right 200px;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.surf__subtitle {
+    text-align: right;
+    padding-right: 80px;
+    margin-top: -86px;
+}
+
+.surf-slider { // Сдайдер surf-slider.
+    padding-top: 110px;
+    .slider-arrows { // Стрелки перелкючения слайдера surf-slider (подключены в main.js вместо стандартных кнопок slick: prevArrow и nextArrow).
+        top: 50px;
+        opacity: 0.25;
+    }
+    .slick-slide:nth-child(4n + 1) { // Класс slick-slide - это класс слайда slick (n принимает значения от нуля до +бесконечности). Т.е. выбираем начиная с 1-го каждый 4-й слайд.
+        .surf-box { // Опускаем выбранный слайд по вертикали.
+            margin-top: 32px;
+        }
+    }
+    .slick-slide:nth-child(4n + 3) { // Класс slick-slide - это класс слайда slick (n принимает значения от нуля до +бесконечности). Т.е. выбираем начиная с 3-го каждый 4-й слайд.
+        .surf-box { // Опускаем выбранный слайд по вертикали.
+            margin-top: 89px;
+        }
+    }
+    .slick-current { // Класс slick-current - это класс текущего слайда slick.
+        .surf-box__inner-btn {
+            display: block; // По умолчанию кнопка отключена и включена только у текущего слайда.
+        }
+        .surf-box__inner {
+            background: rgba(#1c2121, 0.3); // Уменьшаем затемнение для текущего слайда.
+        }
+    }
+}
+
+.surf-box {
+    &__wrapper {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    &__inner {
+        min-height: 750px;
+        background: rgba(#1c2121, 0.85); // Затемнение для слайда.
+        position: relative;
+        transition: all 0.5s; // Плавное изменение свойств (при наведении).
+        &:hover {
+            background: rgba(#1c2121, 0.3); // Уменьшаем затемнение при наведении на слайд.
+            .surf-box__inner-btn { // Кнопка внизу слайда.
+                display: block; // Включение кнопки внизу слайда при наведении.
+            }
+        }
+    }
+}
+
+.surf-box__inner-title {
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 36px;
+    padding: 72px 0 0 40px;
+    width: 140px;
+}
+
+.surf-box__inner-location {
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 8px;
+    transform: rotate(-90deg); // Разворачиваем текст по вертикали.
+    position: absolute; // Позиционирование относительно surf-box__inner.
+    left: 40px;
+    bottom: 80px;
+    width: 0;
+    height: 0;
+    white-space: nowrap; // Отключение переноса слов (текст будет в одну строку).
+    span {
+        font-weight: 100;
+    }
+}
+
+.surf-box__inner-btn { // Кнопка внизу слайда.
+    position: absolute; // Позиционирование относительно surf-box__inner.
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    display: none; // По умолчанию кнопка отключена и включена только у текущего слайда.
+}
+
+.slider-map { // Слайдер: карта мира с пляжами (отмечены зелеными точками) и данными о пляжах под картой.
+    max-width: 1200px; // 1200 - это реальная ширина картинки карта мира.
+    min-height: 635px; // 635 - это реальная высота картинки карта мира.
+    background-image: url("../images/world-map-dots.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto;
+    .slick-list { // Класс slick-list - это класс списка слайдов slick.
+        min-height: 635px; // Задаем мин.высоту такую же, как у картинки карты мира.
+        overflow: visible; // Все что выходит за границы карты мира (края зеленых точек), будет видно.
+    }
+    .slick-current { // Класс slick-current - это класс текущего слайда slick.
+        .slider-dots__content { // Включаем данные для текущего пляжа (слайда).
+            display: block;
+            width: 285px;
+            padding: 28px 31px 0 32px;
+        }
+    }
+}
+
+.slider-dots__content-row {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+
+.slider-dots__content-item {
+    text-align: center;
+    img {
+        margin-bottom: 7px;
+    }
+}
+
+.slider-dots__content-number {
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 23px;
+}
+
+.slider-dots__content-name {
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 12px;
+}
+
+.slider-dots__content-title {
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 26px;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+    position: relative;
+    &::before { // Разделительная декоративная линия.
+        content: "";
+        position: absolute; // Позиционирование относительно slider-dots__content-title.
+        bottom: 0;
+        left: 0;
+        background-color: $green;
+        width: 80px;
+        height: 1px;
+    }
+}
+
+.slider-dots__content-subtitle {
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: capitalize;
+}
+
+.slider-dots__content-link {
+    padding-top: 4px;
+}
+
+.slider-dots__circle { // Картинка зеленой точки на карте.
+    width: 23px;
+    height: 23px;
+    background-color: $green;
+    border-radius: 50%;
+    box-shadow: 0 0 35px rgba(74, 246, 205, 0.837777);
+}
+
+.slider-dots__content { // По умолчения данные всех пляжей отключены.
+    display: none;
+    background: rgba(#0F1010, 0.7);
+    border-radius: 6px;
+    position: absolute; // Позиционирование относительно slider-dots.
+    bottom: 35px;
+    transform: translateX(-50%); // Смещение по оси Х влево.
+    z-index: 1;
+    &::before { // Капля (из треугольника и круга) показывающая текущее место положение.
+        content: "";
+        position: absolute; // Позиционирование относительно slider-dots.
+        bottom: -21px;
+        left: calc(50% - 1px); // Выравниваем по горизонтали, используя calc.
+        width: 0; // Обнуляем, чтобы сделать треугольник.
+        height: 0; // Обнуляем, чтобы сделать треугольник.
+        border-bottom: 20px solid $green; // Высота треугольника (bottom - обычный треугольник, top - перевернутый треугольник).
+        border-left: 12px solid transparent; // Проекция левой стороны треугольника на его основание.
+        border-right: 12px solid transparent; // Проекция правой стороны треугольника на его основание.
+        border-bottom-left-radius: 10px; // Скругление  левого угла у основания треугольника.
+        border-bottom-right-radius: 10px; // Скругление  правого угла у основания треугольника.
+    }
+}
+
+// Позиционирование зеленых точек (пляжей) на карте мира.
+.slider-dots {
+    position: relative;
+}
+
+// Позиционирование конкретной зеленой точки (пляжа) на карте мира.
+.slider-dots--1 {
+    top: 335px;
+    left: 0;
+    .slider-dots__content { // Т.к. контент 1-й точки выходит за границу вертикального контейнера, идущего через весь сайт, то смещаем контент у 1-й точки.
+        transform: translateX(0);
+        &::before {
+            left: calc(0px - 0.5px); // Выравниваем по горизонтали, используя calc.
+        }
+    }
+}
+
+.slider-dots--2 {
+    top: 270px;
+    left: 0;
+    .slider-dots__circle {
+        position: relative;
+        &::before { // Мини-маркер для отображения текущего местонахождения.
+            content: "";
+            position: absolute; // Позиционирование относительно slider-dots__circle.
+            background-image: url("../images/mini-marker.png");
+            background-size: cover;
+            width: 14px;
+            height: 17px;
+            top: -25px;
+            right: -15px;
+        }
+    }
+}
+
+.slider-dots--3 {
+    top: 330px;
+    left: 25px;
+}
+
+.slider-dots--4 {
+    top: 470px;
+    left: -25px;
+}
+
+.slider-dots--5 {
+    top: 230px;
+    left: -65px;
+}
+
+.slider-dots--6 {
+    top: 550px;
+    left: -120px;
+}
+
+.slider-dots--7 {
+    top: 375px;
+    left: -95px;
+}
+
+.slider-dots--8 {
+    top: 470px;
+    left: 35px;
+    .slider-dots__content { // Т.к. контент 8-й точки выходит за границу вертикального контейнера, идущего через весь сайт, то смещаем контент у 8-й точки.
+        transform: translateX(-262px);
+        &::before {
+            left: auto;
+            right: 0.5px;
+        }
+    }
+}
+
+// ####################################################
+// ### section: travel и sleep ########################
+// ####################################################
+
+.holder {
+    background-image: url("../images/travel-bg.png"); // Фото напитка.
+    &.sleep { // &. означает, что класс sleep перезаписывает своими свойствами свойства класса holder (елси в html к классу holder добавлен класс sleep).
+        background-image: url("../images/frangipani.png"); // Фото цветка.
+    }
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    .slider-arrows { // Стрелки перелкючения слайдера holder__slider (подключены в main.js вместо стандартных кнопок slick: prevArrow и nextArrow).
+        top: 225px;
+        opacity: 0.25;
+    }
+}
+
+.holder-slider {
+    &__head { // Прописываем фоновую картинку travelSlider-bg.
+        background-repeat: no-repeat;
+        background-position: top left;
+        min-height: 780px;
+    }
+    &__descr {
+        padding: 160px 0 0 132px;
+        min-height: 320px;
+        margin-top: -230px;
+        background-repeat: no-repeat;
+        background-position: right center;
+        background-size: contain; // Для бекграунда (фото гамака с цветком), чтобы влез.
+        .descr__head {
+            position: relative;
+            padding-right: 68px;
+            &.descr__head-sleep { // &. означает, что класс descr__head-sleep перезаписывает своими свойствами свойства класса descr__head (елси в html к классу descr__head добавлен класс descr__head-sleep).
+                padding-right: 215px; // Падинг нужен, чтобы разместить звезды рейтинга гостинниц.
+            }
+            img {
+                position: absolute; // Позиционирование относительно descr__head.
+                right: 0;
+                top: 0;
+            }
+            .holder__star-list { // Звезды рейтинга гостинниц.
+                position: absolute; // Позиционирование относительно descr__head.
+                right: 0;
+                top: 0;
+                img {
+                    position: static; // Сбросим position до static (который обычно у всех элементов по умолчанию).
+                }
+            }
+        }
+    }
+    &__subtitle {
+        text-align: right;
+        padding: 132px 80px 0 0;
+    }
+    &__btn {
+        text-align: center;
+    }
+}
+
+.holder-slider__info {
+    display: flex;
+    justify-content: space-around;
+}
+
+.holder-slider__info-item {
+    min-height: 200px;
+    margin-bottom: 66px;
+    position: relative;
+}
+
+.holder-slider__info-subtitle {
+    line-height: 22px;
+    letter-spacing: 8px;
+    opacity: 0.5;
+    transform: rotate(-90deg);
+    font-size: 18px;
+    position: absolute; // Позиционирование относительно holder-slider__info-item.
+    top: 97px;
+    left: -97px;
+    width: 200px; // Ширина поменялась местами с высотой, т.к. мы развернули строку на 90deg.
+    height: 0;
+    white-space: nowrap; // Отключение переноса слов (текст будет в одну строку).
+    text-align: right;
+}
+
+.holder-slider__info-title {
+    font-size: 40px;
+    line-height: 36px;
+    font-weight: 800;
+    padding-left: 40px;
+    position: relative;
+    .holder-pricing__span {
+        font-size: 14px;
+        line-height: 0;
+        text-align: right;
+        letter-spacing: 5.25px;
+        opacity: 0.75;
+        font-weight: 400;
+        position: absolute;
+        bottom: -8px;
+        right: 0;
+    }
+}
+
+// ##########################################
+// ### section: shop ########################
+// ##########################################
+
+.shop {
+    background-image: url("../images/shop-bg.png");
+    background-repeat: no-repeat;
+    background-position: right center;
+    .slider-arrows { // Стрелки перелкючения слайдера shop__slider (подключены в main.js вместо стандартных кнопок slick: prevArrow и nextArrow).
+        opacity: 0.25;
+    }
+}
+
+.shop__slider {
+    padding-left: 132px;
+}
+
+.shop__slider-inner {
+    display: flex;
+}
+
+.shop__slider-info {
+    max-width: 480px;
+    width: 100%; // Чтобы блок занял всю доступную ширину.
+    margin-right: 40px;
+    padding-top: 150px;
+}
+
+.descr__head-shop {
+    max-width: 340px;
+    margin-bottom: 47px;
+}
+
+.shop__star-list {
+    margin-left: -9px;
+}
+
+.shop__slider-price {
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 64px;
+    sup {
+        font-size: 18px;
+        padding-left: 2px;
+    }
+}
+
+.shop__slider-content {
+    padding-left: 170px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.shop__extras {
+    padding-left: 150px;
+}
+
+.shop__extras-inner {
+    display: flex;
+}
+
+.shop__extras-title {
+    font-size: 28px;
+    line-height: 40px;
+    margin-bottom: 25px;
+    font-weight: 800;
+}
+
+.shop__extras-box {
+    text-align: center;
+    margin-right: 57px;
+}
+
+.shop__extras-img {
+    min-height: 105px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.shop__extras-name {
+    line-height: 22px;
+    font-size: 18px;
+    opacity: 0.5;
+    letter-spacing: 8px;
+    margin-bottom: 16px;
+}
+
+.shop__extras-price {
+    font-size: 18px;
+    line-height: 40px;
+    font-weight: 800;
+}
+
+.surfboard {
+    position: relative;
+}
+
+.surfboard-box {
+    position: absolute; // Позиционирование относительно surfboard.
+}
+
+.surfboard__position--1 {
+    right: 40px;
+    top: 215px;
+}
+
+.surfboard__position--2 {
+    left: -6px;
+    top: 313px;
+}
+
+.surfboard__position--3 {
+    left: 52px;
+    bottom: 70px;
+    .surfboard-box__content {
+        padding-left: 0;
+        padding-right: 104px;
+        top: -15px;
+        left: -400px;
+        &::before { // Декоративная черта.
+            content: "";
+            position: absolute; // Позиционирование относительно surfboard.
+            width: 80px;
+            height: 1px;
+            background-color: #fff;
+            right: 0;
+            left: auto;
+            top: 50%;
+        }
+    }
+}
+
+.surfboard-box__circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: relative;
+    background-color: #fff;
+    cursor: pointer;
+    /* При клике, плюс меняется на минус, при еще одном клике минус меняется на плюс и т.д.
+    Это происходит, так как при каждом клике, то добавлятьеся, то изчезает класс active в index.html. */
+    &.active {
+        .circle-row {
+            transform: translate(-50%, -50%) rotate(0deg);
+        }
+    }
+}
+
+// Плюс, сформированный из двух перпендикулярных зеленых минусов.
+.circle-row { // Первый горизонтальный минус.
+    background-color: $green;
+    position: absolute; // Позиционирование относительно surfboard-box__circle.
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg); // Делаем оба минуса горизонтальными.
+    width: 12px;
+    height: 2px;
+    & + .circle-row { //Обращаемся ко второму минусу и делаем его вертикальным.
+        transform: translate(-50%, -50%) rotate(90deg);
+    }
+}
+
+/* Если к классу surfboard-box__circle добавлен (по клику) класс active, и есть соседний
+ класс surfboard-box__content, то отображаем скрытый класс surfboard-box__content. */
+.surfboard-box__circle.active + .surfboard-box__content {
+    display: block;
+}
+
+// Класс surfboard-box__content по умолчанию скрыт.
+.surfboard-box__content {
+    display: none;
+    position: absolute; // Позиционирование относительно surfboard.
+    top: -15px;
+    left: 40px;
+    width: 359px;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 800;
+    padding-left: 104px;
+    &::before { // Декоративная черта.
+        content: "";
+        position: absolute; // Позиционирование относительно surfboard.
+        width: 80px;
+        height: 1px;
+        background-color: #fff;
+        left: 0;
+        top: 50%;
+    }
+}
+
+// ############################################
+// ### section: footer ########################
+// ############################################
+
+.footer {
+    text-align: center;
+    padding: 285px 0 34px;
+    .btn {
+        span {
+            padding: 17px 17px 15px;
+            &::after {
+                display: none;
+            }
+        }
+    }
+}
+
+.footer__copy {
+    padding-top: 27px;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 1.05px;
+    opacity: 0.5;
+    font-weight: 300;
+}
+
+// ### МЕДИА-ЗАПРОСЫ ########################
+// (подключаются ниже изменяемого .css/.scss кода).
+@import "media";
+

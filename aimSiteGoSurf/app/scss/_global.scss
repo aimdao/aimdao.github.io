@@ -1,0 +1,263 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit; // Свойства, которым будет присвоено значение inherit, будут наследовать значение того-же свойства его родителя.
+}
+
+body {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    background-color: #171919;
+    color: #fff;
+    text-transform: uppercase;
+
+    // Два свойства ниже, чтобы убрать нижний скролл при анимации для класса .subtitle с помощью библиотек wow.js и animate.css.
+    min-width: 320px; // Минимальная ширина контента (для мобильной версии сайта для устройства).
+    overflow-x: hidden;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+}
+
+ul,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.container { // Вертикальный контейнер, идущий через весь сайт.
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.headline-left {
+    font-size: 22px;
+    line-height: 32px;
+    letter-spacing: 7.33333px;
+    opacity: 0.5;
+    padding-left: 103px;
+    position: relative;
+    display: inline-block;
+    &::before { // Декоративная черта.
+        content: "";
+        position: absolute; // Позиционирование относительно headline-left.
+        width: 80px;
+        height: 1px;
+        background-color: #fff;
+        left: 0;
+        top: 50%;
+    }
+}
+
+.headline-right {
+    font-size: 22px;
+    line-height: 32px;
+    letter-spacing: 7.33333px;
+    opacity: 0.5;
+    padding-right: 103px;
+    position: relative;
+    display: inline-block;
+    &::before { // Декоративная черта.
+        content: "";
+        position: absolute; // Позиционирование относительно headline-right.
+        width: 80px;
+        height: 1px;
+        background-color: #fff;
+        right: 0;
+        top: 50%;
+    }
+}
+
+.title { // Зоголовки в секциях сайта.
+    div {
+        font-size: 200px;
+        color: rgba(#fff, 0.02);
+        font-weight: 800;
+        position: relative;
+        transform: translateX(-50px); // Смещение по оси Х влево.
+        display: inline-block; // Для transform: translateX(-50px).
+    }
+    span {
+        display: inline-block;
+    }
+    h3 {
+        position: absolute; // Позиционирование относительно title span.
+        top: 0;
+        right: -5px;
+        margin: 0;
+        color: #fff;
+        font-size: 80px;
+        &::after {
+            content: "";
+            position: absolute; // Позиционирование относительно title span.
+            top: 0;
+            right: 0;
+            width: 80px;
+            height: 1px;
+            background-color: $green;
+        }
+    }
+}
+
+.subtitle {
+    display: inline-block;
+    text-align: right;
+    &__head {
+        font-weight: 800;
+        font-size: 40px;
+        padding-right: 10px;
+        span {
+            font-weight: 100;
+        }
+    }
+}
+
+.descr {
+    display: inline-block;
+    padding-left: 5px;
+    &__head {
+        font-weight: 800;
+        font-size: 40px;
+        span {
+            font-weight: 100;
+        }
+    }
+}
+
+.btn {
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 36px;
+    span {
+        padding: 17px 57px 15px 17px;
+        background-color: $green;
+        display: inline-block;
+        margin-left: 19px;
+        position: relative;
+        &::before { // Тире.
+            content: "";
+            position: absolute; // Позиционирование относительно btn span.
+            top: 50%;
+            left: -10px;
+            width: 20px;
+            height: 1px;
+            background-color: #fff;
+        }
+        &::after { // Стрелка.
+            content: "";
+            position: absolute; // Позиционирование относительно btn span.
+            top: 50%;
+            right: 17px;
+            transform: translateY(-50%); // Смещение по оси Y вверх.
+            width: 25px;
+            height: 21px;
+            background-image: url("../images/arrows-right.svg");
+        }
+    }
+}
+
+.surf,
+.holder {
+    padding: 160px 0 120px;
+}
+
+.holder {
+    padding-bottom: 265px;
+    margin-bottom: 35px;
+}
+
+// START: Стили секции sleep для полей input number (+ и - для выбора кол-ва ночей и кол-ва гостей).
+.quantity {
+    display: inline-block;
+}
+
+// Убираем стандартные стрелки увеличения-уменьшения.
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.quantity input {
+    width: 43px;
+    height: 42px;
+    display: block;
+    border: none;
+    background-color: transparent; // Фон прозрачный.
+    font-size: 40px;
+    line-height: 36px;
+    font-weight: 800;
+    color: #fff;
+}
+
+.quantity input:focus {
+    outline: 0;
+}
+
+.quantity-nav {
+    float: left;
+    position: static; // Сбросим position до static (который обычно у всех элементов по умолчанию).
+    height: 42px;
+}
+
+.quantity-button {
+    position: relative;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quantity-button.quantity-up {
+    position: absolute; // Позиционирование относительно holder-slider__info-title.
+    top: 45px;
+    right: 0;
+}
+
+.quantity-button.quantity-down {
+    position: absolute; // Позиционирование относительно holder-slider__info-title.
+    top: 45px;
+    right: 25px;
+}
+
+// END: Стили секции sleep для полей input number (+ и - для выбора кол-ва ночей и кол-ва гостей).
+
+.star-list {
+    li {
+        display: inline-block;
+        & + li { // & + li означает "начиная со второго li", т.е. свойство применится начиная со второго li.
+            margin-left: -25px; // Ужимаем расстояния между звездами рейтинга гостинниц.
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

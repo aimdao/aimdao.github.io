@@ -1,0 +1,29 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-weight: 400;
+    font-family: 'Lato', sans-serif;
+    line-height: 24px;
+    color: #4a6385;
+    font-size: 14px;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit; // Наследование свойства от родителя (тега html).
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+}

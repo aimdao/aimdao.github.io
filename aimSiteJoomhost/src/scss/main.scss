@@ -1,0 +1,491 @@
+// Объединение (конкатенация) библиотек (slick.scss, reset.css, normalize.css, animate.css и т.д.).
+@import "_libs.scss";
+// Шрифты.
+@import "_fonts.scss";
+// Сброс стилей браузеров.
+@import "_reset.scss"; // Только для этого проекта. А так, если нужет reset, то использовать node_modules/reset-css/reset.css (от Эрика Маера).
+// Глобальные стили.
+@import "_global.scss";
+// Переменные.
+@import "_vars";
+
+// ###################################
+// ### header ########################
+// ###################################
+
+.header {
+    border-top: 1px solid $blue;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 87px;
+}
+
+// Основное меню (без применения адаптивности).
+.menu {
+    // Sendvich-menu для адаптивности (вместо основного меню).
+    &__btn {
+        width: 40px;
+        display: none; // Sendvich-menu скрыто в неадаптивном режиме.
+        div {
+            height: 5px;
+            background-color: #000;
+            margin-bottom: 5px;
+        }
+    }
+}
+
+.menu__list {
+    display: flex;
+    li {
+        margin-left: 38px;
+    }
+    a {
+        font-size: 14px;
+        color: #2f3f54;
+        font-weight: 700;
+        font-family: 'Open Sans', sans-serif;
+    }
+}
+
+// #########################################
+// ### section: top ########################
+// #########################################
+
+.top {
+    background-color: $blue;
+    padding-top: 150px;
+    padding-bottom: 180px;
+    &__inner {
+        display: flex;
+    }
+}
+
+.top-info {
+    max-width: 555px;
+    margin-right: 35px;
+    color: #fff;
+    &__title {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 900;
+        font-size: 48px;
+        line-height: 52px;
+        text-transform: uppercase;
+    }
+    &__descr {
+        font-size: 19px;
+        line-height: 52px;
+        font-weight: 700;
+        margin-bottom: 35px;
+        span {
+            font-size: 14px;
+            line-height: 24px;
+            display: block;
+            font-weight: 400;
+        }
+    }
+}
+
+.top-info__list {
+    list-style: none;
+    margin-bottom: 50px;
+    li {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+        margin-bottom: 3px;
+        padding-left: 24px;
+        position: relative;
+        &::before {
+            content: "";
+            background: url("../img/list-icon.png");
+            width: 13px;
+            height: 13px;
+            position: absolute; // Относительно .top-info__list li.
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+.top-info__btn {
+    color: #fff;
+    text-transform: uppercase;
+    border: 3px solid #fff;
+    padding: 13px 44px;
+    border-radius: 30px;
+    margin-bottom: 15px;
+}
+
+.top-images__box {
+    position: relative;
+    .top-images__circle {
+        width: 230px;
+        height: 230px;
+        background-color: #fff;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        color: #212121;
+        position: absolute; // Относительно .top-images__box.
+        top: -65px;
+        right: -60px;
+        .top-images__title {
+            text-align: left;
+            width: 140px;
+            margin-bottom: 10px;
+        }
+        .top-images__price {
+            font-size: 54px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        .top-images__date {
+            text-align: right;
+            width: 140px;
+        }
+    }
+}
+
+// ###########################################
+// ### section: price ########################
+// ###########################################
+
+.price {
+    padding: 150px 0 180px;
+}
+
+.title {
+    text-align: center;
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    color: #2f3f54;
+    span {
+        color: $blue;
+    }
+}
+
+.price__descr {
+    text-align: center;
+    max-width: 595px;
+    margin: 35px auto 125px;
+}
+
+.price__items {
+    display: flex;
+    justify-content: space-between;
+}
+
+.price-item {
+    font-family: 'Roboto', sans-serif;
+    max-width: 360px;
+    box-shadow: 0 21px 49px 1px rgba(41, 44, 61, 0.15);
+    padding: 0 50px 60px;
+    position: relative;
+    overflow: hidden; // Для сокрытия выступающей части синего элипса.
+    &__number { // Создаем синий обрезнанный элипс для цены.
+        width: 265px;
+        height: 465px;
+        border-radius: 136px;
+        color: #fff;
+        background-color: $blue;
+        position: absolute; // Относительно .price-item.
+        top: -370px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        font-size: 33px;
+        display: flex; // Для опускания цены вниз обрезанного элипса.
+        align-items: flex-end; // Для опускания цены вниз обрезанного элипса.
+        justify-content: center;
+        padding-bottom: 40px;
+        span {
+            font-size: 16px;
+        }
+    }
+    &__images {
+        padding-top: 120px;
+        text-align: center;
+        margin-bottom: 30px;
+        min-height: 251px;
+    }
+    &__title {
+        margin-bottom: 25px;
+        font-size: 32px;
+        line-height: 40px;
+        font-weight: 700;
+        color: $blue
+    }
+    &__text {
+        font-family: 'Lato', sans-serif;
+        margin-bottom: 50px;
+    }
+    &__list {
+        margin-bottom: 75px;
+        list-style: none; // Убираем дефолтные маркеры у списка.
+        li {
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: 12px;
+            font-weight: 400;
+            padding-left: 36px;
+            position: relative;
+            &::before { // Маркеры для списка.
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                background-image: url("../img/price-icon.png");
+                width: 15px;
+                height: 11px;
+            }
+        }
+    }
+    &__btn { // Кнопка сделана абсолютным позиционированием.
+        font-family: 'Roboto', sans-serif;
+        font-size: 17px;
+        color: #fff;
+        background-color: $blue;
+        font-weight: 700;
+        position: absolute; // Относительно .price-item.
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        padding: 20px 10px;
+    }
+}
+
+// #############################################
+// ### section: reviews ########################
+// #############################################
+.reviews {
+    padding: 120px 0;
+    background-color: #fafafa;
+}
+
+.reviews-slider {
+    margin-top: 160px;
+    // Выравниваем по горизонтали положение слайдов в контейнере .container.
+    .slick-list {
+        margin: 0 -50px; // Растягиваем (расширяем) видимую область отображения слайдов влево-вправо снаружи.
+        .slick-slide {
+            margin: 0 50px; // Изнутри сдлайдера, двигаем (прокручиваем) слайды в нужное положение.
+            padding-bottom: 70px;
+        }
+    }
+    //  Настройка точек для пролистывания слайдера.
+    .slick-dots {
+        list-style: none;
+        display: flex;
+        justify-content: center; // Выравниваем точки по центру.
+        // Перебиваем дефолтные стили слайдера для точек (кнопок).
+        button {
+            font-size: 0; // Отключаем шрифт для точек (кнопок).
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            padding: 0;
+            border: none;
+            background-color: $blue;
+            outline: none;
+        }
+        // Раздвигаем точки для исключения ложных нажатий.
+        li {
+            margin: 0 8px;
+        }
+        // Настройка активной точки.
+        .slick-active button {
+            background-color: #fff;
+            border: 2px solid $blue;
+        }
+    }
+}
+
+.reviews-box {
+    display: flex;
+    box-shadow: 0 21px 49px 1px rgba(41, 44, 61, 0.15);
+    &__images {
+        background-color: $blue;
+        width: 190px;
+        min-height: 350px;
+        display: flex; // Для выравнивания (в данном случае центрирования) картинок внутри .reviews-box__images.
+        align-items: center; // Центрируем картинку по вертикали.
+        justify-content: center; // Центрируем картинку по горизонтали.
+        img {
+            border-radius: 50%;
+        }
+    }
+    &__content {
+        background-color: #fff;
+        width: 330px;
+        font-size: 16px;
+        line-height: 26px;
+        padding: 0 40px;
+        min-height: 350px;
+        display: flex;
+        flex-direction: column; // Назначаем главной вертикальную ось (по дефолту row - главная ось горизонтальная).
+        justify-content: center; // Центрируем картинку по вертикали (используем не align-items: center; т.к. изменили главную ось).
+        .reviews-box__text {
+            margin-bottom: 30px;
+        }
+        .reviews-box__author {
+            span {
+                color: $blue;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+// #############################################
+// ### section: clients ########################
+// #############################################
+.clients {
+    padding: 100px 0 80px;
+}
+
+.clients__inner {
+    padding: 0 40px;
+}
+
+.clients__list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    li {
+        margin: 0 18px;
+    }
+}
+
+//###################################
+//### footer ########################
+//###################################
+
+.footer {
+    background-color: #304054;
+    padding: 80px 0 125px;
+    color: #718db2;
+}
+
+.footer__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-col__logo {
+    width: 263px;
+    .footer__logo {
+        margin-bottom: 30px;
+    }
+    .footer__text {
+        font-size: 13px;
+        line-height: 22px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+}
+
+.footer-menu {
+    width: 165px;
+}
+
+.footer__title {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    color: #d0e4ff;
+    margin-bottom: 30px;
+}
+
+.footer__list {
+    list-style: none;
+    a {
+        font-size: 13px;
+        margin-bottom: 8px;
+        color: #718db2;
+    }
+}
+
+.footer-form {
+    width: 263px;
+    input,
+    textarea {
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        background-color: transparent;
+        height: 38px;
+        display: block;
+        width: 100%;
+        padding: 0 12px;
+        color: #718db2;
+        font-size: 11px;
+        font-family: 'Lato', sans-serif;
+        font-weigth: 400;
+    }
+    input::placeholder,
+    textarea::placeholder {
+        color: #718db2;
+        font-size: 11px;
+        font-family: 'Lato', sans-serif;
+        font-weigth: 400;
+    }
+    textarea {
+        padding: 12px;
+        height: 85px;
+        resize: none; // Отключение возможности изменять размер окна для сообщения.
+        margin-bottom: 10px;
+    }
+    button {
+        text-transform: uppercase;
+        font-family: 'Roboto', sans-serif;
+        font-size: 13px;
+        font-weight: 400;
+        color: #fff;
+        background-color: $blue;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+    }
+}
+
+// Медиa-запросы (подключаются ниже изменяемого .css/.scss кода).
+@import "_media.scss";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

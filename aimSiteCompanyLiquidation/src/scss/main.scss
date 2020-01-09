@@ -35,7 +35,7 @@
     padding-left: 20px;
     padding-right: 30px;
     // Позиционируем картинку phone.svg (относительно класса header__phone).
-    &:before {
+    &::before {
         content: "";
         width: 11px;
         height: 11px;
@@ -50,7 +50,7 @@
 .header__email {
     padding-left: 24px;
     // Позиционируем картинку envelope.svg (относительно класса header__email).
-    &:before {
+    &::before {
         content: "";
         width: 15px;
         height: 11px;
@@ -71,7 +71,7 @@
     font-size: 16px;
     position: relative;
     // Позиционируем картинку briefcase.svg (относительно класса header__btn).
-    &:before {
+    &::before {
         content: "";
         width: 16px;
         height: 14px;
@@ -179,8 +179,8 @@
     outline: none; // Отключили дефолтный стиль внешней границы элемента (линия через outline отображается вокруг элемента, не влияя на ширину блока или его положение).
     background-color: $yellowAccent; // Кнопки желтные по дефолту (пока листают слайд).
     // Позиционируем картинки angle-left-white.svg и angle-right-white.svg (относительно класса slider__inner).
-    &:before {
-        content: '';
+    &::before {
+        content: "";
         width: 5px;
         height: 9px;
         position: absolute; // Относительно класса slider__inner.
@@ -197,14 +197,14 @@
 
 .slick-next {
     right: 0;
-    &:before {
+    &::before {
         background: url("../img/angle-right-white.svg") center center no-repeat / cover;
     }
 }
 
 .slick-prev {
     left: 0;
-    &:before {
+    &::before {
         background: url("../img/angle-left-white.svg") center center no-repeat / cover;
     }
 }
@@ -230,8 +230,8 @@
     max-width: 530px;
     padding-left: 140px; // Резервируем место слева под декоративную линию.
     position: relative;
-    &:before {
-        content: '';
+    &::before {
+        content: "";
         position: absolute; // Относительно классов services__title-box, form__title-box и news__title-box соответственно.
         width: 100px;
         height: 2px;
@@ -343,7 +343,7 @@
 
 .about__btn {
     &.default-btn {
-        &:after {
+        &::after {
             background: url("../img/angle-right-black.svg") no-repeat center center / cover;
         }
     }
@@ -404,7 +404,7 @@
         }
         // Переопределяем классы плагина jQuery Form Styler (это jQuery плагин для стилизации селектов, чекбоксов, радиокнопок, файловых и числовых полей).
         .jq-selectbox__trigger-arrow {
-            &:before {
+            &::before {
                 content: "";
                 width: 5px;
                 height: 9px;
@@ -470,7 +470,7 @@
             color: #282828;
             float: right;
             cursor: pointer;
-            &:after {
+            &::after {
                 background: url("../img/angle-right-black.svg") no-repeat center center / cover;
             }
         }
@@ -517,7 +517,7 @@
     padding: 60px 0 15px;
     position: relative;
     // Рамка для check.
-    &:before {
+    &::before {
         content: "";
         position: absolute; // Относительно класса advantages__title.
         width: 40px;
@@ -528,7 +528,7 @@
         transform: translateX(-50%);
     }
     // check, размещенный в рамке.
-    &:after {
+    &::after {
         content: "";
         width: 12px;
         height: 10px;
@@ -567,7 +567,7 @@
     box-shadow: 0px 5px 15.36px 0.64px rgba(128, 127, 127, 0.13);
     padding: 60px 35px 45px 70px;
     position: relative;
-    &:before {
+    &::before {
         content: "";
         width: 65px;
         height: 30px;
@@ -589,7 +589,7 @@
         right: -35px;
         // Переопределяем класс slick-disabled (сгенерированный плагином slick) (при невозможности следующего пролистываия слайда).
         &.slick-disabled {
-            &:before {
+            &::before {
                 background: url("../img/angle-right-gray.svg") no-repeat center center / cover;
             }
         }
@@ -600,7 +600,7 @@
         left: auto;
         // Переопределяем класс slick-disabled (сгенерированный плагином slick) (при невозможности следующего пролистываия слайда).
         &.slick-disabled {
-            &:before {
+            &::before {
                 background: url("../img/angle-left-gray.svg") no-repeat center center / cover;
             }
         }
@@ -722,7 +722,7 @@
     }
     a.footer__phone {
         // Позиционируем картинку phone.svg (относительно footer__list a).
-        &:before {
+        &::before {
             content: "";
             width: 11px;
             height: 12px;
@@ -735,7 +735,7 @@
     }
     a.footer__email {
         // Позиционируем картинку envelope.svg (относительно footer__list a).
-        &:before {
+        &::before {
             content: "";
             width: 15px;
             height: 11px;
@@ -748,7 +748,7 @@
     }
     a.footer__address {
         // Позиционируем картинку map-marker.svg (относительно footer__list a).
-        &:before {
+        &::before {
             content: "";
             width: 10px;
             height: 14px;

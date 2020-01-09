@@ -37,7 +37,7 @@ li {
 
 /* Из-за свойства float, класс header__btn ушел из потока. Возвращаем его в поток,
 т.е. делаем ClearFix. Класс clearfix добавляем прямому родителю класса header__btn. */
-.clearfix:after {
+.clearfix::after {
     content: "";
     clear: both;
     display: block;
@@ -56,7 +56,7 @@ li {
     border-right-width: 20px;
     position: relative;
     outline: none; // Отключили дефолтный стиль внешней границы элемента (линия через outline отображается вокруг элемента, не влияя на ширину блока или его положение).
-    &:after {
+    &::after {
         content: "";
         width: 5px;
         height: 9px;

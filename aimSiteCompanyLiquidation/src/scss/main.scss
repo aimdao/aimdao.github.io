@@ -39,7 +39,7 @@
         content: "";
         width: 11px;
         height: 11px;
-        background: url("/build/img/phone.svg") no-repeat center center / cover;
+        background: url("../img/phone.svg") no-repeat center center / cover;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -54,7 +54,7 @@
         content: "";
         width: 15px;
         height: 11px;
-        background: url("/build/img/envelope.svg") no-repeat center center / cover;
+        background: url("../img/envelope.svg") no-repeat center center / cover;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -75,7 +75,7 @@
         content: "";
         width: 16px;
         height: 14px;
-        background: url("/build/img/briefcase.svg") no-repeat center center / cover;
+        background: url("../img/briefcase.svg") no-repeat center center / cover;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -130,7 +130,7 @@
 // =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
 
 .slider {
-    background-image: url("/build/img/slider-fon.jpg");
+    background-image: url("../img/slider-fon.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -198,14 +198,14 @@
 .slick-next {
     right: 0;
     &::before {
-        background: url("/build/img/angle-right-white.svg") center center no-repeat / cover;
+        background: url("../img/angle-right-white.svg") center center no-repeat / cover;
     }
 }
 
 .slick-prev {
     left: 0;
     &::before {
-        background: url("/build/img/angle-left-white.svg") center center no-repeat / cover;
+        background: url("../img/angle-left-white.svg") center center no-repeat / cover;
     }
 }
 
@@ -316,7 +316,7 @@
 // =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
 
 .about {
-    background: url("/build/img/about-fon.jpg") no-repeat center center / cover;
+    background: url("../img/about-fon.jpg") no-repeat center center / cover;
     min-height: 300px;
     padding: 25px 0 45px;
 }
@@ -344,7 +344,7 @@
 .about__btn {
     &.default-btn {
         &::after {
-            background: url("/build/img/angle-right-black.svg") no-repeat center center / cover;
+            background: url("../img/angle-right-black.svg") no-repeat center center / cover;
         }
     }
 }
@@ -359,7 +359,7 @@
 
 .form__inner {
     padding-bottom: 40px;
-    background: url("/build/img/form-fon.png") right bottom no-repeat;
+    background: url("../img/form-fon.png") right bottom no-repeat;
     min-height: 460px;
 }
 
@@ -408,7 +408,7 @@
                 content: "";
                 width: 5px;
                 height: 9px;
-                background: url("/build/img/angle-right-black.svg") no-repeat center center / cover;
+                background: url("../img/angle-right-black.svg") no-repeat center center / cover;
                 position: absolute; // Относительно класса default-btn.
                 right: 17px;
                 top: 14px;
@@ -471,7 +471,7 @@
             float: right;
             cursor: pointer;
             &::after {
-                background: url("/build/img/angle-right-black.svg") no-repeat center center / cover;
+                background: url("../img/angle-right-black.svg") no-repeat center center / cover;
             }
         }
     }
@@ -493,7 +493,7 @@
 
 .advantages {
     padding: 55px 0 40px;
-    background: url("/build/img/adv-fon.jpg") center center no-repeat / cover;
+    background: url("../img/adv-fon.jpg") center center no-repeat / cover;
     min-height: 285px;
 }
 
@@ -532,7 +532,7 @@
         content: "";
         width: 12px;
         height: 10px;
-        background: url("/build/img/check-white.svg") no-repeat center center / cover;
+        background: url("../img/check-white.svg") no-repeat center center / cover;
         position: absolute; // Относительно класса advantages__title.
         top: 15px;
         transform: translateX(-50%);
@@ -571,7 +571,7 @@
         content: "";
         width: 65px;
         height: 30px;
-        background: $yellowAccent url("/build/img/quote-right.svg") no-repeat center center;
+        background: $yellowAccent url("../img/quote-right.svg") no-repeat center center;
         position: absolute; // Относительно класса news__slider.
         top: 0;
         left: 70px;
@@ -590,7 +590,7 @@
         // Переопределяем класс slick-disabled (сгенерированный плагином slick) (при невозможности следующего пролистываия слайда).
         &.slick-disabled {
             &::before {
-                background: url("/build/img/angle-right-gray.svg") no-repeat center center / cover;
+                background: url("../img/angle-right-gray.svg") no-repeat center center / cover;
             }
         }
     }
@@ -601,7 +601,7 @@
         // Переопределяем класс slick-disabled (сгенерированный плагином slick) (при невозможности следующего пролистываия слайда).
         &.slick-disabled {
             &::before {
-                background: url("/build/img/angle-left-gray.svg") no-repeat center center / cover;
+                background: url("../img/angle-left-gray.svg") no-repeat center center / cover;
             }
         }
     }
@@ -726,7 +726,7 @@
             content: "";
             width: 11px;
             height: 12px;
-            background: url("/build/img/phone.svg") no-repeat center center / cover;
+            background: url("../img/phone.svg") no-repeat center center / cover;
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
@@ -739,7 +739,7 @@
             content: "";
             width: 15px;
             height: 11px;
-            background: url("/build/img/envelope.svg") no-repeat center center / cover;
+            background: url("../img/envelope.svg") no-repeat center center / cover;
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
@@ -752,7 +752,7 @@
             content: "";
             width: 10px;
             height: 14px;
-            background: url("/build/img/map-marker.svg") no-repeat center center / cover;
+            background: url("../img/map-marker.svg") no-repeat center center / cover;
             position: absolute;
             top: 50%;
             transform: translateY(-50%);

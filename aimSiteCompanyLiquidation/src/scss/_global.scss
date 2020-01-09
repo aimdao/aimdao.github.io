@@ -1,0 +1,70 @@
+html {
+    box-sizing: border-box; // После этого, padding и border не будет увеличивать ширину и высоту элементов, а будут высчитывать ширину и высоту элементов внутри элементов.
+}
+
+body {
+    font-family: 'PT Serif', serif; // Акцентный (превалирующий) шрифт.
+    font-weight: 400; // Акцентный (превалирующий) вес шрифта (400 - regular).
+    font-size: 14px; // Акцентный (превалирующий) размер шрифта.
+    line-height: 18px; // Акцентная (превалирующая) высота шрифта.
+    color: #5e5e5e; // Акцентный (превалирующий) цвет шрифта.
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit; // Наследование свойства от родителя (тега html).
+}
+
+a {
+    //color: #000;
+    text-decoration: none; // Убираем подчеркивания у всех ссылок.
+    display: inline-block; // Обычно надо, чтобы все ссылки были строчно-блочные.
+}
+
+ul,
+li {
+    list-style: none; // Отключаем маркеры у всех маркерных списков.
+    margin: 0; // Отключаем margin.
+    padding: 0; // Отключаем padding.
+}
+
+.container {
+    max-width: 1170px; // Для того, чтобы при ширине дисплея меньше 1170px, дисплей подстраивался и не появился горизонтальный скрол.
+    margin: 0 auto; // Центрируем контейнер.
+    padding: 0 15px; // Для того, чтобы контейнер не касался левых и правых краев дисплеев планшетов и телефонов с шириной дисплея меньше 1170px.
+}
+
+/* Из-за свойства float, класс header__btn ушел из потока. Возвращаем его в поток,
+т.е. делаем ClearFix. Класс clearfix добавляем прямому родителю класса header__btn. */
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+// Дефолтная кнопка сайта.
+.default-btn {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 24px;
+    color: #fff;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+    padding: 8px 30px 8px 24px;
+    border: 1px solid #ffc222;
+    border-right-width: 20px;
+    position: relative;
+    outline: none; // Отключили дефолтный стиль внешней границы элемента (линия через outline отображается вокруг элемента, не влияя на ширину блока или его положение).
+    &:after {
+        content: "";
+        width: 5px;
+        height: 9px;
+        background: url("/build/img/angle-right-white.svg") no-repeat center center / cover;
+        position: absolute; // Относительно класса default-btn.
+        top: 50%;
+        transform: translateY(-50%);
+        right: -12px;
+    }
+}
+

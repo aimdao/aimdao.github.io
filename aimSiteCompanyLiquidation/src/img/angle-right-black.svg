@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" version="1.1" viewBox="72 525 10 16" width="10pt" height="16pt" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <metadata> Produced by OmniGraffle 7.4.3 
+    <dc:date>2019-12-27 13:12:18 +0000</dc:date>
+  </metadata>
+  <defs/>
+  <g stroke="none" stroke-opacity="1" stroke-dasharray="none" fill="none" fill-opacity="1">
+    <title>Canvas 1</title>
+    <rect fill="white" width="9.092" height="15.592"/>
+    <g>
+      <title>Layer 9</title>
+      <path d="M 81.592 532.796 C 81.592 532.921 81.529 533.062 81.436 533.155 L 74.155 540.436 C 74.061 540.53 73.921 540.592 73.796 540.592 C 73.671 540.592 73.53 540.529 73.437 540.436 L 72.656 539.655 C 72.562 539.561 72.5 539.436 72.5 539.296 C 72.5 539.171 72.563 539.03 72.656 538.937 L 78.797 532.796 L 72.656 526.655 C 72.562 526.561 72.5 526.421 72.5 526.296 C 72.5 526.171 72.563 526.03 72.656 525.937 L 73.437 525.156 C 73.531 525.062 73.671 525 73.796 525 C 73.921 525 74.062 525.063 74.155 525.156 L 81.436 532.437 C 81.53 532.531 81.592 532.671 81.592 532.796 Z" fill="#000"/>
+    </g>
+  </g>
+</svg>

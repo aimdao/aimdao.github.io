@@ -26,6 +26,11 @@
 /aimSiteJoomhost/Описание зависимостей (пакетов) в package.json (aimSiteJoomhost).md
 
 # -------------------------------------------------------------------
+# 005_PROJECT: aimSiteCompanyLiquidation
 
+# Игнорируем каталог /aimSiteCompanyLiquidation/node_modules/ и все его содержимое (файлы пакетов node.js)
+/aimSiteCompanyLiquidation/node_modules/	
+
+# -------------------------------------------------------------------
 
 

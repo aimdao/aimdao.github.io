@@ -60,7 +60,7 @@ li {
         content: "";
         width: 5px;
         height: 9px;
-        background: url("/src/img/angle-right-white.svg") no-repeat center center / cover;
+        background: url("../img/angle-right-white.svg") no-repeat center center / cover;
         position: absolute; // Относительно класса default-btn.
         top: 50%;
         transform: translateY(-50%);

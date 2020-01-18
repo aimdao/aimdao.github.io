@@ -2,7 +2,7 @@ $(function () {
     $('.header__slider').slick({ // Подключение первого слайдера slick в header (https://kenwheeler.github.io/slick).
         infinite: true, // Бесконечное листание слайдов.
         fade: true, // Плавное переключение слайдов.
-        // Стрелки перелкючения слайдера header__slider (подключены вместо стандартных кнопок slick: prevArrow и nextArrow).
+        // Код html cтрелок Prev и Next для пролистывания слайдера header__slider (подключен вместо стандартных кнопок slick: prevArrow и nextArrow).
         prevArrow: '<img class="slider-arrows slider-arrows__left" src="images/arrows-left.svg" alt="">', // Левая стрелка для слайдера.
         nextArrow: '<img class="slider-arrows slider-arrows__right" src="images/arrows-right.svg" alt="">', // Правая стрелка для слайдера.
         asNavFor: '.slider-dotsHead', // Связывание со слайдером slider-dotsHead.

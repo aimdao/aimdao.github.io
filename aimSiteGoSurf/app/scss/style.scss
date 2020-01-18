@@ -56,7 +56,7 @@
     margin-bottom: 20px;
 }
 
-.slider-arrows { // Стрелки перелкючения слайдера header__slider (подключены в main.js вместо стандартных кнопок slick: prevArrow и nextArrow).
+.slider-arrows { // Код html cтрелок Prev и Next для пролистывания слайдера header__slider реализован и подключен в main.js вместо стандартных кнопок slick: prevArrow и nextArrow).
     position: absolute;
     top: 40px;
     right: 80px;

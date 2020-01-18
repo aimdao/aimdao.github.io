@@ -1,0 +1,196 @@
+// -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+// -#- IMPORTS -#-
+// -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+// Переменные.
+@import "_vars"; // Переменные должны быть прописаны выше того объекта, в котором они используются.
+
+// -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+// -#- GLOBAL STYLES -#-
+// -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+
+html {
+    box-sizing: border-box; // После этого, padding и border не будет увеличивать ширину и высоту элементов, а будут высчитывать ширину и высоту элементов внутри элементов.
+}
+
+body {
+    font-family: 'Montserrat', sans-serif; // Акцентный (превалируюищй) шрифт.
+    font-size: 15px; // Акцентный (превалирующий) размер шрифта.
+    color: $lightBlack; // Акцентный (превалирующий) цвет шрифта.
+    line-height: 1.6; // Акцентная (превалирующая) высота шрифта.
+    font-weight: 400; // Акцентный (превалирующий) вес шрифта (400 - regular).
+    margin: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit; // Наследование свойства от родителя (тега html).
+}
+
+a {
+    color: #000;
+    text-decoration: none; // Убираем подчеркивания у всех ссылок.
+    display: inline-block; // Обычно надо, чтобы все ссылки были строчно-блочные.
+}
+
+ul,
+li {
+    list-style: none; // Отключаем маркеры у всех маркерных списков.
+    margin: 0; // Отключаем margin.
+    padding: 0; // Отключаем padding.
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+hr { // Разделительная горизонтальная полоса.
+    display: block;
+    width: 100%;
+    height: 1px;
+    border: 0;
+    background-color: $superLightGray;
+    margin: 40px 0;
+}
+
+input:focus,
+button:focus {
+    outline: none;
+}
+
+// Обертка для всех секций сайта, кроме header (для сокрытия элементов, выступающих за пределы секций.)
+.page {
+    overflow: hidden; // Сокрытие элементов, выступающих за пределы секций.
+}
+
+// container - это ширина контента 1200px + паддинги по 15px слева и справа = 1230px.
+.container {
+    max-width: 1230px; // Для того, чтобы при ширине дисплея меньше 1230px, дисплей подстраивался и не появился горизонтальный скрол. Ширина контента 1200px, a 1230px - это с учетом паддингов по 15px слева и справа.
+    width: 100%;
+    margin: 0 auto; // Центрируем контейнер.
+    padding: 0 15px; // Для того, чтобы контейнер не касался левых и правых краев дисплеев планшетов и телефонов с шириной дисплея меньше max-width: 1200px.
+}
+
+// -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+// -#- REUSABLE STYLES -#-
+// -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+
+// Переиспользуемый заголовок для секций: about, services, design, weDo, team, ourWork, clients, blog.
+.global {
+    &__header {
+        max-width: 950px;
+        width: 100%;
+        margin: 0 auto 50px;
+        text-align: center;
+    }
+    &__suptitle {
+        font-size: 24px;
+        font-family: 'Kaushan Script', cursive;
+        color: $lightBlack;
+    }
+    &__title {
+        font-size: 30px;
+        font-weight: 700;
+        color: $lightBlack;
+        text-transform: uppercase;
+        // Декоративная красная линия.
+        &::after {
+            content: "";
+            width: 60px;
+            height: 3px;
+            display: block;
+            background-color: $lightRed;
+            margin: 30px auto 40px;
+        }
+    }
+    &__text {
+        font-size: 15px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        color: $lightGray;
+        line-height: 24px;
+    }
+}
+
+// Переиспользуемый слайдер global__reviews-slider для секций: reviews1, reviews2.
+.global {
+    &__reviews {
+        // Слайдер global__reviews-slider.
+        &-slider {
+            padding: 0 110px;
+            position: relative;
+        }
+        // Код html cтрелок Prev и Next для пролистывания слайдера global__reviews-slider реализован и подключен в main.js вместо стандартных кнопок slick: prevArrow и nextArrow.
+        &-arrow {
+            position: absolute; // Относительно слайдера global__reviews-items.
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+            font-size: 0; // Скрываем текст Prev и Next, прописанный в стрелках в html.
+            color: transparent; // Скрываем текст Prev и Next, прописанный в стрелках в html.
+            // Стрелки для item слайдера только из стилей (без картинки).
+            &::after {
+                content: "";
+                display: block;
+                width: 16px;
+                height: 16px;
+                border-top: 2px solid #ccc;
+                border-left: 2px solid #ccc;
+            }
+            // Модифицируем стрелку Prev.
+            &--prev {
+                left: 0;
+                transform: rotate(-45deg);
+            }
+            // Модифицируем стрелку Next.
+            &--next {
+                right: 0;
+                transform: rotate(135deg);
+            }
+        }
+        &-item {
+            min-height: 210px;
+            padding-left: 255px;
+            position: relative;
+        }
+        &-photo {
+            display: block;
+            width: 210px;
+            height: 210px;
+            position: absolute; // Относительно global__reviews-item.
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            z-index: 1;
+            border: 2px solid $lightGreen;
+            border-radius: 50%;
+        }
+        &-text {
+            font-family: 'Roboto', sans-serif;
+            font-size: 24px;
+            line-height: 36px;
+            font-weight: 300;
+            font-style: italic;
+            color: $lightGray;
+            margin-bottom: 15px;
+        }
+        &-author {
+            font-family: 'Kaushan Script', cursive;
+            font-size: 24px;
+            color: #000;
+            // Декоративная красная линия.
+            &::before {
+                content: "";
+                width: 60px;
+                height: 3px;
+                display: inline-block;
+                vertical-align: middle;
+                background-color: $lightRed;
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+
+

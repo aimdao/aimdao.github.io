@@ -1,0 +1,388 @@
+// -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+// -#- MEDIA QUERIES -#-
+// -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+
+/* Сначала идут max-width (от самого высокого числа до самого низкого),
+а потом идут min-width (от самого низкого числа до самого высокого). */
+
+@media (max-width: 1230px) { // Максимальная ширина (max-width) всегда пишется выше, чем минимальная ширина (min-width).
+    // =*= section: intro =*=*=*=*=*=*=*=*=*=*=
+    .intro__suptitle {
+        font-size: 52px;
+    }
+    .intro__title {
+        font-size: 120px;
+    }
+    // -#- REUSABLE STYLES -#-#-#-#-#-#-#-#-#-#-
+    // Переиспользуемый слайдер global__reviews-slider для секций: reviews1, reviews2.
+    .global {
+        &__reviews {
+            &-text {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 990px) {
+    // =*= section: intro =*=*=*=*=*=*=*=*=*=*=
+    .intro__suptitle {
+        font-size: 32px;
+    }
+    .intro__title {
+        font-size: 80px;
+    }
+    // =*= section: statistics =*=*=*=*=*=*=*=*=*=*=
+    .stat {
+        justify-content: center;
+        &__item {
+            flex: none;
+            width: 33.33333%;
+            border: 0;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            &:last-child {
+                border-right: 0;
+            }
+        }
+    }
+    // =*= section: services =*=*=*=*=*=*=*=*=*=*=
+    .services {
+        &__item {
+            width: 50%;
+            padding-bottom: 0;
+            // Разделительная линия для первых трех item.
+            &--border {
+                border-bottom: 0;
+            }
+        }
+    }
+    // -#- REUSABLE STYLES -#-#-#-#-#-#-#-#-#-#-
+    // Переиспользуемый слайдер global__reviews-slider для секций: reviews1, reviews2.
+    .global {
+        &__reviews {
+            // Слайдер global__reviews-slider.
+            &-slider {
+                padding: 0 60px;
+            }
+            &-item {
+                padding-left: 175px;
+            }
+            &-photo {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    }
+    // =*= section: clients =*=*=*=*=*=*=*=*=*=*=
+    .clients__items {
+        max-width: 600px;
+        margin: 70px auto 0;
+        .clients__item {
+            width: 100%;
+            padding-right: 0;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    // =*= footer =*=*=*=*=*=*=*=*=*=*=
+    .footer__col-1 {
+        width: 100%;
+    }
+    .footer__col-2 {
+        width: 50%;
+    }
+    .footer__col-3 {
+        width: 50%;
+    }
+    .footer__instagram {
+        justify-content: flex-start;
+        &-item {
+            width: auto; // Задаем ширину каждой картинки.
+            border-right: 1px solid #fff;
+        }
+    }
+}
+
+@media (max-width: 770px) {
+    // =*= header =*=*=*=*=*=*=*=*=*=*=
+    .header {
+        padding: 10px 0; // При скролле педдинги у навигационного меню будут меняться.
+    }
+    // Основное навигационное меню.
+    .nav {
+        display: none; // Скрываем основное навигационное меню.
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #eb8b8d;
+        &__link {
+            display: block;
+            margin: 0;
+            padding: 8px 20px;
+        }
+        // Меню активно (открыто) в мобильной версии сайта (при нажатии кнопки sandwich-menu).
+        &.active {
+            display: block;
+        }
+    }
+    // Кнопка sandwich-menu: открытие-закрытие мобильного sandwich-menu.
+    .nav-toggle {
+        display: block; // Показываем кнопку sandwich-menu (по дефолту она скрыта).
+    }
+    // =*= section: intro =*=*=*=*=*=*=*=*=*=*=
+    .intro {
+        min-height: 650px;
+    }
+    .slider__text {
+        display: none;
+    }
+    .slider__item {
+        // Активный item слайдера.
+        &.active {
+            // Декоративная красная линия дополнительно выделяющая активный item слайдера.
+            &::before {
+                width: 50%;
+            }
+        }
+    }
+    // -#- SEVERAL SECTIONS -#-#-#-#-#-#-#-#-#-#-
+    .about,
+    .services,
+    .design,
+    .weDo,
+    .team,
+    .ourWork,
+    .clients,
+    .blog {
+        padding: 40px 0;
+    }
+    // -#- SEVERAL SECTIONS (about, team) -#-#-#-#-#-#-#-#-#-#-
+    .card__items {
+        justify-content: center;
+        margin-top: 50px;
+    }
+    .card__item {
+        width: 100%;
+        max-width: 410px;
+        margin-bottom: 30px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    // =*= section: services =*=*=*=*=*=*=*=*=*=*=
+    .services {
+        &__items {
+            justify-content: center;
+        }
+        &__item {
+            width: 100%;
+            max-width: 400px;
+            padding-left: 55px;
+            padding-right: 0;
+        }
+        &__icon {
+            left: 0;
+        }
+    }
+    // =*= section: design =*=*=*=*=*=*=*=*=*=*=
+    .design {
+        padding-bottom: 0;
+    }
+    // =*= section: weDo =*=*=*=*=*=*=*=*=*=*=
+    .weDo {
+        &__item {
+            width: 100%;
+        }
+        &__img {
+            display: none;
+        }
+    }
+    // -#- REUSABLE STYLES -#-#-#-#-#-#-#-#-#-#-
+    // Переиспользуемый слайдер global__reviews-slider для секций: reviews1, reviews2.
+    .global {
+        &__reviews {
+            &-item {
+                padding-left: 0;
+            }
+            &-photo {
+                position: static;
+                margin: 0 auto 20px;
+                top: 0;
+                transform: translateY(0);
+            }
+            &-text {
+                font-size: 16px;
+                line-height: 24px;
+            }
+            &-author {
+                font-size: 20px;
+            }
+        }
+    }
+    // =*= section: ourWork =*=*=*=*=*=*=*=*=*=*=
+    .ourWork__items {
+        flex-wrap: wrap;
+        .ourWork__col {
+            flex: none;
+            width: 50%;
+        }
+    }
+    // =*= section: blog =*=*=*=*=*=*=*=*=*=*=
+    .blog__items {
+        max-width: 380px;
+        margin: 0 auto;
+        .blog__item {
+            width: 100%;
+            margin-bottom: 30px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    // =*= footer =*=*=*=*=*=*=*=*=*=*=
+    .footer__col-2,
+    .footer__col-3 {
+        width: 100%;
+    }
+}
+
+@media (max-width: 575px) {
+    // =*= section: intro =*=*=*=*=*=*=*=*=*=*=
+    .intro__suptitle {
+        font-size: 22px;
+    }
+    .intro__title {
+        font-size: 40px;
+    }
+    // -#- REUSABLE STYLES -#-#-#-#-#-#-#-#-#-#-
+    // Переиспользуемый заголовок для секций: about, services, design, weDo, team, ourWork, clients, blog.
+    .global {
+        &__header {
+            margin-bottom: 30px;
+        }
+        &__suptitle {
+            font-size: 20px;
+        }
+        &__title {
+            font-size: 24px;
+            // Декоративная красная линия.
+            &::after {
+                margin: 20px auto;
+            }
+        }
+    }
+    // =*= section: statistics =*=*=*=*=*=*=*=*=*=*=
+    .stat {
+        &__item {
+            width: 100%;
+            border-bottom: 1px solid #b5eae0;
+            &:last-child {
+                border-bottom: 0;
+            }
+            .stat__count {
+                font-size: 52px;
+            }
+        }
+    }
+    // =*= section: design =*=*=*=*=*=*=*=*=*=*=
+    .design {
+        &__devices {
+            max-width: 320px;
+            &-item--iphone {
+                width: 180px;
+                bottom: -50px;
+                right: -80px;
+            }
+        }
+    }
+    // -#- REUSABLE STYLES -#-#-#-#-#-#-#-#-#-#-
+    // Переиспользуемый слайдер global__reviews-slider для секций: reviews1, reviews2.
+    .global {
+        &__reviews {
+            // Слайдер global__reviews-slider.
+            &-slider {
+                padding: 0;
+            }
+            // Стрелки Prev и Next для пролистывания слайдера.
+            &-arrow {
+                top: 18%;
+            }
+        }
+    }
+    // =*= section: logos =*=*=*=*=*=*=*=*=*=*=
+    .logos__items {
+        flex-wrap: wrap;
+        justify-content: center;
+        .logos__item {
+            width: 50%;
+            margin-bottom: 20px;
+            .logos__img {
+                margin: 0 auto;
+            }
+        }
+    }
+    // =*= section: ourWork =*=*=*=*=*=*=*=*=*=*=
+    .ourWork__items {
+        .ourWork__col {
+            width: 100%;
+        }
+    }
+    // =*= section: clients =*=*=*=*=*=*=*=*=*=*=
+    .clients__items {
+        .clients__item {
+            padding-left: 0;
+            text-align: center;
+        }
+        .clients__photo {
+            position: static;
+        }
+        .clients__text {
+            // Декоративная красная линия.
+            &::before {
+                margin: 15px auto;
+            }
+        }
+    }
+    // =*= footer =*=*=*=*=*=*=*=*=*=*=
+    .footer__col {
+        .footer__subscribe {
+            flex-wrap: wrap;
+            max-width: none;
+            &-input,
+            &-btn {
+                width: 100%
+            }
+            &-input {
+                border-right: 1px solid $superLightGray;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .footer__blogs {
+        &-img {
+            max-width: 80px;
+            max-height: 50px;
+        }
+        &-title {
+            font-size: 10px;
+        }
+    }
+}
+
+// #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
+// Фикс бага видимости освновного меню
+// #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
+/* Фикс бага видимости освновного меню: после открытия-закрытия sendvich-menu на адаптивном размере экрана,
+и перехода на неадаптивный размер экрана, основное меню было скрыто, т.к.
+jQuery меняла видимость освновного меню в html. */
+@media (min-width: 701px) { // Минимальная ширина (min-width) всегда пишется ниже, чем максимальная ширина (max-width).
+    .menu {
+        ul {
+            display: block !important;
+            z-index: 50; // Чтобы выпадающее меню было над остальными элементами.
+        }
+    }
+}

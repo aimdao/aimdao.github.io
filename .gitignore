@@ -32,5 +32,10 @@
 /aimSiteCompanyLiquidation/node_modules/	
 
 # -------------------------------------------------------------------
+# 006_PROJECT: aimSiteMoGo
 
+# Игнорируем каталог /aimSiteMoGo/node_modules/ и все его содержимое (файлы пакетов node.js)
+/aimSiteMoGo/node_modules/	
+
+# -------------------------------------------------------------------
 

@@ -1,0 +1,90 @@
+// -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+// -#- IMPORTS - general styles -#-
+// -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+//
+// Variables (переменные должны быть прописаны выше того объекта, в котором они используются).
+@import "../vars";
+//
+//
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+// =*= SECTION: header =*=
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+//
+.header {
+    padding-top: 30px;
+    background-color: $violet-bright;
+    position: absolute; // Относительно body.
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    // Фиксация основного навигационного меню при скролле.
+    &.fixed {
+        padding: 10px 0;
+        background-color: $violet-bright;
+        box-shadow: 0 5px 10px rgba($violet, 0.65); // При скролле у меню будет появляться тень.
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        transform: translate3d(0, 0, 0); // Для того, чтобы меню не дергалось при скролле.
+    }
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+//
+//
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+// =*= MODIFIERS: header (connection at the end of styles .css/.scss) =*=
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+//
+
+//
+//
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+// =*= MEDIA QUERIES: header =*=
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+//
+/* Сначала идут max-width (от самого высокого числа до самого низкого),
+а потом идут min-width (от самого низкого числа до самого высокого). */
+//
+@media ($mobile) {
+    .header {
+        background-color: $violet-bright;
+        box-shadow: 0 5px 10px rgba($violet, 0.65);
+        // Фиксируем header, чтобы при скролле постоянно иметь доступ к меню.
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        padding: 10px 0;
+        z-index: 1000;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

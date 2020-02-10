@@ -1,0 +1,71 @@
+// -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+// -#- IMPORTS - general styles -#-
+// -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+//
+// Variables (переменные должны быть прописаны выше того объекта, в котором они используются).
+@import "../_vars.scss";
+//
+//
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+// =*= BLOCK: user =*=
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+//
+.user {
+    display: flex;
+    &__avatar-img {
+        border-radius: 50%;
+        border: 2px solid $violet-red;
+        width: 57px;
+        height: 57px;
+        transition: border 0.2s linear;
+        &:hover {
+            border: 2px solid $white;
+            box-shadow:  0 0 25px rgba($white, 1);
+            z-index: 1;
+        }
+    }
+    &__content {
+        padding-left: 9px;
+    }
+    &__name {
+        font-size: 1.067rem;
+        font-weight: 700;
+        line-height: 1.2rem;
+        color: $violet-dark;
+        margin-bottom: 3px;
+    }
+    &__profession {
+        font-size: 0.8rem;
+        line-height: 1.467rem;
+        color: $violet-boldRed;
+    }
+}
+//
+//
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+// =*= MODIFIERS: user (connection at the end of styles .css/.scss) =*=
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+//
+
+//
+//
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+// =*= MEDIA QUERIES: user =*=
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+//
+/* Сначала идут max-width (от самого высокого числа до самого низкого),
+а потом идут min-width (от самого низкого числа до самого высокого). */
+//
+
+
+
+
+
+
+
+
+
+
+
+
+

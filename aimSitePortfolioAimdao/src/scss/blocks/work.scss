@@ -1,0 +1,68 @@
+// -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+// -#- IMPORTS - general styles -#-
+// -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+//
+// Variables (переменные должны быть прописаны выше того объекта, в котором они используются).
+@import "../_vars.scss";
+//
+//
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+// =*= BLOCK: work =*=
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+//
+.work {
+    border-radius: 10px;
+    overflow: hidden; // Для обрезки картинки, которая выходит за границы при применении свойства border-radius.
+    box-shadow: 0 0 4px rgba(#000, 0.25);
+    &__content {
+        padding: 1rem 0.8rem;
+        .work__category {
+            font-size: 0.8rem;
+            color: $violet-dark;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+        .work__title {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.067rem;
+            font-weight: 700;
+            color: $violet-dark;
+            text-transform: uppercase;
+        }
+    }
+    transition: box-shadow 0.2s linear;
+    // При наведении увеличивается тень (с задержкой).
+    &:hover {
+        box-shadow: 0 0 25px rgba($violet, 0.65);
+    }
+}
+//
+//
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+// =*= MODIFIERS: work (connection at the end of styles .css/.scss) =*=
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+//
+
+//
+//
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+// =*= MEDIA QUERIES: work =*=
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+//
+/* Сначала идут max-width (от самого высокого числа до самого низкого),
+а потом идут min-width (от самого низкого числа до самого высокого). */
+//
+@media ($mobile) {
+    .work {
+        max-width: 370px; // Если ширина картинки будет меньше 370px, она заполнит место до 370px (чтобы небыло незаполненной полосы справа).
+    }
+}
+
+@media ($mobile-sm) {
+    .work {
+        margin: 0 auto;
+        max-width: 370px; // Если ширина картинки будет меньше 370px, она заполнит место до 370px (чтобы небыло незаполненной полосы справа).
+    }
+}
+

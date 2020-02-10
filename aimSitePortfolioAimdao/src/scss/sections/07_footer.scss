@@ -1,0 +1,128 @@
+// -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+// -#- IMPORTS - general styles -#-
+// -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+//
+// Variables (переменные должны быть прописаны выше того объекта, в котором они используются).
+@import "../vars";
+//
+//
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+// =*= SECTION: footer =*=
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+//
+.footer {
+    padding: 1rem 0;
+    background-color: $violet-dark;
+}
+
+.footer__inner {
+    display: flex;
+    flex-wrap: wrap; // Чтобы flex item могли перепрыгивать на новую строку.
+    justify-content: space-between;
+    .footer__credits {
+        display: flex;
+        align-items: center; // Выравнивание по вертикали.
+        .footer__copyright {
+            font-size: 0.933rem;
+            line-height: 1.6rem;
+            color: $violet-bright;
+            border-right: 1px solid rgba($violet-bold, 0.35); // Вертикальная разделительаня черта.
+            padding-right: 0.8rem;
+            margin-right: 1rem;
+        }
+        .footer__social {
+            display: flex;
+            align-items: center; // Выравнивание по вертикали.
+            a {
+                margin-right: 1.2rem;
+            }
+            &-link {
+                transition: transform 0.2s linear;
+                // Ссылки плавно приподнимаются при наведении.
+                &:hover {
+                    transform: translateY(-5px);
+                }
+            }
+        }
+    }
+    .footer__nav {
+        display: flex;
+        align-items: center; // Выравнивание по вертикали.
+        font-size: 0.933rem;
+        .footer__nav-link {
+            color: $violet-bright;
+            margin-left: 1.5rem;
+            text-decoration: none;
+            // При наведении появляется подчеркивание у ссылки.
+            &:hover {
+                text-decoration: underline;
+            }
+            // Кнопка через модификатор.
+            &--btn {
+                border: 1px solid $violet-red;
+                border-radius: 20px;
+                padding: 0.5rem 1.4rem;
+                text-transform: uppercase;
+                line-height: 1.1;
+                // Отключаем при наведении подчеркивание у кнопки.
+                &:hover {
+                    text-decoration: none;
+                    background-color: $violet-bright;
+                    color: $violet-dark;
+                    border-color: $violet-bright;
+                }
+            }
+        }
+    }
+}
+//
+//
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+// =*= MODIFIERS: footer (connection at the end of styles .css/.scss) =*=
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+//
+
+//
+//
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+// =*= MEDIA QUERIES: footer =*=
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+//
+/* Сначала идут max-width (от самого высокого числа до самого низкого),
+а потом идут min-width (от самого низкого числа до самого высокого). */
+//
+@media ($tablet) {
+    .footer__inner {
+        .footer__credits {
+            width: 100%;
+            justify-content: center;
+            margin-bottom: 1rem;
+            .footer__social {
+                a {
+                    margin: 0 0.5rem;
+                }
+            }
+        }
+        .footer__nav {
+            width: 100%;
+            justify-content: center;
+            flex-wrap: wrap; // Чтобы flex item могли перепрыгивать на новую строку.
+            .footer__nav-link {
+                margin: 0 0.5rem 1rem;
+            }
+        }
+    }
+}
+
+@media ($mobile-sm) {
+    .footer__inner {
+        .footer__credits {
+            flex-direction: column; // Свойство flex-direction задаёт направление основных осей в контейнере и тем самым определяет положение флексов в контейнере.
+            .footer__copyright {
+                margin-right: 0;
+                margin-bottom: 1rem;
+                border-right: 0;
+            }
+        }
+    }
+}

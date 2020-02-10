@@ -1,0 +1,252 @@
+// -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+// -#- IMPORTS - general styles -#-
+// -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+//
+// Variables (переменные должны быть прописаны выше того объекта, в котором они используются).
+@import "../vars";
+//
+//
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+// =*= SECTION: intro =*=
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+//
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    min-height: 820px;
+    position: relative;
+    background-color: $violet-bright;
+}
+
+.intro__inner1 {
+    display: flex;
+    border-bottom: 1px solid rgba($violet-bold, 0.3);
+    padding-top: 1rem;
+    padding-bottom: 5rem;
+    margin-bottom: 16rem;
+    background: url("/build/img/intro/photo/symbols.png") right bottom no-repeat;
+    background-size: 380px auto; // Уменьшим размер фона для фото.
+    position: relative;
+    .intro__content {
+        width: 50%;
+        .intro__suptitle {
+            font-size: 2.133rem;
+            color: $violet-dark;
+            font-weight: 200;
+            margin-bottom: 8px;
+        }
+        .intro__title {
+            font-size: 3rem;
+            color: $violet-dark;
+            font-weight: 700;
+            line-height: 52px;
+            margin-bottom: 4px;
+        }
+        .intro__text {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: $violet-boldRed;
+            margin-bottom: 25px;
+        }
+    }
+    .intro__photo {
+        width: 262px;
+        position: absolute; // Относительно intro__inner1.
+        bottom: -1px;
+        right: 56px;
+        z-index: 1;
+    }
+}
+
+.intro__inner2 {
+    width: 1150px;
+    height: auto;
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    .intro__paintSplashColors {
+        width: 100%;
+    }
+}
+//
+//
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+// =*= MODIFIERS: intro (connection at the end of styles .css/.scss) =*=
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+//
+
+//
+//
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+// =*= MEDIA QUERIES: intro =*=
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+//
+/* Сначала идут max-width (от самого высокого числа до самого низкого),
+а потом идут min-width (от самого низкого числа до самого высокого). */
+//
+@media (max-width: 2500px) {
+    .intro__inner2 {
+        width: 1000px;
+    }
+}
+//
+@media (max-width: 2300px) {
+    .intro__inner2 {
+        width: 950px;
+    }
+}
+//
+@media (max-width: 2100px) {
+    .intro__inner2 {
+        width: 850px;
+    }
+}
+//
+@media (max-width: 1800px) {
+    .intro__inner2 {
+        width: 750px;
+    }
+}
+//
+@media (max-width: 1600px) {
+    .intro__inner2 {
+        width: 700px;
+    }
+}
+//
+@media (max-width: 1300px) {
+    .intro__inner2 {
+        width: 648px;
+    }
+}
+@media ($notebook) {
+    .intro__inner1 {
+        .intro__content {
+            .intro__suptitle {
+                margin-top: 14px;
+            }
+        }
+    }
+}
+
+//
+@media ($tablet) {
+    .intro__inner1 {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        background-size: 400px auto; // Уменьшим размер фона для фото.
+        .intro__content {
+            .intro__suptitle {
+                font-size: 1.5rem;
+            }
+            .intro__title {
+                font-size: 2rem;
+            }
+        }
+        .intro__photo {
+            width: 262px;
+            right: 62px;
+        }
+    }
+}
+
+@media ($mobile) {
+    .intro {
+        margin-top: 0;
+    }
+    .intro__inner1 {
+        background-size: 370px auto; // Уменьшим размер фона для фото.
+        .intro__content {
+            width: 60%;
+        }
+        .intro__photo {
+            width: 248px;
+            right: 50px;
+        }
+    }
+}
+
+@media (max-width: 742px) {
+    .intro__inner1 {
+        background-size: 284px auto; // Уменьшим размер фона для фото.
+        .intro__content {
+        }
+        .intro__photo {
+            width: 218px;
+            right: 32px;
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .intro__inner1 {
+        background-size: 0; // Убираем фон для фото.
+        .intro__content {
+            width: 70%;
+        }
+        .intro__photo {
+            right: -12px;
+        }
+    }
+    .intro__inner2 {
+        width: 550px;
+    }
+}
+
+@media ($mobile-sm) {
+    .intro {
+        height: auto;
+        min-height: 568px;
+    }
+    .intro__inner1 {
+        background-size: 342px auto; // Уменьшим размер фона для фото.
+        background-position-x: center; // Выравниваем фон по центру оси X.
+        .intro__content {
+            width: 100%;
+            padding-bottom: 19.5rem;
+        }
+        .intro__photo {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    .intro__inner2 {
+        width: 450px;
+        bottom: 0;
+    }
+}
+
+@media (max-width: 460px) {
+    .intro__inner1 {
+        margin-bottom: 14rem;
+    }
+    .intro__inner2 {
+        width: 380px;
+    }
+}
+
+@media (max-width: 400px) {
+    .intro__inner1 {
+        margin-bottom: 13rem;
+    }
+    .intro__inner2 {
+        width: 360px;
+    }
+}
+
+@media (max-width: 370px) {
+    .intro__inner1 {
+        margin-bottom: 12rem;
+        background-size: 296px auto; // Уменьшим размер фона для фото.
+    }
+    .intro__inner2 {
+        width: 318px;
+    }
+}
+
+
+

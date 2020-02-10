@@ -1,0 +1,94 @@
+// -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+// -#- IMPORTS - general styles -#-
+// -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+//
+// Variables (переменные должны быть прописаны выше того объекта, в котором они используются).
+@import "../_vars.scss";
+//
+//
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+// =*= BLOCK: progress-bar =*=
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+//
+.progress-bar {
+    margin-bottom: 2.533rem;
+    &__item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.3rem;
+    }
+    &__left {
+        width: 30%;
+    }
+    &__title {
+        font-size: 0.933rem;
+        font-weight: 300;
+    }
+    &__right {
+        padding-left: 1.2rem;
+    }
+    &__bar {
+        width: 139px;
+        height: 6px;
+        background-color: #efefef;
+    }
+    &__progress {
+        height: 100%;
+        background-color: $violet-bold;
+        // Плавное изменение линии прогресса в зависимости от ширины элемента (значение ширины в html в атрибуте style меняем через js).
+        transition: width 0.2s linear;
+    }
+}
+//
+//
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+// =*= MODIFIERS: progress-bar (connection at the end of styles .css/.scss) =*=
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+//
+
+//
+//
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+// =*= MEDIA QUERIES: progress-bar =*=
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+//
+/* Сначала идут max-width (от самого высокого числа до самого низкого),
+а потом идут min-width (от самого низкого числа до самого высокого). */
+//
+@media ($tablet) {
+    .progress-bar {
+        &__left {
+            width: 32%;
+        }
+    }
+}
+
+@media ($mobile) {
+    .progress-bar {
+        &__item {
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        &__left {
+            width: 100%;
+            margin-bottom: 0.2rem;
+        }
+    }
+}
+
+@media ($mobile-sm) {
+    .progress-bar {
+        &__right {
+            .progress-bar__bar {
+                margin-left: 0;
+                margin-right: 0;
+                display: inline-block;
+            }
+        }
+    }
+}
+
+
+
+
+

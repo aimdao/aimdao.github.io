@@ -1,0 +1,117 @@
+// -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+// -#- IMPORTS - general styles -#-
+// -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+//
+// Variables (переменные должны быть прописаны выше того объекта, в котором они используются).
+@import "../_vars.scss";
+//
+//
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+// =*= BLOCK: nav =*=
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+//
+.nav {
+    display: flex;
+    flex-wrap: wrap; // Чтобы flex item могли перепрыгивать на новую строку.
+    align-items: center;
+    height: 100%;
+    &__link {
+        margin-left: 2rem;
+        position: relative;
+        font-size: 0.933rem;
+        color: $violet-dark;
+        text-transform: uppercase;
+        font-weight: 700;
+        text-decoration: none;
+        // Линия подчеркивания (с анимацией увеличения).
+        &::after {
+            content: "";
+            width: 0;
+            height: 2px;
+            background-color: $violet-red;
+            position: absolute; // Относительно nav__link.
+            bottom: -5px;
+            left: 0;
+            z-index: 1;
+            transition: width 0.2s linear; // Анимация (плавность изменения width).
+        }
+        // Линия подчеркивания плавно увеличивается при наведении (за исключением ссылки, имеющей модификатор nav__link--btn).
+        &:hover:not(.nav__link--btn) {
+            &::after {
+                width: 100%;
+            }
+        }
+    }
+}
+//
+//
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+// =*= MODIFIERS: nav (connection at the end of styles .css/.scss) =*=
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+//
+.nav {
+    &__link {
+        &--btn {
+            padding: 0.667rem 2rem;
+            border: 2px solid $violet-dark;
+            border-radius: 20px;
+            transition: background-color 0.2s linear, color 0.2s linear;
+            &:hover {
+                background-color: $violet-dark;
+                color: $white;
+            }
+        }
+    }
+}
+//
+//
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+// =*= MEDIA QUERIES: nav =*=
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+//
+/* Сначала идут max-width (от самого высокого числа до самого низкого),
+а потом идут min-width (от самого низкого числа до самого высокого). */
+//
+@media ($tablet) {
+    // Основное навигационное меню nav.
+    .nav {
+        &__link {
+            margin-left: 1.3rem;
+        }
+    }
+}
+//
+@media ($mobile) {
+    // Основное навигационное меню nav.
+    .nav {
+        display: none; // Скрываем основное навигационное меню nav.
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        z-index: 1000;
+        background-color: $violet-bright; // Цвет выпадающего sandwich-menu.
+        box-shadow: 0 5px 10px rgba($violet, 0.65);
+        text-align: center; // Текст всех ссылок (пунктов меню) выравниваем по центру.
+        padding: 1rem;
+        &__link {
+            width: 100%;
+            margin-left: 0;
+            padding: 0.5rem 1rem;
+        }
+        // Меню активно (открыто) в мобильной версии сайта (при нажатии кнопки sandwich-menu).
+        &.active {
+            display: flex;
+            height: 330%;
+        }
+    }
+}
+
+
+
+
+
+
+
+

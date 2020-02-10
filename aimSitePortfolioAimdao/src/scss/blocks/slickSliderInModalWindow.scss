@@ -1,0 +1,91 @@
+// -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+// -#- IMPORTS - general styles -#-
+// -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+//
+// Variables (переменные должны быть прописаны выше того объекта, в котором они используются).
+@import "../_vars.scss";
+//
+//
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+// =*= BLOCK: Слайдер projectSlider (с классом slick-slider) в модальном окне в секции modal (информация о проекте) данного сайта. =*=
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+//
+/* Элемент с классом projectSlider является СЛАЙДЕРОМ. Этот слайдер листает скрины о конкретном
+    проекте, находясь внутри модального окна. Для слайдера projectSlider генерируется класс
+    slick-slider (библиотекой slick). */
+// Библиотека слайдера slick (https://kenwheeler.github.io/slick/).
+.slick-slider {
+    /* Делаем высоту слайдера slick равной 100% т.к. наши картинки (класс modal-work__photo)
+     не имеют высоты (не имеют физических размеров) из-за того, что они спозиционированы
+     абсолютно. */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .slick-list {
+        height: 100%;
+        .slick-track {
+            height: 100%;
+        }
+    }
+    /* В слайдере slick-slider переопределяем стили класса slick-dots (для дефолтных точек
+    проистывания слайдера).
+      */
+    .slick-dots {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        position: absolute;
+        bottom: 1.467rem;
+        left: 0;
+        z-index: 2;
+        li {
+            margin: 0 0.5rem;
+            // Если к элементу li будет добавлен класс slick-active (при нажатии), то ..
+            &.slick-active {
+                // .. меняем цвет background-color.
+                button {
+                    background-color: #fff;
+                }
+            }
+            // Переопределяем стили для дефолтных кнопок.
+            button {
+                padding: 0;
+                //
+                // Убираем текст кнопок, прописанный в теге button.
+                font-size: 0; // Обнуляем размер шрифта.
+                color: transparent; // Цвет текста прозрачный.
+                //
+                // Пишем свои стили для кнопок.
+                width: 11px;
+                height: 11px;
+                border: 1px solid #fff;
+                border-radius: 50%;
+                background: transparent;
+                cursor: pointer;
+                // В фокусе (при нажатии) удаляем свойство outline.
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+    }
+}
+//
+//
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+// =*= MODIFIERS: Слайдер projectSlider (connection at the end of styles .css/.scss) =*=
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+//
+
+//
+//
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+// =*= MEDIA QUERIES: Слайдер projectSlider =*=
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+//
+/* Сначала идут max-width (от самого высокого числа до самого низкого),
+а потом идут min-width (от самого низкого числа до самого высокого). */
+//

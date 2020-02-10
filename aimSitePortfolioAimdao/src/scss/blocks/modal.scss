@@ -1,0 +1,132 @@
+// -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+// -#- IMPORTS - general styles -#-
+// -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+//
+// Variables (переменные должны быть прописаны выше того объекта, в котором они используются).
+@import "../_vars.scss";
+//
+//
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+// =*= BLOCK: modal =*=
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+//
+// Маска модального окна.
+.modal {
+    display: none;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    overflow: auto; // Если много контента, выходящего за высоту дисплейя, то появится скролл.
+    background-color: rgba(#2e2e2f, 0.85);
+    position: fixed; // Модальное окно будет фиксированным.
+    top: 0;
+    left: 0;
+    z-index: 1000; // Модальное окно будет поверх всего содержимого.
+    /* Если имеется класс show, то модально окно будет показано. Без данного класса, модальное окно
+    будет скрыто (класс show добовляется и удаляется через js-код). */
+    &.show {
+        display: flex;
+    }
+}
+
+// В modal__dialog находится вся информация модального окна. Это непосредственно модальное окно (без маски modal).
+.modal__dialog {
+    width: 100%;
+    max-width: 1200px; // Максимальная ширина модального окна.
+    margin: auto; // Выравниваем модальное окно по центру по горизонтали и вертикали.
+    background-color: #fff;
+    position: relative;
+    //
+    // Анимация модального окна при появлении (плавный поворот от 90 градусов до 0 градусов реализован через js-код).
+    transform: rotateX(90deg); // Начальное положение модального окна: поворот на 90 градусов (окно не видно).
+    transition: transform 0.4s linear; // Задаем плавность поворота модального окна.
+}
+
+// Кнопка закрытия модального окна.
+.modal__close {
+    width: 34px;
+    height: 34px;
+    // Убираем дефолтную стилизацию тега button.
+    background: 0;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+
+    position: absolute; // Относительно modal__dialog.
+    top: 0.867rem;
+    right: 0.867rem;
+    z-index: 5;
+    transition: transform 0.2s linear;
+    // При наведении кнопка поворачивается.
+    &:hover {
+        transform: rotate(90deg);
+    }
+    // В фокусе (при нажатии) удаляем свойство outline.
+    &:focus {
+        outline: none;
+    }
+}
+
+.modal__content {
+    padding: 5rem 1rem;
+}
+
+.modal__title {
+    font-size: 3rem;
+    text-align: center;
+    color: $violet-dark;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 3.533rem;
+    margin-bottom: 3.6rem;
+}
+.modal__subtitle {
+    font-size: 1.067rem;
+    text-align: center;
+    color: $violet-dark;
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: 1.8rem;
+}
+//
+//
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+// =*= MODIFIERS: modal (connection at the end of styles .css/.scss) =*=
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+//
+.modal__dialog {
+    // Маленькое модальное окно.
+    &--small {
+        max-width: 900px; // Максимальная ширина модального окна.
+    }
+}
+//
+//
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+// =*= MEDIA QUERIES: modal =*=
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+//
+/* Сначала идут max-width (от самого высокого числа до самого низкого),
+а потом идут min-width (от самого низкого числа до самого высокого). */
+//
+@media ($mobile) {
+    .modal__title {
+        font-size: 2.3rem;
+    }
+    .modal__subtitle {
+        font-size: 0.82rem;
+    }
+}
+
+@media ($mobile-sm) {
+    .modal__title {
+        font-size: 2.1rem;
+        text-align: center;
+        margin-top: 1.2rem;
+    }
+    .modal__subtitle {
+        text-align: center;
+        font-size: 1.2rem;
+    }
+}
+

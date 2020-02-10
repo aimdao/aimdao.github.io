@@ -1,0 +1,137 @@
+// -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+// -#- IMPORTS - general styles -#-
+// -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+//
+// Variables (переменные должны быть прописаны выше того объекта, в котором они используются).
+@import "../_vars.scss";
+//
+//
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+// =*= BLOCK: articles =*=
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+//
+.articles {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1rem; // Выравниваем сетку.
+}
+
+.articles__col {
+    width: 33%;
+    padding: 0 1rem;
+    .articles__item {
+        margin-bottom: 2rem;
+        .articles__header {
+            position: relative;
+            margin-bottom: 1.333rem;
+            .articles__date {
+                display: flex;
+                align-items: center; // Выравнивание блока с текстом по вертикали.
+                justify-content: center; // Выравнивание блока с текстом по горизонтали.
+                text-align: center; // Выравнивание текста по горизонтали внутри текстового блока.
+                width: 77px;
+                height: 77px;
+                background-color: $violet-dark;
+                color: $white;
+                font-size: 1.067rem;
+                line-height: 1.4rem;
+                position: absolute; // Относительно articles__header.
+                top: 0;
+                left: 0;
+                z-index: 1;
+            }
+            // Адаптивный img.
+            .articles__photo {
+                display: block;
+                max-width: 100%;
+                height: auto;
+                background-color: $violet;
+            }
+        }
+        .articles__content {
+            margin-bottom: 2rem;
+            .articles__title {
+                font-size: 1.2rem;
+                font-weight: 700;
+                line-height: 1.667rem;
+                color: $violet-dark;
+                text-transform: uppercase;
+                margin-bottom: 0.6rem;
+                a {
+                    color: inherit;
+                    text-decoration: none;
+                    // При наведении появляется линия подчеркивания.
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+            .articles__category {
+                font-size: 0.8rem;
+                line-height: 1.667rem;
+                color: $violet-dark;
+                text-transform: uppercase;
+                margin-bottom: 1.5rem;
+            }
+            .articles__text {
+                font-size: 0.8rem;
+                line-height: 1.6rem;
+                color: $violet-bold;
+                font-weight: 300;
+            }
+        }
+    }
+}
+//
+//
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+// =*= MODIFIERS: articles (connection at the end of styles .css/.scss) =*=
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+//
+
+//
+//
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+// =*= MEDIA QUERIES: articles =*=
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+//
+/* Сначала идут max-width (от самого высокого числа до самого низкого),
+а потом идут min-width (от самого низкого числа до самого высокого). */
+//
+@media ($tablet) {
+    .articles {
+        // Возвращаем свойства кнопки btn--small специально для секции articles, т.к. они переопределились выше в других секциях.
+        .btn--small {
+            font-size: 0.933rem;
+            padding: 0.7em 1.1em;
+            min-width: 0;
+        }
+    }
+    .articles__col {
+        .articles__item {
+            .articles__content {
+                .articles__title {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media ($mobile) {
+    .articles__col {
+        width: 100%;
+        .articles__item {
+            max-width: 370px;
+            margin: 0 auto 2rem;
+            .articles__content {
+                .articles__title {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
+
+
+

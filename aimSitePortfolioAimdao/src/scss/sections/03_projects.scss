@@ -1,0 +1,133 @@
+// -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+// -#- IMPORTS - general styles -#-
+// -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+//
+// Variables (переменные должны быть прописаны выше того объекта, в котором они используются).
+@import "../vars";
+//
+//
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+// =*= SECTION: projects =*=
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+//
+.projects {
+    margin: 0 0 2.8rem;
+    &__header {
+        text-align: center;
+        margin-bottom: 0.2rem;
+    }
+    &__title {
+        font-size: 3rem;
+        font-weight: 700;
+        line-height: 3rem;
+        color: $violet-dark;
+        text-transform: uppercase;
+        padding-top: 5rem; // Выравниваем высоту для автоматического скролла к данной секции сайта (при нажатии на пункты основного навигационного меню nav).
+        margin-bottom: 0.8rem;
+    }
+    &__subtitle {
+        font-size: 1.2rem;
+        font-weight: 300;
+        color: $violet-red;
+        margin-bottom: 2.5rem;
+    }
+    &__text {
+        font-size: 0.9rem;
+        font-weight: 300;
+        font-style: italic;
+        color: $violet-red;
+    }
+    // Возвращаем свойства кнопки btn--small специально для секции projects, т.к. они переопределились выше в других секциях.
+    .btn--small {
+        font-size: 0.933rem;
+        padding: 0.7em 1.1em;
+        min-width: 0;
+    }
+}
+
+.projects__inner {
+    width: 80%;
+    height: auto;
+    margin: 4rem auto 0;
+    .projects__paintSplashColors {
+        width: 100%;
+    }
+}
+
+.projects__nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.4rem;
+    .projects__nav-link {
+        font-size: 0.8rem;
+        color: rgba($violet-dark, 0.7);
+        margin: 0 1.2rem;
+        // Линия подчеркивания (с анимацией уменьшения).
+        position: relative;
+        &::after {
+            content: "";
+            width: 100%;
+            height: 1px;
+            background-color: $violet-red;
+            position: absolute; // Относительно projects__nav-link.
+            bottom: -3px;
+            left: 0;
+            z-index: 1;
+            transition: width 0.2s linear; // Анимация (плавность изменения width).
+        }
+        // Линия подчеркивания плавно уменьшается при наведении.
+        &:hover {
+            &::after {
+                width: 0;
+            }
+        }
+    }
+}
+//
+//
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+// =*= MODIFIERS: projects (connection at the end of styles .css/.scss) =*=
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+//
+
+//
+//
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+// =*= MEDIA QUERIES: projects =*=
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+//
+/* Сначала идут max-width (от самого высокого числа до самого низкого),
+а потом идут min-width (от самого низкого числа до самого высокого). */
+//
+@media ($mobile) {
+    .projects__header {
+        .projects__title {
+            font-size: 2rem;
+        }
+    }
+    .projects__inner {
+        width: 90%;
+    }
+}
+//
+@media ($mobile-sm) {
+    .projects {
+        margin: 0;
+    }
+    .projects__nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 0.5rem;
+        .projects__nav-link {
+             margin-bottom: 10px;
+        }
+    }
+    .projects__inner {
+        width: 100%;
+        margin-top: 2rem;
+    }
+}
+
+
+

@@ -1,0 +1,265 @@
+// -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+// -#- IMPORTS - general styles -#-
+// -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+//
+// Variables (переменные должны быть прописаны выше того объекта, в котором они используются).
+@import "../_vars.scss";
+//
+//
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+// =*= BLOCK: modal-work =*=
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+//
+.modal-work {
+    display: flex;
+    &__preview {
+        width: 65%;
+        position: relative;
+        // Все что выходит за границы modal-work__preview, мы скрываем.
+        overflow: hidden;
+    }
+    &__photo {
+        position: absolute; // Относительно modal-work__preview.
+        top: 50%;
+        left: 50%;
+        width: auto;
+        height: 100%;
+        z-index: 1;
+        // Чтобы идиально выровнять по центру.
+        transform: translate3d(-50%, -50%, 0);
+    }
+    &__description {
+        width: 35%;
+        padding: 3.333rem 6.6rem 1rem 1.733rem;
+        position: relative;
+    }
+    &__header {
+        margin-bottom: 2.2rem;
+    }
+    &__title {
+        font-size: 2.133rem;
+        font-weight: 700;
+        color: $violet-dark;
+        text-transform: uppercase;
+        line-height: 3rem;
+        margin-bottom: 0.2rem;
+    }
+    &__info {
+        font-size: 1.2rem;
+        color: $violet-bold;
+        text-transform: uppercase;
+        &-divider {
+            margin: 0 1rem;
+        }
+    }
+    &__client {
+        margin-bottom: 2.2rem;
+        &-title {
+            font-size: 1.067rem;
+            font-weight: 700;
+            color: $violet-dark;
+            line-height: 1.467rem;
+            margin-bottom: 0.2rem;
+        }
+        &-company {
+            font-size: 0.933rem;
+            font-weight: 300;
+            color: $violet-bold;
+            font-style: italic;
+            line-height: 1.467rem;
+            padding-bottom: 1rem;
+        }
+        &-link {
+            font-size: 0.933rem;
+            color: $violet-bold;
+            line-height: 1.467rem;
+            position: relative;
+            // Линия подчеркивания (с анимацией уменьшения).
+            &::after {
+                content: "";
+                width: 100%;
+                height: 1px;
+                background-color: $violet-red;
+                position: absolute; // Относительно timeline__linkMySite.
+                bottom: -3px;
+                left: 0;
+                z-index: 1;
+                transition: width 0.2s linear; // Анимация (плавность изменения width).
+            }
+            // Линия подчеркивания плавно уменьшается при наведении.
+            &:hover {
+                &::after {
+                    width: 0;
+                }
+            }
+        }
+    }
+    &__text {
+        font-size: 0.8rem;
+        line-height: 1.6rem;
+        color: $violet-bold;
+        font-weight: 300;
+        margin-bottom: 8.667rem;
+    }
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        position: absolute; // Относительно modal-work__description.
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        padding: 0 1.8rem 1rem;
+    }
+    //Кнопки листания слайдера.
+    &__btn {
+        font-size: 0.933rem;
+        line-height: 1.467rem;
+        color: $violet-dark;
+        text-transform: uppercase;
+        // Убираем дефолтную стилизацию тегов button.
+        background: 0;
+        border: 0;
+        padding: 0;
+        cursor: pointer;
+        font-family: inherit; // Т.к. по дефолту у тегов button шрифт свой, то наследем шрифт от родителя.
+        // В фокусе (при нажатии) удаляем свойство outline.
+        &:focus {
+            outline: none;
+            // В фокусе (при нажатии) добавляем линию подчеркивания.
+            &::after {
+                content: "";
+                width: 100%;
+                height: 1px;
+                background-color: $violet-red;
+                display: block;
+            }
+        }
+    }
+}
+
+//
+//
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+// =*= MODIFIERS: modal-work (connection at the end of styles .css/.scss) =*=
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+//
+.modal-work {
+    &__preview {
+        &--modalSlideBackgroundProject1 {
+            background-color: rgba(30, 30, 30, 0.15); //1E1E1E
+        }
+        &--modalSlideBackgroundProject2 {
+            background-color: rgba(236, 139, 141, 0.40); // EC8B8D
+        }
+        &--modalSlideBackgroundProject3 {
+            background-color: rgba(254, 194, 35, 0.30); //FEC223
+        }
+        &--modalSlideBackgroundProject4 {
+            background-color: rgba(34, 169, 225, 0.30); //22A9E1
+        }
+        &--modalSlideBackgroundProject5 {
+            background-color: rgba(43, 127, 234, 0.30);//2B7FEA
+        }
+        &--modalSlideBackgroundProject6 {
+            background-color: rgba(48, 48, 48, 0.50); //303030
+        }
+    }
+}
+
+//
+//
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+// =*= MEDIA QUERIES: modal-work =*=
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+//
+/* Сначала идут max-width (от самого высокого числа до самого низкого),
+а потом идут min-width (от самого низкого числа до самого высокого). */
+//
+@media ($notebook) {
+    .modal-work {
+        &__description {
+            padding: 3.3rem 3rem 1rem 1.5rem;
+        }
+    }
+}
+
+@media ($tablet) {
+    .modal-work {
+        &__description {
+            width: 36%;
+            padding: 3.3rem 1rem 1rem 1.5rem;
+        }
+    }
+}
+
+@media ($mobile) {
+    .modal-work {
+        display: block;
+        &__preview {
+            position: absolute;
+            bottom: 6%;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 50%;
+            width: 100%;
+        }
+        &__description {
+            width: 100%;
+            padding: 3.3rem 1rem 1rem;
+        }
+        &__header {
+            margin-bottom: 1rem;
+        }
+        &__title {
+            font-size: 2rem;
+            text-align: center;
+        }
+        &__info {
+            font-size: 1.2rem;
+            text-align: center;
+        }
+        &__client {
+            margin-bottom: 1rem;
+        }
+        &__text {
+            margin-bottom: 34rem;
+            text-align: center;
+        }
+        &__footer {
+            bottom: 0;
+        }
+    }
+}
+
+@media ($mobile-sm) {
+    .modal-work {
+        &__preview {
+            bottom: 9%;
+            height: 28%;
+        }
+        &__title {
+            font-size: 1.8rem;
+        }
+        &__info {
+            font-size: 1.1rem;
+        }
+        &__text {
+            margin-bottom: 18rem;
+            p {
+                margin-bottom: 0.5rem;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

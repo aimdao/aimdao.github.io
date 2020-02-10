@@ -1,0 +1,105 @@
+// -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+// -#- IMPORTS - general styles -#-
+// -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+//
+// Variables (переменные должны быть прописаны выше того объекта, в котором они используются).
+@import "../_vars.scss";
+//
+//
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+// =*= BLOCK: sandwichMenu =*=
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+//
+/* Открытие/закрытие основного навигационного меню при нажатии на кнопку sandwichMenu,
+на мобильной версии сайта */
+//
+.sandwichMenu {
+    width: 30px;
+    padding: 10px 0;
+    display: none; // По дефолту кнопка sandwichMenu скрыта.
+    position: absolute; // Относительно body.
+    top: 24px;
+    right: 24px;
+    z-index: 1;
+    cursor: pointer;
+    // Обнуляем дефолтные стили у кнопки (тег button).
+    font-size: 0; // Обнуляем размер шрифта у надписи кнопки.
+    color: transparent; // Делаем цвет надписи кнопки прозрачным.
+    border: 0; // Убираем дефолтный border у кнопки.
+    background: none; // Убираем дефолтный background у кнопки.
+    &:focus {
+        outline: none;
+    }
+    &__item { // Создаем среднюю полоску кнопки sandwichMenu.
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: $violet-dark;
+        position: absolute; // Относительно sandwichMenu.
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        transition: background 0.2s linear; // Замедление скрытия средней полоски кнопки sandwichMenu при нажатии на нее.
+        // Создаем верхную и нижную полоски кнопки sandwichMenu.
+        &::before,
+        &::after {
+            content: "";
+            width: 100%;
+            height: 3px;
+            position: absolute;
+            left: 0;
+            background-color: $violet-dark;
+            z-index: 1;
+            transition: transform 0.2s linear; // Замедление трансформации кнопки sandwichMenu при нажатии на нее.
+        }
+        // Создаем верхную полоску кнопки sandwichMenu.
+        &::before {
+            top: -8px;
+        }
+        // Создаем нижную полоску кнопки sandwichMenu.
+        &::after {
+            bottom: -8px;
+        }
+    }
+    // Состояние активности кнопки sandwichMenu (кнопка sandwichMenu нажата).
+    &.active {
+        .sandwichMenu__item {
+            background: none; // Скрываем средную полоску кнопки sandwichMenu.
+            // Трансформация верхней полоски кнопки sandwichMenu.
+            &::before {
+                transform-origin: left top;
+                transform: rotate(45deg) translateY(-3px);
+            }
+            // Трансформация нижней полоски кнопки sandwichMenu.
+            &::after {
+                transform-origin: left bottom;
+                transform: rotate(-45deg) translateY(3px);
+            }
+        }
+    }
+}
+//
+//
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+// =*= MODIFIERS: sandwichMenu (connection at the end of styles .css/.scss) =*=
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+//
+
+//
+//
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+// =*= MEDIA QUERIES: sandwichMenu =*=
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+//
+/* Сначала идут max-width (от самого высокого числа до самого низкого),
+а потом идут min-width (от самого низкого числа до самого высокого). */
+//
+@media ($mobile) {
+    // Кнопка sandwichMenu: открытие-закрытие мобильного sandwichMenu.
+    .sandwichMenu {
+        display: block; // Показываем кнопку sandwichMenu (по дефолту она скрыта).
+    }
+}
+

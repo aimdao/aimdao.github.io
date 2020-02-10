@@ -1,0 +1,117 @@
+// -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+// -#- IMPORTS - general styles -#-
+// -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+//
+// Variables (переменные должны быть прописаны выше того объекта, в котором они используются).
+@import "../vars";
+//
+//
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+// =*= SECTION: news =*=
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+//
+.news {
+    margin-top: 5rem;
+    margin-bottom: 8.133rem;
+}
+
+.news__header {
+    text-align: center;
+    margin-bottom: 3.667rem;
+    .news__title {
+        font-size: 3rem;
+        font-weight: 700;
+        line-height: 3rem;
+        color: $violet-dark;
+        text-transform: uppercase;
+        padding-top: 3rem;
+        margin-bottom: 0.8rem;
+    }
+    .news__text {
+        font-size: 1.2rem;
+        font-weight: 300;
+        color: $violet-red;
+    }
+}
+
+.news__footer {
+    text-align: right;
+    .news__link {
+        font-size: 0.933rem;
+        color: $violet-bold;
+        text-decoration: underline;
+        // При наведении убирается подчеркивание у ссылки.
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.news__inner {
+    width: 75%;
+    height: auto;
+    margin: 8rem auto 0;
+    .news__paintSplashColors {
+        width: 100%;
+    }
+}
+//
+//
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+// =*= MODIFIERS: news (connection at the end of styles .css/.scss) =*=
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+//
+
+//
+//
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+// =*= MEDIA QUERIES: news =*=
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+//
+/* Сначала идут max-width (от самого высокого числа до самого низкого),
+а потом идут min-width (от самого низкого числа до самого высокого). */
+//
+@media ($tablet) {
+    .news {
+        margin-top: 2rem;
+        margin-bottom: 5rem;
+    }
+    .news__inner {
+        width: 80%;
+        margin: 6rem auto 0;
+    }
+}
+
+@media ($mobile) {
+    .news {
+        margin-top: 1rem;
+    }
+    .news__header {
+       .news__title {
+            font-size: 2rem;
+       }
+    }
+    .news__inner {
+        width: 85%;
+        margin: 4rem auto 0;
+    }
+}
+
+@media ($mobile-sm) {
+    .news {
+        margin-top: 0;
+        margin-bottom: 2rem;
+    }
+    .news__inner {
+        width: 100%;
+        margin: 3rem auto 0;
+    }
+}
+
+
+
+
+
+
+
+

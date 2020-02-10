@@ -1,0 +1,128 @@
+// -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+// -#- IMPORTS - general styles -#-
+// -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+//
+// Variables (переменные должны быть прописаны выше того объекта, в котором они используются).
+@import "../vars";
+//
+//
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+// =*= SECTION: reviews =*=
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+//
+.reviews {
+    padding: 4.533rem 0;
+    background: $violet-boldRed url("/build/img/reviews/reviews-bg.png") center center no-repeat /cover;
+    position: relative;
+}
+
+.reviews__item {
+    width: 100%;
+    max-width: 830px;
+    margin: 0 auto;
+    .reviews__text {
+        font-size: 1.5rem;
+        color: $white;
+        line-height: 2.133rem;
+        text-align: center;
+    }
+    .reviews__author {
+        text-align: center;
+        .reviews__photo {
+            width: 103px;
+            height: 103px;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto 0.6rem;
+            border: 4px solid $violet-red;
+            transition: border 0.2s linear;
+            &:hover {
+                border: 4px solid $white;
+                box-shadow:  0 0.5px 25px rgba($white, 1);
+            }
+        }
+        width: 100%;
+        position: absolute; // Относительно reviews.
+        top: 100%;
+        margin-top: -51px;
+        left: 0;
+        z-index: 1;
+        .reviews__name {
+            font-size: 1.067rem;
+            font-weight: 700;
+            color: $violet-dark;
+            margin-bottom: 0.3rem;
+        }
+        .reviews__company {
+            font-size: 0.933rem;
+            font-weight: 300;
+            color: $violet-red;
+            font-style: italic;
+            margin-bottom: 0.4rem;
+        }
+        .reviews__rating {
+            .reviews__star {
+                width: 13px;
+                height: 13px;
+                // Неактивная звезда.
+                &--unactive {
+                    opacity: 0.3;
+                }
+            }
+        }
+    }
+}
+
+.reviews2__inner {
+    width: 85%;
+    height: auto;
+    margin:14rem auto 0;
+    .reviews2__paintSplashColors {
+        width: 100%;
+    }
+}
+//
+//
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+// =*= MODIFIERS: reviews (connection at the end of styles .css/.scss) =*=
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+//
+
+//
+//
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+// =*= MEDIA QUERIES: reviews =*=
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+//
+/* Сначала идут max-width (от самого высокого числа до самого низкого),
+а потом идут min-width (от самого низкого числа до самого высокого). */
+//
+@media ($tablet) {
+    .reviews__item {
+        .reviews__text {
+            font-size: 1.4rem;
+        }
+    }
+    .reviews2__inner {
+        margin:10rem auto 0;
+        width: 90%;
+    }
+}
+@media ($mobile) {
+    .reviews__item {
+        .reviews__text {
+            font-size: 1.3rem;
+        }
+    }
+}
+@media ($mobile-sm) {
+    .reviews__item {
+        .reviews__text {
+            font-size: 1.2rem;
+        }
+    }
+    .reviews2__inner {
+        margin:9rem auto 0;
+        width: 100%;
+    }
+}

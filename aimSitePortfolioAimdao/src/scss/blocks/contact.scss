@@ -1,0 +1,169 @@
+// -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+// -#- IMPORTS - general styles -#-
+// -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+//
+// Variables (переменные должны быть прописаны выше того объекта, в котором они используются).
+@import "../_vars.scss";
+//
+//
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+// =*= BLOCK: contact =*=
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+//
+.contact {
+    display: flex;
+    &__left {
+        width: 47%;
+        padding: 2rem;
+    }
+    &__right {
+        width: 53%;
+        //background: $violet-dark url("https://place-hold.it/480x700/660099/ffffff&fontsize=24") center center no-repeat;
+        position: relative;
+        // Все что выходит за границы contact__right, мы скрываем.
+        overflow: hidden;
+        &-photo {
+            width: auto;
+            height: 100%;
+            position: absolute; // Относительно contact__right.
+            top: 50%;
+            left: 50%;
+            z-index: 1;
+            // Чтобы идиально выровнять по центру.
+            transform: translate3d(-50%, -50%, 0);
+        }
+    }
+    &__info {
+        margin: 2rem 0 3rem;
+        font-size: 1.1rem;
+        font-weight: 300;
+        color: $violet-dark;
+        &-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.75rem;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        // В контейнере flex содержится иконка и номер телефона.
+        &-phone {
+            display: flex;
+            align-items: center;
+        }
+        // В контейнере flex содержится иконка и текст написания почтового ящика.
+        &-email {
+            display: flex;
+            align-items: center;
+        }
+        &-phone,
+        &-email {
+            position: relative;
+            // Линия подчеркивания (с анимацией уменьшения).
+            &::after {
+                content: "";
+                width: 100%;
+                height: 1px;
+                background-color: $violet-red;
+                position: absolute; // Относительно contact__info-phone и contact__info-email соответственно.
+                bottom: -3px;
+                left: 0;
+                z-index: 1;
+                transition: width 0.2s linear; // Анимация (плавность изменения width).
+            }
+            // Линия подчеркивания плавно уменьшается при наведении.
+            &:hover {
+                &::after {
+                    width: 0;
+                }
+            }
+        }
+        &-icon {
+            margin-right: 0.75rem;
+        }
+
+    }
+}
+
+//
+//
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+// =*= MODIFIERS: contact (connection at the end of styles .css/.scss) =*=
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+//
+
+//
+//
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+// =*= MEDIA QUERIES: contact =*=
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+//
+/* Сначала идут max-width (от самого высокого числа до самого низкого),
+а потом идут min-width (от самого низкого числа до самого высокого). */
+//
+@media ($mobile) {
+    .contact {
+        &__left {
+            padding: 1rem;
+        }
+        &__info {
+            margin: 1.5rem 0 1rem;
+            font-size: 0.933rem;
+            &-item {
+                margin-bottom: 0.7rem;
+            }
+        }
+    }
+}
+
+@media ($mobile-sm) {
+    .contact {
+        &__left {
+            width: 100%;
+            padding: 2rem;
+        }
+        &__info {
+            font-size: 1.1rem;
+        }
+        &__right {
+            display: none;
+        }
+    }
+}
+//
+@media (max-width: 390px) {
+    .contact {
+        &__info {
+            font-size: 0.933rem;
+        }
+    }
+}
+//
+@media (max-width: 346px) {
+    .contact {
+        &__info {
+            font-size: 0.83rem;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

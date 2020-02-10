@@ -1,0 +1,36 @@
+{
+  "name": "aimSitePortfolioAimdao",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "slick-carousel": "^1.8.1"
+  },
+  "devDependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
+    "animate.css": "^3.7.2",
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^6.2.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "imagemin-jpeg-recompress": "^6.0.0",
+    "jquery-form-styler": "^2.0.2",
+    "normalize.css": "^8.0.1",
+    "reset-css": "^5.0.1",
+    "wow.js": "^1.2.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Valentin Ryakhovskiy",
+  "license": "ISC"
+}

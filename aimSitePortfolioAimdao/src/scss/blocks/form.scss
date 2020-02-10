@@ -1,0 +1,84 @@
+// -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+// -#- IMPORTS - general styles -#-
+// -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+//
+// Variables (переменные должны быть прописаны выше того объекта, в котором они используются).
+@import "../_vars.scss";
+//
+//
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+// =*= BLOCK: form =*=
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+//
+.form {
+    &__group {
+        margin-bottom: 1.8rem;
+    }
+    &__label {
+        display: inline-block;
+        font-size: 1rem;
+        color: $violet-dark;
+        font-weight: 700;
+        line-height: 1.6rem;
+        margin-bottom: 0.6rem;
+    }
+    &__input,
+    &__textarea {
+        display: block;
+        width: 100%;
+        padding: 1.3rem 1.8rem;
+        border: 1px solid rgba($violet-dark, 0.3);
+        border-radius: 1.8rem;
+        font-size: 0.8rem;
+        font-weight: 400;
+        line-height: 1.2rem;
+        color: $violet-dark;
+        // Т.к. по дефолту у тегов input свой шрифт, то наследем шрифт от родителя.
+        font-family: inherit;
+        // Плавное изменение цвета border-color.
+        transition: border-color 0.2s linear;
+        // При фокусе, убираем дефолтный outline и задаем цвет border-color.
+        &:focus {
+            outline: none;
+            border-color: $violet-dark;
+        }
+        &::placeholder {
+            color: $violet-dark;
+            font-weight: 300;
+        }
+    }
+    &__textarea {
+        height: 200px;
+        resize: none;
+    }
+}
+
+//
+//
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+// =*= MODIFIERS: form (connection at the end of styles .css/.scss) =*=
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+//
+
+//
+//
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+// =*= MEDIA QUERIES: form =*=
+// =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
+//
+/* Сначала идут max-width (от самого высокого числа до самого низкого),
+а потом идут min-width (от самого низкого числа до самого высокого). */
+//
+@media ($mobile) {
+    .form {
+        &__group {
+            margin-bottom: 1.2rem;
+        }
+        &__label {
+            margin-bottom: 0.4rem;
+        }
+    }
+}
+
+
+

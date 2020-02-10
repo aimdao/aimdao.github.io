@@ -1,0 +1,119 @@
+/* Все ИМПОРТЫ подключаются выше основных стилей .css/.scss,
+т.к. основные стили .css/.scss должны иметь больший приоритет.
+ОДНАКО!!! - ИМПОРТЫ media queries и reuse styles подключаются ниже основных стилей .css/.scss. */
+//
+//
+// -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+// -#- IMPORTS - general styles -#-
+// -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+//
+// Libraries (объединение [конкатенация] библиотек [slick.scss, reset.css, normalize.css, animate.css и т.д.] ).
+@import "_libs.scss";
+//
+// Fonts.
+@import "_fonts.scss";
+//
+// Variables (переменные должны быть прописаны выше того объекта, в котором они используются).
+@import "_vars.scss";
+//
+// Global styles.
+@import "_global.scss";
+//
+//
+// -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+// -#- IMPORTS - sections (основные секции сайта) -#-
+// -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+//
+// SECTION: header
+@import "sections/01_header.scss";
+//
+// SECTION: intro
+@import "sections/02_intro.scss";
+//
+// SECTION: projects
+@import "sections/03_projects.scss";
+//
+// SECTION: about
+@import "sections/04_about.scss";
+//
+// SECTION: reviews
+@import "sections/05_reviews.scss";
+//
+// SECTION: news
+@import "sections/06_news.scss";
+//
+// SECTION: footer
+@import "sections/07_footer.scss";
+//
+//
+// -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+// -#- IMPORTS - blocks (смысловые блоки кода) -#-
+// -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+//
+// BLOCK: 000_blank
+@import "blocks/000_blank";
+//
+// BLOCK: container
+@import "blocks/container.scss";
+//
+// BLOCK: user
+@import "blocks/user.scss";
+//
+// BLOCK: nav
+@import "blocks/nav.scss";
+//
+// BLOCK: social
+@import "blocks/social.scss";
+//
+// BLOCK: btn
+@import "blocks/btn.scss";
+//
+// BLOCK: portfolio
+@import "blocks/portfolio.scss";
+//
+// BLOCK: work
+@import "blocks/work.scss";
+//
+// BLOCK: articles
+@import "blocks/articles.scss";
+//
+// BLOCK: modal
+@import "blocks/modal.scss";
+//
+// BLOCK: modal-work
+@import "blocks/modal-work.scss";
+//
+// BLOCK: timeline
+@import "blocks/timeline.scss";
+//
+// BLOCK: progress-bar
+@import "blocks/progress-bar.scss";
+//
+// BLOCK: contact
+@import "blocks/contact.scss";
+//
+// BLOCK: form
+@import "blocks/form.scss";
+//
+// BLOCK: slickSliderInModalWindow
+@import "blocks/slickSliderInModalWindow.scss";
+//
+// BLOCK: sandwichMenu
+@import "blocks/sandwichMenu.scss";
+//
+//
+//
+// ===%%%%%=====/\/\/\=====%%%%%=====/\/\/\=====%%%%%=====/\/\/\=====%%%%%===
+// ====/\/\/\===== CONNECTION AT THE END OF STYLES .CSS/.SCSS =====/\/\/\====
+// ===%%%%%=====\/\/\/=====%%%%%=====\/\/\/=====%%%%%=====\/\/\/=====%%%%%===
+//
+// Reuse styles.
+@import "_reuse.scss";
+//
+// Media queries.
+@import "_media.scss";
+//
+
+
+
+

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" version="1.1" viewBox="930 454 256 512" width="256pt" height="512pt" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <metadata> Produced by OmniGraffle 7.4.3 
+    <dc:date>2020-01-12 22:32:13 +0000</dc:date>
+  </metadata>
+  <defs/>
+  <g stroke="none" stroke-opacity="1" stroke-dasharray="none" fill="none" fill-opacity="1">
+    <title>Canvas 1</title>
+    <!-- <rect fill="white" width="512" height="416"/> -->
+    <g>
+      <title>Layer 1</title>
+      <path d="M 1090 630 L 1090 566 C 1090 548.336 1104.336 534 1122 534 L 1154 534 L 1154 454 L 1090 454 C 1036.976 454 994 496.976 994 550 L 994 630 L 930 630 L 930 710 L 994 710 L 994 966 L 1090 966 L 1090 710 L 1154 710 L 1186 630 Z" fill="#f38181"/>
+    </g>
+  </g>
+</svg>

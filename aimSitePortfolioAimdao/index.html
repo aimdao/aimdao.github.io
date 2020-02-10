@@ -1,0 +1,1492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>aimSitePortfolioAimdao</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,300i,400,700&display=swap&subset=cyrillic-ext" rel="stylesheet">
+    <link rel="stylesheet" href="build/css/style.min.css">
+</head>
+<!---->
+<!---->
+<!-- При открытии модальных окон, мы добавляем в html к тегу body класс
+no-scroll, и тем самым отменяем возможность скроллить страницу. -->
+<body>
+<!---->
+<!---->
+<!-- =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*= -->
+<!-- =*= SECTION: header =*= -->
+<!-- =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*= -->
+<!---->
+<header class="header" id="header">
+    <div class="container">
+        <div class="header__inner">
+            <div class="user">
+                <div class="user__avatar">
+                    <!-- В значениии атрибута data-scroll указывается id секции, к которой идет плавный автоматический скролл. -->
+                    <a data-scroll="#intro" href="#">
+                        <img class="user__avatar-img" src="/build/img/header/aimdaoAvatar.jpg" alt="Avatar">
+                    </a>
+                </div>
+                <div class="user__content">
+                    <div class="user__name">
+                        Валентин<br>
+                        Ряховский
+                    </div>
+                    <div class="user__profession">
+                        HTML-Верстальщик <!--UI & UX Designer-->
+                    </div>
+                </div>
+            </div>
+            <!-- Навигационное меню. -->
+            <nav class="nav" id="nav">
+                <!-- В значениии атрибута data-scroll указывается id секции, к которой идет плавный автоматический скролл. -->
+                <a class="nav__link" data-scroll="#projects" href="#">Проекты</a>
+                <a class="nav__link" data-scroll="#about" href="#">Обо мне</a>
+                <a class="nav__link" data-scroll="#news" href="#">Блог</a>
+                <a class="nav__link" data-scroll="#footer" href="#">Контакты</a>
+                <!-- Кнопка (в атрибуте data-modal указываем id вызываемого модального окна). -->
+                <a class="nav__link nav__link--btn" href="#" data-modal="#modal_hire_me">Найми меня</a>
+            </nav>
+            <!-- Кнопка sandwichMenu: открытие-закрытие мобильного sandwichMenu. -->
+            <button class="sandwichMenu" id="sandwichMenu" type="button">
+                <span class="sandwichMenu__item">sandwichMenu</span> <!-- Средняя полоска кнопки sandwichMenu (текст "sandwichMenu" будет скрыт, он нужен лишь для удобства разработки). -->
+            </button>
+        </div>
+    </div> <!-- /.container -->
+</header>
+<!---->
+<!---->
+<!-- =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*= -->
+<!-- =*= SECTION: intro =*= -->
+<!-- =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*= -->
+<!---->
+<section class="intro" id="intro">
+    <div class="container">
+        <div class="intro__inner1">
+            <div class="intro__content">
+                <h2 class="intro__suptitle">Привет, я</h2>
+                <h1 class="intro__title">Валентин Ряховский</h1>
+                <div class="intro__text">HTML-Верстальщик</div>
+                <div class="social">
+                    <a class="social__link social__link-facebook" href="https://www.facebook.com/aimdao" target="_blank">
+                        <img src="/build/img/intro/social/01-facebook.svg" alt="Icon">
+                    </a>
+                    <a class="social__link" href="https://vk.com/aimdao" target="_blank">
+                        <img src="/build/img/intro/social/02-vk.svg" alt="Icon">
+                    </a>
+                    <a class="social__link social__link-twitter" href="https://twitter.com/aimdao" target="_blank">
+                        <img src="/build/img/intro/social/03-twitter.svg" alt="Icon">
+                    </a>
+                    <a class="social__link social__link-instagram" href="https://www.instagram.com/aimdao" target="_blank">
+                        <img src="/build/img/intro/social/04-instagram.svg" alt="Icon">
+                    </a>
+                    <a class="social__link social__link-telegram" href="https://t.me/aimdao" target="_blank">
+                        <img src="/build/img/intro/social/05-telegram.svg" alt="Icon">
+                    </a>
+                    <a class="social__link social__link-whatsapp" href="https://wa.me/79616920777" target="_blank">
+                        <img src="/build/img/intro/social/06-whatsapp.svg" alt="Icon">
+                    </a>
+                </div>
+                <!-- Приводим к единому стилю кнопки, созданные на основе разных тегов (button и a). -->
+                <!-- Кнопка (в атрибуте data-modal указываем id вызываемого модального окна). -->
+                <a class="btn" href="#" data-modal="#modal_hire_me">Найми меня</a>
+                <!-- Кнопка (в атрибуте data-modal указываем id вызываемого модального окна). -->
+                <button class="btn" type="button" data-modal="#modal_resume">Мое резюме</button>
+            </div>
+            <!-- Фото. -->
+            <img class="intro__photo" src="/build/img/intro/photo/photoAimdao.png" alt="">
+        </div> <!-- /.intro__inner1 -->
+    </div> <!-- /.container -->
+    <div class="container">
+        <div class="intro__inner2">
+            <img class="intro__paintSplashColors" src="/build/img/intro/photo/paintSplashColors01.png" alt="Img">
+        </div> <!-- /.intro__inner2 -->
+    </div> <!-- /.container -->
+</section>
+<!---->
+<!---->
+<!-- =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*= -->
+<!-- =*= SECTION: projects =*= -->
+<!-- =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*= -->
+<!---->
+<div class="projects" id="projects">
+    <div class="container">
+        <div class="projects__header">
+            <h3 class="projects__title">
+                Проекты </h3>
+            <div class="projects__subtitle">
+                Сайты, сверстанные мной в процессе обучения
+            </div>
+            <div class="projects__text">
+                Сортировка по технологиям:
+            </div>
+        </div>
+        <!-- Навигация по работам. -->
+        <div class="projects__nav">
+            <!--  В атрибуте data-filter хранятся значения категорий, по которым фильтруются сайты. -->
+            <a class="projects__nav-link" href="#" data-filter="all">All</a>
+            <a class="projects__nav-link" href="#" data-filter="HTML-CSS-jQuery">HTML-CSS-jQuery</a>
+            <a class="projects__nav-link" href="#" data-filter="HTML-SCSS-jQuery-Flexbox-Gulp4-NPM">HTML-SCSS-jQuery-Flexbox-Gulp4-NPM</a>
+        </div>
+        <div class="portfolio">
+            <!-- # 1 - item (мой проект). -->
+            <div class="portfolio__col" data-category="HTML-SCSS-jQuery-Flexbox-Gulp4-NPM">
+                <!-- Одна из моих работ (в атрибуте data-modal указываем id вызываемого модального окна). -->
+                <div class="work" data-modal="#modal_project_1">
+                    <!-- Размер фото в инспекторе кода, для скринов: x1_370х300, x4_1480х1200 -->
+                    <img class="work__image reuse__adapt-img" src="/build/img/work/siteCover/01_siteCover-GoSurf.jpg" alt="Img"> <!-- Адаптивный img. (заглушка вместо фото: https://place-hold.it/370x300/660099/ffffff&fontsize=18)-->
+                    <div class="work__content">
+                        <div class="work__category">Category: HTML-SCSS-jQuery-Flexbox-Gulp4-NPM</div>
+                        <div class="work__title">
+                            Go-Surf
+                            <time class="work__date" datetime="2019-11-30 23:00">2020</time>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- # 2 - item (мой проект). -->
+            <div class="portfolio__col" data-category="HTML-SCSS-jQuery-Flexbox-Gulp4-NPM">
+                <!-- Одна из моих работ (в атрибуте data-modal указываем id вызываемого модального окна). -->
+                <div class="work" data-modal="#modal_project_2">
+                    <img class="work__image reuse__adapt-img" src="/build/img/work/siteCover/02_siteCover-MoGo.jpg" alt="Img"> <!-- Адаптивный img. -->
+                    <div class="work__content">
+                        <div class="work__category">Category: HTML-SCSS-jQuery-Flexbox-Gulp4-NPM</div>
+                        <div class="work__title">
+                            MoGo
+                            <time class="work__date" datetime="2019-11-30 23:00">2020</time>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- # 3 - item (мой проект). -->
+            <div class="portfolio__col" data-category="HTML-SCSS-jQuery-Flexbox-Gulp4-NPM">
+                <!-- Одна из моих работ (в атрибуте data-modal указываем id вызываемого модального окна). -->
+                <div class="work" data-modal="#modal_project_3">
+                    <img class="work__image reuse__adapt-img" src="/build/img/work/siteCover/03_siteCover-CompanyLiquidation.jpg" alt="Img"> <!-- Адаптивный img. -->
+                    <div class="work__content">
+                        <div class="work__category">Category: HTML-SCSS-jQuery-Flexbox-Gulp4-NPM</div>
+                        <div class="work__title">
+                            Liquidation
+                            <time class="work__date" datetime="2019-11-30 23:00">2020</time>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- # 4 - item (мой проект). -->
+            <div class="portfolio__col" data-category="HTML-CSS-jQuery">
+                <!-- Одна из моих работ (в атрибуте data-modal указываем id вызываемого модального окна). -->
+                <div class="work" data-modal="#modal_project_4">
+                    <img class="work__image reuse__adapt-img" src="/build/img/work/siteCover/04_siteCover-Bulgaria.jpg" alt="Img"> <!-- Адаптивный img. -->
+                    <div class="work__content">
+                        <div class="work__category">Category: HTML-CSS-jQuery</div>
+                        <div class="work__title">
+                            Bulgaria
+                            <time class="work__date" datetime="2019-11-30 23:00">2019</time>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- # 5 - item (мой проект). -->
+            <div class="portfolio__col" data-category="HTML-SCSS-jQuery-Flexbox-Gulp4-NPM">
+                <!-- Одна из моих работ (в атрибуте data-modal указываем id вызываемого модального окна). -->
+                <div class="work" data-modal="#modal_project_5">
+                    <img class="work__image reuse__adapt-img" src="/build/img/work/siteCover/05_siteCover-Joomhost.jpg" alt="Img"> <!-- Адаптивный img. -->
+                    <div class="work__content">
+                        <div class="work__category">Category: HTML-SCSS-jQuery-Flexbox-Gulp4-NPM</div>
+                        <div class="work__title">
+                            Joomhost
+                            <time class="work__date" datetime="2019-11-30 23:00">2020</time>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- # 6 - item (мой проект). -->
+            <div class="portfolio__col" data-category="HTML-CSS-jQuery">
+                <!-- Одна из моих работ (в атрибуте data-modal указываем id вызываемого модального окна). -->
+                <div class="work" data-modal="#modal_project_6">
+                    <img class="work__image reuse__adapt-img" src="/build/img/work/siteCover/06_siteCover-PortfolioAlena.jpg" alt="Img"> <!-- Адаптивный img. -->
+                    <div class="work__content">
+                        <div class="work__category">Category: HTML-CSS-jQuery</div>
+                        <div class="work__title">
+                            Alena
+                            <time class="work__date" datetime="2019-11-30 23:00">2019</time>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- /.portfolio -->
+        <!-- Кнопка. -->
+        <div class="reuse__text-center">
+            <a class="btn btn--small" href="#">Еще проекты</a>
+        </div>
+    </div> <!-- /.container -->
+    <div class="container">
+        <div class="projects__inner">
+            <img class="projects__paintSplashColors" src="/build/img/projects/photo/paintSplashColors02.png" alt="Img">
+        </div> <!-- /.projects__inner -->
+    </div> <!-- /.container -->
+</div> <!-- /.projects -->
+<!---->
+<!---->
+<!-- =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*= -->
+<!-- =*= SECTION: about =*= -->
+<!-- =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*= -->
+<!---->
+<section class="about" id="about">
+    <div class="container">
+        <div class="about__inner1">
+            <div class="about__photo">
+                <!-- Адаптивный img. -->
+                <img class="reuse__adapt-img" src="/build/img/about/photo/webdevPhoto.png" alt="">
+            </div>
+            <div class="about__content">
+                <h3 class="about__title">
+                    Обо мне </h3>
+                <h2 class="about__bigTitle">
+                    Кто я </h2>
+                <div class="about__text">
+                    <p> Доброго времени суток! </p>
+                    <p> Ранее я занимался информационной безопасностью,
+                        <br> но, теперь, <b>Я</b> — начинающий <b>Верстальщик</b> без опыта
+                        работы, однако, за плечами год усиленного изучения верстки и конечно
+                        богатый жизненный опыт. Владею HTML, CSS, jQuery. Активно изучаю Java Script. </p>
+                    <p> У меня есть огромная мотивация стать профессионалом своего дела. Постоянно
+                        и планомерно, решая практические задачи, пополняю багаж знаний, ведь новое
+                        знание — это ключ к возможности увидеть решение под иным углом. </p>
+                    <p> Мне присущи — коммуникабельность, стрессоустойчивость и ответственность.
+                        Работу выполняю с удовольствием (такое не часто встретишь в наше время).
+                        <br>С чувством юмора полный порядок — так легче жить ;) </p>
+                </div>
+                <!-- Кнопка (в атрибуте data-modal указываем id вызываемого модального окна). -->
+                <a class="btn" href="#" data-modal="#modal_hire_me">Найми меня</a>
+                <!-- Кнопка (в атрибуте data-modal указываем id вызываемого модального окна). -->
+                <button class="btn" type="button" data-modal="#modal_resume">Мое резюме</button>
+            </div> <!-- /.about__content -->
+        </div> <!-- /.about__inner1 -->
+    </div> <!-- /.container -->
+    <div class="container">
+        <div class="about__inner2">
+            <img class="about__paintSplashColors" src="/build/img/about/photo/paintSplashColors03.png" alt="Img">
+        </div> <!-- /.projects__inner -->
+    </div> <!-- /.container -->
+</section>
+<!---->
+<!---->
+<!-- =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*= -->
+<!-- =*= SECTION: reviews =*= -->
+<!-- =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*= -->
+<!---->
+<div class="reviews">
+    <div class="container">
+        <div class="reviews__item">
+            <div class="reviews__text">
+                <p>„Пройденный путь и есть награда”</p>
+            </div>
+            <div class="reviews__author">
+                <!-- Переход на сайт Apple, на страницу памяти Стива Джобса. -->
+                <a href="https://www.apple.com/ru/stevejobs/" target="_blank">
+                    <img class="reviews__photo" src="/build/img/reviews/photo/Steve-Jobs.jpg" alt="Avatar">
+                </a>
+                <div class="reviews__name">
+                    Стив Джобс
+                </div>
+                <div class="reviews__company">
+                    Folklore.org, январь 1983 г.
+                </div>
+                <!-- ПОКА ОТКЛЮЧИЛ. -->
+                <!-- Звезды рейтинга. -->
+                <!--<div class="reviews__rating">-->
+                <!--<img class="reviews__star" src="/build/img/reviews/star.svg" width="13" height="13" alt="Icon">-->
+                <!--<img class="reviews__star" src="/build/img/reviews/star.svg" width="13" height="13" alt="Icon">-->
+                <!--<img class="reviews__star" src="/build/img/reviews/star.svg" width="13" height="13" alt="Icon">-->
+                <!--<img class="reviews__star" src="/build/img/reviews/star.svg" width="13" height="13" alt="Icon">-->
+                <!--<img class="reviews__star reviews__star&#45;&#45;unactive" src="/build/img/reviews/star.svg" width="13" height="13" alt="Icon">-->
+                <!--</div>-->
+            </div>
+        </div> <!-- /.reviews__item -->
+    </div> <!-- /.container -->
+</div>
+<!---->
+<!---->
+<!-- =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*= -->
+<!-- =*= SECTION: reviews2 =*= -->
+<!-- =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*= -->
+<!---->
+<div class="reviews2">
+    <div class="container">
+        <div class="reviews2__inner">
+            <img class="reviews2__paintSplashColors" src="/build/img/reviews/photo/paintSplashColors04.png" alt="Img">
+        </div> <!-- /.reviews2__inner -->
+    </div> <!-- /.container -->
+</div>
+<!---->
+<!---->
+<!-- =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*= -->
+<!-- =*= SECTION: news =*= -->
+<!-- =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*= -->
+<!---->
+<section class="news" id="news">
+    <div class="container">
+        <div class="news__header">
+            <h3 class="news__title">
+                Читайте меня </h3>
+            <div class="news__text">
+                Тут я точно напишу что-то умное ;)
+            </div>
+        </div>
+        <div class="articles">
+            <!-- Колонка. -->
+            <div class="articles__col">
+                <!-- # 1 - item. -->
+                <div class="articles__item">
+                    <div class="articles__header">
+                        <time class="articles__date">
+                            03<br>
+                            июня
+                        </time>
+                        <a href="">
+                            <!-- I use temporary photo for posts. -->
+                            <img class="articles__photo" src="/build/img/articles/temporaryPhotoPost.png" alt="Img"> <!-- Заглушка вместо фото: https://place-hold.it/370x257/660099/ffffff&fontsize=18. -->
+                        </a>
+                    </div>
+                    <div class="articles__content">
+                        <h4 class="articles__title">
+                            <a href="#">Статья 1</a>
+                        </h4>
+                        <div class="articles__category">
+                            Category
+                        </div>
+                        <div class="articles__text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit. Maecenas pellentesque eu enim eget luctus. Sed
+                            augue felis, facilisis et elementum vitae, aliquam sit
+                            amet ante. Sed iaculis eros sem, elementum consequat.
+                        </div>
+                    </div>
+                    <!-- Кнопка. -->
+                    <a class="btn btn--small" href="#">Подробнее</a>
+                </div> <!-- /.articles__item -->
+            </div> <!-- /.articles__col -->
+            <!-- Колонка. -->
+            <div class="articles__col">
+                <!-- # 2 - item. -->
+                <div class="articles__item">
+                    <div class="articles__header">
+                        <time class="articles__date">
+                            01<br>
+                            ноября
+                        </time>
+                        <a href="">
+                            <img class="articles__photo" src="/build/img/articles/temporaryPhotoPost.png" alt="Img"> <!-- Заглушка вместо фото: https://place-hold.it/370x257/660099/ffffff&fontsize=18. -->
+                        </a>
+                    </div>
+                    <div class="articles__content">
+                        <h4 class="articles__title">
+                            <a href="#">Статья 2</a>
+                        </h4>
+                        <div class="articles__category">
+                            Category
+                        </div>
+                        <div class="articles__text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit. Maecenas pellentesque eu enim eget luctus. Sed
+                            augue felis, facilisis et elementum vitae, aliquam sit
+                            amet ante. Sed iaculis eros sem, elementum consequat.
+                        </div>
+                    </div>
+                    <!-- Кнопка. -->
+                    <a class="btn btn--small" href="#">Подробнее</a>
+                </div> <!-- /.articles__item -->
+            </div> <!-- /.articles__col -->
+            <!-- Колонка. -->
+            <div class="articles__col">
+                <!-- # 3 - item. -->
+                <div class="articles__item">
+                    <div class="articles__header">
+                        <time class="articles__date">
+                            14<br>
+                            февраля
+                        </time>
+                        <a href="">
+                            <img class="articles__photo" src="/build/img/articles/temporaryPhotoPost.png" alt="Img"> <!-- Заглушка вместо фото: https://place-hold.it/370x257/660099/ffffff&fontsize=18. -->
+                        </a>
+                    </div>
+                    <div class="articles__content">
+                        <h4 class="articles__title">
+                            <a href="#">Статья 3</a>
+                        </h4>
+                        <div class="articles__category">
+                            Category
+                        </div>
+                        <div class="articles__text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit. Maecenas pellentesque eu enim eget luctus. Sed
+                            augue felis, facilisis et elementum vitae, aliquam sit
+                            amet ante. Sed iaculis eros sem, elementum consequat.
+                        </div>
+                    </div>
+                    <!-- Кнопка. -->
+                    <a class="btn btn--small" href="#">Подробнее</a>
+                </div> <!-- /.articles__item -->
+            </div> <!-- /.articles__col -->
+        </div> <!-- /.articles -->
+        <div class="news__footer">
+            <a class="news__link" href="#">Eще посты...</a>
+        </div>
+    </div> <!-- /.container -->
+    <div class="container">
+        <div class="news__inner">
+            <img class="news__paintSplashColors" src="/build/img/news/photo/paintSplashColors05.png" alt="Img">
+        </div> <!-- /.projects__inner -->
+    </div> <!-- /.container -->
+</section>
+<!---->
+<!---->
+<!-- =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*= -->
+<!-- =*= SECTION: footer =*= -->
+<!-- =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*= -->
+<!---->
+<div class="footer" id="footer">
+    <div class="container">
+        <div class="footer__inner">
+            <div class="footer__credits">
+                <div class="footer__copyright">
+                    &copy; 2020 All rights reserved
+                </div>
+                <div class="footer__social">
+                    <a class="footer__social-link" href="https://www.facebook.com/aimdao" target="_blank">
+                        <img src="/build/img/footer/social/01-facebook-violet.svg" alt="Icon">
+                    </a>
+                    <a class="footer__social-link" href="https://vk.com/aimdao" target="_blank">
+                        <img src="/build/img/footer/social/02-vk-violet.svg" alt="Icon">
+                    </a>
+                    <a class="footer__social-link" href="https://twitter.com/aimdao" target="_blank">
+                        <img src="/build/img/footer/social/03-twitter-violet.svg" alt="Icon">
+                    </a>
+                    <a class="footer__social-link" href="https://www.instagram.com/aimdao" target="_blank">
+                        <img src="/build/img/footer/social/04-instagram-violet.svg" alt="Icon">
+                    </a>
+                    <a class="footer__social-link" href="https://t.me/aimdao" target="_blank">
+                        <img src="/build/img/footer/social/05-telegram-violet.svg" alt="Icon">
+                    </a>
+                    <a class="footer__social-link" href="https://wa.me/79616920777" target="_blank">
+                        <img src="/build/img/footer/social/06-whatsapp-violet.svg" alt="Icon">
+                    </a>
+                </div>
+            </div> <!-- /.footer__credits -->
+            <div class="footer__nav">
+                <!-- В значениии атрибута data-scroll указывается id секции, к которой идет плавный автоматический скролл. -->
+                <a class="footer__nav-link" data-scroll="#projects" href="#">Проекты</a>
+                <a class="footer__nav-link" data-scroll="#about" href="#">Обо мне</a>
+                <a class="footer__nav-link" data-scroll="#news" href="#">Блог</a>
+                <a class="footer__nav-link" data-scroll="#footer" href="#">Контакты</a>
+                <!-- Кнопка (в атрибуте data-modal указываем id вызываемого модального окна). -->
+                <a class="footer__nav-link footer__nav-link--btn" href="#" data-modal="#modal_hire_me">Найми меня</a>
+            </div>
+        </div> <!-- /.footer__inner -->
+    </div> <!-- /.container -->
+</div>
+<!---->
+<!---->
+<!-- -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#- -->
+<!-- -#- MODAL WINDOWS: modal (Резюме)  -#- -->
+<!-- -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#- -->
+<!---->
+<!-- Элемент с классом modal - это маска модального окна. -->
+<div class="modal" id="modal_resume">
+    <!-- В элементе с классом modal__dialog находится вся информация модального окна. Это непосредственно модальное окно. -->
+    <div class="modal__dialog">
+        <!-- Кнопка закрытия модального окна (в атрибуте data-close указываем id закрываемого модального окна). -->
+        <button class="modal__close" type="button" data-close="#modal_resume">
+            <img src="/build/img/modal/modal-close.svg" alt="Close">
+        </button>
+        <div class="modal__content">
+            <h3 class="modal__title reuse__text-center">
+                Резюме </h3>
+            <div class="reuse__text-center">
+                <a class="btn btn--thin" href="#">Загрузить pdf</a>
+                <a class="btn btn--thin" href="#">Печать</a>
+            </div>
+            <div class="timeline">
+                <!---->
+                <!-- Left timeline. -->
+                <div class="timeline__col timeline__col--left">
+                    <!---->
+                    <!-- Раздел: Skills. -->
+                    <h4 class="timeline__title timeline__title--funcNot">
+                        Навыки и умения </h4>
+                    <!-- # 1 - item (Left timeline). -->
+                    <div class="timeline__item">
+                        <h5 class="timeline__subtitle">Верстка</h5>
+                        <div class="timeline__text">
+                            <p> — HTML5;</p>
+                            <p> — CSS3, SASS (SCSS);</p>
+                            <p> — jQuery;</p>
+                            <p> — Slick;</p>
+                            <p> — Flexbox;</p>
+                            <p> — Gulp 4;</p>
+                            <p> — NPM (Node Package Manager);</p>
+                            <p> — Изображения SVG, шрифты Font Awesome;</p>
+                            <p> — Адаптивная верстка;</p>
+                            <p> — Кроссбраузерность (IE, Firefox, Opera, Safari, Chrome) поддержка браузеров последних версий;</p>
+                            <p> — Валидность, стандарты W3C;</p>
+                            <p> — Семантика кода;</p>
+                            <p> — БЭМ;</p>
+                            <p> — Git;</p>
+                            <p> — Bootstrap 4.</p>
+                        </div>
+                    </div>
+                    <!-- # 2 - item (Left timeline). -->
+                    <div class="timeline__item">
+                        <h5 class="timeline__subtitle">Профессиональные навыки</h5>
+                        <div class="timeline__text">
+                            <p>— HTML, CSS, jQuery;</p>
+                            <p>— Photoshop, Figma, Adobe XD, Sketch (навыки нарезки макетов);</p>
+                            <p>— Java Script (в процессе изучения);</p>
+                            <p>— PhpStorm, Visual Studio Code, Sublime Text 3;</p>
+                            <p class="timeline__text-add"> Дополнительно: </p>
+                            <p>— Продвинутый пользователь Mac OS/Linux/Windows;</p>
+                            <p>— С++ (консольные приложения);</p>
+                            <p>— Lua (скрипты для управления умным домом на Z-Wave);</p>
+                            <p>— Swift (начальные знания).</p>
+                        </div>
+                    </div>
+                    <!-- Раздел: MySites. -->
+                    <h4 class="timeline__title">
+                        Мои сайты </h4>
+                    <!-- # 1 - item (Left timeline). -->
+                    <div class="timeline__item">
+                        <a class="timeline__linkMySite" href="https://aimdao.github.io/aimSiteGoSurf/app" target="_blank">
+                            Go-Surf
+                        </a>
+                        <div class="timeline__position">Сайт о самых известных пляжах для серфинга</div>
+                    </div>
+                    <!-- # 2 - item (Left timeline). -->
+                    <div class="timeline__item">
+                        <a class="timeline__linkMySite" href="https://aimdao.github.io/aimSiteMoGo" target="_blank">
+                            MoGo
+                        </a>
+                        <div class="timeline__position">Сайт дизайн-студии MoGo</div>
+                    </div>
+                    <!-- # 3 - item (Left timeline). -->
+                    <div class="timeline__item">
+                        <a class="timeline__linkMySite" href="https://aimdao.github.io/aimSiteCompanyLiquidation" target="_blank">
+                            Liquidation
+                        </a>
+                        <div class="timeline__position">Сайт услуг по ликвидации предприятий</div>
+                    </div>
+                    <!-- # 4 - item (Left timeline). -->
+                    <div class="timeline__item">
+                        <a class="timeline__linkMySite" href="https://aimdao.github.io/aimSiteBulgaria" target="_blank">
+                            Bulgaria
+                        </a>
+                        <div class="timeline__position">Сайт для переезда в Болгарию</div>
+                    </div>
+                    <!-- # 5 - item (Left timeline). -->
+                    <div class="timeline__item">
+                        <a class="timeline__linkMySite" href="https://aimdao.github.io/aimSiteJoomhost" target="_blank">
+                            Joomhost
+                        </a>
+                        <div class="timeline__position">Сайт хостинг-компании</div>
+                    </div>
+                    <!-- # 6 - item (Left timeline). -->
+                    <div class="timeline__item">
+                        <a class="timeline__linkMySite" href="https://aimdao.github.io/aimSitePortfolioAlena" target="_blank">
+                            Alena
+                        </a>
+                        <div class="timeline__position">Сайт портфолио студента</div>
+                    </div>
+
+                    <!-- ОТКЛЮЧИЛ progress-bar (оставил один item.). -->
+                    <!--<div class="progress-bar">-->
+                    <!--&lt;!&ndash; # 1 - item (progress-bar). &ndash;&gt;-->
+                    <!--<div class="progress-bar__item">-->
+                    <!--<div class="progress-bar__left">-->
+                    <!--<div class="progress-bar__title">Photoshop</div>-->
+                    <!--</div>-->
+                    <!--<div class="progress-bar__right">-->
+                    <!--<div class="progress-bar__bar">-->
+                    <!--&lt;!&ndash; Значение ширины в атрибуте style меняем через js. &ndash;&gt;-->
+                    <!--<div class="progress-bar__progress" style="width: 80%"></div>-->
+                    <!--</div>-->
+                    <!--</div>-->
+                    <!--</div>-->
+                    <!--</div> &lt;!&ndash; /.progress-bar &ndash;&gt;-->
+                </div> <!-- /.timeline__col--left -->
+                <!---->
+                <!-- Right timeline. -->
+                <div class="timeline__col timeline__col--right">
+                    <!---->
+                    <!-- Раздел: Education. -->
+                    <h4 class="timeline__title">
+                        Образование </h4>
+                    <!-- # 1 - item (Right timeline). -->
+                    <div class="timeline__item">
+                        <time class="timeline__date" datetime="11-21-2019">2009 - 2011</time>
+                        <h5 class="timeline__subtitle">Квалификация: «Техник» по специальности: «Программное обеспечение вычислительной техники и автоматизированных систем»
+                            <br>(среднее профессиональное)</h5>
+                        <div class="timeline__position">Волгоградский технологический колледж</div>
+                    </div>
+                    <!-- # 2 - item (Right timeline). -->
+                    <div class="timeline__item">
+                        <time class="timeline__date" datetime="11-21-2019">2005 - 2009</time>
+                        <h5 class="timeline__subtitle">Квалификация: «Экономист»
+                            <br>(высшее)</h5>
+                        <div class="timeline__position">Волгоградский Государственный Университет</div>
+                    </div>
+                    <!-- # 3 - item (Right timeline). -->
+                    <div class="timeline__item">
+                        <time class="timeline__date" datetime="11-21-2019">2000 - 2005</time>
+                        <h5 class="timeline__subtitle">Квалификация: «Инженер»
+                            <br>(высшее)</h5>
+                        <div class="timeline__position">Санкт-Петербургский Университет <br> МВД России</div>
+                    </div>
+                    <!-- # 4 - item (Right timeline). -->
+                    <div class="timeline__item">
+                        <time class="timeline__date" datetime="11-21-2019">2000</time>
+                        <h5 class="timeline__subtitle">Факультет: Радиофизика и электроника
+                            <br>(неоконченное высшее)</h5>
+                        <div class="timeline__position">Волгоградский Государственный Университет</div>
+                    </div>
+                    <!---->
+                    <!-- Раздел: Experience. -->
+                    <h4 class="timeline__title">
+                        Опыт </h4>
+                    <!-- # 1 - item (Right timeline). -->
+                    <div class="timeline__item">
+                        <time class="timeline__date" datetime="11-21-2019">2009 - 2018</time>
+                        <h5 class="timeline__subtitle">Cпециалист по информационной безопасности</h5>
+                        <div class="timeline__position">Управление «К» Бюро Специальных Технических Мероприятий (БСТМ)
+                            <br> Главное Управление МВД России по Волгоградской области
+                        </div>
+                        <div class="timeline__text">
+                            <p> — выявление незаконного проникновения в компьютерные сети; </p>
+                            <p> — выявление незаконного оборота радиоэлектронных и специальных технических средств; </p>
+                            <p> — выявление мошенничеств в области электронных платежей.</p>
+                        </div>
+                    </div>
+                    <!-- # 2 - item (Right timeline). -->
+                    <div class="timeline__item">
+                        <time class="timeline__date" datetime="11-21-2019">2004 - 2009</time>
+                        <h5 class="timeline__subtitle">Заместитель начальника части</h5>
+                        <div class="timeline__position">Управление МЧС России по Волгоградской области</div>
+                        <div class="timeline__text">
+                            <p> — руководящие функции; </p>
+                            <p> — управление персоналом (40 человек). </p>
+                        </div>
+                    </div>
+                </div> <!-- /.timeline__col--right -->
+                <!---->
+            </div> <!-- /.timeline -->
+
+            <div class="reuse__text-center">
+                <!-- Кнопка (в атрибуте data-modal указываем id вызываемого модального окна). -->
+                <a class="btn" href="#" data-modal="#modal_hire_me">Найми меня</a>
+            </div>
+        </div> <!-- /.modal__content -->
+    </div> <!-- /.modal__dialog -->
+</div> <!-- /.modal -->
+<!---->
+<!---->
+<!-- -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#- -->
+<!-- -#- MODAL WINDOWS: modal (Обратная связь, наем на работу)  -#- -->
+<!-- -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#- -->
+<!---->
+<!-- Элемент с классом modal - это маска модального окна. -->
+<div class="modal" id="modal_hire_me">
+    <!-- В элементе с классом modal__dialog находится вся информация модального окна. Это непосредственно модальное окно. -->
+    <div class="modal__dialog modal__dialog--small">
+        <!-- Кнопка закрытия модального окна (в атрибуте data-close указываем id закрываемого модального окна). -->
+        <button class="modal__close" type="button" data-close="#modal_hire_me">
+            <img src="/build/img/modal/modal-close.svg" alt="Close">
+        </button>
+        <div class="contact">
+            <div class="contact__left">
+                <h3 class="modal__title reuse__mb-0">
+                    Общение! </h3>
+                <h4 class="modal__subtitle">
+                    Позвони, напиши или отправь запрос </h4>
+                <ul class="contact__info">
+                    <li class="contact__info-item">
+                        <!-- В контейнере flex содержится иконка и номер телефона. -->
+                        <a class="contact__info-phone" href="tel:79616920777">
+                            <img class="contact__info-icon" src="/build/img/modal/phone.svg" alt="Icon">
+                            <span class="contact__info-numberPhone">+7(961) 692 0777</span>
+                        </a>
+                    </li>
+                    <li class="contact__info-item">
+                        <!-- В контейнере flex содержится иконка и текст написания почтового ящика. -->
+                        <a class="contact__info-email" href="mailto:valentin.ryakhovskiy@gmail.com">
+                            <img class="contact__info-icon" src="/build/img/modal/mail.svg" alt="Icon">
+                            <span class="contact__info-emailText">valentin.ryakhovskiy@gmail.com</span>
+                        </a>
+                    </li>
+                </ul>
+                <!-- Форма обратной связи. -->
+                <form class="form" action="/" method="post">
+                    <!-- Ввод email. -->
+                    <div class="form__group">
+                        <label class="form__label" for="input-email">E-mail</label>
+                        <input class="form__input" name="input-email" id="input-email" type="text" placeholder="Ввести e-mail">
+                    </div>
+                    <!-- Ввод текста сообщения. -->
+                    <div class="form__group">
+                        <label class="form__label" for="input-text">Запрос</label>
+                        <textarea class="form__textarea" name="input-text" id="input-text" placeholder="Ввести текст запроса"></textarea>
+                    </div>
+                    <!-- Кнопка отправки сообщения. -->
+                    <div class="reuse__text-right">
+                        <button class="btn" type="submit">Send</button>
+                    </div>
+                </form>
+            </div> <!-- /.contact__left -->
+            <div class="contact__right">
+                <!-- Размер фото в инспекторе кода, для скрина: х1_480х700, 1.5_720х1050 -->
+                <img class="contact__right-photo" src="/build/img/contact/modalContact.png" alt=""> <!-- Заглушка для фото: https://place-hold.it/480x700/660099/ffffff&fontsize=24 -->
+            </div>
+        </div> <!-- /.contact -->
+    </div> <!-- /.modal__dialog -->
+</div> <!-- /.modal -->
+<!---->
+<!---->
+<!-- -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#- -->
+<!-- -#- MODAL WINDOWS: modal (Проект # 1) -#- -->
+<!-- -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#- -->
+<!---->
+<!-- Элемент с классом modal - это маска модального окна. -->
+<div class="modal" id="modal_project_1">
+    <!-- В элементе с классом modal__dialog находится вся информация модального окна. Это непосредственно модальное окно. -->
+    <div class="modal__dialog">
+        <!-- Кнопка закрытия модального окна (в атрибуте data-close указываем id закрываемого модального окна). -->
+        <button class="modal__close" type="button" data-close="#modal_project_1">
+            <img src="/build/img/modal/modal-close.svg" alt="Close">
+        </button>
+        <div class="modal-work">
+            <!-- Левая часть модального окна со скринами проекта. -->
+            <div class="modal-work__preview modal-work__preview--modalSlideBackgroundProject1">
+                <!-- Элемент с классом projectSlider является СЛАЙДЕРОМ. Этот слайдер листает скрины
+                 о конкретном проекте, находясь внутри модального окна. Для слайдера projectSlider
+                 генерируется класс slick-slider (библиотекой slick). -->
+                <div class="projectSlider">
+                    <!-- # 1 - item (картинка слайдера). -->
+                    <div>
+                        <!-- Размер фото в инспекторе кода, для скринов: x1_790х780, x2_1580х1560 -->
+                        <img class="modal-work__photo" src="/build/img/modal-work/01_projectSlides/01_projectSlide-GoSurf.jpg" alt="Img"> <!-- Заглушка для фото: https://place-hold.it/790x780/DEFF8B&fontsize=20 -->
+                    </div>
+                    <!-- # 2 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/01_projectSlides/02_projectSlide-GoSurf.jpg" alt="Img">
+                    </div>
+                    <!-- # 3 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/01_projectSlides/03_projectSlide-GoSurf.jpg" alt="Img">
+                    </div>
+                    <!-- # 4 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/01_projectSlides/04_projectSlide-GoSurf.jpg" alt="Img">
+                    </div>
+                    <!-- # 5 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/01_projectSlides/05_projectSlide-GoSurf.jpg" alt="Img">
+                    </div>
+                    <!-- # 6 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/01_projectSlides/06_projectSlide-GoSurf.jpg" alt="Img">
+                    </div>
+                    <!-- # 7 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/01_projectSlides/07_projectSlide-GoSurf.jpg" alt="Img">
+                    </div>
+                    <!-- # 8 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/01_projectSlides/08_projectSlide-GoSurf.jpg" alt="Img">
+                    </div>
+                    <!-- # 9 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/01_projectSlides/09_projectSlide-GoSurf.jpg" alt="Img">
+                    </div>
+                    <!-- # 10 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/01_projectSlides/10_projectSlide-GoSurf.jpg" alt="Img">
+                    </div>
+                    <!-- # 11 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/01_projectSlides/11_projectSlide-GoSurf.jpg" alt="Img">
+                    </div>
+                    <!-- # 12 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/01_projectSlides/12_projectSlide-GoSurf.jpg" alt="Img">
+                    </div>
+                </div>
+            </div>
+            <!-- Правая часть модального окна. -->
+            <div class="modal-work__description">
+                <div class="modal-work__header">
+                    <h3 class="modal-work__title">
+                        Go-Surf </h3>
+                    <div class="modal-work__info">
+                        Category <span class="modal-work__info-divider">|</span> 2020
+                    </div>
+                </div>
+                <div class="modal-work__client">
+                    <div class="modal-work__client-title">Клиент: —</div>
+                    <div class="modal-work__client-company">Creative Agency</div>
+                    <a class="modal-work__client-link" href="https://aimdao.github.io/aimSiteGoSurf/app" target="_blank">Посетить сайт</a>
+                </div>
+                <div class="modal-work__text">
+                    <p><b>Сайт для серферов</b> </p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Assumenda consequuntur culpa cumque est eum,
+                        excepturi nam officiis quas. </p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Assumenda consequuntur culpa cumque est eum,
+                        excepturi nam officiis quas repellendus sed similique
+                        tempora, ut vel. </p>
+                </div>
+                <div class="modal-work__footer">
+                    <!-- Кнопка prev слайдера. Мы добавили наш класс projectSliderPrev для
+                    замены стандартной кнопки slick: prevArrow. По классу projectSliderPrev
+                    будем определять клик на кнопке (смотри slickSliderInModalWindow.js). -->
+                    <button class="modal-work__btn projectSliderPrev" type="button">
+                        <img src="/build/img/modal/prev.svg" height="12" alt="Icon">
+                        Previous
+                    </button>
+                    <!-- Кнопка next слайдера. Мы добавили наш класс projectSliderNext для
+                    замены стандартной кнопки slick: nextArrow. По классу projectSliderNext
+                    будем определять клик на кнопке (смотри slickSliderInModalWindow.js).-->
+                    <button class="modal-work__btn projectSliderNext" type="button">
+                        Next
+                        <img src="/build/img/modal/next.svg" height="12" alt="Icon">
+                    </button>
+                </div>
+            </div> <!-- /.modal-work__description -->
+        </div> <!-- /.modal-work -->
+    </div> <!-- /.modal__dialog -->
+</div> <!-- /.modal -->
+<!---->
+<!---->
+<!-- -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#- -->
+<!-- -#- MODAL WINDOWS: modal (Проект # 2) -#- -->
+<!-- -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#- -->
+<!---->
+<!-- Элемент с классом modal - это маска модального окна. -->
+<div class="modal" id="modal_project_2">
+    <!-- В элементе с классом modal__dialog находится вся информация модального окна. Это непосредственно модальное окно. -->
+    <div class="modal__dialog">
+        <!-- Кнопка закрытия модального окна (в атрибуте data-close указываем id закрываемого модального окна). -->
+        <button class="modal__close" type="button" data-close="#modal_project_2">
+            <img src="/build/img/modal/modal-close.svg" alt="Close">
+        </button>
+        <div class="modal-work">
+            <!-- Левая часть модального окна со скринами проекта. -->
+            <div class="modal-work__preview modal-work__preview--modalSlideBackgroundProject2">
+                <!-- Элемент с классом projectSlider является СЛАЙДЕРОМ. Этот слайдер листает скрины
+                 о конкретном проекте, находясь внутри модального окна. Для слайдера projectSlider
+                 генерируется класс slick-slider (библиотекой slick). -->
+                <div class="projectSlider">
+                    <!-- # 1 - item (картинка слайдера). -->
+                    <div>
+                        <!-- Размер фото в инспекторе кода, для скринов: x1_790х780, x2_1580х1560 -->
+                        <img class="modal-work__photo" src="/build/img/modal-work/02_projectSlides/01_projectSlide-MoGo.jpg" alt="Img"> <!-- Заглушка для фото: https://place-hold.it/790x780/DEFF8B&fontsize=20 -->
+                    </div>
+                    <!-- # 2 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/02_projectSlides/02_projectSlide-MoGo.jpg" alt="Img">
+                    </div>
+                    <!-- # 3 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/02_projectSlides/03_projectSlide-MoGo.jpg" alt="Img">
+                    </div>
+                    <!-- # 4 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/02_projectSlides/04_projectSlide-MoGo.jpg" alt="Img">
+                    </div>
+                    <!-- # 5 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/02_projectSlides/05_projectSlide-MoGo.jpg" alt="Img">
+                    </div>
+                    <!-- # 6 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/02_projectSlides/06_projectSlide-MoGo.jpg" alt="Img">
+                    </div>
+                    <!-- # 7 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/02_projectSlides/07_projectSlide-MoGo.jpg" alt="Img">
+                    </div>
+                    <!-- # 8 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/02_projectSlides/08_projectSlide-MoGo.jpg" alt="Img">
+                    </div>
+                    <!-- # 9 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/02_projectSlides/09_projectSlide-MoGo.jpg" alt="Img">
+                    </div>
+                    <!-- # 10 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/02_projectSlides/10_projectSlide-MoGo.jpg" alt="Img">
+                    </div>
+                    <!-- # 11 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/02_projectSlides/11_projectSlide-MoGo.jpg" alt="Img">
+                    </div>
+                    <!-- # 12 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/02_projectSlides/12_projectSlide-MoGo.jpg" alt="Img">
+                    </div>
+                    <!-- # 13 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/02_projectSlides/13_projectSlide-MoGo.jpg" alt="Img">
+                    </div>
+                    <!-- # 14 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/02_projectSlides/14_projectSlide-MoGo.jpg" alt="Img">
+                    </div>
+                    <!-- # 15 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/02_projectSlides/15_projectSlide-MoGo.jpg" alt="Img">
+                    </div>
+                </div>
+            </div>
+            <!-- Правая часть модального окна. -->
+            <div class="modal-work__description">
+                <div class="modal-work__header">
+                    <h3 class="modal-work__title">
+                        MoGo </h3>
+                    <div class="modal-work__info">
+                        Category <span class="modal-work__info-divider">|</span> 2020
+                    </div>
+                </div>
+                <div class="modal-work__client">
+                    <div class="modal-work__client-title">Клиент: —</div>
+                    <div class="modal-work__client-company">Creative Agency</div>
+                    <a class="modal-work__client-link" href="https://aimdao.github.io/aimSiteMoGo" target="_blank">Посетить сайт</a>
+                </div>
+                <div class="modal-work__text">
+                    <p><b>Сайт дизайн-студии MoGo</b> </p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Assumenda consequuntur culpa cumque est eum,
+                        excepturi nam officiis quas. </p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Assumenda consequuntur culpa cumque est eum,
+                        excepturi nam officiis quas repellendus sed similique
+                        tempora, ut vel. </p>
+                </div>
+                <div class="modal-work__footer">
+                    <!-- Кнопка prev слайдера. Мы добавили наш класс projectSliderPrev для
+                    замены стандартной кнопки slick: prevArrow. По классу projectSliderPrev
+                    будем определять клик на кнопке (смотри slickSliderInModalWindow.js). -->
+                    <button class="modal-work__btn projectSliderPrev" type="button">
+                        <img src="/build/img/modal/prev.svg" height="12" alt="Icon">
+                        Previous
+                    </button>
+                    <!-- Кнопка next слайдера. Мы добавили наш класс projectSliderNext для
+                    замены стандартной кнопки slick: nextArrow. По классу projectSliderNext
+                    будем определять клик на кнопке (смотри slickSliderInModalWindow.js).-->
+                    <button class="modal-work__btn projectSliderNext" type="button">
+                        Next
+                        <img src="/build/img/modal/next.svg" height="12" alt="Icon">
+                    </button>
+                </div>
+            </div> <!-- /.modal-work__description -->
+        </div> <!-- /.modal-work -->
+    </div> <!-- /.modal__dialog -->
+</div> <!-- /.modal -->
+<!---->
+<!---->
+<!-- -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#- -->
+<!-- -#- MODAL WINDOWS: modal (Проект # 3) -#- -->
+<!-- -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#- -->
+<!---->
+<!-- Элемент с классом modal - это маска модального окна. -->
+<div class="modal" id="modal_project_3">
+    <!-- В элементе с классом modal__dialog находится вся информация модального окна. Это непосредственно модальное окно. -->
+    <div class="modal__dialog">
+        <!-- Кнопка закрытия модального окна (в атрибуте data-close указываем id закрываемого модального окна). -->
+        <button class="modal__close" type="button" data-close="#modal_project_3">
+            <img src="/build/img/modal/modal-close.svg" alt="Close">
+        </button>
+        <div class="modal-work">
+            <!-- Левая часть модального окна со скринами проекта. -->
+            <div class="modal-work__preview modal-work__preview--modalSlideBackgroundProject3">
+                <!-- Элемент с классом projectSlider является СЛАЙДЕРОМ. Этот слайдер листает скрины
+                 о конкретном проекте, находясь внутри модального окна. Для слайдера projectSlider
+                 генерируется класс slick-slider (библиотекой slick). -->
+                <div class="projectSlider">
+                    <!-- # 1 - item (картинка слайдера). -->
+                    <div>
+                        <!-- Размер фото в инспекторе кода, для скринов: x1_790х780, x2_1580х1560 -->
+                        <img class="modal-work__photo" src="/build/img/modal-work/03_projectSlides/01_projectSlide-CompanyLiquidation.jpg" alt="Img"> <!-- Заглушка для фото: https://place-hold.it/790x780/DEFF8B&fontsize=20 -->
+                    </div>
+                    <!-- # 2 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/03_projectSlides/02_projectSlide-CompanyLiquidation.jpg" alt="Img">
+                    </div>
+                    <!-- # 3 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/03_projectSlides/03_projectSlide-CompanyLiquidation.jpg" alt="Img">
+                    </div>
+                    <!-- # 4 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/03_projectSlides/04_projectSlide-CompanyLiquidation.jpg" alt="Img">
+                    </div>
+                    <!-- # 5 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/03_projectSlides/05_projectSlide-CompanyLiquidation.jpg" alt="Img">
+                    </div>
+                    <!-- # 6 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/03_projectSlides/06_projectSlide-CompanyLiquidation.jpg" alt="Img">
+                    </div>
+                    <!-- # 7 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/03_projectSlides/07_projectSlide-CompanyLiquidation.jpg" alt="Img">
+                    </div>
+                    <!-- # 8 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/03_projectSlides/08_projectSlide-CompanyLiquidation.jpg" alt="Img">
+                    </div>
+                    <!-- # 9 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/03_projectSlides/09_projectSlide-CompanyLiquidation.jpg" alt="Img">
+                    </div>
+                    <!-- # 10 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/03_projectSlides/10_projectSlide-CompanyLiquidation.jpg" alt="Img">
+                    </div>
+                    <!-- # 11 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/03_projectSlides/11_projectSlide-CompanyLiquidation.jpg" alt="Img">
+                    </div>
+                    <!-- # 12 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/03_projectSlides/12_projectSlide-CompanyLiquidation.jpg" alt="Img">
+                    </div>
+                    <!-- # 13 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/03_projectSlides/13_projectSlide-CompanyLiquidation.jpg" alt="Img">
+                    </div>
+                    <!-- # 14 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/03_projectSlides/14_projectSlide-CompanyLiquidation.jpg" alt="Img">
+                    </div>
+                    <!-- # 15 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/03_projectSlides/15_projectSlide-CompanyLiquidation.jpg" alt="Img">
+                    </div>
+                    <!-- # 16 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/03_projectSlides/16_projectSlide-CompanyLiquidation.jpg" alt="Img">
+                    </div>
+                </div>
+            </div>
+            <!-- Правая часть модального окна. -->
+            <div class="modal-work__description">
+                <div class="modal-work__header">
+                    <h3 class="modal-work__title">
+                        Liquidation </h3>
+                    <div class="modal-work__info">
+                        Category <span class="modal-work__info-divider">|</span> 2020
+                    </div>
+                </div>
+                <div class="modal-work__client">
+                    <div class="modal-work__client-title">Клиент: —</div>
+                    <div class="modal-work__client-company">Creative Agency</div>
+                    <a class="modal-work__client-link" href="https://aimdao.github.io/aimSiteCompanyLiquidation" target="_blank">Посетить сайт</a>
+                </div>
+                <div class="modal-work__text">
+                    <p><b>Сайт услуг по ликвидации предприятий</b> </p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Assumenda consequuntur culpa cumque est eum,
+                        excepturi nam officiis quas. </p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Assumenda consequuntur culpa cumque est eum,
+                        excepturi nam officiis quas repellendus sed similique
+                        tempora, ut vel. </p>
+                </div>
+                <div class="modal-work__footer">
+                    <!-- Кнопка prev слайдера. Мы добавили наш класс projectSliderPrev для
+                    замены стандартной кнопки slick: prevArrow. По классу projectSliderPrev
+                    будем определять клик на кнопке (смотри slickSliderInModalWindow.js). -->
+                    <button class="modal-work__btn projectSliderPrev" type="button">
+                        <img src="/build/img/modal/prev.svg" height="12" alt="Icon">
+                        Previous
+                    </button>
+                    <!-- Кнопка next слайдера. Мы добавили наш класс projectSliderNext для
+                    замены стандартной кнопки slick: nextArrow. По классу projectSliderNext
+                    будем определять клик на кнопке (смотри slickSliderInModalWindow.js).-->
+                    <button class="modal-work__btn projectSliderNext" type="button">
+                        Next
+                        <img src="/build/img/modal/next.svg" height="12" alt="Icon">
+                    </button>
+                </div>
+            </div> <!-- /.modal-work__description -->
+        </div> <!-- /.modal-work -->
+    </div> <!-- /.modal__dialog -->
+</div> <!-- /.modal -->
+<!---->
+<!---->
+<!-- -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#- -->
+<!-- -#- MODAL WINDOWS: modal (Проект # 4) -#- -->
+<!-- -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#- -->
+<!---->
+<!-- Элемент с классом modal - это маска модального окна. -->
+<div class="modal" id="modal_project_4">
+    <!-- В элементе с классом modal__dialog находится вся информация модального окна. Это непосредственно модальное окно. -->
+    <div class="modal__dialog">
+        <!-- Кнопка закрытия модального окна (в атрибуте data-close указываем id закрываемого модального окна). -->
+        <button class="modal__close" type="button" data-close="#modal_project_4">
+            <img src="/build/img/modal/modal-close.svg" alt="Close">
+        </button>
+        <div class="modal-work">
+            <!-- Левая часть модального окна со скринами проекта. -->
+            <div class="modal-work__preview modal-work__preview--modalSlideBackgroundProject4">
+                <!-- Элемент с классом projectSlider является СЛАЙДЕРОМ. Этот слайдер листает скрины
+                 о конкретном проекте, находясь внутри модального окна. Для слайдера projectSlider
+                 генерируется класс slick-slider (библиотекой slick). -->
+                <div class="projectSlider">
+                    <!-- # 1 - item (картинка слайдера). -->
+                    <div>
+                        <!-- Размер фото в инспекторе кода, для скринов: x1_790х780, x1.6_1264х1248 -->
+                        <img class="modal-work__photo" src="/build/img/modal-work/04_projectSlides/01_projectSlide-Bulgaria.jpg" alt="Img"> <!-- Заглушка для фото: https://place-hold.it/790x780/DEFF8B&fontsize=20 -->
+                    </div>
+                    <!-- # 2 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/04_projectSlides/02_projectSlide-Bulgaria.jpg" alt="Img">
+                    </div>
+                    <!-- # 3 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/04_projectSlides/03_projectSlide-Bulgaria.jpg" alt="Img">
+                    </div>
+                    <!-- # 4 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/04_projectSlides/04_projectSlide-Bulgaria.jpg" alt="Img">
+                    </div>
+                    <!-- # 5 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/04_projectSlides/05_projectSlide-Bulgaria.jpg" alt="Img">
+                    </div>
+                    <!-- # 6 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/04_projectSlides/06_projectSlide-Bulgaria.jpg" alt="Img">
+                    </div>
+                    <!-- # 7 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/04_projectSlides/07_projectSlide-Bulgaria.jpg" alt="Img">
+                    </div>
+                    <!-- # 8 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/04_projectSlides/08_projectSlide-Bulgaria.jpg" alt="Img">
+                    </div>
+                    <!-- # 9 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/04_projectSlides/09_projectSlide-Bulgaria.jpg" alt="Img">
+                    </div>
+                    <!-- # 10 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/04_projectSlides/10_projectSlide-Bulgaria.jpg" alt="Img">
+                    </div>
+                    <!-- # 11 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/04_projectSlides/11_projectSlide-Bulgaria.jpg" alt="Img">
+                    </div>
+                    <!-- # 12 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/04_projectSlides/12_projectSlide-Bulgaria.jpg" alt="Img">
+                    </div>
+                    <!-- # 13 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/04_projectSlides/13_projectSlide-Bulgaria.jpg" alt="Img">
+                    </div>
+                    <!-- # 14 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/04_projectSlides/14_projectSlide-Bulgaria.jpg" alt="Img">
+                    </div>
+                    <!-- # 15 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/04_projectSlides/15_projectSlide-Bulgaria.jpg" alt="Img">
+                    </div>
+                </div>
+            </div>
+            <!-- Правая часть модального окна. -->
+            <div class="modal-work__description">
+                <div class="modal-work__header">
+                    <h3 class="modal-work__title">
+                        Bulgaria </h3>
+                    <div class="modal-work__info">
+                        Category <span class="modal-work__info-divider">|</span> 2019
+                    </div>
+                </div>
+                <div class="modal-work__client">
+                    <div class="modal-work__client-title">Клиент: —</div>
+                    <div class="modal-work__client-company">Creative Agency</div>
+                    <a class="modal-work__client-link" href="https://aimdao.github.io/aimSiteBulgaria" target="_blank">Посетить сайт</a>
+                </div>
+                <div class="modal-work__text">
+                    <p><b>Сайт для переезда в Болгарию</b></p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Assumenda consequuntur culpa cumque est eum,
+                        excepturi nam officiis quas. </p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Assumenda consequuntur culpa cumque est eum,
+                        excepturi nam officiis quas repellendus sed similique
+                        tempora, ut vel. </p>
+                </div>
+                <div class="modal-work__footer">
+                    <!-- Кнопка prev слайдера. Мы добавили наш класс projectSliderPrev для
+                    замены стандартной кнопки slick: prevArrow. По классу projectSliderPrev
+                    будем определять клик на кнопке (смотри slickSliderInModalWindow.js). -->
+                    <button class="modal-work__btn projectSliderPrev" type="button">
+                        <img src="/build/img/modal/prev.svg" height="12" alt="Icon">
+                        Previous
+                    </button>
+                    <!-- Кнопка next слайдера. Мы добавили наш класс projectSliderNext для
+                    замены стандартной кнопки slick: nextArrow. По классу projectSliderNext
+                    будем определять клик на кнопке (смотри slickSliderInModalWindow.js).-->
+                    <button class="modal-work__btn projectSliderNext" type="button">
+                        Next
+                        <img src="/build/img/modal/next.svg" height="12" alt="Icon">
+                    </button>
+                </div>
+            </div> <!-- /.modal-work__description -->
+        </div> <!-- /.modal-work -->
+    </div> <!-- /.modal__dialog -->
+</div> <!-- /.modal -->
+<!---->
+<!---->
+<!-- -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#- -->
+<!-- -#- MODAL WINDOWS: modal (Проект # 5) -#- -->
+<!-- -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#- -->
+<!---->
+<!-- Элемент с классом modal - это маска модального окна. -->
+<div class="modal" id="modal_project_5">
+    <!-- В элементе с классом modal__dialog находится вся информация модального окна. Это непосредственно модальное окно. -->
+    <div class="modal__dialog">
+        <!-- Кнопка закрытия модального окна (в атрибуте data-close указываем id закрываемого модального окна). -->
+        <button class="modal__close" type="button" data-close="#modal_project_5">
+            <img src="/build/img/modal/modal-close.svg" alt="Close">
+        </button>
+        <div class="modal-work">
+            <!-- Левая часть модального окна со скринами проекта. -->
+            <div class="modal-work__preview modal-work__preview--modalSlideBackgroundProject5">
+                <!-- Элемент с классом projectSlider является СЛАЙДЕРОМ. Этот слайдер листает скрины
+                 о конкретном проекте, находясь внутри модального окна. Для слайдера projectSlider
+                 генерируется класс slick-slider (библиотекой slick). -->
+                <div class="projectSlider">
+                    <!-- # 1 - item (картинка слайдера). -->
+                    <div>
+                        <!-- Размер фото в инспекторе кода, для скринов: x1_790х780, x1.6_1264х1248 -->
+                        <img class="modal-work__photo" src="/build/img/modal-work/05_projectSlides/01_projectSlide-Joomhost.jpg" alt="Img"> <!-- Заглушка для фото: https://place-hold.it/790x780/DEFF8B&fontsize=20 -->
+                    </div>
+                    <!-- # 2 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/05_projectSlides/02_projectSlide-Joomhost.jpg" alt="Img">
+                    </div>
+                    <!-- # 3 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/05_projectSlides/03_projectSlide-Joomhost.jpg" alt="Img">
+                    </div>
+                    <!-- # 4 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/05_projectSlides/04_projectSlide-Joomhost.jpg" alt="Img">
+                    </div>
+                    <!-- # 5 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/05_projectSlides/05_projectSlide-Joomhost.jpg" alt="Img">
+                    </div>
+                    <!-- # 6 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/05_projectSlides/06_projectSlide-Joomhost.jpg" alt="Img">
+                    </div>
+                    <!-- # 7 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/05_projectSlides/07_projectSlide-Joomhost.jpg" alt="Img">
+                    </div>
+                    <!-- # 8 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/05_projectSlides/08_projectSlide-Joomhost.jpg" alt="Img">
+                    </div>
+                    <!-- # 9 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/05_projectSlides/09_projectSlide-Joomhost.jpg" alt="Img">
+                    </div>
+                    <!-- # 10 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/05_projectSlides/10_projectSlide-Joomhost.jpg" alt="Img">
+                    </div>
+                    <!-- # 11 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/05_projectSlides/11_projectSlide-Joomhost.jpg" alt="Img">
+                    </div>
+                    <!-- # 12 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/05_projectSlides/12_projectSlide-Joomhost.jpg" alt="Img">
+                    </div>
+                    <!-- # 13 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/05_projectSlides/13_projectSlide-Joomhost.jpg" alt="Img">
+                    </div>
+                    <!-- # 14 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/05_projectSlides/14_projectSlide-Joomhost.jpg" alt="Img">
+                    </div>
+                    <!-- # 15 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/05_projectSlides/15_projectSlide-Joomhost.jpg" alt="Img">
+                    </div>
+                </div>
+            </div>
+            <!-- Правая часть модального окна. -->
+            <div class="modal-work__description">
+                <div class="modal-work__header">
+                    <h3 class="modal-work__title">
+                        Joomhost </h3>
+                    <div class="modal-work__info">
+                        Category <span class="modal-work__info-divider">|</span> 2020
+                    </div>
+                </div>
+                <div class="modal-work__client">
+                    <div class="modal-work__client-title">Клиент: —</div>
+                    <div class="modal-work__client-company">Creative Agency</div>
+                    <a class="modal-work__client-link" href="https://aimdao.github.io/aimSiteJoomhost" target="_blank">Посетить сайт</a>
+                </div>
+                <div class="modal-work__text">
+                    <p><b>Сайт хостинг-компании</b></p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Assumenda consequuntur culpa cumque est eum,
+                        excepturi nam officiis quas. </p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Assumenda consequuntur culpa cumque est eum,
+                        excepturi nam officiis quas repellendus sed similique
+                        tempora, ut vel. </p>
+                </div>
+                <div class="modal-work__footer">
+                    <!-- Кнопка prev слайдера. Мы добавили наш класс projectSliderPrev для
+                    замены стандартной кнопки slick: prevArrow. По классу projectSliderPrev
+                    будем определять клик на кнопке (смотри slickSliderInModalWindow.js). -->
+                    <button class="modal-work__btn projectSliderPrev" type="button">
+                        <img src="/build/img/modal/prev.svg" height="12" alt="Icon">
+                        Previous
+                    </button>
+                    <!-- Кнопка next слайдера. Мы добавили наш класс projectSliderNext для
+                    замены стандартной кнопки slick: nextArrow. По классу projectSliderNext
+                    будем определять клик на кнопке (смотри slickSliderInModalWindow.js).-->
+                    <button class="modal-work__btn projectSliderNext" type="button">
+                        Next
+                        <img src="/build/img/modal/next.svg" height="12" alt="Icon">
+                    </button>
+                </div>
+            </div> <!-- /.modal-work__description -->
+        </div> <!-- /.modal-work -->
+    </div> <!-- /.modal__dialog -->
+</div> <!-- /.modal -->
+<!---->
+<!---->
+<!-- -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#- -->
+<!-- -#- MODAL WINDOWS: modal (Проект # 6) -#- -->
+<!-- -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#- -->
+<!---->
+<!-- Элемент с классом modal - это маска модального окна. -->
+<div class="modal" id="modal_project_6">
+    <!-- В элементе с классом modal__dialog находится вся информация модального окна. Это непосредственно модальное окно. -->
+    <div class="modal__dialog">
+        <!-- Кнопка закрытия модального окна (в атрибуте data-close указываем id закрываемого модального окна). -->
+        <button class="modal__close" type="button" data-close="#modal_project_6">
+            <img src="/build/img/modal/modal-close.svg" alt="Close">
+        </button>
+        <div class="modal-work">
+            <!-- Левая часть модального окна со скринами проекта. -->
+            <div class="modal-work__preview modal-work__preview--modalSlideBackgroundProject6">
+                <!-- Элемент с классом projectSlider является СЛАЙДЕРОМ. Этот слайдер листает скрины
+                 о конкретном проекте, находясь внутри модального окна. Для слайдера projectSlider
+                 генерируется класс slick-slider (библиотекой slick). -->
+                <div class="projectSlider">
+                    <!-- # 1 - item (картинка слайдера). -->
+                    <div>
+                        <!-- Размер фото в инспекторе кода, для скринов: x1_790х780, x1.6_1264х1248 -->
+                        <img class="modal-work__photo" src="/build/img/modal-work/06_projectSlides/01_projectSlide-PortfolioAlena.jpg" alt="Img"> <!-- Заглушка для фото: https://place-hold.it/790x780/DEFF8B&fontsize=20 -->
+                    </div>
+                    <!-- # 2 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/06_projectSlides/02_projectSlide-PortfolioAlena.jpg" alt="Img">
+                    </div>
+                    <!-- # 3 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/06_projectSlides/03_projectSlide-PortfolioAlena.jpg" alt="Img">
+                    </div>
+                    <!-- # 4 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/06_projectSlides/04_projectSlide-PortfolioAlena.jpg" alt="Img">
+                    </div>
+                    <!-- # 5 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/06_projectSlides/05_projectSlide-PortfolioAlena.jpg" alt="Img">
+                    </div>
+                    <!-- # 6 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/06_projectSlides/06_projectSlide-PortfolioAlena.jpg" alt="Img">
+                    </div>
+                    <!-- # 7 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/06_projectSlides/07_projectSlide-PortfolioAlena.jpg" alt="Img">
+                    </div>
+                    <!-- # 8 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/06_projectSlides/08_projectSlide-PortfolioAlena.jpg" alt="Img">
+                    </div>
+                    <!-- # 9 - item (картинка слайдера). -->
+                    <div>
+                        <img class="modal-work__photo" src="/build/img/modal-work/06_projectSlides/09_projectSlide-PortfolioAlena.jpg" alt="Img">
+                    </div>
+                </div>
+            </div>
+            <!-- Правая часть модального окна. -->
+            <div class="modal-work__description">
+                <div class="modal-work__header">
+                    <h3 class="modal-work__title">
+                        Alena </h3>
+                    <div class="modal-work__info">
+                        Category <span class="modal-work__info-divider">|</span> 2019
+                    </div>
+                </div>
+                <div class="modal-work__client">
+                    <div class="modal-work__client-title">Клиент: —</div>
+                    <div class="modal-work__client-company">Creative Agency</div>
+                    <a class="modal-work__client-link" href="https://aimdao.github.io/aimSitePortfolioAlena" target="_blank">Посетить сайт</a>
+                </div>
+                <div class="modal-work__text">
+                    <p><b>Сайт портфолио студента</b></p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Assumenda consequuntur culpa cumque est eum,
+                        excepturi nam officiis quas. </p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Assumenda consequuntur culpa cumque est eum,
+                        excepturi nam officiis quas repellendus sed similique
+                        tempora, ut vel. </p>
+                </div>
+                <div class="modal-work__footer">
+                    <!-- Кнопка prev слайдера. Мы добавили наш класс projectSliderPrev для
+                    замены стандартной кнопки slick: prevArrow. По классу projectSliderPrev
+                    будем определять клик на кнопке (смотри slickSliderInModalWindow.js). -->
+                    <button class="modal-work__btn projectSliderPrev" type="button">
+                        <img src="/build/img/modal/prev.svg" height="12" alt="Icon">
+                        Previous
+                    </button>
+                    <!-- Кнопка next слайдера. Мы добавили наш класс projectSliderNext для
+                    замены стандартной кнопки slick: nextArrow. По классу projectSliderNext
+                    будем определять клик на кнопке (смотри slickSliderInModalWindow.js).-->
+                    <button class="modal-work__btn projectSliderNext" type="button">
+                        Next
+                        <img src="/build/img/modal/next.svg" height="12" alt="Icon">
+                    </button>
+                </div>
+            </div> <!-- /.modal-work__description -->
+        </div> <!-- /.modal-work -->
+    </div> <!-- /.modal__dialog -->
+</div> <!-- /.modal -->
+<!---->
+<!---->
+<script src="build/js/script.min.js"></script>
+<!---->
+</body>
+</html>

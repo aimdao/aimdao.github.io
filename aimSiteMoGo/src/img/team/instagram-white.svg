@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" version="1.1" viewBox="841 457 512 512" width="512pt" height="512pt" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <metadata> Produced by OmniGraffle 7.4.3 
+    <dc:date>2020-01-12 22:30:04 +0000</dc:date>
+  </metadata>
+  <defs/>
+  <g stroke="none" stroke-opacity="1" stroke-dasharray="none" fill="none" fill-opacity="1">
+    <title>Canvas 1</title>
+    <!-- <rect fill="white" width="512" height="416"/> -->
+    <g>
+      <title>Layer 3</title>
+      <path d="M 1193 457 L 1001 457 C 912.648 457 841 528.648 841 617 L 841 809 C 841 897.352 912.648 969 1001 969 L 1193 969 C 1281.352 969 1353 897.352 1353 809 L 1353 617 C 1353 528.648 1281.352 457 1193 457 Z M 1305 809 C 1305 870.76 1254.76 921 1193 921 L 1001 921 C 939.24 921 889 870.76 889 809 L 889 617 C 889 555.24 939.24 505 1001 505 L 1193 505 C 1254.76 505 1305 555.24 1305 617 Z" fill="#fff"/>
+      <path d="M 1097 585 C 1026.312 585 969 642.312 969 713 C 969 783.688 1026.312 841 1097 841 C 1167.688 841 1225 783.688 1225 713 C 1225 642.312 1167.688 585 1097 585 Z M 1097 793 C 1052.904 793 1017 757.096 1017 713 C 1017 668.872 1052.904 633 1097 633 C 1141.096 633 1177 668.872 1177 713 C 1177 757.096 1141.096 793 1097 793 Z" fill="#fff"/>
+      <circle cx="1234.6" cy="575.4" r="17.056027" fill="#fff"/>
+    </g>
+  </g>
+</svg>

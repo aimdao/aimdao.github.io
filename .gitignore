@@ -38,4 +38,14 @@
 /aimSiteMoGo/node_modules/	
 
 # -------------------------------------------------------------------
+# 007_PROJECT: aimSitePortfolioAimdao
+
+# Игнорируем каталог /aimSitePortfolioAimdao/node_modules/ и все его содержимое (файлы пакетов node.js)
+/aimSitePortfolioAimdao/node_modules/
+/aimSitePortfolioAimdao/gulpfile.js
+/aimSitePortfolioAimdao/package-lock.json
+/aimSitePortfolioAimdao/package.json
+/aimSitePortfolioAimdao/src/
+
+# -------------------------------------------------------------------
 

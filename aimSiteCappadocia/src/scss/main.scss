@@ -1,0 +1,83 @@
+/* Все ИМПОРТЫ подключаются выше основных стилей .css/.scss,
+т.к. основные стили .css/.scss должны иметь больший приоритет.
+ОДНАКО!!! - ИМПОРТЫ media queries и reuse styles подключаются ниже основных стилей .css/.scss. */
+//
+//
+// -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+// -#- IMPORTS - general styles -#-
+// -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+//
+// Libraries (объединение [конкатенация] библиотек [slick.scss, reset.css, normalize.css, animate.css и т.д.] ).
+@import "_libs.scss";
+//
+// Fonts.
+@import "_fonts.scss";
+//
+// Variables (переменные должны быть прописаны выше того объекта, в котором они используются).
+@import "_vars.scss";
+//
+// Global styles.
+//@import "_global.scss";  // Отключил, т.к. использую reset.css в gulpfile.js.
+//
+// Global2 styles.
+@import "_global2.scss";
+//
+//
+// -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+// -#- IMPORTS - sections (основные секции сайта) -#-
+// -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+//
+// SECTION: header
+@import "sections/01_header.scss";
+//
+// SECTION: fairy-tail
+@import "sections/02_fairy-tail.scss";
+//
+// SECTION: our-trip
+@import "sections/03_our-trip.scss";
+//
+// SECTION: hotel
+@import "sections/04_hotel.scss";
+//
+// SECTION: price
+@import "sections/05_price.scss";
+//
+// SECTION: contacts
+@import "sections/06_contacts.scss";
+//
+// SECTION: footer
+@import "sections/07_footer.scss";
+//
+//
+// -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+// -#- IMPORTS - blocks (смысловые блоки кода) -#-
+// -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
+//
+// BLOCK: 000_blank
+//@import "blocks/000_blank";
+//
+// BLOCK: container
+@import "blocks/container.scss";
+//
+// BLOCK: user
+//@import "blocks/user.scss";
+//
+//
+//
+//
+// ===%%%%%=====/\/\/\=====%%%%%=====/\/\/\=====%%%%%=====/\/\/\=====%%%%%===
+// ====/\/\/\===== CONNECTION AT THE END OF STYLES .CSS/.SCSS =====/\/\/\====
+// ===%%%%%=====\/\/\/=====%%%%%=====\/\/\/=====%%%%%=====\/\/\/=====%%%%%===
+//
+// Reuse styles.
+@import "_reuse.scss";
+//
+// Media queries.
+@import "_media.scss";
+//
+
+
+
+
+
+

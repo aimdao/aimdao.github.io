@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'balqis';
+    src: url('/src/fonts/balqis.woff2') format('woff2'),
+    url('/src/fonts/balqis.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap; // Позволяет до загрузки браузером наших шрифтов, использовать системные шрифты. Это улучшает загрузку сайта.
+}
+
+@font-face {
+    font-family: 'RobotoCondensed-Light';
+    src: url('/src/fonts/RobotoCondensed-Light.woff2') format('woff2'),
+    url('/src/fonts/RobotoCondensed-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap; // Позволяет до загрузки браузером наших шрифтов, использовать системные шрифты. Это улучшает загрузку сайта.
+}
+
+@font-face {
+    font-family: 'RobotoCondensed-LightItalic';
+    src: url('/src/fonts/RobotoCondensed-LightItalic.woff2') format('woff2'),
+    url('/src/fonts/RobotoCondensed-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap; // Позволяет до загрузки браузером наших шрифтов, использовать системные шрифты. Это улучшает загрузку сайта.
+}
+
+@font-face {
+    font-family: 'RobotoCondensed-Regular';
+    src: url('/src/fonts/RobotoCondensed-Regular.woff2') format('woff2'),
+    url('/src/fonts/RobotoCondensed-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap; // Позволяет до загрузки браузером наших шрифтов, использовать системные шрифты. Это улучшает загрузку сайта.
+}

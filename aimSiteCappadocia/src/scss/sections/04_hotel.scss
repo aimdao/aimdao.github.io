@@ -1,0 +1,29 @@
+.hotel__title span {
+    margin-left: 120px;
+}
+
+.hotel__inner {
+    display: flex;
+
+    .hotel__images {
+        margin-right: 100px;
+    }
+
+    .hotel__content {
+
+        .hotel__text {
+            margin-bottom: 20px;
+        }
+
+        .hotel__gallery {
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            a {
+                margin-top: 50px;
+            }
+        }
+    }
+}

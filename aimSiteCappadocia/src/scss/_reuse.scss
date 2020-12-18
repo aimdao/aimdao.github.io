@@ -1,0 +1,29 @@
+// Для разделения секций сайта между собой.
+.page-section {
+    margin: 200px auto;
+    max-width: 1920px; // Чтобы слайдер не выходил за пределы ширины 1920px, если большой монитор.
+}
+
+// Общие стили для заглавий h3 в каждой из секций сайта.
+.title {
+    font-family: 'balqis', serif;
+    font-weight: 300;
+    font-size: 96px;
+    line-height: 128px;
+    color: $gold;
+    margin-bottom: 100px;
+
+    span {
+        font-family: 'RobotoCondensed-LightItalic', serif;
+        font-size: 24px;
+        line-height: 28px;
+        color: $black;
+        display: block;
+        margin-top: -24px;
+    }
+}
+
+
+
+
+

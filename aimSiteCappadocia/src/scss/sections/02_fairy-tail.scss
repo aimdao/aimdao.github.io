@@ -1,0 +1,67 @@
+.fairy-tail__inner {
+    position: relative;
+}
+
+.fairy-tail__title span {
+    margin-left: 180px;
+}
+
+// Слайдер на основе slick-слайдера.
+.fairy-tail__slider {
+    width: 50%;
+
+    // Позиционируем кнопки слайдера.
+    .slick-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 5; // Чтобы кнопки слайдера были поверх слайдов.
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        outline: none; // Убираем обводку вокруг стрелок, появляющуюся при нажатии на стрелку.
+    }
+
+    // Кнопку prev размещаем слева слайдера.
+    .slick-prev {
+        left: 0;
+    }
+
+    // Кнопку next размещаем справа слайдера.
+    .slick-next {
+        right: 0;
+    }
+}
+
+// Контейнер для текста.
+.fairy-tail__container {
+    max-width: 1230px;
+    padding: 0 15px;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    .fairy-tail__body {
+        width: 50%;
+        margin-left: auto;
+        padding-left: 55px;
+        // Выравниваем абзацы с текстом через flex.
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100%;
+
+        .fairy-tail__body-title {
+            font-family: 'RobotoCondensed-Regular', serif;
+        }
+
+        .fairy-tail__text {
+            padding: 10px 0;
+        }
+    }
+}
+
+

@@ -1,0 +1,82 @@
+.our-trip__inner {
+    position: relative;
+
+    .our-trip__content {
+        width: 50%;
+        padding-right: 55px;
+    }
+}
+
+// Слайдер на основе slick-слайдера.
+.our-trip__slider {
+    width: 50%;
+    margin-left: auto;
+
+    // Позиционируем кнопки слайдера.
+    .slick-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 5; // Чтобы кнопки слайдера были поверх слайдов.
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        outline: none; // Убираем обводку вокруг стрелок, появляющуюся при нажатии на стрелку.
+    }
+
+    // Кнопку prev размещаем слева слайдера.
+    .slick-prev {
+        left: 0;
+    }
+
+    // Кнопку next размещаем справа слайдера.
+    .slick-next {
+        right: 0;
+    }
+}
+
+// Контейнер для текста.
+.our-trip__container {
+    max-width: 1230px;
+    padding: 0 15px;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    .our-trip__body {
+        // Выравниваем абзацы с текстом через flex.
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        align-items: start;
+
+        .our-trip__title span {
+            margin-left: 252px;
+        }
+
+        .our-trip__list {
+            margin: 5px 0;
+            font-size: 24px;
+            line-height: 28px;
+
+            // Выделяем заголовки у каждого списка.
+            li:first-child {
+                font-family: 'RobotoCondensed-Regular', serif;
+                margin-bottom: 20px;
+            }
+        }
+
+        // Кнопка-ссылка для перехода к бронированию.
+        .our-trip__btn {
+            font-size: 24px;
+            line-height: 28px;
+            padding: 11px 53px;
+            border: 1px solid $gold;
+        }
+    }
+}
+

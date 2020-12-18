@@ -58,10 +58,26 @@
 
         .contacts__images {
             height: 70vh; // Картинки слайдера будут размером 70% высоты экрана девайса.
-            width: 80%;
+            width: 50%;
             object-fit: cover; // Чтобы картинка полностью заполняла область ее размещения.
             margin-left: 15px;
         }
+    }
+
+    // =*= SECTION: 07_footer =*=
+    .footer__inner {
+
+        .footer__text {
+            font-size: 80px;
+        }
+    }
+
+}
+
+@media (max-width: 1024px) {
+    // =*= SECTION: 07_footer =*=
+    .footer {
+        padding-top: 210px;
     }
 }
 
@@ -150,10 +166,21 @@
         }
 
         .contacts__images {
-            width: 50%;
+            width: 46%;
         }
     }
 
+    // =*= SECTION: 07_footer =*=
+    .footer {
+        padding-top: 96px;
+    }
+
+    .footer__inner {
+
+        .footer__text {
+            font-size: 66px;
+        }
+    }
 }
 
 @media (max-width: 840px) {
@@ -231,8 +258,20 @@
 
         .contacts__images {
             height: 60vh; // Картинки слайдера будут размером 70% высоты экрана девайса.
-            width: 40%;
+            width: 34%;
             margin-left: 10px;
+        }
+    }
+
+    // =*= SECTION: 07_footer =*=
+    .footer__inner {
+        display: block;
+
+        .footer__text {
+            font-size: 80px;
+            line-height: 90px;
+            text-align: center;
+            margin-top: 30px;
         }
     }
 }
@@ -402,6 +441,37 @@
         }
     }
 
+    // =*= SECTION: 07_footer =*=
+    .footer__inner {
+
+        .footer__contacts {
+            background-size: 95%;
+
+            .footer__contacts-title {
+                font-size: 84px;
+                margin-bottom: 14px;
+            }
+
+            .footer__phone,
+            .footer__email {
+                padding-left: 34px; // Отступ для иконки слева.
+
+                // Иконка слева.
+                &::before {
+                    width: 25px;
+                    height: 25px;
+                    background-size: cover; // Чтобы иконка вписалась в новые размеры.
+                }
+            }
+        }
+
+        .footer__text {
+            font-size: 48px;
+            line-height: 52px;
+            margin-top: -16px;
+        }
+    }
+
     // =*= _reuse.scss =*=
     .page-section {
         margin: 50px 0;
@@ -532,6 +602,41 @@
         .contacts__images {
             height: 30vh; // Картинки слайдера будут размером 70% высоты экрана девайса.
             margin-top: 15px;
+        }
+    }
+
+    // =*= SECTION: 07_footer =*=
+    .footer__inner {
+
+        .footer__contacts {
+            background-size: 95%;
+            width: 300px;
+            height: 430px;
+
+            .footer__contacts-title {
+                font-size: 66px;
+                margin-bottom: 0;
+                padding-top: 12px;
+            }
+
+            .footer__phone,
+            .footer__email {
+                padding-left: 34px; // Отступ для иконки слева.
+
+                // Иконка слева.
+                &::before {
+                    width: 23px;
+                    height: 23px;
+                    background-size: cover; // Чтобы иконка вписалась в новые размеры.
+                    top: -1px;
+                }
+            }
+        }
+
+        .footer__text {
+            font-size: 40px;
+            line-height: 44px;
+            margin-top: -8px;
         }
     }
 

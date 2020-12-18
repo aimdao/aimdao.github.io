@@ -44,4 +44,15 @@
 /aimSitePortfolioAimdao/node_modules/
 
 # -------------------------------------------------------------------
+# 008_PROJECT: aimSiteCappadocia
+
+# Игнорируем каталог /aimSitePortfolioAimdao/node_modules/ и все его содержимое (файлы пакетов node.js)
+/aimSiteCappadocia/node_modules/
+
+# -------------------------------------------------------------------
+
+
+
+
+
 

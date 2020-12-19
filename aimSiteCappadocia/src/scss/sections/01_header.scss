@@ -1,5 +1,5 @@
 .header {
-    background: url("/src/img/header-bg.jpg") no-repeat center bottom;
+    background: url("/build/img/header-bg.jpg") no-repeat center bottom;
     height: 100vh; // Автоматическая высота для разных мониторов.
     background-size: cover; // Растягиваем img как обложку.
 
@@ -18,7 +18,7 @@
             &:before {
                 content: "";
                 position: absolute;
-                background-image: url('/src/img/phone-icon.svg');
+                background-image: url('/build/img/phone-icon.svg');
                 width: 30px;
                 height: 30px;
                 left: 0;

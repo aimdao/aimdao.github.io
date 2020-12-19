@@ -1,5 +1,5 @@
 .footer {
-    background: url(/src/img/footer-bg.jpg) no-repeat bottom center;
+    background: url(/build/img/footer-bg.jpg) no-repeat bottom center;
     height: 100vh;
     padding-top: 96px;
 }
@@ -12,7 +12,7 @@
     .footer__contacts {
         width: 356px;
         height: 527px;
-        background: url("/src/img/footer-contact-bg.png") no-repeat;
+        background: url("/build/img/footer-contact-bg.png") no-repeat;
         background-size: cover; // Чтобы картинка тянулась.
         text-align: center;
 
@@ -47,7 +47,7 @@
 
             // Иконка слева.
             &::before {
-                background-image: url(/src/img/footer-phone-icon.svg);
+                background-image: url(/build/img/footer-phone-icon.svg);
             }
         }
 
@@ -55,7 +55,7 @@
 
             // Иконка слева.
             &::before {
-                background-image: url(/src/img/footer-email-icon.svg);
+                background-image: url(/build/img/footer-email-icon.svg);
             }
         }
 

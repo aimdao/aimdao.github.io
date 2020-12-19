@@ -8,19 +8,19 @@
 // -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
 //
 // Libraries (объединение [конкатенация] библиотек [slick.scss, reset.css, normalize.css, animate.css и т.д.] ).
-@import "_libs.scss";
+@import "./src/scss/_libs.scss";
 //
 // Fonts.
-@import "_fonts.scss";
+@import "./src/scss/_fonts.scss";
 //
 // Variables (переменные должны быть прописаны выше того объекта, в котором они используются).
-@import "_vars.scss";
+@import "./src/scss/_vars.scss";
 //
 // Global styles.
-//@import "_global.scss";  // Отключил, т.к. использую reset.css в gulpfile.js.
+//@import "./src/scss/_global.scss";  // Отключил, т.к. использую reset.css в gulpfile.js.
 //
 // Global2 styles.
-@import "_global2.scss";
+@import "./src/scss/_global2.scss";
 //
 //
 // -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
@@ -70,10 +70,10 @@
 // ===%%%%%=====\/\/\/=====%%%%%=====\/\/\/=====%%%%%=====\/\/\/=====%%%%%===
 //
 // Reuse styles.
-@import "_reuse.scss";
+@import "./src/scss/_reuse.scss";
 //
 // Media queries.
-@import "_media.scss";
+@import "./src/scss/_media.scss";
 //
 
 

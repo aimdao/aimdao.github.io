@@ -28,25 +28,25 @@
 // -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
 //
 // SECTION: header
-@import "src/scss/sections/01_header.scss";
+@import "./src/scss/sections/01_header.scss";
 //
 // SECTION: fairy-tail
-@import "src/scss/sections/02_fairy-tail.scss";
+@import "./src/scss/sections/02_fairy-tail.scss";
 //
 // SECTION: our-trip
-@import "src/scss/sections/03_our-trip.scss";
+@import "./src/scss/sections/03_our-trip.scss";
 //
 // SECTION: hotel
-@import "src/scss/sections/04_hotel.scss";
+@import "./src/scss/sections/04_hotel.scss";
 //
 // SECTION: price
-@import "src/scss/sections/05_price.scss";
+@import "./src/scss/sections/05_price.scss";
 //
 // SECTION: contacts
-@import "src/scss/sections/06_contacts.scss";
+@import "./src/scss/sections/06_contacts.scss";
 //
 // SECTION: footer
-@import "src/scss/sections/07_footer.scss";
+@import "./src/scss/sections/07_footer.scss";
 //
 //
 // -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
@@ -57,7 +57,7 @@
 //@import "blocks/000_blank";
 //
 // BLOCK: container
-@import "src/scss/blocks/container.scss";
+@import "./src/scss/blocks/container.scss";
 //
 // BLOCK: user
 //@import "blocks/user.scss";

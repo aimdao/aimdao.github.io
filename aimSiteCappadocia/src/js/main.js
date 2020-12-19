@@ -3,8 +3,8 @@ $(function () {
     // Слайдер fairy-tail__slider.
     $('.fairy-tail__slider').slick({
         // Подключаем две стрелки для листания слайдера.
-        prevArrow: '<button type="button" class="slick-btn slick-prev"><img src="/src/img/arrow-prev.svg" alt=""></button>',
-        nextArrow: '<button type="button" class="slick-btn slick-next"><img src="/src/img/arrow-next.svg" alt=""></button>',
+        prevArrow: '<button type="button" class="slick-btn slick-prev"><img src="/build/img/arrow-prev.svg" alt=""></button>',
+        nextArrow: '<button type="button" class="slick-btn slick-next"><img src="/build/img/arrow-next.svg" alt=""></button>',
         // Автоматическое перелистывание слайдера (каждые 3 секунды): true - вкл; false - откл.
         autoplay: false,
         autoplaySpeed: 3000,
@@ -26,8 +26,8 @@ $(function () {
     // Слайдер our-trip__slider.
     $('.our-trip__slider').slick({
         // Подключаем две стрелки для листания слайдера.
-        prevArrow: '<button type="button" class="slick-btn slick-prev"><img src="/src/img/arrow-prev.svg" alt=""></button>',
-        nextArrow: '<button type="button" class="slick-btn slick-next"><img src="/src/img/arrow-next.svg" alt=""></button>',
+        prevArrow: '<button type="button" class="slick-btn slick-prev"><img src="/build/img/arrow-prev.svg" alt=""></button>',
+        nextArrow: '<button type="button" class="slick-btn slick-next"><img src="/build/img/arrow-next.svg" alt=""></button>',
         // Автоматическое перелистывание слайдера (каждые 3 секунды): true - вкл; false - откл.
         autoplay: false,
         autoplaySpeed: 3000,

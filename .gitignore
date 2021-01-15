@@ -6,14 +6,22 @@
 # -------------------------------------------------------------------
 # 001_PROJECT: aimSiteBulgaria
 
+# Игнорируем рабочие файлы PhpStorm
+/aimSiteBulgaria/.idea/
+
 # -------------------------------------------------------------------
 # 002_PROJECT: aimSitePortfolioAlena
+
+# Игнорируем рабочие файлы PhpStorm
+/aimSitePortfolioAlena/.idea/
 
 # -------------------------------------------------------------------
 # 003_PROJECT: aimSiteGoSurf
 
 # Игнорируем каталог /aimSiteGoSurf/node_modules/ и все его содержимое (файлы пакетов node.js)
 /aimSiteGoSurf/node_modules/	
+# Игнорируем рабочие файлы PhpStorm
+/aimSiteGoSurf/.idea/
 
 # -------------------------------------------------------------------
 # 004_PROJECT: aimSiteJoomhost_Сайт Интернет-провайдера (Vadiv Prokopchuk)
@@ -24,24 +32,32 @@
 /aimSiteJoomhost/Как переиспользовать gulp в новых проектах из старых (aimGulpProjectBuild-v01).md
 # Игнорировать файл в текущем каталоге
 /aimSiteJoomhost/Описание зависимостей (пакетов) в package.json (aimSiteJoomhost).md
+# Игнорируем рабочие файлы PhpStorm
+/aimSiteJoomhost/.idea/
 
 # -------------------------------------------------------------------
 # 005_PROJECT: aimSiteCompanyLiquidation
 
 # Игнорируем каталог /aimSiteCompanyLiquidation/node_modules/ и все его содержимое (файлы пакетов node.js)
-/aimSiteCompanyLiquidation/node_modules/	
+/aimSiteCompanyLiquidation/node_modules/
+# Игнорируем рабочие файлы PhpStorm
+/aimSiteCompanyLiquidation/.idea/	
 
 # -------------------------------------------------------------------
 # 006_PROJECT: aimSiteMoGo
 
 # Игнорируем каталог /aimSiteMoGo/node_modules/ и все его содержимое (файлы пакетов node.js)
 /aimSiteMoGo/node_modules/	
+# Игнорируем рабочие файлы PhpStorm
+/aimSiteMoGo/.idea/
 
 # -------------------------------------------------------------------
 # 007_PROJECT: aimSitePortfolioAimdao
 
 # Игнорируем каталог /aimSitePortfolioAimdao/node_modules/ и все его содержимое (файлы пакетов node.js)
 /aimSitePortfolioAimdao/node_modules/
+# Игнорируем рабочие файлы PhpStorm
+/aimSitePortfolioAimdao/.idea/
 
 # -------------------------------------------------------------------
 # 008_PROJECT: aimSiteCappadocia

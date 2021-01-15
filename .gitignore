@@ -48,6 +48,14 @@
 
 # Игнорируем каталог /aimSitePortfolioAimdao/node_modules/ и все его содержимое (файлы пакетов node.js)
 /aimSiteCappadocia/node_modules/
+# Игнорируем каталог /aimSiteCappadocia/src/ и все его содержимое (рабочие src-файлы проекта)
+/aimSiteCappadocia/src/
+# Игнорируем файл gulpfile.js (файл сборки сборщика gulp)
+/aimSiteCappadocia/gulpfile.js
+# Игнорируем файл package.json (файл для установки npm-менеджером необходимых модулей сборки проекта)
+/aimSiteCappadocia/package.json
+# Игнорируем вспомогательный файл package-lock.json (файл для работы файла package.json )
+/aimSiteCappadocia/package-lock.json
 
 # -------------------------------------------------------------------
 

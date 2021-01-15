@@ -40,8 +40,8 @@
 
 # Игнорируем каталог /aimSiteCompanyLiquidation/node_modules/ и все его содержимое (файлы пакетов node.js)
 /aimSiteCompanyLiquidation/node_modules/
-# Игнорируем рабочие файлы PhpStorm
-/aimSiteCompanyLiquidation/.idea/	
+# Игнорируем рабочие файлы PhpStorm.
+/aimSiteCompanyLiquidation/.idea/
 
 # -------------------------------------------------------------------
 # 006_PROJECT: aimSiteMoGo

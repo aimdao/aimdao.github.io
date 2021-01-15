@@ -56,7 +56,8 @@
 /aimSiteCappadocia/package.json
 # Игнорируем вспомогательный файл package-lock.json (файл для работы файла package.json )
 /aimSiteCappadocia/package-lock.json
-
+# Игнорируем рабочие файлы PhpStorm
+/aimSiteCappadocia/.idea/
 # -------------------------------------------------------------------
 
 

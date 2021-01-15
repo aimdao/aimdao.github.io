@@ -26,7 +26,7 @@
 # -------------------------------------------------------------------
 # 004_PROJECT: aimSiteJoomhost_Сайт Интернет-провайдера (Vadiv Prokopchuk)
 
-# Игнорируем каталог /aimSiteJoomhost/node_modules/ и все его содержимое (файлы пакетов node.js)
+# Игнорируем каталог /aimSiteJoomhost/node_modules/ и все его содержимое (файлы пакетов node.js).
 /aimSiteJoomhost/node_modules/
 # Игнорировать файл в текущем каталоге
 /aimSiteJoomhost/Как переиспользовать gulp в новых проектах из старых (aimGulpProjectBuild-v01).md

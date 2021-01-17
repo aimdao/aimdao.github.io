@@ -58,7 +58,7 @@
 # -------------------------------------------------------------------
 # 008_PROJECT: aimSiteCappadocia
 #
-# Игнорируем каталог /aimSitePortfolioAimdao/node_modules/ и все его содержимое (файлы пакетов node.js).
+# Игнорируем каталог /aimSiteCappadocia/node_modules/ и все его содержимое (файлы пакетов node.js).
 /aimSiteCappadocia/node_modules/
 # Игнорируем каталог /aimSiteCappadocia/src/ и все его содержимое (рабочие src-файлы проекта).
 /aimSiteCappadocia/src/
@@ -70,6 +70,23 @@
 /aimSiteCappadocia/package-lock.json
 # Игнорируем рабочие файлы PhpStorm.
 /aimSiteCappadocia/.idea/
+
+# -------------------------------------------------------------------
+# 009_PROJECT: aimSiteMavic2Pro
+#
+# Игнорируем каталог /aimSiteMavic2Pro/node_modules/ и все его содержимое (файлы пакетов node.js).
+/aimSiteMavic2Pro/node_modules/
+# Игнорируем каталог /aimSiteMavic2Pro/src/ и все его содержимое (рабочие src-файлы проекта).
+/aimSiteMavic2Pro/src/
+# Игнорируем файл gulpfile.js (рабочий файл сборщика gulp).
+/aimSiteMavic2Pro/gulpfile.js
+# Игнорируем файл package.json (с помощью данного файла npm-менеджер устанавливает необходимые зависимости [пакеты] для сборки проекта).
+/aimSiteMavic2Pro/package.json
+# Игнорируем вспомогательный файл package-lock.json (файл для работы файла package.json).
+/aimSiteMavic2Pro/package-lock.json
+# Игнорируем рабочие файлы PhpStorm.
+/aimSiteMavic2Pro/.idea/
+
 # -------------------------------------------------------------------
 
 

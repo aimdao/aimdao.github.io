@@ -88,7 +88,22 @@
 /aimSiteMavic2Pro/.idea/
 
 # -------------------------------------------------------------------
+# 010_PROJECT: aimOnlineStoreJetSkis
+#
+# Игнорируем каталог /aimOnlineStoreJetSkis/node_modules/ и все его содержимое (файлы пакетов node.js).
+/aimOnlineStoreJetSkis/node_modules/
+# Игнорируем каталог /aimOnlineStoreJetSkis/src/ и все его содержимое (рабочие src-файлы проекта).
+/aimOnlineStoreJetSkis/src/
+# Игнорируем файл gulpfile.js (рабочий файл сборщика gulp).
+/aimOnlineStoreJetSkis/gulpfile.js
+# Игнорируем файл package.json (с помощью данного файла npm-менеджер устанавливает необходимые зависимости [пакеты] для сборки проекта).
+/aimOnlineStoreJetSkis/package.json
+# Игнорируем вспомогательный файл package-lock.json (файл для работы файла package.json).
+/aimOnlineStoreJetSkis/package-lock.json
+# Игнорируем рабочие файлы PhpStorm.
+/aimOnlineStoreJetSkis/.idea/
 
+# -------------------------------------------------------------------
 
 
 

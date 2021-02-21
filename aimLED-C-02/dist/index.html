@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <!-- Ширина всего контента будет подстраиваться под ширину девайса (для адаптивной верстки). -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>aimLED-C-02</title>
+    <!-- Подключаем шрифт Ubuntu от Google (Light300, Regular400, Medium500, Bold700). -->
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+<!---->
+<!---->
+<!-- =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*= -->
+<!-- =*= section00_header =*= -->
+<!-- =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*= -->
+<!---->
+<header class="header">
+    <div class="container">
+        <div id="header__nav" class="header__inner">
+            <div data-menuanchor="top">
+                <a class="logo" href="#top">
+                    <picture class="logo__img">
+                        <source srcset="images/logo-mobile.png" media="(max-width: 600px)">
+                        <!-- max-width - это размер, меньше которого будет вставлятся уже маленький логотип. -->
+                        <img src="images/logo.png" alt="">
+                    </picture>
+                </a>
+            </div>
+            <nav class="menu">
+                <button class="menu__btn"> <!-- For mobile version site. Кнопка-гамбургер. -->
+                    <span class="menu__btn-line"></span>
+                </button>
+                <ul class="menu__list">
+                    <li class="menu__list-item" data-menuanchor="products">
+                        <a class="menu__list-link" href="#products">О контроллере</a>
+                    </li>
+                    <li class="menu__list-item"data-menuanchor="benefits">
+                        <a class="menu__list-link" href="#benefits">Преимущества</a>
+                    </li>
+                    <li class="menu__list-item" data-menuanchor="specifications">
+                        <a class="menu__list-link" href="#specifications">Характеристики</a>
+                    </li>
+                    <li class="menu__list-item" data-menuanchor="questions">
+                        <a class="menu__list-link" href="#questions">FAQ</a>
+                    </li>
+                    <li class="menu__list-item" data-menuanchor="contacts">
+                        <a class="menu__list-link" href="#contacts">Контакты</a>
+                    </li>
+                    <li class="menu__list-item" data-menuanchor="buy">
+                        <a class="menu__list-link" href="#buy">Купить</a>
+                    </li>
+                    <li class="menu__list-phone"> <!-- For mobile version site. -->
+                        <a class="header__phone-menu" href="tel:89268384195">7 (926) 838 41 95</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header__info">
+                <button class="header__btn">купить</button>
+                <a class="header__phone" href="tel:89268384195">7 (926) 838 41 95</a>
+            </div>
+        </div>
+    </div>
+</header>
+<!---->
+<!---->
+<!-- // main - для библиотеки fullpage.js.  fullpage.js - библиотека для одностраничных сайтов с полноэкранной прокруткой (scroll). Она также позволяет добавлять горизонтальные ползунки для разделов сайта. Сайт: https://alvarotrigo.com/fullPage/ru/ -->
+<!-- <main id="fullpage"> -->
+    <!---->
+    <!---->
+    <!-- =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*= -->
+    <!-- =*= section01_top =*= -->
+    <!-- =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*= -->
+    <!---->
+    <section id="top" data-anchor="top" class="page-section top"> <!-- Класс page-section будет у каждой секции. -->
+        <div class="page-section__wrapper top__wrapper">
+            <!-- Класс page-section__wrapper нужен для градиента. Он будет у каждой секции. -->
+            <div class="container">
+                <div class="top__inner">
+                    <h1 class="top__title">
+                        LED-C-02
+                    </h1>
+                    <img class="top__imgMavic" src="images/led-c-02.png" alt="">
+                    <p class="top__text">
+                        LED-C-02 — контроллер для управления светодиодными лентами
+                    </p>
+                    <ul class="top__social-list">
+                        <li class="top__social-item">
+                            <a class="top__social-link" href="#">
+                                <img src="images/facebook.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="top__social-item">
+                            <a class="top__social-link" href="#">
+                                <img src="images/youtube.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="top__social-item">
+                            <a class="top__social-link" href="#">
+                                <img src="images/instagram.svg" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="scroll__btn">
+                <a href="#products">
+                    <img src="images/arrow-down.svg" alt="">
+                </a>
+            </div>
+        </div>
+    </section>
+    <!---->
+    <!---->
+    <!-- =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*= -->
+    <!-- =*= section02_products =*= -->
+    <!-- =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*= -->
+    <!---->
+    <section id="products" data-anchor="products" class="page-section products">
+        <div class="page-section__wrapper">
+            <div class="container">
+                <h3 class="title products__title">
+                    Что такое LED-C-02?
+                </h3>
+                <div class="products__inner">
+                    <div class="products__text">
+                        <p>
+                            Commodo. Ridiculus curabitur vehicula scelerisque sollicitudin hendrerit. Enim nec parturient condimentum nibh praesent. Ullamcorper proin nibh mattis posuere cum urna.
+                        </p>
+                        <p>
+                            Mattis facilisi sollicitudin in dolor amet. Aliquet cursus malesuada id posuere. Dui at vulputate nec lectus. Ipsum ultricies pede quisque Rutrum fames vel lorem tristique class nam sociosqu non condimentum. Tellus integer curae; facilisis in at curae; suscipit pellentesque odio.
+                        </p>
+                    </div>
+                    <div class="products__slider-box">
+                        <div class="products__slider-text">
+                            Ridiculus curabitur vehicula hendrerit
+                        </div>
+                        <div class="products__slider">
+                            <div class="products__slider-item">
+                                <img class="products__slider-img" src="images/slider-1.jpg" alt="">
+                            </div>
+                            <div class="products__slider-item">
+                                <img class="products__slider-img" src="images/slider-2.jpg" alt="">
+                            </div>
+                            <div class="products__slider-item">
+                                <img class="products__slider-img" src="images/slider-3.jpg" alt="">
+                            </div>
+                            <div class="products__slider-item">
+                                <img class="products__slider-img" src="images/slider-4.jpg" alt="">
+                            </div>
+                            <div class="products__slider-item">
+                                <img class="products__slider-img" src="images/slider-5.jpg" alt="">
+                            </div>
+                            <div class="products__slider-item">
+                                <img class="products__slider-img" src="images/slider-6.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll__btn">
+                <a href="#benefits">
+                    <img src="images/arrow-down.svg" alt="">
+                </a>
+            </div>
+        </div>
+    </section>
+    <!---->
+    <!---->
+    <!-- =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*= -->
+    <!-- =*= section03_benefits =*= -->
+    <!-- =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*= -->
+    <!---->
+    <section id="benefits" data-anchor="benefits" class="page-section benefits">
+        <div class="page-section__wrapper">
+            <div class="container">
+                <h3 class="title">Преимущества</h3>
+                <div class="benefits__items">
+                    <div class="benefits__item">
+                        <div class="benefits__num">1</div>
+                        <div class="benefits__img">
+                            <img src="images/benefits-1.jpg" alt="">
+                        </div>
+                        <div class="benefits__info">
+                            <h4 class="benefits__info-title">
+                                Mattis facilisi
+                            </h4>
+                            <p class="benefits__info-text">
+                                Aliquet cursus malesuada id posuere. Dui at vulputate nec lectus. Ipsum ultricies pede quisque.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="benefits__item">
+                        <div class="benefits__num">2</div>
+                        <div class="benefits__img">
+                            <img src="images/benefits-2.jpg" alt="">
+                        </div>
+                        <div class="benefits__info">
+                            <h4 class="benefits__info-title">
+                                Ultrices aliquet
+                            </h4>
+                            <p class="benefits__info-text">
+                                Elementum rutrum ligula magna pretium. Conubia senectus rutrum egestas ligula vehicula volutpat.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="benefits__item">
+                        <div class="benefits__num">3</div>
+                        <div class="benefits__img">
+                            <img src="images/benefits-3.jpg" alt="">
+                        </div>
+                        <div class="benefits__info">
+                            <h4 class="benefits__info-title">
+                                Enim bibendum
+                            </h4>
+                            <p class="benefits__info-text">
+                                Suscipit taciti pretium eu orci egestas elit feugiat. Etiam sem. Enim bibendum ipsum.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="benefits__item">
+                        <div class="benefits__num">4</div>
+                        <div class="benefits__img">
+                            <img src="images/benefits-4.jpg" alt="">
+                        </div>
+                        <div class="benefits__info">
+                            <h4 class="benefits__info-title">
+                                Conubia senectus
+                            </h4>
+                            <p class="benefits__info-text">
+                                Sem consectetuer aliquet torquent aptent dignissim aliquam diam ipsum. Hendrerit nec. Elementum rutrum.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll__btn">
+                <a href="#specifications">
+                    <img src="images/arrow-down.svg" alt="">
+                </a>
+            </div>
+        </div>
+    </section>
+    <!---->
+    <!---->
+    <!-- =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*= -->
+    <!-- =*= section04_specifications =*= -->
+    <!-- =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*= -->
+    <!---->
+    <section id="specifications" data-anchor="specifications" class="page-section specifications">
+        <div class="page-section__wrapper">
+            <div class="container">
+                <h3 class="title">Характеристики</h3>
+                <div class="specifications__inner">
+                    <div class="specifications__item">
+                        <div class="specifications__box specifications__box-1">
+                            <h4 class="specifications__box-title">Ante accumsan</h4>
+                            <p class="specifications__box-text">
+                                Donec ipsum volutpat congue rutrum sollicitudin bibendum sollicitudin facilisi tempor turpis facilisi conubia suspendisse nascetur urna.
+                            </p>
+                        </div>
+                        <div class="specifications__box specifications__box-2">
+                            <h4 class="specifications__box-title">Suscipit sodales</h4>
+                            <p class="specifications__box-text">
+                                Eros libero felis in adipiscing eleifend netus natoque nostra posuere nisi curae.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="specifications__item specifications__item--center">
+                        <img src="images/led-c-02.png" alt="">
+                    </div>
+                    <div class="specifications__item">
+                        <div class="specifications__box specifications__box-3">
+                            <h4 class="specifications__box-title">Tristique arcu</h4>
+                            <p class="specifications__box-text">
+                                Pulvinar porttitor platea fringilla tristique porttitor nisl nam senectus mus dictumst cum congue.
+                            </p>
+                        </div>
+                        <div class="specifications__box specifications__box-4">
+                            <h4 class="specifications__box-title">Purus orci</h4>
+                            <p class="specifications__box-text">
+                                Mus aptent lectus eu porttitor, dis, semper, suscipit netus sollicitudin pharetra ultrices Egestas tincidunt lacinia nec porta sapien praesent mauris.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll__btn">
+                <a href="#questions">
+                    <img src="images/arrow-down.svg" alt="">
+                </a>
+            </div>
+        </div>
+    </section>
+    <!---->
+    <!---->
+    <!-- =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*= -->
+    <!-- =*= section05_questions =*= -->
+    <!-- =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*= -->
+    <!---->
+    <section id="questions" data-anchor="questions" class="page-section questions">
+        <div class="page-section__wrapper">
+            <div class="container">
+                <h3 class="title">Остались вопросы?</h3>
+                <div class="questions__items">
+                    <div class="questions__item">
+                        <h4 class="questions__item-title">Gravida fringilla fames sociis mi malesuada?</h4>
+                        <p class="questions__item-text">
+                            Mi luctus, eros metus aliquet mus, consequat duis egestas feugiat lectus eros ac nunc cum accumsan sociis, tortor egestas convallis, convallis habitasse arcu iaculis leo curae.
+                        </p>
+                    </div>
+                    <div class="questions__item questions__item--active">
+                        <h4 class="questions__item-title">Cubilia diam mollis porta pede placerat? </h4>
+                        <p class="questions__item-text">
+                            Tincidunt dictumst est dictumst sit neque nunc nostra fusce consectetuer suspendisse dis auctor purus nulla laoreet montes consectetuer diam eget. Nonummy dolor Leo ipsum elit.
+                        </p>
+                    </div>
+                    <div class="questions__item">
+                        <h4 class="questions__item-title">Magna tempor aliquam, dui suscipit venenatis?</h4>
+                        <p class="questions__item-text">
+                            At turpis fames nunc donec platea sit gravida metus libero venenatis. Viverra sociis vulputate facilisi dis massa. Penatibus praesent. Ullamcorper tempor interdum dignissim id.
+                        </p>
+                    </div>
+                    <div class="questions__item">
+                        <h4 class="questions__item-title">Semper fringilla nunc leo nec？</h4>
+                        <p class="questions__item-text">
+                            Consectetuer senectus at metus. Gravida Mus praesent, ridiculus dictumst non sit per arcu. Ad felis non potenti mauris. Vestibulum quam mollis risus elit donec elementum felis.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll__btn">
+                <a href="#contacts">
+                    <img src="images/arrow-down.svg" alt="">
+                </a>
+            </div>
+        </div>
+    </section>
+    <!---->
+    <!---->
+    <!-- =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*= -->
+    <!-- =*= section06_contacts =*= -->
+    <!-- =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*= -->
+    <!---->
+    <section id="contacts" data-anchor="contacts" class="page-section contacts">
+        <div class="page-section__wrapper">
+            <div class="container">
+                <h3 class="title">Контакты</h3>
+                <div class="contacts__inner">
+                    <div class="contacts__info">
+                        <div class="contacts__info-box">
+                            <p class="contacts__info-title">Москва</p>
+                            <a class="contacts__info-phone" href="tel:+89268384195">+7 (926) 838 41 95</a>
+                            <a class="contacts__info-email" href="mailto:info@it-home.pro">info@it-home.pro</a>
+                        </div>
+                        <div class="contacts__info-box">
+                            <p class="contacts__info-title">Волгоград</p>
+                            <a class="contacts__info-phone" href="tel:+89268384195">+7 (926) 838 41 95</a>
+                            <a class="contacts__info-email" href="mailto:info@it-home.pro">info@it-home.pro</a>
+                        </div>
+                    </div>
+                    <div class="contacts__form">
+                        <form>
+                            <h4 class="contacts__form-title">
+                                Остались вопросы?
+                            </h4>
+                            <p class="contacts__form-text">
+                                Мы обязательно свяжемся с вами в течение двух рабочих дней
+                            </p>
+                            <div class="contacts__form-line">
+                                <input class="contacts__form-input" placeholder="Ваше имя" type="text">
+                                <input class="contacts__form-input" placeholder="Ваше e-mail" type="email">
+                            </div>
+                            <textarea class="contacts__form-textarea" placeholder="Что вас интересует?"></textarea>
+                            <button class="contacts__form-btn" type="submit">ОТПРАВИТЬ</button>
+                        </form>
+                    </div>
+                    <ul class="contacts__social-list">
+                        <li class="contacts__social-item">
+                            <a class="contacts__social-link" href="#">
+                                <img src="images/facebook.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="contacts__social-item">
+                            <a class="contacts__social-link" href="#">
+                                <img src="images/youtube.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="contacts__social-item">
+                            <a class="contacts__social-link" href="#">
+                                <img src="images/instagram.svg" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="scroll__btn">
+                <a href="#buy">
+                    <img src="images/arrow-down.svg" alt="">
+                </a>
+            </div>
+        </div>
+    </section>
+    <!---->
+    <!---->
+    <!-- =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*= -->
+    <!-- =*= section07_buy =*= -->
+    <!-- =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*= -->
+    <!---->
+    <section id="buy" data-anchor="buy" class="page-section buy">
+        <div class="page-section__wrapper">
+            <div class="container">
+                <h3 class="title">Купить</h3>
+                <h4 class="buy__title">Уважаемые клиенты, вы можете оплатить наши услуги следующими способами:</h4>
+                <h5 class="buy__list-title">* Банковский перевод</h5>
+                <ul class="buy__list">
+                    <li class="buy__list-item">
+                        — Бланк банковского перевода можно распечатать после завершения процесса оформления заказа.
+                    </li>
+                    <li class="buy__list-item">
+                        — Оплатить счет можно через любой банк, действующий на территории России, на основании сформированного счета.
+                    </li>
+                    <li class="buy__list-item">
+                        — При оплате через банк взимается комиссионный сбор банка за перевод денежных средств, который составляет от 3% до 7% суммы перевода.
+                    </li>
+                    <li class="buy__list-item">
+                        — Перечисление денег может занять от 2 до 10 дней.
+                    </li>
+                    <li class="buy__list-item">
+                        — При заполнении бланка банковского перевода вручную, необходимо указывать в качестве получателя платежа ООО "АйТи-Хоум", в комментарии к платежу - номер заказа.
+                    </li>
+                    <li class="buy__list-item">
+                        — Денежные средства зачисляются в счет оплаты заказа, после их поступления на расчетный счет ООО "АйТи-Хоум".
+                    </li>
+                </ul>
+                <footer class="footer">
+                    <div class="container">
+                        <p class="footer__copy">
+                            © Vitaly Kurakin, 2021
+                        </p>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </section>
+<!-- </main> -->
+<!---->
+<!---->
+<script src="js/script.min.js"></script>
+<!---->
+</body>
+</html>
+

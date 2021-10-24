@@ -120,6 +120,100 @@
 /aimLED-C-02/.idea/
 
 # -------------------------------------------------------------------
+# 012_PROJECT: aimSpaceModels
+#
+# Игнорируем каталог /aimSpaceModels/node_modules/ и все его содержимое (файлы пакетов node.js).
+/aimSpaceModels/node_modules/
+# Игнорируем каталог /aimSpaceModels/src/ и все его содержимое (рабочие src-файлы проекта).
+/aimSpaceModels/src/
+# Игнорируем файл gulpfile.js (рабочий файл сборщика gulp).
+/aimSpaceModels/gulpfile.js
+# Игнорируем файл package.json (с помощью данного файла npm-менеджер устанавливает необходимые зависимости [пакеты] для сборки проекта).
+/aimSpaceModels/package.json
+# Игнорируем вспомогательный файл package-lock.json (файл для работы файла package.json).
+/aimSpaceModels/package-lock.json
+# Игнорируем рабочие файлы PhpStorm.
+/aimSpaceModels/.idea/
+# Игнорируем рабочие файлы VSCode.
+/aimSpaceModels/.vscode/
+# Игнорируем рабочие файлы Babel.
+/aimSpaceModels/.babelrc/
+
+# -------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

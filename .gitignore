@@ -135,9 +135,9 @@
 # Игнорируем рабочие файлы PhpStorm.
 /aimSpaceModels/.idea/
 # Игнорируем рабочие файлы VSCode.
-/aimSpaceModels/.vscode/
+# /aimSpaceModels/.vscode/
 # Игнорируем рабочие файлы Babel.
-/aimSpaceModels/.babelrc/
+# /aimSpaceModels/.babelrc/
 
 # -------------------------------------------------------------------
 

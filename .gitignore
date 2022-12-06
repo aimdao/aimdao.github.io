@@ -140,7 +140,26 @@
 # /aimSpaceModels/.babelrc/
 
 # -------------------------------------------------------------------
+# 013_PROJECT: aimPortfolioRiakhovskaiyLina
+#
+# Игнорируем каталог /aimPortfolioRiakhovskaiyLina/node_modules/ и все его содержимое (файлы пакетов node.js).
+/aimPortfolioRiakhovskaiyLina/node_modules/
+# Игнорируем каталог /aimPortfolioRiakhovskaiyLina/src/ и все его содержимое (рабочие src-файлы проекта).
+/aimPortfolioRiakhovskaiyLina/src/
+# Игнорируем файл gulpfile.js (рабочий файл сборщика gulp).
+/aimPortfolioRiakhovskaiyLina/gulpfile.js
+# Игнорируем файл package.json (с помощью данного файла npm-менеджер устанавливает необходимые зависимости [пакеты] для сборки проекта).
+/aimPortfolioRiakhovskaiyLina/package.json
+# Игнорируем вспомогательный файл package-lock.json (файл для работы файла package.json).
+/aimPortfolioRiakhovskaiyLina/package-lock.json
+# Игнорируем рабочие файлы PhpStorm.
+/aimPortfolioRiakhovskaiyLina/.idea/
+# Игнорируем рабочие файлы VSCode.
+# /aimPortfolioRiakhovskaiyLina/.vscode/
+# Игнорируем рабочие файлы Babel.
+# /aimPortfolioRiakhovskaiyLina/.babelrc/
 
+# -------------------------------------------------------------------
 
 
 

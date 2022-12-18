@@ -5,46 +5,46 @@
 /**/
 /* Исползуются на разных страницах (p) в разных секциях (s) сайта) */
 /**/
-@import url("generalStyles/fonts.css");
+@import url("./generalStyles/fonts.css");
 /**/
 /* Переменные должны быть прописаны выше того объекта, в котором они используются. */
-@import url("generalStyles/vars.css");
+@import url("./generalStyles/vars.css");
 /**/
 /* Глобальая настройка тегов. Могу отключить (DISABLED), чтобы использовать, например, reset.css в gulpfile.js. */
-@import url("generalStyles/tagsTuning.css");
+@import url("./generalStyles/tagsTuning.css");
 /**/
 /* Общие классы. */
-@import url("generalStyles/generalClasses.css");
+@import url("./generalStyles/generalClasses.css");
 /**/
 /**/
 /* ==*==*==*==*==*==*==*==*==*==*==*== */
-/* IMPORTS: pages and sections */
+/* IMPORTS: pages */
 /* ==*==*==*==*==*==*==*==*==*==*==*== */
 /**/
 /**/
-/* Основные страницы и секции сайта */
+/* Основные страницы сайта */
 /**/
-@import url("index_s1.css");
+@import url("./sitePages/index_s1.css");
 /**/
-@import url("artworks_s1.css");
+@import url("./sitePages/artworks_s1.css");
 /**/
-@import url("about_s1.css");
+@import url("./sitePages/about_s1.css");
 /**/
-@import url("humberBakery_s1.css");
+@import url("./sitePages/humberBakery_s1.css");
 /**/
-@import url("domeRestaurant_s1.css");
+@import url("./sitePages/domeRestaurant_s1.css");
 /**/
-@import url("amsterdam_s1.css");
+@import url("./sitePages/amsterdam_s1.css");
 /**/
-@import url("illustration_s1.css");
+@import url("./sitePages/illustration_s1.css");
 /**/
-@import url("mspace_s1.css");
+@import url("./sitePages/mspace_s1.css");
 /**/
-@import url("artBusiness_s1.css");
+@import url("./sitePages/artBusiness_s1.css");
 /**/
-@import url("core_s1.css");
+@import url("./sitePages/core_s1.css");
 /**/
-@import url("td_s1.css");
+@import url("./sitePages/td_s1.css");
 /**/
 /**/
 /* ==*==*==*==*==*==*==*==*==*==*==*== */
@@ -54,6 +54,6 @@
 /**/
 /* Смысловые блоки кода, которые можно использовать в других проектах */
 /**/
-@import url("generalStyles/snippet_01.css");
+@import url("./snippets/snippet_01.css");
 /**/
-@import url("generalStyles/snippet_02.css");
+@import url("./snippets/snippet_02.css");

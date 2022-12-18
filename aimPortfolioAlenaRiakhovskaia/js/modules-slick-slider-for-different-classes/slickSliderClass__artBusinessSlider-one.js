@@ -1,5 +1,5 @@
 /* --*--*--*--*--*--*--*--*--*--*--*-- */
-/* artBusinessSlider-one */
+/* slickSliderClass__artBusinessSlider-one.js */
 /* --*--*--*--*--*--*--*--*--*--*--*-- */
 //
 // Slick (слайдер-карусель, source: https://kenwheeler.github.io/slick/).

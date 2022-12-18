@@ -1,5 +1,5 @@
 /* --*--*--*--*--*--*--*--*--*--*--*-- */
-/* restSlider-one */
+/* slickSliderClass__restSlider-one.js */
 /* --*--*--*--*--*--*--*--*--*--*--*-- */
 //
 // Slick (слайдер-карусель, source: https://kenwheeler.github.io/slick/).

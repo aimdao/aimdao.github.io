@@ -1,5 +1,5 @@
 /* --*--*--*--*--*--*--*--*--*--*--*-- */
-/* tdSlider-two */
+/* slickSliderClass__tdSlider-two.js */
 /* --*--*--*--*--*--*--*--*--*--*--*-- */
 //
 // Slick (слайдер-карусель, source: https://kenwheeler.github.io/slick/).

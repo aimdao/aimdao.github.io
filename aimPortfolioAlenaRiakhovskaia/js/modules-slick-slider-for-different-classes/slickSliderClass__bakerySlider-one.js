@@ -1,5 +1,5 @@
 /* --*--*--*--*--*--*--*--*--*--*--*-- */
-/* bakerySlider-one */
+/* slickSliderClass__bakerySlider-one.js */
 /* --*--*--*--*--*--*--*--*--*--*--*-- */
 //
 // Slick (слайдер-карусель, source: https://kenwheeler.github.io/slick/).

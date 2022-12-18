@@ -1,5 +1,5 @@
 /* --*--*--*--*--*--*--*--*--*--*--*-- */
-/* coreSlider-one */
+/* slickSliderClass__coreSlider-one.js */
 /* --*--*--*--*--*--*--*--*--*--*--*-- */
 //
 // Slick (слайдер-карусель, source: https://kenwheeler.github.io/slick/).

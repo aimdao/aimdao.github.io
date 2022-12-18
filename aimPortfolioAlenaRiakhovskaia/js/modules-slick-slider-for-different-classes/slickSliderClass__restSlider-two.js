@@ -1,3 +1,7 @@
+/* --*--*--*--*--*--*--*--*--*--*--*-- */
+/* slickSliderClass__restSlider-two.js */
+/* --*--*--*--*--*--*--*--*--*--*--*-- */
+//
 // Slick (слайдер-карусель, source: https://kenwheeler.github.io/slick/).
 // Данный модуль подключен через import в файле main.js.
 $(function () {

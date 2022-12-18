@@ -5,16 +5,16 @@
 /**/
 /* Исползуются на разных страницах (p) в разных секциях (s) сайта) */
 /**/
-@import url("_fonts.css");
+@import url("generalStyles/fonts.css");
 /**/
 /* Переменные должны быть прописаны выше того объекта, в котором они используются. */
-@import url("_vars.css");
+@import url("generalStyles/vars.css");
 /**/
 /* Глобальая настройка тегов. Могу отключить (DISABLED), чтобы использовать, например, reset.css в gulpfile.js. */
-@import url("_tagsTuning.css");
+@import url("generalStyles/tagsTuning.css");
 /**/
 /* Общие классы. */
-@import url("_generalClasses.css");
+@import url("generalStyles/generalClasses.css");
 /**/
 /**/
 /* ==*==*==*==*==*==*==*==*==*==*==*== */
@@ -54,6 +54,6 @@
 /**/
 /* Смысловые блоки кода, которые можно использовать в других проектах */
 /**/
-@import url("_snippet_01.css");
+@import url("generalStyles/snippet_01.css");
 /**/
-@import url("_snippet_02.css");
+@import url("generalStyles/snippet_02.css");

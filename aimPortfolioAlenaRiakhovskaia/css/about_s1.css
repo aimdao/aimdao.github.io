@@ -1,0 +1,236 @@
+/* ==*==*==*==*==*==*==*==*==*==*==*== */
+/* BASIC STYLES: about_s1 */
+/* ==*==*==*==*==*==*==*==*==*==*==*== */
+/**/
+/**/
+/* --*--*--*--*--*--*--*--*--*--*--*-- */
+/* iam */
+/* --*--*--*--*--*--*--*--*--*--*--*-- */
+/**/
+.iam {
+    margin-top: 40px;
+    margin-bottom: 150px;
+}
+/* Выравнивание по горизонтали iam-box1 и iam-box2. */
+.iam-box {
+    display: flex;
+    justify-content: space-between;
+}
+/* Настройка картинки. */
+.iam-box1__img {
+    width: 190%;
+    height: auto;
+    margin-left: -330px;
+}
+/* Для абсолютного позиционирования надписи i am на картинке. */
+.iam-box1 {
+    position: relative;
+}
+/* Абсолютное позиционирование надписи i am на картинке. */
+.iam-box1__title {
+    position: absolute;
+    top: 30px;
+    right: 55px;
+    font-family: "CactusJack";
+    font-size: 80px;
+    font-weight: 400;
+    color: white;
+}
+/* Выравнивание по горизонтали iam-box2__set1 и iam-box2__set2. */
+.iam-box2 {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 50px;
+}
+/* Выравнивание по вертикали iam-box2__set1. */
+.iam-box2__set1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+/* Выравнивание по вертикали iam-box2__set2. */
+.iam-box2__set2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+/* Выравнивание по горизонтали iam-box2__set1-info2-block-text1 и iam-box2__set1-info2-block-text2. */
+.iam-box2__set1-info2-block {
+    display: flex;
+    justify-content: flex-start;
+}
+/* Выравнивание текстового блока по горизонтали. */
+.iam-box2__set1-info2-block-text1 {
+    margin-right: 80px;
+}
+/* Выравнивание по горизонтали iam-box2__set1-info3-block1 и iam-box2__set1-info3-block2. */
+.iam-box2__set1-info3 {
+    display: flex;
+    justify-content: flex-start;
+}
+/* Выравнивание текстового блока по горизонтали. */
+.iam-box2__set1-info3-block1-text {
+    margin-right: 136px;
+}
+/* Настройка шрифта. */
+.iam-box2__set1-info1-title {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+/* Настройка шрифтов. */
+.iam-box2__set1-info2-title,
+.iam-box2__set1-info3-block1-title,
+.iam-box2__set1-info3-block2-title,
+.iam-box2__set2-block-title {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+/* Настройка ширины текстового блока. */
+.iam-box2__set1-info1-text {
+    width: 66%;
+}
+/* Настройка ширины текстовых блоков. */
+.iam-box2__set1-info2-block-text1,
+.iam-box2__set1-info2-block-text2 {
+    width: 30%;
+}
+
+.iam-box2__set2-imgArrows {
+    width: 50%;
+    height: auto;
+    margin-left: 50px;
+    margin-bottom: 25px;
+}
+/* Отступ снизу для текстовых блоков (кроме нижних). */
+.iam-box2__set1-info1-text,
+.iam-box2__set1-info2-block-text1,
+.iam-box2__set1-info2-block-text2 {
+    margin-bottom: 40px;
+}
+/* Все текстовые блоки (без заголовков) переводим в нижний регистр. */
+.iam-box2__set1-info1-text,
+.iam-box2__set1-info2-block-text1,
+.iam-box2__set1-info2-block-text2,
+.iam-box2__set1-info3-block1-text,
+.iam-box2__set1-info3-block2-text,
+.iam-box2__set2-block-contacts {
+    text-transform: lowercase;
+}
+/* Выделяем заголовок в тексте. */
+.iam-box2__set1-info2-block-text1 span {
+    font-weight: 700;
+}
+/* Выделяем заголовок в тексте. */
+.iam-box2__set1-info2-block-text2 span {
+    font-weight: 700;
+}
+
+/* ==*==*==*==*==*==*==*==*==*==*==*== */
+/* MEDIA QUERIES: about_s1 */
+/* ==*==*==*==*==*==*==*==*==*==*==*== */
+/**/
+/**/
+/* Сначала идут max-width (от самого высокого числа до самого низкого),
+а потом идут min-width (от самого низкого числа до самого высокого). */
+/**/
+@media (max-width: 1275px) {
+    .iam-box {
+        display: block;
+    }
+    .iam-box1__img {
+        width: 40%;
+        margin: 0 auto;
+        height: auto;
+    }
+    .iam-box2__set1-info3-block2 {
+        margin-left: 98px;
+    }
+    .iam-box1__title {
+        display: none;
+    }
+}
+
+@media (max-width: 1204px) {
+    .iam-box2 {
+        display: block;
+    }
+    .iam-box2__set2-imgArrows {
+        display: none;
+    }
+    .iam-box2__set1-info2-block {
+        display: block;
+    }
+
+    .iam-box2__set1-info3 {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .iam-box1__img {
+        width: 70%;
+    }
+}
+
+@media (max-width: 800px) {
+    .iam-box1__img {
+        width: 80%;
+    }
+
+    .iam-box2__set1-info2-block-text1,
+    .iam-box2__set1-info2-block-text2 {
+        width: 400px;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 585px) {
+    .iam-box1__img {
+        width: 80%;
+    }
+
+    .iam-box2__set1-info2-block-text1,
+    .iam-box2__set1-info2-block-text2 {
+        width: 400px;
+        margin-right: 0;
+    }
+
+    .iam-box2__set1-info3 {
+        display: block;
+    }
+
+    .iam-box2__set1-info3-block2 {
+        margin-left: 0;
+    }
+
+    .iam-box2__set1-info3-block1-text {
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 490px) {
+    .iam-box2__set1-info2-block-text1 {
+        width: 300px;
+    }
+}
+
+@media (max-width: 400px) {
+    .iam-box2__set1-info2-block-text1 {
+        width: 250px;
+    }
+}
+
+@media (max-width: 340px) {
+    .iam-box2__set1-info2-block-text1 {
+        width: 230px;
+    }
+
+    .iam-box2__set1-info2-block-text2 {
+        width: 230px;
+    }
+}

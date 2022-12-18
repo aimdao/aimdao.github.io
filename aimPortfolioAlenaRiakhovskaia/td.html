@@ -1,0 +1,231 @@
+<!-- ==*==*==*==*==*==*==*==*==*==*==*== -->
+<!-- td.html -->
+<!-- ==*==*==*==*==*==*==*==*==*==*==*== -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>TD</title>
+        <!---->
+        <!-- ==*==*==*==*==*==*==*==*==*==*==*== -->
+        <!-- libs (подключаемые библиотеки css) -->
+        <!-- ==*==*==*==*==*==*==*==*==*==*==*== -->
+        <!---->
+        <link href="libs/slick/slick.css" rel="stylesheet" />
+        <link href="libs/slick/slick-theme.css" rel="stylesheet" />
+        <!---->
+        <!-- ==*==*==*==*==*==*==*==*==*==*==*== -->
+        <!-- css (мой) -->
+        <!-- ==*==*==*==*==*==*==*==*==*==*==*== -->
+        <!---->
+        <!-- Основной файл стилей (к нему импортами подключены все остальные файлы моих стилей). -->
+        <link href="css/main.css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <style>
+            /* --*--*--*--*--*--*--*--*--*--*--*-- */
+            /* Переопределение общих стилей (только для данной страницы) */
+            /* --*--*--*--*--*--*--*--*--*--*--*-- */
+            body {
+                /* Переопределяем акцентный (превалирующий) фон для этой страницы. */
+                background-color: black;
+                /* Переопределяем акцентный (превалирующий) цвет шрифта для этой страницы. */
+                color: white;
+            }
+            /* Переопределяем акцентный (превалирующий) цвет шрифта для ссылок. */
+            a {
+                color: white;
+            }
+            /* Переопределяем snippet_01 с учетом наличиня на странице background черного цвета. */
+            a:after {
+                background-color: white; /* Задаём цвет линии. */
+            }
+        </style>
+        <!---->
+        <!---->
+        <!-- --*--*--*--*--*--*--*--*--*--*--*-- -->
+        <!-- header -->
+        <!-- --*--*--*--*--*--*--*--*--*--*--*-- -->
+        <!---->
+        <header class="header">
+            <div class="page-container">
+                <ul class="header-navBar">
+                    <li class="header-navBar__item"><a href="index.html">Alena Riakhovskaia</a></li>
+                    <li class="header-navBar__item"><a href="artworks.html">Artworks</a></li>
+                    <li class="header-navBar__item"><a href="about.html">Contacts</a></li>
+                    <li class="header-navBar__item"><a href="about.html">About</a></li>
+                </ul>
+                <div class="header-language">
+                    <div class="header-language__text">ru</div>
+                    <!-- Инвертированый цвет svg-иконки выбора языка (для черного фона). -->
+                    <a class="header-language__img" href="#"><img src="images/general/language-globe_white.svg" alt="" /></a>
+                </div>
+            </div>
+        </header>
+        <!---->
+        <!---->
+        <!-- --*--*--*--*--*--*--*--*--*--*--*-- -->
+        <!-- core -->
+        <!-- --*--*--*--*--*--*--*--*--*--*--*-- -->
+        <!---->
+        <section class="td">
+            <div class="page-container">
+                <div class="td-box">
+                    <div class="td-box__mainLogo">
+                        <img class="td-box__mainLogo-img" src="images/td/tdMainLogo.png" alt="" />
+                    </div>
+                    <div class="td-box__wrap">
+                        <h1 class="td-box__wrap-title">web & mobile app</h1>
+                        <p class="td-box__wrap-text">
+                            eng lang. <br />
+                            built as a TD Canda Trust <br />
+                            bank redesign
+                        </p>
+                    </div>
+                </div>
+                <div class="td-set">
+                    <h1 class="td-set__title">
+                        TD Canda Trust <br />
+                        bank redesign
+                    </h1>
+                    <a class="td-set__linkYouTube" href="https://www.youtube.com/watch?v=OluQXM1ACPs">link to project overview</a>
+                    <a class="td-set__linkFigma" href="https://www.figma.com/file/vKmVshefiwbtvNaF8HJ8VJ/AlenaRiakhovskaia_TDFinalDesign?node-id=0%3A1&t=P7rCC77oc9PsLj2j-3">prototype link</a>
+                </div>
+            </div>
+        </section>
+        <!---->
+        <!---->
+        <!-- --*--*--*--*--*--*--*--*--*--*--*-- -->
+        <!-- tdSlider -->
+        <!-- --*--*--*--*--*--*--*--*--*--*--*-- -->
+        <!---->
+        <section class="tdSlider">
+            <div class="page-container">
+                <!-- Slider One -->
+                <div class="tdSlider-one">
+                    <!-- Slide 1. -->
+                    <div class="tdSlider-one__slide">
+                        <img class="tdSlider-one__slide-img" src="images/td/sliderImg/1-1_sliderImg.png" alt="" />
+                    </div>
+                    <!-- Slide 2. -->
+                    <div class="tdSlider-one__slide">
+                        <img class="tdSlider-one__slide-img" src="images/td/sliderImg/1-2_sliderImg.png" alt="" />
+                    </div>
+                    <!-- Slide 3. -->
+                    <div class="tdSlider-one__slide">
+                        <img class="tdSlider-one__slide-img" src="images/td/sliderImg/1-3_sliderImg.png" alt="" />
+                    </div>
+                    <!-- Slide 4. -->
+                    <div class="tdSlider-one__slide">
+                        <img class="tdSlider-one__slide-img" src="images/td/sliderImg/1-4_sliderImg.png" alt="" />
+                    </div>
+                </div>
+                <!-- Slider Two -->
+                <div class="tdSlider-two">
+                    <!-- Slide 1. -->
+                    <div class="tdSlider-two__slide">
+                        <img class="tdSlider-two__slide-img" src="images/td/sliderImg/2-1_sliderImg.png" alt="" />
+                    </div>
+                    <!-- Slide 2. -->
+                    <div class="tdSlider-two__slide">
+                        <img class="tdSlider-two__slide-img" src="images/td/sliderImg/2-2_sliderImg.png" alt="" />
+                    </div>
+                    <!-- Slide 3. -->
+                    <div class="tdSlider-two__slide">
+                        <img class="tdSlider-two__slide-img" src="images/td/sliderImg/2-3_sliderImg.png" alt="" />
+                    </div>
+                    <!-- Slide 4. -->
+                    <div class="tdSlider-two__slide">
+                        <img class="tdSlider-two__slide-img" src="images/td/sliderImg/2-4_sliderImg.png" alt="" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!---->
+        <!---->
+        <!-- --*--*--*--*--*--*--*--*--*--*--*-- -->
+        <!-- tdMobile -->
+        <!-- --*--*--*--*--*--*--*--*--*--*--*-- -->
+        <!---->
+        <section class="tdMobile">
+            <div class="page-container">
+                <div class="tdMobile-box">
+                    <div class="tdMobile-box__screen tdMobile-box__screen1">
+                        <img class="tdMobile-box__screen-img" src="images/td/tdMobile/1_mobileVersion.png" alt="" />
+                        <!-- Размещаем tdMobile-box__stickyTape-img (как будто клеем на скотч элемент tdMobile-box__screen1). -->
+                        <img class="tdMobile-box__stickyTape-img" src="images/td/tdStickyTape.png" alt="" />
+                    </div>
+                    <div class="tdMobile-box__screen tdMobile-box__screen2">
+                        <img class="tdMobile-box__screen-img" src="images/td/tdMobile/2_mySpendPage.png" alt="" />
+                    </div>
+                    <div class="tdMobile-box__screen tdMobile-box__screen3">
+                        <img class="tdMobile-box__screen-img" src="images/td/tdMobile/3_send.png" alt="" />
+                    </div>
+                    <div class="tdMobile-box__screen tdMobile-box__screen4">
+                        <img class="tdMobile-box__screen-img" src="images/td/tdMobile/4_transfers.png" alt="" />
+                    </div>
+                    <div class="tdMobile-box__screen tdMobile-box__screen5">
+                        <img class="tdMobile-box__screen-img" src="images/td/tdMobile/5_deposit.png" alt="" />
+                    </div>
+                    <div class="tdMobile-box__screen tdMobile-box__screen6">
+                        <img class="tdMobile-box__screen-img" src="images/td/tdMobile/6_cameraSimulation.png" alt="" />
+                    </div>
+                    <div class="tdMobile-box__screen tdMobile-box__screen7">
+                        <img class="tdMobile-box__screen-img" src="images/td/tdMobile/7_statements.png" alt="" />
+                    </div>
+                    <div class="tdMobile-box__screen tdMobile-box__screen8">
+                        <img class="tdMobile-box__screen-img" src="images/td/tdMobile/8_confirmation.png" alt="" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!---->
+        <!---->
+        <!-- --*--*--*--*--*--*--*--*--*--*--*-- -->
+        <!-- footer -->
+        <!-- --*--*--*--*--*--*--*--*--*--*--*-- -->
+        <!---->
+        <footer class="footer">
+            <div class="page-container">
+                <div class="footer-box">
+                    <div class="footer-box__nameAndImg">
+                        <h2 class="footer-box__name"><a href="index.html">Alena Riakhovskaia</a></h2>
+                        <img class="footer-box__img" src="images/index/footerImg.png" alt="" />
+                    </div>
+                    <div class="footer-box__whoAmI">
+                        <h2 class="footer-box__whoAmI-title">Digital designer</h2>
+                        <div class="footer-box__whoAmI-subtitle">who goes beyond frame</div>
+                    </div>
+                    <div class="footer-box__collaboration">
+                        <h2 class="footer-box__collaboration-title">Start collaboration</h2>
+                        <ul class="footer-box__collaboration-contacts">
+                            <li class="footer-box__collaboration-email"><a href="mailto:alyona.ryakhovskaya@gmail.com">alyona.ryakhovskaya@gmail.com</a></li>
+                            <li class="footer-box__collaboration-instagram"><a href="https://www.instagram.com/alenariahovskaia/">instagram</a></li>
+                            <li class="footer-box__collaboration-telegram"><a href="https://t.me/alenariahovskaia">telegram</a></li>
+                            <li class="footer-box__collaboration-linkedIn"><a href="https://www.linkedin.com/in/alena-riakhovskaia-2861b3253">linkedIn</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-box__rightsReserved">
+                        <p>©2022. All project rights reserved</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!---->
+        <!-- ==*==*==*==*==*==*==*==*==*==*==*== -->
+        <!-- libs (подключаемые библиотеки js) -->
+        <!-- ==*==*==*==*==*==*==*==*==*==*==*== -->
+        <!---->
+        <script src="libs/jquery-3.6.1.min.js"></script>
+        <script src="libs/slick/slick.min.js"></script>
+        <!---->
+        <!-- ==*==*==*==*==*==*==*==*==*==*==*== -->
+        <!-- js (мой) -->
+        <!-- ==*==*==*==*==*==*==*==*==*==*==*== -->
+        <!---->
+        <script type="module" src="js/main.js"></script>
+    </body>
+</html>

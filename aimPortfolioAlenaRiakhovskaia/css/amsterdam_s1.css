@@ -1,0 +1,182 @@
+/* ==*==*==*==*==*==*==*==*==*==*==*== */
+/* BASIC STYLES: amsterdam_s1 */
+/* ==*==*==*==*==*==*==*==*==*==*==*== */
+/**/
+/**/
+/* --*--*--*--*--*--*--*--*--*--*--*-- */
+/* amster */
+/* --*--*--*--*--*--*--*--*--*--*--*-- */
+/**/
+/* Отступ от верха и низа. */
+.amster {
+    margin-top: 130px;
+    margin-bottom: 200px;
+}
+/* amsterdamFrame - это cover для главного окна. */
+.amsterdamFrame {
+    background-image: url("../images/amsterdam/amsterdamFrame.png");
+    height: 550px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* Для абсолютного позиционирования текста лежащего в amster-box__set, относительно amster-box. */
+.amster-box {
+    position: relative;
+}
+/* Абсолютное позиционирование текста лежащего в amster-box__set, относительно amster-box. */
+.amster-box__set {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 300px;
+    height: 40px;
+    top: -600px;
+    right: 110px;
+}
+/* Настройка шрифта. */
+.amster-box__set-title {
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+/* Настройка ширины текстового блока. */
+.amster-box__set-text {
+    width: 60%;
+}
+/* Выравнивание по горизонтале amster-set__title, amster-set__linkYouTube и amster-set__linkFigma. */
+.amster-set {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 220px;
+    margin-bottom: 150px;
+}
+/* Настройка шрифта. */
+.amster-set__title {
+    font-family: "CactusJack";
+    font-size: 74px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-top: -18px;
+}
+/* Для абсолютного позиционирования иконки iconYouTube.svg относительно amster-set__linkYouTube. */
+.amster-set__linkYouTube {
+    position: relative;
+}
+/* Создание иконки (iconYouTube.svg) с помощью псевдо-элемента before. */
+.amster-set__linkYouTube:before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    background: url("../images/general/iconYouTube.svg") no-repeat top left;
+    width: 56px;
+    height: 40px;
+    top: -10px;
+    right: 155px;
+}
+/* Для абсолютного позиционирования иконки iconFigma относительно amster-set__linkFigma. */
+.amster-set__linkFigma {
+    position: relative;
+}
+/* Создание иконки (iconFigma) с помощью псевдо-элемента before. */
+.amster-set__linkFigma:before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    background: url("../images/general/iconFigma.svg") no-repeat top left;
+    width: 41px;
+    height: 40px;
+    top: -10px;
+    right: 84px;
+}
+
+/* --*--*--*--*--*--*--*--*--*--*--*-- */
+/* amsterScreens */
+/* --*--*--*--*--*--*--*--*--*--*--*-- */
+/**/
+/* Отступ от низа. */
+.amsterScreens {
+    margin-bottom: 200px;
+}
+/* Выравниваем фреймы по вертикале. */
+.amsterScreens-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Для абсолютного позиционирования подписей к фреймам относительно amsterScreens-box. */
+    position: relative;
+}
+/* Совмещаем вертикальные фреймы. */
+.amsterScreens-box__screen {
+    margin-bottom: 50px;
+}
+/* Подпись к screen1 с помощью псевдо-элемента after. */
+.amsterScreens-box__screen1::after {
+    content: "gallery";
+    position: absolute;
+    display: inline-block;
+    width: 60px;
+    height: 14px;
+    top: 0;
+    right: 40px;
+}
+/* Подпись к screen2 с помощью псевдо-элемента before. */
+.amsterScreens-box__screen2::before {
+    content: "about";
+    position: absolute;
+    display: inline-block;
+    width: 48px;
+    height: 14px;
+    top: 614px;
+    left: 60px;
+}
+/* Подпись к screen3 с помощью псевдо-элемента after. */
+.amsterScreens-box__screen3::after {
+    content: "header";
+    position: absolute;
+    display: inline-block;
+    width: 60px;
+    height: 14px;
+    top: 1228px;
+    right: 40px;
+}
+/* Подпись к screen4 с помощью псевдо-элемента before. */
+.amsterScreens-box__screen4::before {
+    content: "architecture";
+    position: absolute;
+    display: inline-block;
+    width: 90px;
+    height: 14px;
+    top: 1842px;
+    left: 20px;
+}
+/* Подпись к screen5 с помощью псевдо-элемента after. */
+.amsterScreens-box__screen5::after {
+    content: '"i am" section';
+    position: absolute;
+    display: inline-block;
+    width: 98px;
+    height: 14px;
+    top: 2458px;
+    right: 5px;
+}
+/* Подпись к screen6 с помощью псевдо-элемента before. */
+.amsterScreens-box__screen6::before {
+    content: "attractions";
+    position: absolute;
+    display: inline-block;
+    width: 84px;
+    height: 14px;
+    top: 3072px;
+    left: 28px;
+}
+
+/* ==*==*==*==*==*==*==*==*==*==*==*== */
+/* MEDIA QUERIES: amsterdam_s1 */
+/* ==*==*==*==*==*==*==*==*==*==*==*== */
+/**/
+/**/
+/* Сначала идут max-width (от самого высокого числа до самого низкого),
+а потом идут min-width (от самого низкого числа до самого высокого). */
+/**/
+@media (max-width: 1000px) {
+}

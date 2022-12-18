@@ -1,0 +1,67 @@
+/* ==*==*==*==*==*==*==*==*==*==*==*== */
+/* BASIC STYLES: illustration_s1 */
+/* ==*==*==*==*==*==*==*==*==*==*==*== */
+/**/
+/**/
+/* --*--*--*--*--*--*--*--*--*--*--*-- */
+/* illustration */
+/* --*--*--*--*--*--*--*--*--*--*--*-- */
+/**/
+/* Отступ от верха и низа. */
+.illustration {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+/* Выравнивание илюстрации на главном окне. */
+.illustration-cover {
+    display: flex;
+    justify-content: center;
+}
+/* Настройка илюстрации. */
+.illustration-cover__img {
+    width: 115%;
+    height: auto;
+}
+/* Для абсолютного позиционирования текстов лежащих в illustration-box, относительно illustration-box. */
+.illustration-box {
+    position: relative;
+}
+/* Абсолютное позиционирование текста illustration-box__text1 лежащего в illustration-box, относительно illustration-box. */
+.illustration-box__text1 {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    top: -574px;
+    left: 332px;
+}
+/* Абсолютное позиционирование текста illustration-box__text2 лежащего в illustration-box, относительно illustration-box. */
+.illustration-box__text2 {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    top: -24px;
+    left: 332px;
+}
+/* Настройка ширины текстового блока. */
+.illustration-box__text1 {
+    width: 75px;
+}
+/* Настройка ширины текстового блока. */
+.illustration-box__text2 {
+    width: 190px;
+}
+
+/* ==*==*==*==*==*==*==*==*==*==*==*== */
+/* MEDIA QUERIES: illustration_s1 */
+/* ==*==*==*==*==*==*==*==*==*==*==*== */
+/**/
+/**/
+/* Сначала идут max-width (от самого высокого числа до самого низкого),
+а потом идут min-width (от самого низкого числа до самого высокого). */
+/**/
+@media (max-width: 1000px) {
+}

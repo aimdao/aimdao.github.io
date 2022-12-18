@@ -1,0 +1,59 @@
+/* ==*==*==*==*==*==*==*==*==*==*==*== */
+/* IMPORTS: general styles */
+/* ==*==*==*==*==*==*==*==*==*==*==*== */
+/**/
+/**/
+/* Исползуются на разных страницах (p) в разных секциях (s) сайта) */
+/**/
+@import url("_fonts.css");
+/**/
+/* Переменные должны быть прописаны выше того объекта, в котором они используются. */
+@import url("_vars.css");
+/**/
+/* Глобальая настройка тегов. Могу отключить (DISABLED), чтобы использовать, например, reset.css в gulpfile.js. */
+@import url("_tagsTuning.css");
+/**/
+/* Общие классы. */
+@import url("_generalClasses.css");
+/**/
+/**/
+/* ==*==*==*==*==*==*==*==*==*==*==*== */
+/* IMPORTS: pages and sections */
+/* ==*==*==*==*==*==*==*==*==*==*==*== */
+/**/
+/**/
+/* Основные страницы и секции сайта */
+/**/
+@import url("index_s1.css");
+/**/
+@import url("artworks_s1.css");
+/**/
+@import url("about_s1.css");
+/**/
+@import url("humberBakery_s1.css");
+/**/
+@import url("domeRestaurant_s1.css");
+/**/
+@import url("amsterdam_s1.css");
+/**/
+@import url("illustration_s1.css");
+/**/
+@import url("mspace_s1.css");
+/**/
+@import url("artBusiness_s1.css");
+/**/
+@import url("core_s1.css");
+/**/
+@import url("td_s1.css");
+/**/
+/**/
+/* ==*==*==*==*==*==*==*==*==*==*==*== */
+/* IMPORTS: snippets */
+/* ==*==*==*==*==*==*==*==*==*==*==*== */
+/**/
+/**/
+/* Смысловые блоки кода, которые можно использовать в других проектах */
+/**/
+@import url("_snippet_01.css");
+/**/
+@import url("_snippet_02.css");

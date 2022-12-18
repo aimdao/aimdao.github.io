@@ -1,0 +1,171 @@
+<!-- ==*==*==*==*==*==*==*==*==*==*==*== -->
+<!-- core.html -->
+<!-- ==*==*==*==*==*==*==*==*==*==*==*== -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Core</title>
+        <!---->
+        <!-- ==*==*==*==*==*==*==*==*==*==*==*== -->
+        <!-- libs (подключаемые библиотеки css) -->
+        <!-- ==*==*==*==*==*==*==*==*==*==*==*== -->
+        <!---->
+        <link href="libs/slick/slick.css" rel="stylesheet" />
+        <link href="libs/slick/slick-theme.css" rel="stylesheet" />
+        <!---->
+        <!-- ==*==*==*==*==*==*==*==*==*==*==*== -->
+        <!-- css (мой) -->
+        <!-- ==*==*==*==*==*==*==*==*==*==*==*== -->
+        <!---->
+        <!-- Основной файл стилей (к нему импортами подключены все остальные файлы моих стилей). -->
+        <link href="css/main.css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <style>
+            /* --*--*--*--*--*--*--*--*--*--*--*-- */
+            /* Переопределение общих стилей (только для данной страницы) */
+            /* --*--*--*--*--*--*--*--*--*--*--*-- */
+            body {
+                /* Переопределяем акцентный (превалирующий) фон для этой страницы. */
+                background-color: black;
+                /* Переопределяем акцентный (превалирующий) цвет шрифта для этой страницы. */
+                color: white;
+            }
+            /* Переопределяем акцентный (превалирующий) цвет шрифта для ссылок. */
+            a {
+                color: white;
+            }
+            /* Переопределяем snippet_01 с учетом наличиня на странице background черного цвета. */
+            a:after {
+                background-color: white; /* Задаём цвет линии. */
+            }
+        </style>
+        <!---->
+        <!---->
+        <!-- --*--*--*--*--*--*--*--*--*--*--*-- -->
+        <!-- header -->
+        <!-- --*--*--*--*--*--*--*--*--*--*--*-- -->
+        <!---->
+        <header class="header">
+            <div class="page-container">
+                <ul class="header-navBar">
+                    <li class="header-navBar__item"><a href="index.html">Alena Riakhovskaia</a></li>
+                    <li class="header-navBar__item"><a href="artworks.html">Artworks</a></li>
+                    <li class="header-navBar__item"><a href="about.html">Contacts</a></li>
+                    <li class="header-navBar__item"><a href="about.html">About</a></li>
+                </ul>
+                <div class="header-language">
+                    <div class="header-language__text">ru</div>
+                    <!-- Инвертированый цвет svg-иконки выбора языка (для черного фона). -->
+                    <a class="header-language__img" href="#"><img src="images/general/language-globe_white.svg" alt="" /></a>
+                </div>
+            </div>
+        </header>
+        <!---->
+        <!---->
+        <!-- --*--*--*--*--*--*--*--*--*--*--*-- -->
+        <!-- core -->
+        <!-- --*--*--*--*--*--*--*--*--*--*--*-- -->
+        <!---->
+        <section class="core">
+            <div class="page-container">
+                <div class="core-box">
+                    <div class="core-box__mainLogo">
+                        <img class="core-box__mainLogo-img" src="images/core/coreMainLogo.png" alt="" />
+                    </div>
+                    <div class="core-box__wrap">
+                        <h1 class="core-box__wrap-title">Landing page</h1>
+                        <p class="core-box__wrap-text">
+                            ru lang. <br />
+                            built for the core aesthetics <br />
+                            project overview
+                        </p>
+                    </div>
+                </div>
+                <div class="core-set">
+                    <h1 class="core-set__title">Core landing page design</h1>
+                    <a class="core-set__linkYouTube" href="https://www.youtube.com/watch?v=svbdgwWBcr4">link to project overview</a>
+                    <a class="core-set__linkFigma" href="https://www.figma.com/file/Qr2UzNshIGusYyngK24q86/ohDesign_Assignment2?node-id=0%3A1&t=OzvdsUqTKhwRdDiL-3">prototype link</a>
+                </div>
+            </div>
+        </section>
+        <!---->
+        <!---->
+        <!-- --*--*--*--*--*--*--*--*--*--*--*-- -->
+        <!-- coreSlider -->
+        <!-- --*--*--*--*--*--*--*--*--*--*--*-- -->
+        <!---->
+        <section class="coreSlider">
+            <div class="page-container">
+                <!-- Slider One -->
+                <div class="coreSlider-one">
+                    <!-- Slide 1. -->
+                    <div class="coreSlider-one__slide">
+                        <img class="coreSlider-one__slide-img" src="images/core/sliderImg/1_coreSlider.png" alt="" />
+                    </div>
+                    <!-- Slide 2. -->
+                    <div class="coreSlider-one__slide">
+                        <img class="coreSlider-one__slide-img" src="images/core/sliderImg/2_coreSlider.png" alt="" />
+                    </div>
+                    <!-- Slide 3. -->
+                    <div class="coreSlider-one__slide">
+                        <img class="coreSlider-one__slide-img" src="images/core/sliderImg/3_coreSlider.png" alt="" />
+                    </div>
+                    <!-- Slide 4. -->
+                    <div class="coreSlider-one__slide">
+                        <img class="coreSlider-one__slide-img" src="images/core/sliderImg/4_coreSlider.png" alt="" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!---->
+        <!---->
+        <!-- --*--*--*--*--*--*--*--*--*--*--*-- -->
+        <!-- footer -->
+        <!-- --*--*--*--*--*--*--*--*--*--*--*-- -->
+        <!---->
+        <footer class="footer">
+            <div class="page-container">
+                <div class="footer-box">
+                    <div class="footer-box__nameAndImg">
+                        <h2 class="footer-box__name"><a href="index.html">Alena Riakhovskaia</a></h2>
+                        <img class="footer-box__img" src="images/index/footerImg.png" alt="" />
+                    </div>
+                    <div class="footer-box__whoAmI">
+                        <h2 class="footer-box__whoAmI-title">Digital designer</h2>
+                        <div class="footer-box__whoAmI-subtitle">who goes beyond frame</div>
+                    </div>
+                    <div class="footer-box__collaboration">
+                        <h2 class="footer-box__collaboration-title">Start collaboration</h2>
+                        <ul class="footer-box__collaboration-contacts">
+                            <li class="footer-box__collaboration-email"><a href="mailto:alyona.ryakhovskaya@gmail.com">alyona.ryakhovskaya@gmail.com</a></li>
+                            <li class="footer-box__collaboration-instagram"><a href="https://www.instagram.com/alenariahovskaia/">instagram</a></li>
+                            <li class="footer-box__collaboration-telegram"><a href="https://t.me/alenariahovskaia">telegram</a></li>
+                            <li class="footer-box__collaboration-linkedIn"><a href="https://www.linkedin.com/in/alena-riakhovskaia-2861b3253">linkedIn</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-box__rightsReserved">
+                        <p>©2022. All project rights reserved</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!---->
+        <!-- ==*==*==*==*==*==*==*==*==*==*==*== -->
+        <!-- libs (подключаемые библиотеки js) -->
+        <!-- ==*==*==*==*==*==*==*==*==*==*==*== -->
+        <!---->
+        <script src="libs/jquery-3.6.1.min.js"></script>
+        <script src="libs/slick/slick.min.js"></script>
+        <!---->
+        <!-- ==*==*==*==*==*==*==*==*==*==*==*== -->
+        <!-- js (мой) -->
+        <!-- ==*==*==*==*==*==*==*==*==*==*==*== -->
+        <!---->
+        <script type="module" src="js/main.js"></script>
+    </body>
+</html>

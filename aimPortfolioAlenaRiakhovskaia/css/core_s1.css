@@ -1,0 +1,124 @@
+/* ==*==*==*==*==*==*==*==*==*==*==*== */
+/* BASIC STYLES: core_s1 */
+/* ==*==*==*==*==*==*==*==*==*==*==*== */
+/**/
+/**/
+/* --*--*--*--*--*--*--*--*--*--*--*-- */
+/* core */
+/* --*--*--*--*--*--*--*--*--*--*--*-- */
+/**/
+/* Отступ от верха и низа. */
+.core {
+    margin-top: 150px;
+    margin-bottom: 200px;
+}
+/* Выравнивание по горизонтале core-box__mainLogo и core-box__wrap. */
+.core-box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 200px;
+}
+/* Настройка картинки. */
+.core-box__mainLogo-img {
+    width: 627px;
+    height: auto;
+}
+/* Настройка и позиционирование текста. */
+.core-box__wrap-title {
+    font-family: "CactusJack";
+    font-size: 70px;
+    font-weight: 400;
+    line-height: 80px;
+    width: 290px;
+    text-align: right;
+}
+/* Настройка и позиционирование текста. */
+.core-box__wrap-text {
+    text-align: right;
+    margin-right: 11px;
+    font-size: 16px;
+    margin-top: 25px;
+}
+/* Выравнивание по горизонтале core-set__title, core-set__linkYouTube и core-set__linkFigma. */
+.core-set {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 220px;
+    margin-bottom: 200px;
+}
+/* Настройка шрифта. */
+.core-set__title {
+    font-family: "CactusJack";
+    font-size: 70px;
+    font-weight: 400;
+    line-height: 80px;
+    margin-top: -50px;
+    width: 580px;
+    height: auto;
+}
+/* Для абсолютного позиционирования иконки iconYouTube_white.svg относительно core-set__linkYouTube. */
+.core-set__linkYouTube {
+    position: relative;
+}
+/* Создание иконки (iconYouTube_white.svg) с помощью псевдо-элемента before. */
+.core-set__linkYouTube:before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    background: url("../images/general/iconYouTube_white.svg") no-repeat top left;
+    width: 56px;
+    height: 40px;
+    top: -10px;
+    right: 155px;
+}
+/* Для абсолютного позиционирования иконки iconFigma_white.svg относительно core-set__linkFigma. */
+.core-set__linkFigma {
+    position: relative;
+}
+/* Создание иконки (linkFigma_white.svg) с помощью псевдо-элемента before. */
+.core-set__linkFigma:before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    background: url("../images/general/iconFigma_white.svg") no-repeat top left;
+    width: 41px;
+    height: 40px;
+    top: -10px;
+    right: 82px;
+}
+
+/* --*--*--*--*--*--*--*--*--*--*--*-- */
+/* coreSlider */
+/* --*--*--*--*--*--*--*--*--*--*--*-- */
+/**/
+/* Отступ от низа. */
+.coreSlider {
+    margin-bottom: 300px;
+}
+/* Настройка размеров слайдов: 0.7 от исходного размера 456х290. */
+.coreSlider-one__slide-img {
+    width: 319px;
+    height: 203px;
+}
+/* Настрока библиотечных стилей слайдера Slick (получил эти стили из инспектора кода Goolge Chrome. */
+.slick-dots li button:before {
+    font-size: 8px;
+    line-height: 20px;
+    top: 0px;
+    left: 0px;
+    width: 20px;
+    height: 20px;
+    content: "•";
+    text-align: center;
+    color: white;
+}
+/* ==*==*==*==*==*==*==*==*==*==*==*== */
+/* MEDIA QUERIES: core_s1 */
+/* ==*==*==*==*==*==*==*==*==*==*==*== */
+/**/
+/**/
+/* Сначала идут max-width (от самого высокого числа до самого низкого),
+а потом идут min-width (от самого низкого числа до самого высокого). */
+/**/
+@media (max-width: 1000px) {
+}

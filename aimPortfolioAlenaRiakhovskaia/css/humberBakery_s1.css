@@ -1,0 +1,252 @@
+/* ==*==*==*==*==*==*==*==*==*==*==*== */
+/* BASIC STYLES: humberBakery_s1 */
+/* ==*==*==*==*==*==*==*==*==*==*==*== */
+/**/
+/**/
+/* --*--*--*--*--*--*--*--*--*--*--*-- */
+/* bakery */
+/* --*--*--*--*--*--*--*--*--*--*--*-- */
+/**/
+/* Отступ от верха и низа. */
+.bakery {
+    margin-top: 130px;
+    margin-bottom: 150px;
+}
+/* Выравнивание по горизонтале bakery-box__bakeryFrame и bakery-box__set. */
+.bakery-box {
+    display: flex;
+    justify-content: flex-start;
+}
+/* Настройка картинки. */
+.bakery-box__bakeryFrame {
+    width: 35%;
+    height: auto;
+    margin-left: 150px;
+}
+/* Выравнивание текста по вертикали и горизонтали. */
+.bakery-box__set {
+    margin-top: 150px;
+    margin-left: 40px;
+}
+/* Настройка шрифта. */
+.bakery-box__set-title {
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+/* Настройка ширины текстового блока. */
+.bakery-box__set-text {
+    width: 70%;
+}
+/* Выравнивание по горизонтале bakery-set__title, bakery-set__linkYouTube и bakery-set__linkFigma. */
+.bakery-set {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 220px;
+    margin-bottom: 150px;
+}
+/* Настройка шрифта. */
+.bakery-set__title {
+    font-family: "CactusJack";
+    font-size: 74px;
+    font-weight: 400;
+    line-height: 80px;
+    margin-top: -80px;
+}
+/* Для абсолютного позиционирования иконки iconYouTube.svg относительно bakery-set__linkYouTube. */
+.bakery-set__linkYouTube {
+    position: relative;
+}
+/* Создание иконки (iconYouTube.svg) с помощью псевдо-элемента before. */
+.bakery-set__linkYouTube:before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    background: url("../images/general/iconYouTube.svg") no-repeat top left;
+    width: 56px;
+    height: 40px;
+    top: -10px;
+    right: 155px;
+}
+/* Для абсолютного позиционирования иконки iconFigma относительно bakery-set__linkFigma. */
+.bakery-set__linkFigma {
+    position: relative;
+}
+/* Создание иконки (linkFigma) с помощью псевдо-элемента before. */
+.bakery-set__linkFigma:before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    background: url("../images/general/iconFigma.svg") no-repeat top left;
+    width: 41px;
+    height: 40px;
+    top: -10px;
+    right: 82px;
+}
+
+/* --*--*--*--*--*--*--*--*--*--*--*-- */
+/* bakerySlider */
+/* --*--*--*--*--*--*--*--*--*--*--*-- */
+/**/
+/* Отступ от низа. */
+.bakerySlider {
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+/* Настройка размеров слайдов: 0.7 от исходного размера 456х290. */
+.bakerySlider-one__slide-img {
+    width: 319px;
+    height: 203px;
+}
+/* Настрока библиотечных стилей слайдера Slick (получил эти стили из инспектора кода Goolge Chrome. */
+.slick-dots li button:before {
+    font-size: 8px;
+    line-height: 20px;
+    top: 0px;
+    left: 0px;
+    width: 20px;
+    height: 20px;
+    content: "•";
+    text-align: center;
+}
+
+/* ==*==*==*==*==*==*==*==*==*==*==*== */
+/* MEDIA QUERIES: humberBakery_s1 */
+/* ==*==*==*==*==*==*==*==*==*==*==*== */
+/**/
+/**/
+/* Сначала идут max-width (от самого высокого числа до самого низкого),
+а потом идут min-width (от самого низкого числа до самого высокого). */
+/**/
+@media (max-width: 840px) {
+    .bakery-set__title {
+        font-size: 60px;
+    }
+
+    .footer-box__name,
+    .footer-box__whoAmI-title,
+    .footer-box__collaboration-title {
+        font-size: 14px;
+    }
+
+    .bakery-box__bakeryFrame {
+        width: 42%;
+        margin-left: 110px;
+    }
+}
+
+@media (max-width: 740px) {
+    .bakery-set__title {
+        font-size: 45px;
+    }
+
+    .footer-box__name,
+    .footer-box__whoAmI-title,
+    .footer-box__collaboration-title {
+        font-size: 12px;
+    }
+
+    .bakery-box__bakeryFrame {
+        width: 42%;
+        margin-left: 70px;
+    }
+}
+
+@media (max-width: 685px) {
+    .bakery-set__title {
+        font-size: 45px;
+    }
+
+    .footer-box__name,
+    .footer-box__whoAmI-title,
+    .footer-box__collaboration-title {
+        font-size: 12px;
+    }
+
+    .bakery-box__bakeryFrame {
+        width: 42%;
+        margin-left: 40px;
+    }
+
+    .bakery {
+        margin-top: 60px;
+    }
+
+    .bakery-set {
+        margin-top: 130px;
+        margin-bottom: 80px;
+    }
+}
+
+@media (max-width: 684px) {
+    .bakery-set {
+        display: block;
+    }
+
+    .bakery-set__title {
+        text-align: center;
+        font-size: 80px;
+    }
+
+    .footer-box__nameAndImg {
+        display: none;
+    }
+
+    .bakery-set__linkYouTube,
+    .bakery-set__linkFigma {
+        display: none;
+    }
+}
+
+@media (max-width: 575px) {
+    .bakery-set__title {
+        text-align: center;
+        font-size: 80px;
+    }
+
+    .bakery-box__bakeryFrame {
+        width: 60%;
+    }
+}
+
+@media (max-width: 502px) {
+    .bakery-set__title {
+        text-align: center;
+        font-size: 50px;
+    }
+
+    .bakery-box__bakeryFrame {
+        width: 65%;
+    }
+
+    .footer-box {
+        display: inline-block;
+    }
+}
+
+@media (max-width: 480px) {
+    .bakery-set__title {
+        text-align: center;
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 400px) {
+    .bakery-box__bakeryFrame {
+        width: 80%;
+    }
+
+    .bakery-set__title {
+        text-align: center;
+        font-size: 40px;
+    }
+
+    .bakery-box__bakeryFrame {
+        margin-left: 5px;
+    }
+
+    .bakery-box__set {
+        margin-bottom: 50px;
+        margin-left: 20px;
+        margin-top: 30px;
+    }
+}

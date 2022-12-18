@@ -1,0 +1,62 @@
+/* ==*==*==*==*==*==*==*==*==*==*==*== */
+/* _global_fonts */
+/* ==*==*==*==*==*==*==*==*==*==*==*== */
+/**/
+/**/
+/* Исползуются на разных страницах (p) в разных секциях (s) сайта. */
+/**/
+/* Шрифт Cactus Jack (only English). */
+@font-face {
+    font-family: "CactusJack";
+    src: url("../fonts/CactusJack/CactusJack.woff2") format("woff2"), /* woff2 - for super modern browsers */ /* Шрифт woff2 должен подключаться первым, а потом woff. */ url("../fonts/CactusJack/CactusJack.woff") format("woff"),
+        /* woff - for pretty modern browsers */ url("../fonts/CactusJack/CactusJack.ttf") format("truetype"); /* truetype - for Safari, Android, iOS */
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; /* Позволяет до загрузки браузером наших шрифтов, использовать системные шрифты. Это улучшает загрузку сайта. */
+}
+/**/
+/**/
+/* Шрифт Cactus Jack Alternate (only English). */
+@font-face {
+    font-family: "CactusJackAlternate";
+    src: url("../fonts/CactusJack/CactusJackAlternate.woff2") format("woff2"), /* woff2 - for super modern browsers */ /* Шрифт woff2 должен подключаться первым, а потом woff. */ url("../fonts/CactusJack/CactusJackAlternate.woff") format("woff"),
+        /* woff - for pretty modern browsers */ url("../fonts/CactusJack/CactusJackAlternate.ttf") format("truetype"); /* truetype -  for Safari, Android, iOS */
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; /* Позволяет до загрузки браузером наших шрифтов, использовать системные шрифты. Это улучшает загрузку сайта. */
+}
+/**/
+/**/
+/* Шрифт Inter-Light (only English). */
+@font-face {
+    font-family: "Inter-Light";
+    src: url("../fonts/Inter/Inter-Light.woff2") format("woff2"), /* woff2 - for super modern browsers */ /* Шрифт woff2 должен подключаться первым, а потом woff. */ url("../fonts/Inter/Inter-Light.woff") format("woff"),
+        /* woff - for pretty modern browsers */ url("../fonts/Inter/Inter-Light.ttf") format("truetype"); /* truetype - for Safari, Android, iOS */
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap; /* Позволяет до загрузки браузером наших шрифтов, использовать системные шрифты. Это улучшает загрузку сайта. */
+}
+/**/
+/**/
+/* Шрифт Inter-Regular (only English). */
+@font-face {
+    font-family: "Inter-Regular";
+    src: url("../fonts/Inter/Inter-Regular.woff2") format("woff2"), /* woff2 - for super modern browsers */ /* Шрифт woff2 должен подключаться первым, а потом woff. */ url("../fonts/Inter/Inter-Regular.woff") format("woff"),
+        /* woff - for pretty modern browsers */ url("../fonts/Inter/Inter-Regular.ttf") format("truetype"); /* truetype - for Safari, Android, iOS */
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap; /* Позволяет до загрузки браузером наших шрифтов, использовать системные шрифты. Это улучшает загрузку сайта. */
+}
+/**/
+/**/
+/* Шрифт Inter-Bold (only English). */
+@font-face {
+    font-family: "Inter-Bold";
+    src: url("../fonts/Inter/Inter-Bold.woff2") format("woff2"), /* woff2 - for super modern browsers */ /* Шрифт woff2 должен подключаться первым, а потом woff. */ url("../fonts/Inter/Inter-Bold.woff") format("woff"),
+        /* woff - for pretty modern browsers */ url("../fonts/Inter/Inter-Bold.ttf") format("truetype"); /* truetype - for Safari, Android, iOS */
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap; /* Позволяет до загрузки браузером наших шрифтов, использовать системные шрифты. Это улучшает загрузку сайта. */
+}
+/**/
+/**/

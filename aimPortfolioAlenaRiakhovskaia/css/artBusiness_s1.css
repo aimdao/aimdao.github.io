@@ -1,0 +1,121 @@
+/* ==*==*==*==*==*==*==*==*==*==*==*== */
+/* BASIC STYLES: artBusiness_s1 */
+/* ==*==*==*==*==*==*==*==*==*==*==*== */
+/**/
+/**/
+/* --*--*--*--*--*--*--*--*--*--*--*-- */
+/* artBusiness */
+/* --*--*--*--*--*--*--*--*--*--*--*-- */
+/**/
+/* Отступ от верха и низа. */
+.artBusiness {
+    margin-top: 130px;
+    margin-bottom: 150px;
+}
+/* Выравнивание по горизонтале artBusiness-box__mainImg и artBusiness-box__set. */
+.artBusiness-box {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 270px;
+}
+/* Настройка картинки. */
+.artBusiness-box__mainImg {
+    width: 717px;
+    height: auto;
+    margin-left: 40px;
+}
+/* Выравнивание текста по вертикали и горизонтали. */
+.artBusiness-box__set {
+    margin-top: 150px;
+    margin-left: 40px;
+}
+/* Настройка шрифта. */
+.artBusiness-box__set-title {
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+/* Настройка ширины текстового блока. */
+.artBusiness-box__set-text {
+    width: 70%;
+}
+/* Выравнивание по горизонтале artBusiness-set__title, artBusiness-set__linkYouTube и artBusiness-set__linkFigma. */
+.artBusiness-set {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 220px;
+    margin-bottom: 200px;
+}
+/* Настройка шрифта. */
+.artBusiness-set__title {
+    font-family: "CactusJack";
+    font-size: 74px;
+    font-weight: 400;
+    line-height: 80px;
+    margin-top: -80px;
+}
+/* Для абсолютного позиционирования иконки iconYouTube.svg относительно artBusiness-set__linkYouTube. */
+.artBusiness-set__linkYouTube {
+    position: relative;
+}
+/* Создание иконки (iconYouTube.svg) с помощью псевдо-элемента before. */
+.artBusiness-set__linkYouTube:before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    background: url("../images/general/iconYouTube.svg") no-repeat top left;
+    width: 56px;
+    height: 40px;
+    top: -10px;
+    right: 155px;
+}
+/* Для абсолютного позиционирования иконки iconFigma относительно artBusiness-set__linkFigma. */
+.artBusiness-set__linkFigma {
+    position: relative;
+}
+/* Создание иконки (linkFigma) с помощью псевдо-элемента before. */
+.artBusiness-set__linkFigma:before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    background: url("../images/general/iconFigma.svg") no-repeat top left;
+    width: 41px;
+    height: 40px;
+    top: -10px;
+    right: 82px;
+}
+
+/* --*--*--*--*--*--*--*--*--*--*--*-- */
+/* artBusinessSlider */
+/* --*--*--*--*--*--*--*--*--*--*--*-- */
+/**/
+/* Отступ от низа. */
+.artBusinessSlider {
+    margin-bottom: 300px;
+}
+/* Настройка размеров слайдов: 0.7 от исходного размера 456х290. */
+.artBusinessSlider-one__slide-img {
+    width: 319px;
+    height: 203px;
+}
+/* Настрока библиотечных стилей слайдера Slick (получил эти стили из инспектора кода Goolge Chrome. */
+.slick-dots li button:before {
+    font-size: 8px;
+    line-height: 20px;
+    top: 0px;
+    left: 0px;
+    width: 20px;
+    height: 20px;
+    content: "•";
+    text-align: center;
+}
+
+/* ==*==*==*==*==*==*==*==*==*==*==*== */
+/* MEDIA QUERIES: artBusiness_s1 */
+/* ==*==*==*==*==*==*==*==*==*==*==*== */
+/**/
+/**/
+/* Сначала идут max-width (от самого высокого числа до самого низкого),
+а потом идут min-width (от самого низкого числа до самого высокого). */
+/**/
+@media (max-width: 1000px) {
+}

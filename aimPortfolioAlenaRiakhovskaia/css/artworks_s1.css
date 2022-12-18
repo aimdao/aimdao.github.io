@@ -1,0 +1,216 @@
+/* ==*==*==*==*==*==*==*==*==*==*==*== */
+/* BASIC STYLES: artworks_s1 */
+/* ==*==*==*==*==*==*==*==*==*==*==*== */
+/**/
+/**/
+/* --*--*--*--*--*--*--*--*--*--*--*-- */
+/* artworks */
+/* --*--*--*--*--*--*--*--*--*--*--*-- */
+/**/
+.workExamples {
+    margin-bottom: 150px;
+}
+
+.artworks-title {
+    display: flex;
+    justify-content: center;
+    margin-top: 400px;
+    margin-bottom: 400px;
+}
+
+.artworks-title img {
+    width: 50%;
+}
+
+/* --*--*--*--*--*--*--*--*--*--*--*-- */
+/* workExamples */
+/* --*--*--*--*--*--*--*--*--*--*--*-- */
+/**/
+/* Настройка заголовка. */
+.workExamples-title {
+    font-family: "CactusJack";
+    font-size: 64px;
+    line-height: 64px;
+    margin-bottom: 100px;
+}
+/* Выравниваем по горизонтале боксы по два item в каждом. */
+.workExamples-box1,
+.workExamples-box2,
+.workExamples-box3,
+.workExamples-box4 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 120px;
+}
+/* Переопределяем последний box. */
+.workExamples-box4 {
+    margin-bottom: 0;
+}
+/* Выравниваем по горизонтале содержимое каждого item: картинку и текст. */
+.workExamples-box__item {
+    display: flex;
+}
+/* Выравниваем item, находящиеся справа, по нижнему краю box. */
+.workExamples-box__item2,
+.workExamples-box__item4,
+.workExamples-box__item6,
+.workExamples-box__item8 {
+    align-self: flex-end;
+}
+/* Увеличиваем расстояние между картинкой и текстом, для всех картинок в всех item. */
+.workExamples-box__item-img {
+    margin-right: 30px;
+}
+/* Настройка картинки в item. */
+.workExamples-box__item-img2 {
+    width: 75%;
+    height: 60%;
+}
+/* Настройка картинки в item. */
+.workExamples-box__item-img4 {
+    width: 74%;
+    height: 64%;
+}
+/* Настройка картинки в item. */
+.workExamples-box__item-img5 {
+    width: 70%;
+    height: 66%;
+    /* Переопределяем расстояние между картинкой и текстом (из-за рамки в данной картинке). */
+    margin-right: 8px;
+}
+/* Настройка картинки в item. */
+.workExamples-box__item-img6 {
+    width: 90%;
+    height: 90%;
+}
+/* Настройка картинки в item. */
+.workExamples-box__item-img8 {
+    width: 85%;
+    height: 65%;
+}
+/* Настройка текста в item. */
+.workExamples-box__item-text1 {
+    width: 130px;
+}
+/* Настройка текста в item. */
+.workExamples-box__item-text2 {
+    width: 146px;
+}
+/* Настройка текста в item. */
+.workExamples-box__item-text3 {
+    width: 138px;
+}
+/* Настройка текста в item. */
+.workExamples-box__item-text4 {
+    width: 118px;
+}
+/* Настройка текста в item. */
+.workExamples-box__item-text5 {
+    width: 96px;
+}
+/* Настройка текста в item. */
+.workExamples-box__item-text6 {
+    width: 174px;
+}
+/* Настройка текста в item. */
+.workExamples-box__item-text7 {
+    width: 140px;
+}
+/* Настройка текста в item. */
+.workExamples-box__item-text8 {
+    width: 184px;
+}
+
+/* ==*==*==*==*==*==*==*==*==*==*==*== */
+/* MEDIA QUERIES: artworks_s1 */
+/* ==*==*==*==*==*==*==*==*==*==*==*== */
+/**/
+/**/
+/* Сначала идут max-width (от самого высокого числа до самого низкого),
+а потом идут min-width (от самого низкого числа до самого высокого). */
+/**/
+@media (max-width: 1020px) {
+    .workExamples-box1,
+    .workExamples-box2,
+    .workExamples-box3 {
+        display: block;
+    }
+
+    .workExamples-box__item-img {
+        margin-bottom: 40px;
+    }
+
+    .workExamples-box__item-img2 {
+        width: 54%;
+    }
+
+    .workExamples-box__item-img4 {
+        width: 22%;
+    }
+
+    .workExamples-box__item-img5 {
+        width: 25%;
+    }
+
+    .workExamples-box__item-img6 {
+        width: 50%;
+    }
+}
+
+@media (max-width: 676px) {
+    .workExamples-box__item-img3 {
+        width: 45%;
+    }
+
+    .workExamples-box__item-img2 {
+        width: 48%;
+    }
+
+    .workExamples-box__item-img1 {
+        width: 48%;
+    }
+
+    .artworks-title {
+        margin-top: 120px;
+        margin-bottom: 120px;
+    }
+
+    .artworks-title {
+        width: 100%;
+    }
+}
+
+@media (max-width: 546px) {
+    .artworks-title {
+        margin-top: 36px;
+        margin-bottom: 30px;
+    }
+
+    .workExamples-title {
+        margin-bottom: 40px;
+    }
+
+    .workExamples-title {
+        font-size: 80px;
+        text-align: center;
+    }
+
+    .workExamples-box__item-title,
+    .workExamples-box__item-subtitle {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 346px) {
+    .workExamples-box__item-img3 {
+        width: 45%;
+    }
+
+    .workExamples-box__item-img2 {
+        width: 48%;
+    }
+
+    .workExamples-box__item-img1 {
+        width: 35%;
+    }
+}

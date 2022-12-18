@@ -1,0 +1,109 @@
+/* ==*==*==*==*==*==*==*==*==*==*==*== */
+/* BASIC STYLES: mspace_s1 */
+/* ==*==*==*==*==*==*==*==*==*==*==*== */
+/**/
+/**/
+/* --*--*--*--*--*--*--*--*--*--*--*-- */
+/* mspace */
+/* --*--*--*--*--*--*--*--*--*--*--*-- */
+/**/
+/* Отступ от верха и низа. */
+.mspace {
+    margin-top: 150px;
+    margin-bottom: 200px;
+}
+/* Выравнивание по горизонтале mspace-box__mainLogo и mspace-box__wrap. */
+.mspace-box {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 200px;
+}
+/* Настройка картинки. */
+.mspace-box__mainLogo-img {
+    width: 500px;
+    height: auto;
+}
+/* Настройка и позиционирование текста. */
+.mspace-box__mainLogo-text {
+    font-size: 16px;
+    text-transform: lowercase;
+    width: 260px;
+    margin-left: 122px;
+    margin-top: 35px;
+}
+/* Настройка и позиционирование текста. */
+.mspace-box__wrap-title {
+    font-family: "CactusJack";
+    font-size: 100px;
+    font-weight: 400;
+    line-height: 80px;
+    width: 380px;
+    text-align: right;
+}
+/* Настройка и позиционирование текста. */
+.mspace-box__wrap-text {
+    text-align: right;
+    margin-right: 11px;
+    font-size: 16px;
+    margin-top: 25px;
+}
+/* Выравнивание по горизонтале mspace-set__kit и mspace-set__screenshot. */
+.mspace-set {
+    display: flex;
+    justify-content: space-around;
+}
+/* Настройка размеров картинок. */
+.mspace-set__kit-coloredLogo-img,
+.mspace-set__kit-transparentLogo-img {
+    width: 480px;
+    height: auto;
+}
+/* Настройка размера картинки. */
+.mspace-set__screenshot-img {
+    width: 540px;
+    height: auto;
+}
+/* Для абсолютного позиционирования текста лежащего в mspace-set__kit-coloredLogo, относительно mspace-set__kit-coloredLogo. */
+.mspace-set__kit-coloredLogo {
+    position: relative;
+}
+/* Абсолютное позиционирование текста mspace-set__kit-coloredLogo-text лежащего в mspace-set__kit-coloredLogo, относительно mspace-set__kit-coloredLogo. */
+.mspace-set__kit-coloredLogo-text {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 76px;
+    height: 24px;
+    top: 96px;
+    left: -40px;
+}
+/* Для абсолютного позиционирования текста лежащего в mspace-set__kit-transparentLogo, относительно mspace-set__kit-transparentLogo. */
+.mspace-set__kit-transparentLogo {
+    position: relative;
+}
+/* Абсолютное позиционирование текста mspace-set__kit-transparentLogo-text лежащего в mspace-set__kit-transparentLogo, относительно mspace-set__kit-transparentLogo. */
+.mspace-set__kit-transparentLogo-text {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 76px;
+    height: 24px;
+    top: 96px;
+    left: -40px;
+}
+/* Настройка текста. */
+.mspace-set__kit-coloredLogo-text,
+.mspace-set__kit-transparentLogo-text {
+    font-size: 20px;
+}
+
+/* ==*==*==*==*==*==*==*==*==*==*==*== */
+/* MEDIA QUERIES: mspace_s1 */
+/* ==*==*==*==*==*==*==*==*==*==*==*== */
+/**/
+/**/
+/* Сначала идут max-width (от самого высокого числа до самого низкого),
+а потом идут min-width (от самого низкого числа до самого высокого). */
+/**/
+@media (max-width: 1000px) {
+}

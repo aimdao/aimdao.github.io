@@ -1,0 +1,248 @@
+/* ==*==*==*==*==*==*==*==*==*==*==*== */
+/* BASIC STYLES: td_s1 */
+/* ==*==*==*==*==*==*==*==*==*==*==*== */
+/**/
+/**/
+/* --*--*--*--*--*--*--*--*--*--*--*-- */
+/* core */
+/* --*--*--*--*--*--*--*--*--*--*--*-- */
+/**/
+/* Отступ от верха и низа. */
+.td {
+    margin-top: 150px;
+    margin-bottom: 200px;
+}
+/* Выравнивание по горизонтале core-box__mainLogo и core-box__wrap. */
+.td-box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 200px;
+}
+/* Настройка картинки. */
+.td-box__mainLogo-img {
+    width: 600px;
+    height: auto;
+}
+/* Настройка и позиционирование текста. */
+.td-box__wrap-title {
+    font-family: "CactusJack";
+    font-size: 70px;
+    font-weight: 400;
+    line-height: 80px;
+    width: 405px;
+    text-align: right;
+}
+/* Настройка и позиционирование текста. */
+.td-box__wrap-text {
+    text-align: right;
+    margin-right: 11px;
+    font-size: 16px;
+    margin-top: 25px;
+}
+/* Выравнивание по горизонтале td-set__title, td-set__linkYouTube и td-set__linkFigma. */
+.td-set {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 220px;
+    margin-bottom: 200px;
+}
+/* Настройка шрифта. */
+.td-set__title {
+    font-family: "CactusJack";
+    font-size: 70px;
+    font-weight: 400;
+    line-height: 80px;
+    margin-top: -90px;
+    width: 580px;
+    height: auto;
+}
+/* Для абсолютного позиционирования иконки iconYouTube_white.svg относительно td-set__linkYouTube. */
+.td-set__linkYouTube {
+    position: relative;
+}
+/* Создание иконки (iconYouTube_white.svg) с помощью псевдо-элемента before. */
+.td-set__linkYouTube:before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    background: url("../images/general/iconYouTube_white.svg") no-repeat top left;
+    width: 56px;
+    height: 40px;
+    top: -10px;
+    right: 155px;
+}
+/* Для абсолютного позиционирования иконки iconFigma_white.svg относительно td-set__linkFigma. */
+.td-set__linkFigma {
+    position: relative;
+}
+/* Создание иконки (linkFigma_white.svg) с помощью псевдо-элемента before. */
+.td-set__linkFigma:before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    background: url("../images/general/iconFigma_white.svg") no-repeat top left;
+    width: 41px;
+    height: 40px;
+    top: -10px;
+    right: 82px;
+}
+
+/* --*--*--*--*--*--*--*--*--*--*--*-- */
+/* tdSlider */
+/* --*--*--*--*--*--*--*--*--*--*--*-- */
+/**/
+/* Отступ от низа. */
+.tdSlider {
+    margin-bottom: 170px;
+}
+/* Настройка размеров слайдов: 0.7 от исходного размера 456х290. */
+.tdSlider-one__slide-img,
+.tdSlider-two__slide-img {
+    width: 319px;
+    height: 203px;
+}
+/* Отступ между слайдерами tdSlider-one и tdSlider-two . */
+.tdSlider-two {
+    margin-top: 120px;
+}
+/* Настрока библиотечных стилей слайдера Slick (получил эти стили из инспектора кода Goolge Chrome. */
+.slick-dots li button:before {
+    font-size: 8px;
+    line-height: 20px;
+    top: 0px;
+    left: 0px;
+    width: 20px;
+    height: 20px;
+    content: "•";
+    text-align: center;
+}
+
+/* --*--*--*--*--*--*--*--*--*--*--*-- */
+/* tdMobile */
+/* --*--*--*--*--*--*--*--*--*--*--*-- */
+/**/
+/* Отступ от низа. */
+.tdMobile {
+    margin-bottom: 300px;
+}
+/* Выравниваем фреймы по вертикали. */
+.tdMobile-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Для абсолютного позиционирования (подписей к скринам и tdMobile-box__stickyTape-img) относительно tdMobile-box. */
+    position: relative;
+}
+/* Отступы снизу между скринами. */
+.tdMobile-box__screen {
+    margin-bottom: 60px;
+}
+/* Убираем отступ снизу у последнего скрина. */
+.tdMobile-box__screen8 {
+    margin-bottom: 0;
+}
+/* Настройка размеров скринов: 0.7 от исходного размера 389х844. */
+.tdMobile-box__screen-img {
+    width: 272px;
+    height: 590px;
+}
+/* Размещаем tdMobile-box__stickyTape-img (как будто клеем на скотч элемент tdMobile-box__screen1). */
+.tdMobile-box__stickyTape-img {
+    position: absolute;
+    top: -41px;
+    left: 394px;
+    /* Настройка размеров tdMobile-box__stickyTape-img: 0.35 от исходного размера 326х266. */
+    width: 114px;
+    height: 93px;
+}
+/* Подпись к screen1 с помощью псевдо-элемента after. */
+.tdMobile-box__screen1::after {
+    content: "mobile version";
+    position: absolute;
+    display: inline-block;
+    width: 94px;
+    height: 14px;
+    top: 1px;
+    right: 308px;
+}
+/* Подпись к screen2 с помощью псевдо-элемента before. */
+.tdMobile-box__screen2::before {
+    content: "my spend page";
+    position: absolute;
+    display: inline-block;
+    width: 106px;
+    height: 14px;
+    top: 655px;
+    left: 307px;
+}
+/* Подпись к screen3 с помощью псевдо-элемента after. */
+.tdMobile-box__screen3::after {
+    content: "send";
+    position: absolute;
+    display: inline-block;
+    width: 44px;
+    height: 14px;
+    top: 1309px;
+    right: 357px;
+}
+/* Подпись к screen4 с помощью псевдо-элемента before. */
+.tdMobile-box__screen4::before {
+    content: "transfers";
+    position: absolute;
+    display: inline-block;
+    width: 64px;
+    height: 14px;
+    top: 1964px;
+    left: 347px;
+}
+/* Подпись к screen5 с помощью псевдо-элемента before. */
+.tdMobile-box__screen5::before {
+    content: "deposit";
+    position: absolute;
+    display: inline-block;
+    width: 60px;
+    height: 14px;
+    top: 2619px;
+    right: 340px;
+}
+/* Подпись к screen6 с помощью псевдо-элемента before. */
+.tdMobile-box__screen6::before {
+    content: "camera simulation";
+    position: absolute;
+    display: inline-block;
+    width: 122px;
+    height: 14px;
+    top: 3273px;
+    left: 286px;
+}
+/* Подпись к screen7 с помощью псевдо-элемента before. */
+.tdMobile-box__screen7::before {
+    content: "statements";
+    position: absolute;
+    display: inline-block;
+    width: 78px;
+    height: 14px;
+    top: 3931px;
+    right: 321px;
+}
+/* Подпись к screen8 с помощью псевдо-элемента before. */
+.tdMobile-box__screen8::before {
+    content: "confirmation";
+    position: absolute;
+    display: inline-block;
+    width: 84px;
+    height: 14px;
+    top: 4584px;
+    left: 323px;
+}
+
+/* ==*==*==*==*==*==*==*==*==*==*==*== */
+/* MEDIA QUERIES: td_s1 */
+/* ==*==*==*==*==*==*==*==*==*==*==*== */
+/**/
+/**/
+/* Сначала идут max-width (от самого высокого числа до самого низкого),
+а потом идут min-width (от самого низкого числа до самого высокого). */
+/**/
+@media (max-width: 1000px) {
+}

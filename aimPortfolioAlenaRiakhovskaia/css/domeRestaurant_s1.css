@@ -1,0 +1,185 @@
+/* ==*==*==*==*==*==*==*==*==*==*==*== */
+/* BASIC STYLES: domeRestaurant_s1 */
+/* ==*==*==*==*==*==*==*==*==*==*==*== */
+/**/
+/**/
+/* --*--*--*--*--*--*--*--*--*--*--*-- */
+/* rest */
+/* --*--*--*--*--*--*--*--*--*--*--*-- */
+/**/
+/* Отступ от верха и низа. */
+.rest {
+    margin-top: 130px;
+    margin-bottom: 150px;
+}
+/* Выравнивание по горизонтале rest-box__tvRestImg и rest-box__set. */
+.rest-box {
+    display: flex;
+    justify-content: space-between;
+}
+/* Настройка картинки. */
+.rest-box__tvRestImg {
+    width: 72%;
+    height: auto;
+}
+/* Выравнивание текста по вертикали и горизонтали. */
+.rest-box__set {
+    margin-top: 150px;
+    margin-left: 40px;
+}
+/* Настройка шрифта. */
+.rest-box__set-title {
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+/* Настройка ширины текстового блока. */
+.rest-box__set-text {
+    width: 70%;
+}
+/* Выравнивание по горизонтале rest-set__title, rest-set__linkYouTube и rest-set__linkXd. */
+.rest-set {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 220px;
+    margin-bottom: 150px;
+}
+/* Настройка шрифта. */
+.rest-set__title {
+    font-family: "CactusJack";
+    font-size: 74px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-top: -15px;
+}
+/* Для абсолютного позиционирования иконки iconYouTube.svg относительно rest-set__linkYouTube. */
+.rest-set__linkYouTube {
+    position: relative;
+}
+/* Создание иконки (iconYouTube.svg) с помощью псевдо-элемента before. */
+.rest-set__linkYouTube:before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    background: url("../images/general/iconYouTube.svg") no-repeat top left;
+    width: 56px;
+    height: 40px;
+    top: -10px;
+    right: 155px;
+}
+/* Для абсолютного позиционирования иконки iconXd относительно rest-set__linkXd. */
+.rest-set__linkXd {
+    position: relative;
+}
+/* Создание иконки (iconXd) с помощью псевдо-элемента before. */
+.rest-set__linkXd:before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    background: url("../images/general/iconXd.svg") no-repeat top left;
+    width: 41px;
+    height: 40px;
+    top: -10px;
+    right: 97px;
+}
+
+/* --*--*--*--*--*--*--*--*--*--*--*-- */
+/* restSlider */
+/* --*--*--*--*--*--*--*--*--*--*--*-- */
+/**/
+/* Отступ от низа. */
+.restSlider {
+    margin-bottom: 170px;
+}
+/* Настройка размеров слайдов: 0.7 от исходного размера 456х290. */
+.restSlider-one__slide-img,
+.restSlider-two__slide-img {
+    width: 319px;
+    height: 203px;
+}
+/* Отступ между слайдерами restSlider-one и restSlider-two . */
+.restSlider-two {
+    margin-top: 120px;
+}
+/* Настрока библиотечных стилей слайдера Slick (получил эти стили из инспектора кода Goolge Chrome. */
+.slick-dots li button:before {
+    font-size: 8px;
+    line-height: 20px;
+    top: 0px;
+    left: 0px;
+    width: 20px;
+    height: 20px;
+    content: "•";
+    text-align: center;
+}
+
+/* --*--*--*--*--*--*--*--*--*--*--*-- */
+/* restFrame */
+/* --*--*--*--*--*--*--*--*--*--*--*-- */
+/**/
+/* Отступ от низа. */
+.restFrame {
+    margin-bottom: 300px;
+}
+/* Выравниваем фреймы по вертикале. */
+.restFrame-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Для абсолютного позиционирования подписей к фреймам относительно restFrame-box. */
+    position: relative;
+}
+/* Совмещаем вертикальные фреймы. */
+.restFrame-box__frame {
+    margin-bottom: -118px;
+}
+/* Подпись к frame1 с помощью псевдо-элемента after. */
+.restFrame-box__frame1::after {
+    content: "mobile version";
+    position: absolute;
+    display: inline-block;
+    width: 94px;
+    height: 14px;
+    top: 1px;
+    right: 250px;
+}
+/* Подпись к frame2 с помощью псевдо-элемента before. */
+.restFrame-box__frame2::before {
+    content: "about section";
+    position: absolute;
+    display: inline-block;
+    width: 108px;
+    height: 14px;
+    top: 680px;
+    left: 260px;
+}
+/* Подпись к frame3 с помощью псевдо-элемента after. */
+.restFrame-box__frame3::after {
+    content: "food page";
+    position: absolute;
+    display: inline-block;
+    width: 94px;
+    height: 14px;
+    top: 1366px;
+    right: 250px;
+}
+/* Подпись к frame4 с помощью псевдо-элемента before. */
+.restFrame-box__frame4::before {
+    content: "reservation page";
+    position: absolute;
+    display: inline-block;
+    width: 108px;
+    height: 14px;
+    top: 2040px;
+    left: 238px;
+}
+
+/* ==*==*==*==*==*==*==*==*==*==*==*== */
+/* MEDIA QUERIES: domeRestaurant_s1 */
+/* ==*==*==*==*==*==*==*==*==*==*==*== */
+/**/
+/**/
+/* Сначала идут max-width (от самого высокого числа до самого низкого),
+а потом идут min-width (от самого низкого числа до самого высокого). */
+/**/
+@media (max-width: 1000px) {
+}
